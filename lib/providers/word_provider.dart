@@ -1,0 +1,1 @@
+export '../repositories/word_repository.dart';
