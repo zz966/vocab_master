@@ -44,6 +44,56 @@ class WordEnrichment {
     word.examples ??= _legacyExamples(word);
   }
 
+  /// Finds peer words with overlapping Chinese meanings for the synonyms tab.
+  static List<ConfusableWord> buildSynonyms(
+    Word word,
+    List<Word> peers,
+  ) {
+    final segments = _meaningSegments(word.chinese);
+    if (segments.isEmpty) {
+      return const [];
+    }
+
+    final results = <ConfusableWord>[];
+    for (final peer in peers) {
+      if (peer.id == word.id ||
+          peer.english.toLowerCase() == word.english.toLowerCase()) {
+        continue;
+      }
+
+      final peerSegments = _meaningSegments(peer.chinese);
+      final overlap = segments.any(
+        (segment) => peerSegments.any(
+          (peerSegment) =>
+              segment == peerSegment ||
+              segment.contains(peerSegment) ||
+              peerSegment.contains(segment),
+        ),
+      );
+      if (!overlap) {
+        continue;
+      }
+
+      results.add(
+        ConfusableWord()
+          ..word = peer.english
+          ..explanation = peer.chinese.split(RegExp(r'[；;,，]')).first.trim(),
+      );
+      if (results.length >= 6) {
+        break;
+      }
+    }
+    return results;
+  }
+
+  static Set<String> _meaningSegments(String chinese) {
+    return chinese
+        .split(RegExp(r'[；;,，/]'))
+        .map((segment) => segment.trim())
+        .where((segment) => segment.length >= 2)
+        .toSet();
+  }
+
   static MemoryTips _buildMemoryTips(Word word) {
     final tips = MemoryTips();
     tips.etymology = _analyzeEtymology(word.english);

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vocab_master/data/built_in_books.dart';
 import 'package:vocab_master/features/books/books_page.dart';
-import 'package:vocab_master/features/books/widgets/book_card.dart';
+import 'package:vocab_master/features/books/widgets/book_list_item.dart';
 import 'package:vocab_master/models/word_book.dart';
 import 'package:vocab_master/providers/book_provider.dart';
 import 'package:vocab_master/repositories/book_repository.dart';
@@ -74,7 +74,10 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    expect(find.byType(BookCard), findsNWidgets(BuiltInBooks.books.length));
+    expect(
+      find.byType(BookListItem),
+      findsNWidgets(BuiltInBooks.books.length),
+    );
 
     for (final definition in BuiltInBooks.books) {
       expect(find.text(definition.title), findsOneWidget);

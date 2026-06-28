@@ -26,6 +26,9 @@ class BookProgress {
   double get masteryRate =>
       totalWords == 0 ? 0 : masteredWords / totalWords;
 
+  double get learnedRate =>
+      totalWords == 0 ? 0 : learnedWords / totalWords;
+
   bool get isCustom => book.category == 'custom';
 }
 

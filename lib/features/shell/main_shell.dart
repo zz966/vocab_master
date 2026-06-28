@@ -43,7 +43,7 @@ class MainShell extends ConsumerWidget {
           NavigationDestination(
             icon: Icon(Icons.school_outlined),
             selectedIcon: Icon(Icons.school),
-            label: '学习',
+            label: '单词训练',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
