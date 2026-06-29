@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/learning_session.dart';
+import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/study_provider.dart';
 import '../../utils/study_quality.dart';
@@ -12,14 +15,14 @@ class SpellingPage extends ConsumerStatefulWidget {
     required this.words,
     required this.bookIds,
     this.session,
-    this.onSessionComplete,
+    this.onSpellingComplete,
     this.onProgressUpdate,
   });
 
   final List<Word> words;
   final List<String> bookIds;
   final LearningSession? session;
-  final Future<void> Function()? onSessionComplete;
+  final Future<void> Function(QuizSessionResult result)? onSpellingComplete;
   final VoidCallback? onProgressUpdate;
 
   @override
@@ -27,8 +30,14 @@ class SpellingPage extends ConsumerStatefulWidget {
 }
 
 class _SpellingPageState extends ConsumerState<SpellingPage> {
+  static final _shuffleRandom = Random();
+
+  late final List<Word> _quizWords;
   late int _currentIndex;
   final _controller = TextEditingController();
+  int _answeredCount = 0;
+  int _correctCount = 0;
+  final List<QuizWrongAnswer> _wrongAnswers = [];
   bool? _isCorrect;
   bool _isSubmitting = false;
   bool _hintShown = false;
@@ -36,6 +45,7 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
   @override
   void initState() {
     super.initState();
+    _quizWords = List<Word>.from(widget.words)..shuffle(_shuffleRandom);
     _currentIndex = 0;
   }
 
@@ -45,7 +55,7 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
     super.dispose();
   }
 
-  Word get _currentWord => widget.words[_currentIndex];
+  Word get _currentWord => _quizWords[_currentIndex];
 
   void _showHint() {
     if (_isCorrect != null) {
@@ -66,11 +76,26 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
       return;
     }
 
-    final input = _controller.text.trim().toLowerCase();
-    final correct =
-        input == _currentWord.english.trim().toLowerCase();
+    final input = _controller.text.trim();
+    final normalizedInput = input.toLowerCase();
+    final normalizedAnswer = _currentWord.english.trim().toLowerCase();
+    final correct = normalizedInput == normalizedAnswer;
 
-    setState(() => _isCorrect = correct);
+    setState(() {
+      _isCorrect = correct;
+      _answeredCount += 1;
+      if (correct) {
+        _correctCount += 1;
+      } else {
+        _wrongAnswers.add(
+          QuizWrongAnswer(
+            word: _currentWord,
+            selectedAnswer: input.isEmpty ? '（未填写）' : input,
+            correctAnswer: _currentWord.english.trim(),
+          ),
+        );
+      }
+    });
 
     await Future<void>.delayed(const Duration(milliseconds: 900));
 
@@ -93,8 +118,14 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
       return;
     }
 
-    if (_currentIndex >= widget.words.length - 1) {
-      await widget.onSessionComplete?.call();
+    if (_currentIndex >= _quizWords.length - 1) {
+      await widget.onSpellingComplete?.call(
+        QuizSessionResult(
+          totalWords: _quizWords.length,
+          correctCount: _correctCount,
+          wrongAnswers: List.unmodifiable(_wrongAnswers),
+        ),
+      );
       return;
     }
 
@@ -110,14 +141,27 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
   @override
   Widget build(BuildContext context) {
     final word = _currentWord;
-    final progress = (_currentIndex + 1) / widget.words.length;
+    final total = _quizWords.length;
+    final progress = total == 0 ? 0.0 : _answeredCount / total;
+    final theme = Theme.of(context);
 
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('${_currentIndex + 1} / ${widget.words.length}'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('$_answeredCount / $total'),
+              Text(
+                '第 ${_currentIndex + 1} 题',
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: Colors.grey,
+                ),
+              ),
+            ],
+          ),
           const SizedBox(height: 8),
           LinearProgressIndicator(
             value: progress,
@@ -129,7 +173,7 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
             children: [
               Text(
                 '根据释义拼写英文单词',
-                style: Theme.of(context).textTheme.titleMedium,
+                style: theme.textTheme.titleMedium,
               ),
               const SizedBox(width: 8),
               TextButton.icon(
@@ -144,9 +188,9 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
               padding: const EdgeInsets.only(top: 4),
               child: Text(
                 '首字母：${_currentWord.english[0].toUpperCase()}',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.primary,
+                ),
               ),
             ),
           const SizedBox(height: 24),
@@ -159,17 +203,17 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
                   Text(
                     word.chinese,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    style: theme.textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  if (word.partOfSpeech != null) ...[
+                  if (word.partOfSpeech.isNotEmpty) ...[
                     const SizedBox(height: 8),
                     Text(
-                      word.partOfSpeech!,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: Colors.grey,
-                          ),
+                      word.partOfSpeech,
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        color: Colors.grey,
+                      ),
                     ),
                   ],
                 ],

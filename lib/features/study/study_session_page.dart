@@ -9,7 +9,6 @@ import '../../providers/achievements_provider.dart';
 import '../../providers/recent_achievements_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
-import '../../providers/word_provider.dart';
 import '../../repositories/level_challenge_repository.dart';
 import '../../repositories/session_repository.dart';
 import '../../repositories/settings_repository.dart';
@@ -53,39 +52,30 @@ class _QuizLoader extends StatelessWidget {
   }
 }
 
-class _ListeningLoader extends ConsumerWidget {
+class _ListeningLoader extends StatelessWidget {
   const _ListeningLoader({
     required this.words,
     required this.bookIds,
     required this.session,
-    required this.onSessionComplete,
+    required this.onListeningComplete,
     this.onProgressUpdate,
   });
 
   final List<Word> words;
   final List<String> bookIds;
   final LearningSession? session;
-  final Future<void> Function() onSessionComplete;
+  final Future<void> Function(QuizSessionResult result) onListeningComplete;
   final VoidCallback? onProgressUpdate;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return FutureBuilder(
-      future: ref.read(wordRepositoryProvider).getWordsForBooks(bookIds),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState != ConnectionState.done) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        final pool = snapshot.data ?? words;
-        return ListeningPage(
-          words: words,
-          bookIds: bookIds,
-          wordPool: pool.length >= 4 ? pool : words,
-          session: session,
-          onSessionComplete: onSessionComplete,
-          onProgressUpdate: onProgressUpdate,
-        );
-      },
+  Widget build(BuildContext context) {
+    return ListeningPage(
+      words: words,
+      bookIds: bookIds,
+      wordPool: words,
+      session: session,
+      onListeningComplete: onListeningComplete,
+      onProgressUpdate: onProgressUpdate,
     );
   }
 }
@@ -305,7 +295,7 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
       todayCount: todayCount,
       dailyGoal: settings.dailyGoal,
       currentStreak: settings.currentStreak,
-      showShareButton: widget.mode != StudyMode.spelling,
+      showShareButton: true,
     );
 
     if (!mounted) {
@@ -493,14 +483,14 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
                 words: words,
                 bookIds: bookIds,
                 session: _session,
-                onSessionComplete: _completeSession,
+                onSpellingComplete: _completeQuizSession,
                 onProgressUpdate: _onProgressUpdate,
               ),
               StudyMode.listening => _ListeningLoader(
                 words: words,
                 bookIds: bookIds,
                 session: _session,
-                onSessionComplete: _completeSession,
+                onListeningComplete: _completeQuizSession,
                 onProgressUpdate: _onProgressUpdate,
               ),
             },
