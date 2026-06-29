@@ -94,8 +94,6 @@ class StatsRepository {
 
   Future<List<DailyStudyStat>> getLast7DaysStats() => getDailyStats(days: 7);
 
-  Future<List<DailyStudyStat>> getLast30DaysStats() => getDailyStats(days: 30);
-
   Future<int> getTotalWordsStudied() async {
     return HiveService.getAllReviewRecords().length;
   }

@@ -25,7 +25,7 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
       autoReadEnabled: fields[5] == null ? true : fields[5] as bool,
       allowExtraStudy: fields[6] == null ? false : fields[6] as bool,
       quizPickEnglish: fields[7] == null ? true : fields[7] as bool,
-      defaultStudyMode: fields[8] == null ? 'flashcard' : fields[8] as String,
+      defaultStudyMode: fields[8] == null ? 'quiz' : fields[8] as String,
       speechRate: fields[9] == null ? 0.45 : fields[9] as double,
       ttsAccent: fields[10] == null ? 'en-US' : fields[10] as String,
       reminderTime: fields[11] as String?,

@@ -4,6 +4,7 @@ import '../core/hive/hive_service.dart';
 import '../models/word.dart';
 import '../models/word_book.dart';
 import '../utils/book_export.dart';
+import '../utils/overview_stats.dart';
 import '../utils/word_factory.dart';
 
 class BookProgress {
@@ -89,6 +90,15 @@ class BookRepository {
       progressList.add(await getBookProgress(book));
     }
     return progressList;
+  }
+
+  Future<OverviewStats> getGlobalOverviewStats() async {
+    final books = await getAllBooks();
+    final words = <Word>[];
+    for (final book in books) {
+      words.addAll(await getWordsForBook(book.id));
+    }
+    return computeOverviewStats(words);
   }
 
   Future<WordBook> createBook({
@@ -191,10 +201,6 @@ class BookRepository {
     }
     final words = await getWordsForBook(bookId);
     return BookExportCodec.encode(book, words);
-  }
-
-  Future<void> seedBuiltInBooks() {
-    return HiveService.seedBuiltInBooks();
   }
 
   Future<void> ensureTestBook() {

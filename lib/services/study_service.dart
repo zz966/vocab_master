@@ -5,7 +5,7 @@ import '../models/word.dart';
 import '../repositories/session_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/word_repository.dart';
-import '../utils/sm2_algorithm.dart';
+import '../utils/study_progress.dart';
 import '../utils/study_quality.dart';
 
 class StudyService {
@@ -26,27 +26,7 @@ class StudyService {
     LearningSession? session,
   }) async {
     final previousInterval = word.sm2Interval;
-    final sm2 = Sm2Algorithm.calculate(
-      quality: quality.value,
-      repetitions: word.reviewCount,
-      easeFactor: word.easeFactor,
-      interval: word.sm2Interval,
-    );
-
-    word.reviewCount = sm2.repetitions;
-    word.easeFactor = sm2.easeFactor;
-    word.sm2Interval = sm2.interval;
-    word.nextReview = sm2.nextReview;
-    word.familiarity =
-        Sm2Algorithm.nextFamiliarity(word.familiarity, quality.value);
-    word.correctStreak =
-        quality.value >= 2 ? word.correctStreak + 1 : 0;
-
-    if (quality == StudyQuality.again) {
-      word.inWrongBook = true;
-    } else if (quality.value >= 2) {
-      word.inWrongBook = false;
-    }
+    StudyProgress.applyRating(word, quality);
 
     await _wordRepository.saveWord(word, bookId: bookId);
 
@@ -57,8 +37,8 @@ class StudyService {
       quality: quality.value,
       reviewedAt: DateTime.now(),
       previousInterval: previousInterval,
-      newInterval: sm2.interval,
-      easeFactor: sm2.easeFactor,
+      newInterval: word.sm2Interval,
+      easeFactor: word.easeFactor,
     );
     await _settingsRepository.addReviewRecord(record);
 

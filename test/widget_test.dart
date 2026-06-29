@@ -1,29 +1,29 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/utils/sm2_algorithm.dart';
+import 'package:vocab_master/utils/study_progress.dart';
+import 'package:vocab_master/utils/study_quality.dart';
+
+import 'helpers/model_fixtures.dart';
 
 void main() {
-  test('SM-2 algorithm returns next review date', () {
-    final result = Sm2Algorithm.calculate(
-      quality: 3,
-      repetitions: 1,
-      easeFactor: 2.5,
-      interval: 6,
-      now: DateTime(2026, 6, 16),
-    );
+  test('StudyProgress schedules next review after good rating', () {
+    final word = testWord(familiarity: 1);
 
-    expect(result.repetitions, 2);
-    expect(result.interval, greaterThan(0));
-    expect(result.nextReview.isAfter(DateTime(2026, 6, 16)), isTrue);
+    StudyProgress.applyRating(word, StudyQuality.good);
+
+    expect(word.familiarity, 2);
+    expect(word.reviewCount, 1);
+    expect(StudyProgress.intervalDays(word), greaterThan(0));
+    expect(word.nextReview, isNotNull);
   });
 
-  test('calculateNextReview returns map with nextReview and familiarity', () {
-    final result = Sm2Algorithm.calculateNextReview(
-      0,
-      rating: 'Good',
-      now: DateTime(2026, 6, 16),
-    );
+  test('StudyProgress resets streak after again rating', () {
+    final word = testWord(familiarity: 3)
+      ..correctStreak = 4;
 
-    expect(result['familiarity'], 1);
-    expect(result['nextReview'], isA<DateTime>());
+    StudyProgress.applyRating(word, StudyQuality.again);
+
+    expect(word.correctStreak, 0);
+    expect(word.inWrongBook, isTrue);
+    expect(StudyProgress.intervalDays(word), 0);
   });
 }

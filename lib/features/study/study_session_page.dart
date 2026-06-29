@@ -6,7 +6,6 @@ import '../../models/learning_session.dart';
 import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/achievements_provider.dart';
-import '../../providers/recent_achievements_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
 import '../../repositories/level_challenge_repository.dart';
@@ -16,7 +15,6 @@ import '../../utils/level_challenge.dart';
 import '../../utils/achievement_tracker.dart';
 import '../achievements/widgets/achievement_unlock_dialog.dart';
 import '../../providers/book_provider.dart';
-import 'flashcard_page.dart';
 import 'listening_page.dart';
 import 'quiz_page.dart';
 import 'spelling_page.dart';
@@ -203,7 +201,6 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
 
     if (newlyUnlocked.isNotEmpty && mounted) {
       ref.invalidate(settingsProvider);
-      ref.invalidate(recentAchievementsProvider);
       await showAchievementUnlockDialog(context, newlyUnlocked);
     }
 
@@ -465,13 +462,6 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
               goalReached: goalReached,
             )
           : switch (widget.mode) {
-              StudyMode.flashcard => FlashcardPage(
-                words: words,
-                bookIds: bookIds,
-                session: _session,
-                onSessionComplete: _completeSession,
-                onProgressUpdate: _onProgressUpdate,
-              ),
               StudyMode.quiz => _QuizLoader(
                 words: words,
                 bookIds: bookIds,

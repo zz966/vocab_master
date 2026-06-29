@@ -41,7 +41,6 @@ Future<void> _refreshSessionData(WidgetRef ref) async {
   ref.invalidate(recentSessionsProvider);
   ref.invalidate(sessionSummaryProvider);
   ref.invalidate(last7DaysStatsProvider);
-  ref.invalidate(last30DaysStatsProvider);
   invalidateStudyData(ref);
 }
 

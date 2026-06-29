@@ -12,7 +12,6 @@ void main() {
         totalWordsStudied: 600,
         favoritesCount: 12,
         sessionTypes: {
-          'flashcard',
           'quiz',
           'spelling',
           'listening',

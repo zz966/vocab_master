@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/database/seed_data.dart';
 import 'package:vocab_master/services/tts_service.dart';
 
 void main() {
@@ -55,17 +54,11 @@ void main() {
       expect(speakCallsAfter, speakCallsBefore);
     });
 
-    test('speak at least 5 seed words and their examples', () async {
-      final samples = SeedData.wordsForBook('seed_basic', 'basic');
-      expect(samples.length, greaterThanOrEqualTo(5));
+    test('speak handles multiple sample words', () async {
+      const samples = ['hello', 'world', 'study', 'vocab', 'master'];
 
-      for (final word in samples.take(5)) {
-        await TtsService.instance.speak(word.english);
-        if (word.examples != null) {
-          for (final example in word.examples!) {
-            await TtsService.instance.speak(example);
-          }
-        }
+      for (final word in samples) {
+        await TtsService.instance.speak(word);
       }
 
       final speakCount = calls.where((c) => c == 'speak').length;
@@ -75,6 +68,13 @@ void main() {
     test('stop invokes platform channel', () async {
       await TtsService.instance.stop();
       expect(calls, contains('stop'));
+    });
+
+    test('setSpeechRate updates platform speech rate', () async {
+      await TtsService.instance.setSpeechRate(0.8);
+
+      final rateIndex = calls.lastIndexOf('setSpeechRate');
+      expect(rateIndex, greaterThanOrEqualTo(0));
     });
   });
 }

@@ -5,13 +5,17 @@ void main() {
   group('StudyMode.fromId', () {
     test('returns matching mode for valid id', () {
       expect(StudyMode.fromId('quiz'), StudyMode.quiz);
-      expect(StudyMode.fromId('complete'), StudyMode.flashcard);
+      expect(StudyMode.fromId('complete'), StudyMode.quiz);
       expect(StudyMode.fromId('listening'), StudyMode.listening);
     });
 
-    test('falls back to flashcard for unknown id', () {
-      expect(StudyMode.fromId('unknown'), StudyMode.flashcard);
-      expect(StudyMode.fromId(''), StudyMode.flashcard);
+    test('maps legacy flashcard id to quiz', () {
+      expect(StudyMode.fromId('flashcard'), StudyMode.quiz);
+    });
+
+    test('falls back to quiz for unknown id', () {
+      expect(StudyMode.fromId('unknown'), StudyMode.quiz);
+      expect(StudyMode.fromId(''), StudyMode.quiz);
     });
   });
 }

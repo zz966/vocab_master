@@ -32,7 +32,7 @@ void main() {
       ],
       sessions: [
         testSession(
-          sessionType: 'flashcard',
+          sessionType: 'quiz',
           bookIds: ['book_1'],
           wordsStudied: 10,
           wordsCorrect: 8,

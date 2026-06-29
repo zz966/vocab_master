@@ -81,7 +81,7 @@ class AppRouter {
       AppRoutes.studySession => MaterialPageRoute<void>(
           builder: (_) {
             final args = settings.arguments;
-            final mode = args is StudyMode ? args : StudyMode.flashcard;
+            final mode = args is StudyMode ? args : StudyMode.quiz;
             return StudySessionPage(mode: mode);
           },
         ),

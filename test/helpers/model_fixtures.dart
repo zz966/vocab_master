@@ -43,7 +43,7 @@ Book testBook({
 
 LearningSession testSession({
   String id = 'session_1',
-  String sessionType = 'flashcard',
+  String sessionType = 'quiz',
   List<String> bookIds = const ['book_1'],
   DateTime? startedAt,
   DateTime? completedAt,

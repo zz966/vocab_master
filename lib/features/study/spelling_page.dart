@@ -7,6 +7,7 @@ import '../../models/learning_session.dart';
 import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/study_provider.dart';
+import '../../utils/auto_read.dart';
 import '../../utils/study_quality.dart';
 
 class SpellingPage extends ConsumerStatefulWidget {
@@ -47,6 +48,11 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
     super.initState();
     _quizWords = List<Word>.from(widget.words)..shuffle(_shuffleRandom);
     _currentIndex = 0;
+    WidgetsBinding.instance.addPostFrameCallback((_) => _autoSpeakCurrent());
+  }
+
+  Future<void> _autoSpeakCurrent() async {
+    await autoSpeakWordIfEnabled(ref, _currentWord);
   }
 
   @override
@@ -129,6 +135,8 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
       return;
     }
 
+    await ref.read(ttsServiceProvider).stop();
+
     setState(() {
       _currentIndex += 1;
       _controller.clear();
@@ -136,6 +144,7 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
       _isSubmitting = false;
       _hintShown = false;
     });
+    await _autoSpeakCurrent();
   }
 
   @override

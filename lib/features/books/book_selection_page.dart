@@ -24,8 +24,8 @@ class _BookSelectionPageState extends ConsumerState<BookSelectionPage> {
     );
   }
 
-  void _startFlashcard() {
-    _startWithMode(StudyMode.flashcard);
+  void _startQuiz() {
+    _startWithMode(StudyMode.quiz);
   }
 
   Future<void> _pickMode() async {
@@ -114,7 +114,7 @@ class _BookSelectionPageState extends ConsumerState<BookSelectionPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               FilledButton.icon(
-                onPressed: selectedIds.isEmpty ? null : _startFlashcard,
+                onPressed: selectedIds.isEmpty ? null : _startQuiz,
                 style: FilledButton.styleFrom(
                   minimumSize: const Size.fromHeight(52),
                 ),
@@ -122,7 +122,7 @@ class _BookSelectionPageState extends ConsumerState<BookSelectionPage> {
                 label: Text(
                   selectedIds.isEmpty
                       ? '请至少选择 1 本单词书'
-                      : '开始学习（速刷 · 已选 ${selectedIds.length} 本）',
+                      : '开始学习（选择题 · 已选 ${selectedIds.length} 本）',
                 ),
               ),
               const SizedBox(height: 8),

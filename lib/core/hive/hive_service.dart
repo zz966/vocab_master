@@ -4,15 +4,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../../data/built_in_books.dart';
 import '../../models/book_model.dart';
 import '../../models/learning_session.dart';
 import '../../models/level_challenge_progress.dart';
 import '../../models/point_transaction.dart';
 import '../../models/review_record.dart';
 import '../../models/user_settings.dart';
-import '../../utils/kylebing_vocab_codec.dart';
-import '../../utils/word_factory.dart';
+
 
 class HiveService {
   HiveService._();
@@ -128,8 +126,6 @@ class HiveService {
 
   static Future<void> importInitialBooks() async {
     if (_books.isEmpty) {
-      await seedBuiltInBooks();
-
       try {
         final jsonStr =
             await rootBundle.loadString('assets/books/cet4_1.json');
@@ -224,48 +220,6 @@ class HiveService {
         ..isFavorite = previous.isFavorite
         ..inWrongBook = previous.inWrongBook;
     }
-  }
-
-  static Future<void> seedBuiltInBooks() async {
-    if (_books.isNotEmpty) {
-      return;
-    }
-
-    for (final definition in BuiltInBooks.books) {
-      final json = await rootBundle.loadString(definition.assetPath);
-      final bookId = _bookIdFromAsset(definition.assetPath);
-      final items = KyleBingVocabCodec.decode(json);
-      final peerWords = items.map((item) => item.english).toList();
-      final words = <BookWord>[];
-
-      for (var i = 0; i < items.length; i++) {
-        words.add(
-          WordFactory.fromImport(
-            items[i],
-            bookId: bookId,
-            wordIndex: i + 1,
-            peerWords: peerWords,
-          ),
-        );
-      }
-
-      final book = Book(
-        bookId: bookId,
-        bookName: definition.title,
-        description: definition.description,
-        category: definition.category,
-        coverColor: definition.coverColor,
-        totalWords: words.length,
-        words: words,
-      );
-      _attachBookIds(book);
-      await saveBook(book);
-    }
-  }
-
-  static String _bookIdFromAsset(String assetPath) {
-    final fileName = assetPath.split('/').last;
-    return fileName.replaceAll('.json', '').toLowerCase();
   }
 
   static void _attachBookIds(Book book) {

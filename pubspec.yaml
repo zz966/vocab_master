@@ -1,7 +1,7 @@
 name: vocab_master
 description: >
-  VocabMaster — 英语单词学习 App。内置 KyleBing 词库，SM-2 间隔重复，
-  闪卡/TTS/统计/自定义单词书，支持 Android、iOS 与 Web。
+  VocabMaster — 英语单词学习 App。内置词库与自定义单词书，
+  支持选择题/拼写/听音、关卡挑战、签到积分，面向 Android、iOS 与 Web。
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -55,6 +55,5 @@ flutter_native_splash:
 flutter:
   uses-material-design: true
   assets:
-    - assets/vocab/
     - assets/books/
     - assets/icon/

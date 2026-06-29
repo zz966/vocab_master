@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/word.dart';
 import '../../providers/book_provider.dart';
+import '../../providers/study_provider.dart';
 import '../../providers/word_provider.dart';
 import '../../repositories/book_repository.dart';
+import '../../utils/auto_read.dart';
 import '../../utils/color_utils.dart';
 import '../../utils/word_enrichment.dart';
 import 'widgets/word_detail_info_section.dart';
@@ -95,6 +97,7 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
       _word = word;
       _peerWords = peerWords;
     });
+    await autoSpeakWordIfEnabled(ref, word);
   }
 
   String? _primaryBookId(Word word) {
@@ -147,6 +150,7 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
   }
 
   void _goToWord(String wordId) {
+    ref.read(ttsServiceProvider).stop();
     setState(() => _currentWordId = wordId);
     _loadWord(wordId);
   }

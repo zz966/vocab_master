@@ -6,7 +6,7 @@ import '../../providers/points_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
 import '../../repositories/points_repository.dart';
-import '../me/settings_page.dart';
+import '../settings/settings_page.dart';
 import 'widgets/daily_check_in_card.dart';
 import 'widgets/me_profile_header.dart';
 import 'widgets/points_history_section.dart';
@@ -75,6 +75,7 @@ class _MePageState extends ConsumerState<MePage> {
     final settingsAsync = ref.watch(settingsProvider);
     final checkInStatus = ref.watch(checkInStatusProvider);
     final todayCountAsync = ref.watch(todayStudyCountProvider);
+    final overviewStatsAsync = ref.watch(globalOverviewStatsProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('我的'),
@@ -86,12 +87,7 @@ class _MePageState extends ConsumerState<MePage> {
         data: (books) {
           final settings = settingsAsync.value;
           final todayCount = todayCountAsync.value ?? 0;
-          final totalWords =
-              books.fold<int>(0, (sum, item) => sum + item.totalWords);
-          final masteredWords =
-              books.fold<int>(0, (sum, item) => sum + item.masteredWords);
-          final learnedWords =
-              books.fold<int>(0, (sum, item) => sum + item.learnedWords);
+          final overview = overviewStatsAsync.valueOrNull;
 
           return RefreshIndicator(
             onRefresh: _refresh,
@@ -133,17 +129,23 @@ class _MePageState extends ConsumerState<MePage> {
                         ),
                         _OverviewRow(
                           label: '已学习的单词',
-                          value: '$learnedWords 词',
+                          value: overview == null
+                              ? '加载中…'
+                              : '${overview.learnedWords} 词',
                         ),
                         _OverviewRow(
                           label: '总词汇量',
-                          value: '$totalWords 词',
+                          value: overview == null
+                              ? '加载中…'
+                              : '${overview.totalWords} 词',
                         ),
                         _OverviewRow(
                           label: '已掌握',
-                          value: totalWords == 0
-                              ? '0%'
-                              : '${(masteredWords / totalWords * 100).round()}%',
+                          value: overview == null
+                              ? '加载中…'
+                              : overview.totalWords == 0
+                                  ? '0%'
+                                  : '${(overview.masteryRate * 100).round()}%',
                         ),
                       ],
                     ),

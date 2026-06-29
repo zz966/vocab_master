@@ -15,7 +15,6 @@ class StudyModeList extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 12),
           child: _ModeCard(
             icon: switch (mode) {
-              StudyMode.flashcard => Icons.bolt,
               StudyMode.quiz => Icons.quiz_outlined,
               StudyMode.spelling => Icons.spellcheck,
               StudyMode.listening => Icons.hearing,

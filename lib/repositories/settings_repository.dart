@@ -4,14 +4,16 @@ import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
 import '../models/review_record.dart';
 import '../models/user_settings.dart';
+import '../utils/overview_stats.dart';
 
 class SettingsRepository {
   Future<UserSettings> getSettings() async {
     final existing = HiveService.getSettings();
     var changed = false;
 
-    if (existing.defaultStudyMode == 'complete') {
-      existing.defaultStudyMode = 'flashcard';
+    if (existing.defaultStudyMode == 'complete' ||
+        existing.defaultStudyMode == 'flashcard') {
+      existing.defaultStudyMode = 'quiz';
       changed = true;
     }
 
@@ -31,11 +33,7 @@ class SettingsRepository {
   }
 
   Future<int> getTodayStudyCount() async {
-    final now = DateTime.now();
-    final startOfDay = DateTime(now.year, now.month, now.day);
-    return HiveService.getAllReviewRecords()
-        .where((record) => record.reviewedAt.isAfter(startOfDay))
-        .length;
+    return countTodayStudiedWords(HiveService.getAllReviewRecords());
   }
 
   Future<void> recordStudyDay(UserSettings settings) async {

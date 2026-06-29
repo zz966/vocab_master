@@ -64,7 +64,7 @@ void main() {
     );
     expect(
       calculateChallengeStars(
-        const ['quiz', 'spelling', 'listening', 'flashcard'],
+        const ['quiz', 'spelling', 'listening', 'quiz'],
       ),
       3,
     );

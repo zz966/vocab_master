@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/word.dart';
 import '../repositories/book_repository.dart';
+import '../utils/overview_stats.dart';
 
 /// All word books with per-book progress, backed by [AsyncNotifier].
 class BooksNotifier extends AsyncNotifier<List<BookProgress>> {
@@ -35,4 +36,9 @@ final bookProgressProvider =
 final bookWordsProvider =
     FutureProvider.family<List<Word>, String>((ref, bookId) async {
   return ref.watch(bookRepositoryProvider).getWordsForBook(bookId);
+});
+
+final globalOverviewStatsProvider = FutureProvider<OverviewStats>((ref) async {
+  ref.watch(booksProvider);
+  return ref.read(bookRepositoryProvider).getGlobalOverviewStats();
 });

@@ -1,10 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/user_settings.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
-import '../../repositories/settings_repository.dart';
 import '../../services/notification_service.dart';
 import '../../utils/sync_reminder.dart';
 import '../about/about_page.dart';
@@ -16,12 +16,22 @@ class SettingsPage extends ConsumerStatefulWidget {
   ConsumerState<SettingsPage> createState() => _SettingsPageState();
 }
 
+const _speechRatePreviewText = 'Practice makes perfect.';
+
 class _SettingsPageState extends ConsumerState<SettingsPage> {
   bool _saving = false;
 
+  bool get _remindersSupported {
+    if (kIsWeb) {
+      return false;
+    }
+    return defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS;
+  }
+
   Future<void> _save(UserSettings settings) async {
     setState(() => _saving = true);
-    await ref.read(settingsRepositoryProvider).saveSettings(settings);
+    await ref.read(settingsProvider.notifier).save(settings);
     await ref.read(ttsServiceProvider).setSpeechRate(settings.speechRate);
     await ref.read(ttsServiceProvider).setAccent(settings.ttsAccent);
     await syncAllReminders(ref, settings);
@@ -32,6 +42,16 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
         context,
       ).showSnackBar(const SnackBar(content: Text('设置已保存')));
     }
+  }
+
+  Future<void> _previewSpeech(UserSettings settings) async {
+    if (_saving) {
+      return;
+    }
+    final tts = ref.read(ttsServiceProvider);
+    await tts.setSpeechRate(settings.speechRate);
+    await tts.setAccent(settings.ttsAccent);
+    await tts.speak(_speechRatePreviewText);
   }
 
   Future<void> _pickReminderTime(UserSettings settings) async {
@@ -74,23 +94,67 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                         _save(settings);
                       },
               ),
-              ListTile(
-                title: const Text('朗读语速'),
-                subtitle: Slider(
-                  value: settings.speechRate.clamp(0.2, 1.0),
-                  min: 0.2,
-                  max: 1.0,
-                  divisions: 8,
-                  label: settings.speechRate.toStringAsFixed(2),
-                  onChanged: _saving
-                      ? null
-                      : (value) {
-                          setState(() => settings.speechRate = value);
-                        },
-                  onChangeEnd: (value) {
-                    settings.speechRate = value;
-                    _save(settings);
-                  },
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('朗读语速', style: Theme.of(context).textTheme.titleMedium),
+                    Slider(
+                      value: settings.speechRate.clamp(0.2, 1.0),
+                      min: 0.2,
+                      max: 1.0,
+                      divisions: 8,
+                      label: settings.speechRate.toStringAsFixed(2),
+                      onChanged: _saving
+                          ? null
+                          : (value) {
+                              setState(() => settings.speechRate = value);
+                            },
+                      onChangeEnd: (value) {
+                        settings.speechRate = value;
+                        _save(settings);
+                      },
+                    ),
+                    Material(
+                      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(12),
+                      child: InkWell(
+                        onTap: _saving ? null : () => _previewSpeech(settings),
+                        borderRadius: BorderRadius.circular(12),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 14,
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  _speechRatePreviewText,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge
+                                      ?.copyWith(fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              Icon(
+                                Icons.volume_up_outlined,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '点击英文试听当前语速与口音',
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: Theme.of(context).colorScheme.outline,
+                          ),
+                    ),
+                  ],
                 ),
               ),
               Text('发音口音', style: Theme.of(context).textTheme.titleSmall),
@@ -128,6 +192,17 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
               const SizedBox(height: 24),
               Text('提醒', style: Theme.of(context).textTheme.titleLarge),
               const SizedBox(height: 8),
+              if (!_remindersSupported)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Text(
+                    '当前平台（桌面端 / Web）暂不支持系统推送提醒，'
+                    '以下选项会保存但不会触发通知。',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: Theme.of(context).colorScheme.outline,
+                        ),
+                  ),
+                ),
               SwitchListTile(
                 title: const Text('每日学习提醒'),
                 subtitle: Text('每天 ${settings.reminderTime ?? '20:00'} 推送通知'),

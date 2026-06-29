@@ -12,7 +12,7 @@ void main() {
 
     final session = testSession(
       id: 'session_1',
-      sessionType: 'flashcard',
+      sessionType: 'quiz',
       wordsStudied: 10,
       wordsCorrect: 8,
       startedAt: started,
@@ -24,7 +24,7 @@ void main() {
 
     expect(lines, hasLength(2));
     expect(lines.first, '类型,开始时间,完成时间,学习词数,正确数,正确率');
-    expect(lines[1], contains('速刷学习'));
+    expect(lines[1], contains('选择题'));
     expect(lines[1], contains('2026-06-16 10:30'));
     expect(lines[1], contains('2026-06-16 10:45'));
     expect(lines[1], contains('10'));
@@ -38,7 +38,7 @@ void main() {
 
     final session = testSession(
       id: 'session_42',
-      sessionType: 'flashcard',
+      sessionType: 'quiz',
       bookIds: ['book_1', 'book_2'],
       wordsStudied: 10,
       wordsCorrect: 8,
@@ -55,8 +55,8 @@ void main() {
     expect(sessions, hasLength(1));
     final row = sessions.first as Map<String, dynamic>;
     expect(row['id'], 'session_42');
-    expect(row['type'], 'flashcard');
-    expect(row['typeLabel'], '速刷学习');
+    expect(row['type'], 'quiz');
+    expect(row['typeLabel'], '选择题');
     expect(row['bookIds'], ['book_1', 'book_2']);
     expect(row['wordsStudied'], 10);
     expect(row['wordsCorrect'], 8);

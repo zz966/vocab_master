@@ -11,9 +11,7 @@ import '../services/study_service.dart';
 import '../services/tts_service.dart';
 import '../utils/study_queue.dart';
 import 'achievements_provider.dart';
-import 'notification_preview_provider.dart';
-import 'recent_achievements_provider.dart';
-import 'book_provider.dart';
+import 'book_provider.dart' show booksProvider, globalOverviewStatsProvider;
 import 'points_provider.dart';
 import 'review_provider.dart' show todayReviewWordsProvider;
 import 'settings_provider.dart';
@@ -64,7 +62,7 @@ final studyQueueOrderProvider = StateProvider<StudyQueueOrder>(
   (ref) => StudyQueueOrder.familiarity,
 );
 
-/// In-session flashcard progress (current index / total).
+/// In-session study progress (current index / total).
 class StudySessionProgress {
   const StudySessionProgress({
     required this.currentIndex,
@@ -139,54 +137,6 @@ final activeStudyQueueProvider = FutureProvider<List<Word>>((ref) async {
 /// Backward-compatible alias for [todayReviewWordsProvider].
 final reviewWordsProvider = todayReviewWordsProvider;
 
-/// Count of words due for review today (uses [selectedBookIdsProvider]).
-final todayReviewCountProvider = FutureProvider<int>((ref) async {
-  final bookIds = ref.watch(selectedBookIdsProvider);
-  final words = await ref.watch(todayReviewWordsProvider(bookIds).future);
-  return words.length;
-});
-
-/// Backward-compatible alias for [todayReviewCountProvider].
-final reviewQueueCountProvider = todayReviewCountProvider;
-
-final wordOfTheDayProvider = FutureProvider<Word?>((ref) async {
-  final bookRepo = ref.watch(bookRepositoryProvider);
-  final wordRepo = ref.watch(wordRepositoryProvider);
-  final books = await bookRepo.getAllBooks();
-  if (books.isEmpty) {
-    return null;
-  }
-  final words = await wordRepo.getWordsForBooks(
-    books.map((book) => book.id).toList(),
-  );
-  if (words.isEmpty) {
-    return null;
-  }
-  final now = DateTime.now();
-  final seed = now.year * 1000 + now.month * 50 + now.day;
-  return words[seed % words.length];
-});
-
-final favoritesCountProvider = FutureProvider<int>((ref) async {
-  final words = await ref.watch(wordRepositoryProvider).getFavoriteWords();
-  return words.length;
-});
-
-final wrongBookCountProvider = FutureProvider<int>((ref) async {
-  final words = await ref.watch(wordRepositoryProvider).getWrongBookWords();
-  return words.length;
-});
-
-final favoritesProvider =
-    FutureProvider.family<List<Word>, List<String>?>((ref, bookIds) async {
-  return ref.watch(wordRepositoryProvider).getFavoriteWords(bookIds: bookIds);
-});
-
-final wrongBookProvider =
-    FutureProvider.family<List<Word>, List<String>?>((ref, bookIds) async {
-  return ref.watch(wordRepositoryProvider).getWrongBookWords(bookIds: bookIds);
-});
-
 /// Active [LearningSession] while [StudySessionPage] is open.
 final currentStudySessionProvider =
     StateProvider<LearningSession?>((ref) => null);
@@ -194,30 +144,22 @@ final currentStudySessionProvider =
 final navigationIndexProvider = StateProvider<int>((ref) => 0);
 
 final studySessionModeProvider = StateProvider<StudyMode>((ref) {
-  return StudyMode.flashcard;
+  return StudyMode.quiz;
 });
 
 void invalidateStudyData(WidgetRef ref) {
   ref.invalidate(booksProvider);
+  ref.invalidate(globalOverviewStatsProvider);
   ref.invalidate(settingsProvider);
   ref.invalidate(todayStudyCountProvider);
   ref.invalidate(dailyQuotaRemainingProvider);
   ref.invalidate(dueWordsCountProvider);
   ref.invalidate(activeStudyQueueProvider);
   ref.invalidate(todayReviewWordsProvider);
-  ref.invalidate(todayReviewCountProvider);
-  ref.invalidate(wrongBookCountProvider);
-  ref.invalidate(favoritesProvider);
-  ref.invalidate(wrongBookProvider);
-  ref.invalidate(favoritesCountProvider);
-  ref.invalidate(wordOfTheDayProvider);
   ref.invalidate(studyWordsProvider);
   ref.invalidate(recentSessionsProvider);
   ref.invalidate(sessionSummaryProvider);
-  ref.invalidate(todayStudyStatsProvider);
   ref.invalidate(achievementsProvider);
-  ref.invalidate(recentAchievementsProvider);
-  ref.invalidate(notificationPreviewProvider);
   ref.invalidate(pointsHistoryProvider);
   ref.invalidate(allPointsHistoryProvider);
 }

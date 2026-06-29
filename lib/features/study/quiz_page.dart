@@ -7,6 +7,7 @@ import '../../models/learning_session.dart';
 import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/study_provider.dart';
+import '../../utils/auto_read.dart';
 import '../../utils/quiz_generator.dart';
 import '../../utils/study_quality.dart';
 
@@ -51,6 +52,11 @@ class _QuizPageState extends ConsumerState<QuizPage> {
     _quizWords = List<Word>.from(widget.words)..shuffle(_shuffleRandom);
     _currentIndex = 0;
     _currentOptions = _buildOptionsForCurrentWord();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _autoSpeakCurrent());
+  }
+
+  Future<void> _autoSpeakCurrent() async {
+    await autoSpeakWordIfEnabled(ref, _currentWord);
   }
 
   Word get _currentWord => _quizWords[_currentIndex];
@@ -127,6 +133,8 @@ class _QuizPageState extends ConsumerState<QuizPage> {
       return;
     }
 
+    await ref.read(ttsServiceProvider).stop();
+
     setState(() {
       _currentIndex += 1;
       _selected = null;
@@ -134,6 +142,7 @@ class _QuizPageState extends ConsumerState<QuizPage> {
       _isSubmitting = false;
       _currentOptions = _buildOptionsForCurrentWord();
     });
+    await _autoSpeakCurrent();
   }
 
   @override

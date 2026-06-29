@@ -28,7 +28,7 @@ class UserSettings {
   @HiveField(7, defaultValue: true)
   bool quizPickEnglish;
 
-  @HiveField(8, defaultValue: 'flashcard')
+  @HiveField(8, defaultValue: 'quiz')
   String defaultStudyMode;
 
   @HiveField(9, defaultValue: 0.45)
@@ -85,7 +85,7 @@ class UserSettings {
     this.autoReadEnabled = true,
     this.allowExtraStudy = false,
     this.quizPickEnglish = true,
-    this.defaultStudyMode = 'flashcard',
+    this.defaultStudyMode = 'quiz',
     this.speechRate = 0.45,
     this.ttsAccent = 'en-US',
     this.reminderTime,

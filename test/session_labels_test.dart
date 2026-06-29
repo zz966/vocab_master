@@ -3,7 +3,8 @@ import 'package:vocab_master/core/session_labels.dart';
 
 void main() {
   test('session type labels are human readable', () {
-    expect(sessionTypeLabel('flashcard'), '速刷学习');
+    expect(sessionTypeLabel('flashcard'), '选择题');
+    expect(sessionTypeLabel('quiz'), '选择题');
     expect(sessionTypeLabel('complete'), 'complete');
     expect(sessionTypeLabel('review_complete'), 'review_complete');
     expect(sessionTypeLabel('review_quiz'), '复习 · 选择题');

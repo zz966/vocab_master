@@ -7,6 +7,7 @@ import '../../models/learning_session.dart';
 import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/study_provider.dart';
+import '../../utils/auto_read.dart';
 import '../../utils/quiz_generator.dart';
 import '../../utils/study_quality.dart';
 
@@ -74,7 +75,7 @@ class _ListeningPageState extends ConsumerState<ListeningPage> {
   }
 
   Future<void> _speakCurrent() async {
-    await ref.read(ttsServiceProvider).speak(_currentWord.english);
+    await autoSpeakWordIfEnabled(ref, _currentWord, force: true);
   }
 
   Future<void> _selectOption(String option) async {

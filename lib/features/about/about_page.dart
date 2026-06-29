@@ -29,15 +29,16 @@ class AboutPage extends StatelessWidget {
           ),
           const SizedBox(height: 32),
           Text(
-            '一款基于 SM-2 间隔重复算法的英语词汇学习应用，'
-            '支持速刷、选择题、拼写和听音选义等多种学习模式。',
+            '一款本地化的英语词汇学习应用，'
+            '支持选择题、拼写和听音选义等学习模式，'
+            '并提供关卡挑战、每日签到与积分体系。',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const SizedBox(height: 24),
-          const _FeatureRow(icon: Icons.psychology, text: 'SM-2 科学复习调度'),
-          const _FeatureRow(icon: Icons.hearing, text: 'TTS 朗读与听音练习'),
-          const _FeatureRow(icon: Icons.bar_chart, text: '学习统计与记录追踪'),
-          const _FeatureRow(icon: Icons.upload_file, text: '单词书导入导出'),
+          const _FeatureRow(icon: Icons.quiz_outlined, text: '选择题 / 拼写 / 听音练习'),
+          const _FeatureRow(icon: Icons.hearing, text: 'TTS 朗读'),
+          const _FeatureRow(icon: Icons.emoji_events, text: '关卡挑战与成就'),
+          const _FeatureRow(icon: Icons.stars_rounded, text: '每日签到与积分'),
         ],
       ),
     );

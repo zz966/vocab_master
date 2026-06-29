@@ -21,7 +21,7 @@ void main() {
     test('groups sessions under same date label', () {
       final day = DateTime(2026, 6, 16, 10);
       final sessions = [
-        testSession(sessionType: 'flashcard', startedAt: day),
+        testSession(sessionType: 'quiz', startedAt: day),
         testSession(
           id: 'session_2',
           sessionType: 'quiz',

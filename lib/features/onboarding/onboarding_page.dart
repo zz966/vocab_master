@@ -20,18 +20,18 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
   static const _pages = [
     _OnboardStep(
       icon: Icons.school,
-      title: '科学记忆',
-      description: '基于 SM-2 间隔重复算法，在最佳时间点提醒你复习。',
+      title: '关卡学习',
+      description: '按单词书关卡推进，选择题、拼写、听音多种方式巩固记忆。',
     ),
     _OnboardStep(
-      icon: Icons.style,
-      title: '多种学习模式',
-      description: '速刷、选择题、拼写、听音选义，满足不同场景需求。',
+      icon: Icons.stars_rounded,
+      title: '签到积分',
+      description: '每日签到领取积分，连续签到天数会累计。',
     ),
     _OnboardStep(
       icon: Icons.track_changes,
       title: '追踪进度',
-      description: '每日目标、学习曲线、错题本与收藏夹，进步一目了然。',
+      description: '学习记录、掌握率与整体统计，进步一目了然。',
     ),
   ];
 

@@ -4,7 +4,7 @@ import 'package:vocab_master/utils/word_progress.dart';
 import 'helpers/model_fixtures.dart';
 
 void main() {
-  test('resetWordLearningState clears SM-2 fields', () {
+  test('resetWordLearningState clears learning progress fields', () {
     final word = testWord(
       familiarity: 4,
       reviewCount: 3,

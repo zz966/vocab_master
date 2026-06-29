@@ -8,7 +8,7 @@ void main() {
   test('formatSessionShareText summarizes session stats', () {
     final session = testSession(
       id: 'session_7',
-      sessionType: 'flashcard',
+      sessionType: 'quiz',
       wordsStudied: 12,
       wordsCorrect: 9,
       startedAt: DateTime(2026, 6, 16, 9, 30),
@@ -17,7 +17,7 @@ void main() {
 
     final text = formatSessionShareText(session: session);
 
-    expect(text, contains('速刷学习'));
+    expect(text, contains('选择题'));
     expect(text, contains('2026-06-16 09:30'));
     expect(text, contains('12 词'));
     expect(text, contains('75%'));
