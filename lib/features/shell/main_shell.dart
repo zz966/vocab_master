@@ -5,7 +5,7 @@ import '../../providers/study_provider.dart';
 import '../books/books_page.dart';
 import '../home/home_page.dart';
 import '../stats/me_page.dart';
-import '../study/study_page.dart';
+import '../search/word_lookup_page.dart';
 
 class MainShell extends ConsumerWidget {
   const MainShell({super.key});
@@ -20,7 +20,7 @@ class MainShell extends ConsumerWidget {
         children: const [
           HomePage(),
           BooksPage(),
-          StudyPage(),
+          WordLookupPage(),
           MePage(),
         ],
       ),
@@ -41,9 +41,9 @@ class MainShell extends ConsumerWidget {
             label: '单词书',
           ),
           NavigationDestination(
-            icon: Icon(Icons.school_outlined),
-            selectedIcon: Icon(Icons.school),
-            label: '单词训练',
+            icon: Icon(Icons.search_outlined),
+            selectedIcon: Icon(Icons.search),
+            label: '查单词',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),

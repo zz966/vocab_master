@@ -15,8 +15,21 @@ class NotificationService {
 
   bool _initialized = false;
 
+  bool get _isSupported {
+    if (kIsWeb) {
+      return false;
+    }
+    return defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS;
+  }
+
   Future<void> init() async {
-    if (_initialized || kIsWeb) {
+    if (_initialized) {
+      return;
+    }
+    _initialized = true;
+
+    if (!_isSupported) {
       return;
     }
 
@@ -32,14 +45,13 @@ class NotificationService {
     );
 
     await _plugin.initialize(settings);
-    _initialized = true;
   }
 
   Future<void> requestPermissionIfNeeded() async {
     if (!_initialized) {
       await init();
     }
-    if (kIsWeb) {
+    if (!_isSupported) {
       return;
     }
 
@@ -58,6 +70,9 @@ class NotificationService {
   }) async {
     if (!_initialized) {
       await init();
+    }
+    if (!_isSupported) {
+      return;
     }
 
     if (!settings.reminderEnabled) {
@@ -112,6 +127,9 @@ class NotificationService {
   }) async {
     if (!_initialized) {
       await init();
+    }
+    if (!_isSupported) {
+      return;
     }
 
     if (!settings.reminderEnabled || !settings.weeklyReportEnabled) {

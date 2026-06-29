@@ -22,13 +22,28 @@ import 'widgets/async_value_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await _bootstrapApp();
+  runApp(const ProviderScope(child: VocabMasterApp()));
+}
+
+Future<void> _bootstrapApp() async {
+  try {
+    await _initializeServices();
+  } on Object catch (error, stackTrace) {
+    debugPrint('应用初始化失败，正在重置本地数据后重试: $error');
+    debugPrint('$stackTrace');
+    await HiveService.resetAllBoxes();
+    await _initializeServices();
+  }
+}
+
+Future<void> _initializeServices() async {
   await HiveService.init();
   await HiveService.importInitialBooks();
   await HiveService.seedDefaultSettingsIfNeeded();
   await SessionRepository().cleanupStaleSessions();
   await TtsService.instance.init();
   await NotificationService.instance.init();
-  runApp(const ProviderScope(child: VocabMasterApp()));
 }
 
 class VocabMasterApp extends ConsumerStatefulWidget {
@@ -56,25 +71,30 @@ class _VocabMasterAppState extends ConsumerState<VocabMasterApp> {
         });
       }
       Future.microtask(() async {
-        await TtsService.instance.setSpeechRate(settings.speechRate);
-        await TtsService.instance.setAccent(settings.ttsAccent);
-        await NotificationService.instance.requestPermissionIfNeeded();
-        final body = await buildDailyReminderMessage(
-          settingsRepository: ref.read(settingsRepositoryProvider),
-          wordRepository: ref.read(wordRepositoryProvider),
-          bookRepository: ref.read(bookRepositoryProvider),
-          statsRepository: ref.read(statsRepositoryProvider),
-        );
-        await NotificationService.instance.syncReminder(settings, body: body);
-        final weeklyBody = await buildWeeklyReportMessage(
-          settingsRepository: ref.read(settingsRepositoryProvider),
-          statsRepository: ref.read(statsRepositoryProvider),
-          bookRepository: ref.read(bookRepositoryProvider),
-        );
-        await NotificationService.instance.syncWeeklyReport(
-          settings,
-          body: weeklyBody,
-        );
+        try {
+          await TtsService.instance.setSpeechRate(settings.speechRate);
+          await TtsService.instance.setAccent(settings.ttsAccent);
+          await NotificationService.instance.requestPermissionIfNeeded();
+          final body = await buildDailyReminderMessage(
+            settingsRepository: ref.read(settingsRepositoryProvider),
+            wordRepository: ref.read(wordRepositoryProvider),
+            bookRepository: ref.read(bookRepositoryProvider),
+            statsRepository: ref.read(statsRepositoryProvider),
+          );
+          await NotificationService.instance.syncReminder(settings, body: body);
+          final weeklyBody = await buildWeeklyReportMessage(
+            settingsRepository: ref.read(settingsRepositoryProvider),
+            statsRepository: ref.read(statsRepositoryProvider),
+            bookRepository: ref.read(bookRepositoryProvider),
+          );
+          await NotificationService.instance.syncWeeklyReport(
+            settings,
+            body: weeklyBody,
+          );
+        } on Object catch (error, stackTrace) {
+          debugPrint('后台提醒同步失败: $error');
+          debugPrint('$stackTrace');
+        }
       });
     }
 

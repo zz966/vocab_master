@@ -1,9 +1,9 @@
 const bookCategoryLabels = <String, String>{
-  'basic': '高考',
-  'cet4': 'CET4',
-  'cet6': 'CET6',
+  'basic': '基础',
+  'cet4': '四级',
+  'cet6': '六级',
   'ielts': '雅思',
-  'toefl': '考研',
+  'toefl': '托福',
   'custom': '自定义',
   'test': '测试',
 };

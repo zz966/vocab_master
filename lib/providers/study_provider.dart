@@ -14,6 +14,7 @@ import 'achievements_provider.dart';
 import 'notification_preview_provider.dart';
 import 'recent_achievements_provider.dart';
 import 'book_provider.dart';
+import 'points_provider.dart';
 import 'review_provider.dart' show todayReviewWordsProvider;
 import 'settings_provider.dart';
 import 'stats_provider.dart';
@@ -217,4 +218,6 @@ void invalidateStudyData(WidgetRef ref) {
   ref.invalidate(achievementsProvider);
   ref.invalidate(recentAchievementsProvider);
   ref.invalidate(notificationPreviewProvider);
+  ref.invalidate(pointsHistoryProvider);
+  ref.invalidate(allPointsHistoryProvider);
 }

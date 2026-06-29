@@ -7,7 +7,7 @@ import '../features/books/level_selection_page.dart';
 import '../features/home/home_page.dart';
 import '../features/shell/main_shell.dart';
 import '../features/stats/me_page.dart';
-import '../features/study/study_page.dart';
+import '../features/search/word_lookup_page.dart';
 import '../features/study/study_session_page.dart';
 import '../core/study_mode.dart';
 
@@ -45,7 +45,7 @@ class AppRouter {
           builder: (_) => const BooksPage(),
         ),
       AppRoutes.study => MaterialPageRoute<void>(
-          builder: (_) => const StudyPage(),
+          builder: (_) => const WordLookupPage(),
         ),
       AppRoutes.me => MaterialPageRoute<void>(
           builder: (_) => const MePage(),

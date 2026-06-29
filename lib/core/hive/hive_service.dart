@@ -8,6 +8,7 @@ import '../../data/built_in_books.dart';
 import '../../models/book_model.dart';
 import '../../models/learning_session.dart';
 import '../../models/level_challenge_progress.dart';
+import '../../models/point_transaction.dart';
 import '../../models/review_record.dart';
 import '../../models/user_settings.dart';
 import '../../utils/kylebing_vocab_codec.dart';
@@ -22,8 +23,18 @@ class HiveService {
   static const sessionsBoxName = 'sessions';
   static const reviewRecordsBoxName = 'review_records';
   static const levelChallengesBoxName = 'level_challenges';
+  static const pointTransactionsBoxName = 'point_transactions';
 
   static bool _initialized = false;
+
+  static const _allBoxNames = [
+    booksBoxName,
+    settingsBoxName,
+    sessionsBoxName,
+    reviewRecordsBoxName,
+    levelChallengesBoxName,
+    pointTransactionsBoxName,
+  ];
 
   static Future<void> init() async {
     if (_initialized) {
@@ -31,30 +42,51 @@ class HiveService {
     }
 
     await Hive.initFlutter();
-
     _registerAdapters();
 
-    try {
-      await Hive.openBox<Book>(booksBoxName);
-      await Hive.openBox<UserSettings>(settingsBoxName);
-      await Hive.openBox<LearningSession>(sessionsBoxName);
-      await Hive.openBox<ReviewRecord>(reviewRecordsBoxName);
-      await Hive.openBox<LevelChallengeProgress>(levelChallengesBoxName);
-    } on HiveError catch (error) {
-      debugPrint('Hive 数据兼容失败，正在重置本地缓存: $error');
-      await Hive.deleteBoxFromDisk(booksBoxName);
-      await Hive.deleteBoxFromDisk(settingsBoxName);
-      await Hive.deleteBoxFromDisk(sessionsBoxName);
-      await Hive.deleteBoxFromDisk(reviewRecordsBoxName);
-      await Hive.deleteBoxFromDisk(levelChallengesBoxName);
-      await Hive.openBox<Book>(booksBoxName);
-      await Hive.openBox<UserSettings>(settingsBoxName);
-      await Hive.openBox<LearningSession>(sessionsBoxName);
-      await Hive.openBox<ReviewRecord>(reviewRecordsBoxName);
-      await Hive.openBox<LevelChallengeProgress>(levelChallengesBoxName);
-    }
+    await _openBoxOrReset<Book>(booksBoxName);
+    await _openBoxOrReset<UserSettings>(settingsBoxName);
+    await _openBoxOrReset<LearningSession>(sessionsBoxName);
+    await _openBoxOrReset<ReviewRecord>(reviewRecordsBoxName);
+    await _openBoxOrReset<LevelChallengeProgress>(levelChallengesBoxName);
+    await _openBoxOrReset<PointTransaction>(pointTransactionsBoxName);
 
     _initialized = true;
+  }
+
+  static Future<void> resetAllBoxes() async {
+    for (final name in _allBoxNames) {
+      await _closeBoxIfOpen(name);
+      try {
+        await Hive.deleteBoxFromDisk(name);
+      } on Object catch (error) {
+        debugPrint('删除 Hive box "$name" 失败: $error');
+      }
+    }
+    _initialized = false;
+  }
+
+  static Future<void> _openBoxOrReset<T>(String name) async {
+    try {
+      await _closeBoxIfOpen(name);
+      await Hive.openBox<T>(name);
+    } on Object catch (error, stackTrace) {
+      debugPrint('Hive box "$name" 打开失败，正在重置: $error');
+      debugPrint('$stackTrace');
+      await _closeBoxIfOpen(name);
+      try {
+        await Hive.deleteBoxFromDisk(name);
+      } on Object catch (deleteError) {
+        debugPrint('删除 Hive box "$name" 失败: $deleteError');
+      }
+      await Hive.openBox<T>(name);
+    }
+  }
+
+  static Future<void> _closeBoxIfOpen(String name) async {
+    if (Hive.isBoxOpen(name)) {
+      await Hive.box(name).close();
+    }
   }
 
   static void _registerAdapters() {
@@ -74,7 +106,8 @@ class HiveService {
       ..registerAdapter(UserSettingsAdapter())
       ..registerAdapter(LearningSessionAdapter())
       ..registerAdapter(ReviewRecordAdapter())
-      ..registerAdapter(LevelChallengeProgressAdapter());
+      ..registerAdapter(LevelChallengeProgressAdapter())
+      ..registerAdapter(PointTransactionAdapter());
   }
 
   static Box<Book> get _books => Hive.box<Book>(booksBoxName);
@@ -89,6 +122,9 @@ class HiveService {
 
   static Box<LevelChallengeProgress> get _levelChallenges =>
       Hive.box<LevelChallengeProgress>(levelChallengesBoxName);
+
+  static Box<PointTransaction> get _pointTransactions =>
+      Hive.box<PointTransaction>(pointTransactionsBoxName);
 
   static Future<void> importInitialBooks() async {
     if (_books.isEmpty) {
@@ -333,6 +369,14 @@ class HiveService {
 
   static String nextId(String prefix) =>
       '${prefix}_${DateTime.now().microsecondsSinceEpoch}';
+
+  static Future<void> savePointTransaction(PointTransaction transaction) async {
+    await _pointTransactions.put(transaction.id, transaction);
+  }
+
+  static List<PointTransaction> getPointTransactions() {
+    return _pointTransactions.values.toList();
+  }
 
   static Future<void> close() async {
     await Hive.close();

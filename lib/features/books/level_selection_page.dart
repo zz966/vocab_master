@@ -190,9 +190,9 @@ class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage>
             label: '单词书',
           ),
           NavigationDestination(
-            icon: Icon(Icons.school_outlined),
-            selectedIcon: Icon(Icons.school),
-            label: '单词训练',
+            icon: Icon(Icons.search_outlined),
+            selectedIcon: Icon(Icons.search),
+            label: '查单词',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
