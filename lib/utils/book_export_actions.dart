@@ -10,7 +10,7 @@ import 'export_file.dart';
 Future<void> exportBookAsJson(
   BuildContext context,
   WidgetRef ref, {
-  required int bookId,
+  required String bookId,
   required String title,
   bool shareAfter = false,
 }) async {

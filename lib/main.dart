@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'core/hive/hive_service.dart';
 import 'core/router.dart';
 import 'core/theme.dart';
 import 'models/user_settings.dart';
-import 'database/isar_service.dart';
 import 'features/onboarding/onboarding_page.dart';
 import 'features/shell/main_shell.dart';
 import 'providers/settings_provider.dart';
@@ -22,10 +22,10 @@ import 'widgets/async_value_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await IsarService.init();
-  await BookRepository(IsarService.instance).seedBuiltInBooks();
-  await IsarService.seedDefaultSettingsIfNeeded();
-  await SessionRepository(IsarService.instance).cleanupStaleSessions();
+  await HiveService.init();
+  await HiveService.importInitialBooks();
+  await HiveService.seedDefaultSettingsIfNeeded();
+  await SessionRepository().cleanupStaleSessions();
   await TtsService.instance.init();
   await NotificationService.instance.init();
   runApp(const ProviderScope(child: VocabMasterApp()));

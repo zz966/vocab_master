@@ -12,7 +12,7 @@ import 'widgets/batch_import_dialog.dart';
 class ManageWordsPage extends ConsumerStatefulWidget {
   const ManageWordsPage({super.key, required this.bookId});
 
-  final int bookId;
+  final String bookId;
 
   @override
   ConsumerState<ManageWordsPage> createState() => _ManageWordsPageState();

@@ -1,0 +1,1506 @@
+{
+  "adrift": {
+    "synonyms": [
+      "aimless",
+      "drifting",
+      "afloat",
+      "rudderless"
+    ],
+    "collocations": [
+      {
+        "phrase": "set adrift",
+        "translation": "使漂流；使茫然无措"
+      },
+      {
+        "phrase": "cast adrift",
+        "translation": "使漂泊无依"
+      },
+      {
+        "phrase": "cut adrift",
+        "translation": "使孤立无援"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "漫无目的地；漂浮着"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "floating without steering or mooring; lacking purpose or direction"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "a-（处于…状态）+ drift（漂流），字面即「在漂流中」。",
+      "mnemonic": "联想：adrift 像「a drift（一次漂流）」，船无人掌舵四处漂。",
+      "association": "联想：adrift → 漫无目的地漂浮"
+    },
+    "root": "drift"
+  },
+  "aftermath": {
+    "synonyms": [
+      "consequence",
+      "repercussion",
+      "fallout",
+      "wake"
+    ],
+    "collocations": [
+      {
+        "phrase": "in the aftermath of",
+        "translation": "在…之后；余波中"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "后果；余波"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "the consequences or results of a significant unpleasant event"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "after（之后）+ math（古义为收割），原指「收割之后长出的第二茬草」，引申为事件后的遗留影响。",
+      "mnemonic": "拆分：after + math，事件「之后」才算清「账目」——即后果。",
+      "association": "联想：aftermath → 灾难过后的余波"
+    },
+    "root": "after"
+  },
+  "afterworld": {
+    "synonyms": [
+      "afterlife",
+      "hereafter",
+      "netherworld"
+    ],
+    "collocations": [],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "阴间；来世"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a world or existence believed to come after death"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "after（之后）+ world（世界），死后所去的世界。",
+      "mnemonic": "联想：afterworld = after + world，人死后去的「另一个世界」。",
+      "association": "联想：afterworld → 阴间、来世"
+    },
+    "root": "after"
+  },
+  "ample": {
+    "synonyms": [
+      "plentiful",
+      "abundant",
+      "sufficient",
+      "generous"
+    ],
+    "collocations": [
+      {
+        "phrase": "ample evidence",
+        "translation": "充分证据"
+      },
+      {
+        "phrase": "ample time",
+        "translation": "充足的时间"
+      },
+      {
+        "phrase": "ample space",
+        "translation": "充足的空间"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "足够的；丰富的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "more than enough; plentiful in size, amount, or scope"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自拉丁语 amplus（大的、宽敞的），与 amplify（放大）同源。",
+      "mnemonic": "谐音：ample 像「俺够」，资源「俺够」用——充足。",
+      "association": "联想：ample → 充足丰富"
+    },
+    "root": "ampl"
+  },
+  "ascertain": {
+    "synonyms": [
+      "determine",
+      "establish",
+      "verify",
+      "find out"
+    ],
+    "collocations": [
+      {
+        "phrase": "ascertain the truth",
+        "translation": "查明真相"
+      },
+      {
+        "phrase": "ascertain whether",
+        "translation": "确定是否"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "确定；查明"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to find out or learn with certainty through investigation or effort"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "as-（加强）+ certain（确定的），即「使变得确定」。",
+      "mnemonic": "联想：ascertain 内含 certain（确定），加强后就是「查明确定」。",
+      "association": "联想：ascertain → 查明真相"
+    },
+    "root": "cert"
+  },
+  "assure": {
+    "synonyms": [
+      "guarantee",
+      "reassure",
+      "promise",
+      "convince"
+    ],
+    "collocations": [
+      {
+        "phrase": "assure oneself",
+        "translation": "弄清楚，查明"
+      },
+      {
+        "phrase": "assure of",
+        "translation": "vt. 向...保证）；查明（使相信"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "向…保证；使…确信"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to tell someone confidently that something is true, or to make a situation certain"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "as-（加强）+ sure（确信），即「使确信」。",
+      "mnemonic": "联想：assure 就是 a + sure，「给你一个 sure」——保证。",
+      "association": "联想：assure → 向人保证"
+    },
+    "root": "sur"
+  },
+  "attain": {
+    "synonyms": [
+      "achieve",
+      "reach",
+      "accomplish",
+      "gain"
+    ],
+    "collocations": [
+      {
+        "phrase": "attain a goal",
+        "translation": "实现目标"
+      },
+      {
+        "phrase": "attain success",
+        "translation": "获得成功"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "获得；达到"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to succeed in achieving or reaching something, especially after effort"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "at-（向）+ tain（持有，来自拉丁语 tenere），即「握在手中」→ 获得。",
+      "mnemonic": "联想：attain 像 at + gain，「到达并得到」。",
+      "association": "联想：attain → 努力获得"
+    },
+    "root": "tain"
+  },
+  "autopsy": {
+    "synonyms": [
+      "postmortem",
+      "necropsy",
+      "dissection"
+    ],
+    "collocations": [
+      {
+        "phrase": "perform an autopsy",
+        "translation": "进行尸检"
+      },
+      {
+        "phrase": "autopsy report",
+        "translation": "尸检报告"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "尸体剖检；验尸"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "an examination of a dead body to determine the cause of death or the nature of disease"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "auto-（自己）+ -opsy（看，来自希腊语），字面「亲自查看」→ 验尸。",
+      "mnemonic": "拆分：auto（自动/自己）+ opsy（观察），亲自查看遗体。",
+      "association": "联想：autopsy → 验尸检查"
+    },
+    "root": "opsy"
+  },
+  "Bible": {
+    "synonyms": [
+      "scripture",
+      "holy book",
+      "Good Book"
+    ],
+    "collocations": [
+      {
+        "phrase": "holy bible",
+        "translation": "n. 圣经"
+      },
+      {
+        "phrase": "bible society",
+        "translation": "圣经公会"
+      },
+      {
+        "phrase": "family bible",
+        "translation": "家庭圣经；家庭用大型圣经"
+      },
+      {
+        "phrase": "bible school",
+        "translation": "圣经学校"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "圣经"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "the sacred scriptures of Christianity, consisting of the Old and New Testaments"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自希腊语 biblos（书），biblia 意为「书卷」。",
+      "mnemonic": "联想：Bible 首字母大写，专指基督教《圣经》。",
+      "association": "联想：Bible → 基督教经典"
+    },
+    "root": "bibl"
+  },
+  "charitable": {
+    "synonyms": [
+      "benevolent",
+      "philanthropic",
+      "generous",
+      "kind"
+    ],
+    "collocations": [
+      {
+        "phrase": "charitable foundation",
+        "translation": "慈善基金，慈善机构"
+      },
+      {
+        "phrase": "charitable donation",
+        "translation": "慈善捐款"
+      },
+      {
+        "phrase": "charitable organization",
+        "translation": "慈善组织"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "仁慈的；慈善的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "relating to the giving of help or money to those in need; kindly and forgiving"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "charity（慈善）+ -able（形容词后缀），表示「具有慈善性质的」。",
+      "mnemonic": "联想：charitable 来自 charity，充满善意的。",
+      "association": "联想：charitable → 慈善仁慈"
+    },
+    "root": "char"
+  },
+  "combination": {
+    "synonyms": [
+      "blend",
+      "mixture",
+      "union",
+      "fusion"
+    ],
+    "collocations": [
+      {
+        "phrase": "combination of",
+        "translation": "…的组合"
+      },
+      {
+        "phrase": "in combination",
+        "translation": "结合"
+      },
+      {
+        "phrase": "combination with",
+        "translation": "与…结合"
+      },
+      {
+        "phrase": "in combination with",
+        "translation": "与…结合，与…联合"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "结合体；混合物；组合"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a joining or merging of different things or parts into one"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "combine（结合）+ -ation（名词后缀），表示结合的结果或方式。",
+      "mnemonic": "联想：combination = combine + nation，多者「结合成一体」。",
+      "association": "联想：combination → 组合混合"
+    },
+    "root": "bin"
+  },
+  "concept": {
+    "synonyms": [
+      "idea",
+      "notion",
+      "conception",
+      "thought"
+    ],
+    "collocations": [
+      {
+        "phrase": "new concept",
+        "translation": "新概念"
+      },
+      {
+        "phrase": "basic concept",
+        "translation": "基本概念；本义"
+      },
+      {
+        "phrase": "design concept",
+        "translation": "设计理念；设计构思；设计原理"
+      },
+      {
+        "phrase": "concept design",
+        "translation": "概念设计"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "观念；概念；想法"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "an abstract idea or general notion formed in the mind"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（共同）+ cept（抓，来自 capere），把要点「一起抓住」→ 概念。",
+      "mnemonic": "联想：concept 与 conceive（构想）同源，都是「抓住想法」。",
+      "association": "联想：concept → 抽象概念"
+    },
+    "root": "cept"
+  },
+  "congress": {
+    "synonyms": [
+      "parliament",
+      "assembly",
+      "conference",
+      "legislature"
+    ],
+    "collocations": [
+      {
+        "phrase": "national people's congress",
+        "translation": "全国人民代表大会"
+      },
+      {
+        "phrase": "library of congress",
+        "translation": "n. 美国国会图书馆"
+      },
+      {
+        "phrase": "congress party",
+        "translation": "国大党"
+      },
+      {
+        "phrase": "african national congress",
+        "translation": "非洲国民大会"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "国会；代表大会"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a formal meeting or series of meetings; the national legislative body of the United States"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（共同）+ gress（走），众人「走到一起」开会。",
+      "mnemonic": "联想：congress 与 progress（前进）同根 gress，代表「走到一起来商议」。",
+      "association": "联想：congress → 国会大会"
+    },
+    "root": "gress"
+  },
+  "consequence": {
+    "synonyms": [
+      "result",
+      "outcome",
+      "effect",
+      "repercussion"
+    ],
+    "collocations": [
+      {
+        "phrase": "as a consequence",
+        "translation": "因此，结果"
+      },
+      {
+        "phrase": "in consequence",
+        "translation": "因此；结果"
+      },
+      {
+        "phrase": "as a consequence of",
+        "translation": "因此；由于…的结果"
+      },
+      {
+        "phrase": "in consequence of",
+        "translation": "由于…的缘故"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "结果；后果"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a result or effect of an action or condition, often one that is unwelcome"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（共同）+ sequ（跟随）+ -ence，事件「随后而来」的东西。",
+      "mnemonic": "联想：consequence 内含 sequence（顺序），按顺序跟在后面的就是后果。",
+      "association": "联想：consequence → 行动后果"
+    },
+    "root": "sequ"
+  },
+  "contagious": {
+    "synonyms": [
+      "infectious",
+      "communicable",
+      "catching",
+      "transmissible"
+    ],
+    "collocations": [
+      {
+        "phrase": "contagious disease",
+        "translation": "接触传染病"
+      },
+      {
+        "phrase": "highly contagious",
+        "translation": "传染性极强"
+      },
+      {
+        "phrase": "contagious laughter",
+        "translation": "有感染力的笑声"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "传染性的；有感染力的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "able to spread from one person or organism to another by direct or indirect contact"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（共同）+ tag（接触）+ -ious，「彼此接触」而传播。",
+      "mnemonic": "联想：contagious 核心是 contact（接触），接触即传染。",
+      "association": "联想：contagious → 接触传染"
+    },
+    "root": "tag"
+  },
+  "contemporary": {
+    "synonyms": [
+      "modern",
+      "current",
+      "present-day",
+      "coeval"
+    ],
+    "collocations": [
+      {
+        "phrase": "contemporary art",
+        "translation": "当代艺术"
+      },
+      {
+        "phrase": "contemporary literature",
+        "translation": "n. 现代文学"
+      },
+      {
+        "phrase": "the contemporary era",
+        "translation": "当代"
+      },
+      {
+        "phrase": "contemporary western philosophy",
+        "translation": "当代西方哲学"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "当代的；同时代的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "belonging to or occurring in the present time; living or existing at the same time"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（共同）+ tempor（时间）+ -ary，「处于同一时间」的。",
+      "mnemonic": "联想：contemporary 内含 temporal（时间的），共处于同一时代。",
+      "association": "联想：contemporary → 当代同时代"
+    },
+    "root": "tempor"
+  },
+  "contempt": {
+    "synonyms": [
+      "scorn",
+      "disdain",
+      "derision",
+      "disrespect"
+    ],
+    "collocations": [
+      {
+        "phrase": "contempt of court",
+        "translation": "蔑视法庭；对法院的藐视罪"
+      },
+      {
+        "phrase": "in contempt of",
+        "translation": "不顾；不把…放在眼里；藐视"
+      },
+      {
+        "phrase": "beneath contempt",
+        "translation": "卑鄙到极点的"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "轻视；蔑视"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "the feeling that someone or something is worthless or deserving scorn"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "con-（加强）+ tempt（轻视），来自拉丁语 contemnere。",
+      "mnemonic": "联想：contempt 语气比 contemptuous 更直接，就是「看不起」。",
+      "association": "联想：contempt → 蔑视轻视"
+    },
+    "root": "tempt"
+  },
+  "crave": {
+    "synonyms": [
+      "desire",
+      "long for",
+      "yearn",
+      "hunger"
+    ],
+    "collocations": [
+      {
+        "phrase": "crave for",
+        "translation": "渴望"
+      },
+      {
+        "phrase": "crave attention",
+        "translation": "渴望关注"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "渴望；热望"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to feel a powerful desire for something"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自古英语 crafian（要求、恳求），后引申为强烈渴望。",
+      "mnemonic": "联想：crave 发音类似「渴瑞夫」，渴极了就「渴望」水喝。",
+      "association": "联想：crave → 强烈渴望"
+    },
+    "root": ""
+  },
+  "deprive": {
+    "synonyms": [
+      "strip",
+      "dispossess",
+      "deny",
+      "rob"
+    ],
+    "collocations": [
+      {
+        "phrase": "deprive of",
+        "translation": "vt. 剥夺；失去"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "剥夺；使丧失"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to take something important or necessary away from someone"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "de-（离开）+ prive（私人的），使不再拥有私有的东西→ 剥夺。",
+      "mnemonic": "联想：deprive = de + private，拿走原本属于你的东西。",
+      "association": "联想：deprive → 剥夺权利"
+    },
+    "root": "priv"
+  },
+  "detect": {
+    "synonyms": [
+      "discover",
+      "notice",
+      "identify",
+      "spot"
+    ],
+    "collocations": [
+      {
+        "phrase": "detect a problem",
+        "translation": "发现问题"
+      },
+      {
+        "phrase": "early detect",
+        "translation": "早期发现"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "察觉；侦查；检测"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to discover or notice the presence of something that is hidden, difficult to see, or not obvious"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "de-（去掉遮盖）+ tect（覆盖），揭开覆盖物→ 发现。",
+      "mnemonic": "联想：detect 与 protect（保护/覆盖）相对，去掉遮盖就能「察觉」。",
+      "association": "联想：detect → 察觉发现"
+    },
+    "root": "tect"
+  },
+  "deter": {
+    "synonyms": [
+      "discourage",
+      "prevent",
+      "dissuade",
+      "inhibit"
+    ],
+    "collocations": [
+      {
+        "phrase": "deter from",
+        "translation": "阻止；威慑不做某事"
+      },
+      {
+        "phrase": "deter crime",
+        "translation": "震慑犯罪"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "阻止；制止；威慑"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to discourage someone from doing something by making them doubt or fear the consequences"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "de-（离开）+ ter（害怕），使人「因害怕而退缩」。",
+      "mnemonic": "联想：deter 让人 deter（吓退），不敢行动。",
+      "association": "联想：deter → 威慑阻止"
+    },
+    "root": "ter"
+  },
+  "disgrace": {
+    "synonyms": [
+      "shame",
+      "dishonor",
+      "humiliation",
+      "ignominy"
+    ],
+    "collocations": [
+      {
+        "phrase": "in disgrace",
+        "translation": "很不讨人喜欢"
+      },
+      {
+        "phrase": "bring disgrace on",
+        "translation": "给…带来耻辱"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n./v.",
+        "meaning": "耻辱；使丢脸"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "loss of reputation or respect as the result of a dishonorable act"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "dis-（否定）+ grace（优雅、荣誉），失去体面→ 耻辱。",
+      "mnemonic": "联想：disgrace 是 grace（荣耀）的反面。",
+      "association": "联想：disgrace → 耻辱丢脸"
+    },
+    "root": "grace"
+  },
+  "dispel": {
+    "synonyms": [
+      "dissipate",
+      "banish",
+      "eliminate",
+      "clear"
+    ],
+    "collocations": [
+      {
+        "phrase": "dispel doubts",
+        "translation": "消除疑虑"
+      },
+      {
+        "phrase": "dispel rumors",
+        "translation": "澄清谣言"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "消除；驱散（疑虑、恐惧等）"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to make a doubt, feeling, or belief disappear"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "dis-（分开）+ pel（驱动），把阴霾「驱散开」。",
+      "mnemonic": "联想：dispel 与 repel（击退）同根 pel，都是「推开」。",
+      "association": "联想：dispel → 驱散疑虑"
+    },
+    "root": "pel"
+  },
+  "dispute": {
+    "synonyms": [
+      "debate",
+      "quarrel",
+      "contest",
+      "challenge"
+    ],
+    "collocations": [
+      {
+        "phrase": "dispute resolution",
+        "translation": "[法律]调解纠纷"
+      },
+      {
+        "phrase": "in dispute",
+        "translation": "在争论中"
+      },
+      {
+        "phrase": "labor dispute",
+        "translation": "劳动争议；劳资纠纷"
+      },
+      {
+        "phrase": "dispute about",
+        "translation": "争论，辩论"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v./n.",
+        "meaning": "争论；对…提出质疑；纠纷"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to argue or debate about something; to question whether something is true or valid"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "dis-（分开）+ put（思考），各自「想的不一样」→ 争论。",
+      "mnemonic": "联想：dispute 就是观点 put（放）不到一起。",
+      "association": "联想：dispute → 争论纠纷"
+    },
+    "root": "put"
+  },
+  "disseminate": {
+    "synonyms": [
+      "spread",
+      "distribute",
+      "circulate",
+      "propagate"
+    ],
+    "collocations": [
+      {
+        "phrase": "disseminate information",
+        "translation": "传播信息"
+      },
+      {
+        "phrase": "disseminate knowledge",
+        "translation": "传播知识"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "散布；传播"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to spread information, knowledge, or ideas widely among many people"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "dis-（向各处）+ semin（种子）+ -ate，像撒种一样「广泛播散」。",
+      "mnemonic": "联想：disseminate 内含 seed/semin（种子），把种子撒出去就是传播。",
+      "association": "联想：disseminate → 广泛传播"
+    },
+    "root": "semin"
+  },
+  "dove": {
+    "synonyms": [
+      "pigeon",
+      "peace bird"
+    ],
+    "collocations": [
+      {
+        "phrase": "dove of peace",
+        "translation": "和平鸽"
+      },
+      {
+        "phrase": "white dove",
+        "translation": "白鸽"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "鸽子"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a bird of the pigeon family, often used as a symbol of peace"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自古英语 dufe，与 dive（俯冲）有关，指俯冲而下的鸟。",
+      "mnemonic": "联想：dove 是和平象征，与 hawk（鹰）常对比。",
+      "association": "联想：dove → 和平鸽"
+    },
+    "root": ""
+  },
+  "drag": {
+    "synonyms": [
+      "pull",
+      "haul",
+      "tow",
+      "trail"
+    ],
+    "collocations": [
+      {
+        "phrase": "drag on",
+        "translation": "拖延"
+      },
+      {
+        "phrase": "drag and drop",
+        "translation": "拖放"
+      },
+      {
+        "phrase": "drag reduction",
+        "translation": "减阻"
+      },
+      {
+        "phrase": "drag coefficient",
+        "translation": "阻力系数；曳引系数"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v./n.",
+        "meaning": "拖拽；吃力地拉；拖延"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to pull something along the ground or another surface with effort; to proceed or cause to proceed slowly"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自古英语 dragan（拉、拖），与 draw 同源。",
+      "mnemonic": "联想：drag on（拖延）像时间被「拖着走」。",
+      "association": "联想：drag → 拖拽拖延"
+    },
+    "root": "drag"
+  },
+  "ensure": {
+    "synonyms": [
+      "guarantee",
+      "secure",
+      "make certain",
+      "safeguard"
+    ],
+    "collocations": [
+      {
+        "phrase": "ensure public security",
+        "translation": "保安"
+      },
+      {
+        "phrase": "ensure from",
+        "translation": "v. 保护"
+      },
+      {
+        "phrase": "ensure safety",
+        "translation": "确保安全"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "保证；确保"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to make certain that something will occur or be the case"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "en-（使）+ sure（确定），即「使确定发生」。",
+      "mnemonic": "辨析：ensure（确保）强调结果；assure（向人保证）强调安抚对方。",
+      "association": "联想：ensure → 确保无误"
+    },
+    "root": "sur"
+  },
+  "especially": {
+    "synonyms": [
+      "particularly",
+      "notably",
+      "chiefly",
+      "above all"
+    ],
+    "collocations": [
+      {
+        "phrase": "especially english",
+        "translation": "具有英国特征的"
+      },
+      {
+        "phrase": "especially when",
+        "translation": "尤其是在…时候"
+      },
+      {
+        "phrase": "especially for",
+        "translation": "尤其适用于"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adv.",
+        "meaning": "尤其；特别"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adv.",
+        "meaning": "used to single out one person, thing, or situation over all others; particularly"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "especial（特别的）+ -ly（副词后缀）。",
+      "mnemonic": "联想：especially = special（特别）+ ly，特别地。",
+      "association": "联想：especially → 尤其特别"
+    },
+    "root": "spec"
+  },
+  "expel": {
+    "synonyms": [
+      "eject",
+      "oust",
+      "banish",
+      "remove"
+    ],
+    "collocations": [
+      {
+        "phrase": "expel from",
+        "translation": "v. 驱逐出；开除；排出"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "驱逐；开除；排出"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "v.",
+        "meaning": "to force someone to leave a place, organization, or school; to drive out or discharge"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "ex-（向外）+ pel（驱动），把人或物「驱赶出去」。",
+      "mnemonic": "联想：expel 与 propel（推进）同根，一个是向外推，一个是向前推。",
+      "association": "联想：expel → 驱逐开除"
+    },
+    "root": "pel"
+  },
+  "fate": {
+    "synonyms": [
+      "destiny",
+      "fortune",
+      "lot",
+      "doom"
+    ],
+    "collocations": [
+      {
+        "phrase": "as sure as fate",
+        "translation": "千真万确"
+      },
+      {
+        "phrase": "meet one's fate",
+        "translation": "遭遇命运；赴死"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "命运；宿命"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "the development of events outside a person's control, regarded as predetermined; destiny"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自拉丁语 fatum（神谕、天命），与 fairy（命运女神）相关。",
+      "mnemonic": "联想：fate 与 fatal（致命的）同源，命运有时很「致命」。",
+      "association": "联想：fate → 命中注定"
+    },
+    "root": "fat"
+  },
+  "federal": {
+    "synonyms": [
+      "national",
+      "central",
+      "union",
+      "governmental"
+    ],
+    "collocations": [
+      {
+        "phrase": "federal reserve",
+        "translation": "（美国）联邦储备系统"
+      },
+      {
+        "phrase": "federal government",
+        "translation": "联邦政府"
+      },
+      {
+        "phrase": "federal law",
+        "translation": "联邦法律"
+      },
+      {
+        "phrase": "federal funds",
+        "translation": "联邦资金"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "联邦的；联邦政府的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "having or relating to a system of government in which several states form a unity but remain independent in internal affairs"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自拉丁语 foedus（盟约、条约），联邦即「盟约之国」。",
+      "mnemonic": "联想：federal government = 联邦政府，与 state（州）相对。",
+      "association": "联想：federal → 联邦体制"
+    },
+    "root": "fed"
+  },
+  "generations": {
+    "synonyms": [
+      "age groups",
+      "cohorts",
+      "descendants",
+      "offspring"
+    ],
+    "collocations": [
+      {
+        "phrase": "alternation of generations",
+        "translation": "世代交替"
+      },
+      {
+        "phrase": "through generations",
+        "translation": "代代相传"
+      },
+      {
+        "phrase": "younger generations",
+        "translation": "年轻一代"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "一代人；世代（generation 的复数）"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "all the people born and living at about the same time, regarded collectively; successive stages in a family lineage"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "generation（一代）+ -s 复数；gene（基因）+ generate（产生）→ 繁衍出的一代代人。",
+      "mnemonic": "联想：generations 来自 generate（产生），一代代「产生」下去。",
+      "association": "联想：generations → 数代人"
+    },
+    "root": "gen"
+  },
+  "grit": {
+    "synonyms": [
+      "courage",
+      "determination",
+      "fortitude",
+      "perseverance"
+    ],
+    "collocations": [
+      {
+        "phrase": "grit chamber",
+        "translation": "沉砂池"
+      },
+      {
+        "phrase": "steel grit",
+        "translation": "钢砂；钢丸；钢粒"
+      },
+      {
+        "phrase": "true grit",
+        "translation": "真正的勇气；坚毅"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "毅力；勇气；沙砾"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "courage and resolve; strength of character; also, small loose particles of stone or sand"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "原义为「沙砾」，沙砾粗糙坚硬，引申为「坚韧不拔」。",
+      "mnemonic": "联想：grit 像 grit（沙粒）一样磨人，但也磨出毅力。",
+      "association": "联想：grit → 坚毅毅力"
+    },
+    "root": "grit"
+  },
+  "gritty": {
+    "synonyms": [
+      "resilient",
+      "tough",
+      "determined",
+      "courageous"
+    ],
+    "collocations": [
+      {
+        "phrase": "gritty realism",
+        "translation": "粗粝的现实主义"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "坚毅的；粗粝的；有沙砾的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "showing courage and resolve; containing or resembling grit; harshly realistic"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "grit（沙砾/毅力）+ -y，既指「含沙砾的」，也指「有毅力的」。",
+      "mnemonic": "联想：gritty 是 grit 的形容词，坚韧不拔的。",
+      "association": "联想：gritty → 勇敢坚毅"
+    },
+    "root": "grit"
+  },
+  "gutter": {
+    "synonyms": [
+      "drain",
+      "ditch",
+      "channel",
+      "sewer"
+    ],
+    "collocations": [
+      {
+        "phrase": "in the gutter",
+        "translation": "[美国俚语]"
+      },
+      {
+        "phrase": "rain gutter",
+        "translation": "雨水檐沟"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "（路边）排水沟；檐沟"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a shallow trough fixed beneath the edge of a roof or along a street to carry off rainwater"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自古法语 goutiere（排水沟），与 gout（一滴）相关。",
+      "mnemonic": "联想：gutter 收集雨水，in the gutter 引申为「堕落到底层」。",
+      "association": "联想：gutter → 排水沟"
+    },
+    "root": "gut"
+  },
+  "hippie": {
+    "synonyms": [
+      "bohemian",
+      "flower child",
+      "nonconformist"
+    ],
+    "collocations": [
+      {
+        "phrase": "hippie culture",
+        "translation": "嬉皮文化"
+      },
+      {
+        "phrase": "hippie movement",
+        "translation": "嬉皮运动"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "嬉皮士"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "a young person in the 1960s and 1970s who rejected conventional society and promoted peace and love"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "来自 hip（时髦、知情）+ -ie，指反主流文化的年轻人。",
+      "mnemonic": "联想：hippie 追求 peace & love，留长发、穿花衣。",
+      "association": "联想：hippie → 60年代嬉皮士"
+    },
+    "root": "hip"
+  },
+  "immortality": {
+    "synonyms": [
+      "eternity",
+      "perpetuity",
+      "everlasting life",
+      "endlessness"
+    ],
+    "collocations": [
+      {
+        "phrase": "seek immortality",
+        "translation": "追求永生"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "永生；不朽"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "the ability to live forever; lasting fame or remembrance that never ends"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "im-（不）+ mortal（会死的）+ -ity，「不会死亡」的状态。",
+      "mnemonic": "联想：immortality = im + mortal，否定「凡人必死」。",
+      "association": "联想：immortality → 永生不朽"
+    },
+    "root": "mort"
+  },
+  "indolence": {
+    "synonyms": [
+      "laziness",
+      "sloth",
+      "idleness",
+      "inactivity"
+    ],
+    "collocations": [],
+    "definitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "懒惰；懒散"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "n.",
+        "meaning": "avoidance of activity or exertion; laziness"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "in-（不）+ dol（痛苦）+ -ence，「不愿承受努力之苦」→ 懒惰。",
+      "mnemonic": "联想：indolence 就是不愿 dol（痛苦/付出），所以懒散。",
+      "association": "联想：indolence → 懒惰懈怠"
+    },
+    "root": "dol"
+  },
+  "insecure": {
+    "synonyms": [
+      "uncertain",
+      "unstable",
+      "vulnerable",
+      "anxious"
+    ],
+    "collocations": [
+      {
+        "phrase": "feel insecure",
+        "translation": "感到不安/不自信"
+      },
+      {
+        "phrase": "insecure about",
+        "translation": "对…缺乏安全感"
+      }
+    ],
+    "definitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "不安全的；缺乏自信的"
+      }
+    ],
+    "englishDefinitions": [
+      {
+        "partOfSpeech": "adj.",
+        "meaning": "not firm or fixed; liable to give way or break; lacking confidence or assurance"
+      }
+    ],
+    "memoryTips": {
+      "etymology": "in-（否定）+ secure（安全的），既指物理不安全，也指心理不踏实。",
+      "mnemonic": "联想：insecure = in + secure，secure 的反面。",
+      "association": "联想：insecure → 不安全不自信"
+    },
+    "root": "sec"
+  }
+}

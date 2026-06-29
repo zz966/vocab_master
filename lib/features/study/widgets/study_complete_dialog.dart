@@ -12,6 +12,7 @@ Future<StudyCompleteAction> showStudyCompleteDialog(
   int? todayCount,
   int? dailyGoal,
   int? currentStreak,
+  bool showShareButton = true,
 }) async {
   final accuracy = totalWords == 0
       ? 0
@@ -52,18 +53,19 @@ Future<StudyCompleteAction> showStudyCompleteDialog(
         ],
       ),
       actions: [
-        TextButton.icon(
-          onPressed: () => shareStudySessionResult(
-            totalWords: totalWords,
-            correctCount: correctCount,
-            sessionType: sessionType,
-            todayCount: todayCount,
-            dailyGoal: dailyGoal,
-            currentStreak: currentStreak,
+        if (showShareButton)
+          TextButton.icon(
+            onPressed: () => shareStudySessionResult(
+              totalWords: totalWords,
+              correctCount: correctCount,
+              sessionType: sessionType,
+              todayCount: todayCount,
+              dailyGoal: dailyGoal,
+              currentStreak: currentStreak,
+            ),
+            icon: const Icon(Icons.share_outlined),
+            label: const Text('分享'),
           ),
-          icon: const Icon(Icons.share_outlined),
-          label: const Text('分享'),
-        ),
         TextButton(
           onPressed: () => Navigator.of(context).pop(StudyCompleteAction.finish),
           child: const Text('完成'),

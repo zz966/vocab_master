@@ -57,7 +57,6 @@ class AchievementSnapshot {
 
 const studyModeTypes = {
   'flashcard',
-  'complete',
   'quiz',
   'spelling',
   'listening',

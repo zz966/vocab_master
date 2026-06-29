@@ -16,7 +16,7 @@ class AddWordPage extends ConsumerStatefulWidget {
     this.word,
   });
 
-  final int bookId;
+  final String bookId;
   final Word? word;
 
   bool get isEditing => word != null;

@@ -26,11 +26,11 @@ final todayStudyStatsProvider =
 });
 
 final bookDailyStatsProvider =
-    FutureProvider.family<List<DailyStudyStat>, int>((ref, bookId) async {
+    FutureProvider.family<List<DailyStudyStat>, String>((ref, bookId) async {
   return ref.watch(statsRepositoryProvider).getDailyStatsForBook(bookId);
 });
 
 final bookDailyAccuracyProvider =
-    FutureProvider.family<List<DailyAccuracyStat>, int>((ref, bookId) async {
+    FutureProvider.family<List<DailyAccuracyStat>, String>((ref, bookId) async {
   return ref.watch(statsRepositoryProvider).getDailyAccuracyForBook(bookId);
 });

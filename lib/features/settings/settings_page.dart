@@ -256,16 +256,6 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                   );
                 }).toList(),
               ),
-              const SizedBox(height: 8),
-              SwitchListTile(
-                title: const Text('选择题默认方向'),
-                subtitle: Text(settings.quizPickEnglish ? '看中文选英文' : '看英文选中文'),
-                value: settings.quizPickEnglish,
-                onChanged: (value) {
-                  settings.quizPickEnglish = value;
-                  _save(settings);
-                },
-              ),
               ListTile(
                 title: const Text('朗读语速'),
                 subtitle: Slider(

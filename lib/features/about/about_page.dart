@@ -30,7 +30,7 @@ class AboutPage extends StatelessWidget {
           const SizedBox(height: 32),
           Text(
             '一款基于 SM-2 间隔重复算法的英语词汇学习应用，'
-            '支持速刷、完整学习、选择题、拼写和听音选义等多种学习模式。',
+            '支持速刷、选择题、拼写和听音选义等多种学习模式。',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const SizedBox(height: 24),

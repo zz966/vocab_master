@@ -1,18 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/learning_session.dart';
-import 'package:vocab_master/models/word_book.dart';
 import 'package:vocab_master/repositories/book_repository.dart';
 import 'package:vocab_master/repositories/stats_repository.dart';
 import 'package:vocab_master/utils/book_stats_export.dart';
 
+import 'helpers/model_fixtures.dart';
+
 void main() {
   test('BookStatsExportCodec produces valid JSON summary', () {
-    final book = WordBook()
-      ..id = 1
-      ..title = 'CET-4'
-      ..category = 'exam';
+    final book = testBook(bookId: 'book_1', bookName: 'CET-4', category: 'exam');
 
     final progress = BookProgress(
       book: book,
@@ -34,11 +31,12 @@ void main() {
         ),
       ],
       sessions: [
-        LearningSession()
-          ..sessionType = 'flashcard'
-          ..bookIds = [1]
-          ..wordsStudied = 10
-          ..wordsCorrect = 8,
+        testSession(
+          sessionType: 'flashcard',
+          bookIds: ['book_1'],
+          wordsStudied: 10,
+          wordsCorrect: 8,
+        ),
       ],
     );
 

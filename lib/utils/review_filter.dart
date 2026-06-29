@@ -21,7 +21,7 @@ bool isDueForReview(Word word, DateTime referenceDay) {
 List<Word> getTodayReviewWords(
   List<Word> words, {
   DateTime? today,
-  List<int>? bookIds,
+  List<String>? bookIds,
 }) {
   final referenceDay = today ?? DateTime.now();
   final bookFilter = bookIds == null || bookIds.isEmpty

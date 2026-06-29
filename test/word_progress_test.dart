@@ -1,20 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/utils/word_progress.dart';
+
+import 'helpers/model_fixtures.dart';
 
 void main() {
   test('resetWordLearningState clears SM-2 fields', () {
-    final word = Word()
-      ..english = 'test'
-      ..chinese = '测试'
-      ..bookIds = [1]
-      ..familiarity = 4
-      ..reviewCount = 3
+    final word = testWord(
+      familiarity: 4,
+      reviewCount: 3,
+      nextReview: DateTime(2026, 6, 20),
+    )
       ..correctStreak = 2
       ..easeFactor = 2.8
       ..sm2Interval = 10
-      ..inWrongBook = true
-      ..nextReview = DateTime(2026, 6, 20);
+      ..inWrongBook = true;
 
     resetWordLearningState(word);
 

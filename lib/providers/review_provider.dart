@@ -7,7 +7,7 @@ import '../utils/review_filter.dart' as review_filter;
 
 /// Today's review queue for the given [bookIds] (empty = all books, mixed).
 final todayReviewWordsProvider =
-    FutureProvider.family<List<Word>, List<int>>((ref, bookIds) async {
+    FutureProvider.family<List<Word>, List<String>>((ref, bookIds) async {
   return ReviewRepository(ref).getTodayReviewWords(bookIds: bookIds);
 });
 
@@ -18,7 +18,7 @@ class ReviewRepository {
 
   /// Loads words due for review where `nextReview <= today`.
   Future<List<Word>> getTodayReviewWords({
-    List<int> bookIds = const [],
+    List<String> bookIds = const [],
     DateTime? today,
   }) async {
     final wordRepo = _ref.read(wordRepositoryProvider);

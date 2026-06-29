@@ -23,7 +23,7 @@ final booksProvider = AsyncNotifierProvider<BooksNotifier, List<BookProgress>>(
 );
 
 final bookProgressProvider =
-    FutureProvider.family<BookProgress?, int>((ref, bookId) async {
+    FutureProvider.family<BookProgress?, String>((ref, bookId) async {
   final repository = ref.watch(bookRepositoryProvider);
   final book = await repository.getBook(bookId);
   if (book == null) {
@@ -33,6 +33,6 @@ final bookProgressProvider =
 });
 
 final bookWordsProvider =
-    FutureProvider.family<List<Word>, int>((ref, bookId) async {
+    FutureProvider.family<List<Word>, String>((ref, bookId) async {
   return ref.watch(bookRepositoryProvider).getWordsForBook(bookId);
 });

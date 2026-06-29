@@ -1,11 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../models/learning_session.dart';
+import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
-import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
-import '../../repositories/settings_repository.dart';
 import '../../utils/quiz_generator.dart';
 import '../../utils/study_quality.dart';
 
@@ -16,15 +17,15 @@ class QuizPage extends ConsumerStatefulWidget {
     required this.bookIds,
     required this.wordPool,
     this.session,
-    this.onSessionComplete,
+    this.onQuizComplete,
     this.onProgressUpdate,
   });
 
   final List<Word> words;
-  final List<int> bookIds;
+  final List<String> bookIds;
   final List<Word> wordPool;
   final LearningSession? session;
-  final Future<void> Function()? onSessionComplete;
+  final Future<void> Function(QuizSessionResult result)? onQuizComplete;
   final VoidCallback? onProgressUpdate;
 
   @override
@@ -32,8 +33,14 @@ class QuizPage extends ConsumerStatefulWidget {
 }
 
 class _QuizPageState extends ConsumerState<QuizPage> {
+  static final _shuffleRandom = Random();
+
+  late final List<Word> _quizWords;
   late int _currentIndex;
-  late bool _pickEnglish;
+  late List<String> _currentOptions;
+  int _answeredCount = 0;
+  int _correctCount = 0;
+  final List<QuizWrongAnswer> _wrongAnswers = [];
   String? _selected;
   bool? _isCorrect;
   bool _isSubmitting = false;
@@ -41,38 +48,28 @@ class _QuizPageState extends ConsumerState<QuizPage> {
   @override
   void initState() {
     super.initState();
+    _quizWords = List<Word>.from(widget.words)..shuffle(_shuffleRandom);
     _currentIndex = 0;
-    _pickEnglish = true;
+    _currentOptions = _buildOptionsForCurrentWord();
   }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final settings = ref.read(settingsProvider).valueOrNull;
-    _pickEnglish = settings?.quizPickEnglish ?? true;
-  }
+  Word get _currentWord => _quizWords[_currentIndex];
 
-  Word get _currentWord => widget.words[_currentIndex];
+  String get _correctAnswer => _currentWord.chinese.trim();
 
-  String get _correctAnswer =>
-      _pickEnglish ? _currentWord.english : _currentWord.chinese;
-
-  List<String> get _options => QuizGenerator.generateOptions(
-        correct: _currentWord,
-        pool: widget.wordPool,
-        pickEnglish: _pickEnglish,
-      );
-
-  Future<void> _toggleDirection() async {
-    final settings = ref.read(settingsProvider).valueOrNull;
-    if (settings == null) {
-      setState(() => _pickEnglish = !_pickEnglish);
-      return;
-    }
-    settings.quizPickEnglish = !_pickEnglish;
-    await ref.read(settingsRepositoryProvider).saveSettings(settings);
-    ref.invalidate(settingsProvider);
-    setState(() => _pickEnglish = !_pickEnglish);
+  List<String> _buildOptionsForCurrentWord() {
+    final options = QuizGenerator.generateOptions(
+      correct: _currentWord,
+      pool: widget.wordPool,
+      pickEnglish: false,
+    );
+    assert(
+      QuizGenerator.isValidQuizOptions(
+        options: options,
+        correctAnswer: _correctAnswer,
+      ),
+    );
+    return options;
   }
 
   Future<void> _selectOption(String option) async {
@@ -80,10 +77,22 @@ class _QuizPageState extends ConsumerState<QuizPage> {
       return;
     }
 
-    final correct = option == _correctAnswer;
+    final correct = QuizGenerator.matchesAnswer(option, _correctAnswer);
     setState(() {
       _selected = option;
       _isCorrect = correct;
+      _answeredCount += 1;
+      if (correct) {
+        _correctCount += 1;
+      } else {
+        _wrongAnswers.add(
+          QuizWrongAnswer(
+            word: _currentWord,
+            selectedAnswer: option,
+            correctAnswer: _correctAnswer,
+          ),
+        );
+      }
     });
 
     await Future<void>.delayed(const Duration(milliseconds: 800));
@@ -107,8 +116,14 @@ class _QuizPageState extends ConsumerState<QuizPage> {
       return;
     }
 
-    if (_currentIndex >= widget.words.length - 1) {
-      await widget.onSessionComplete?.call();
+    if (_currentIndex >= _quizWords.length - 1) {
+      await widget.onQuizComplete?.call(
+        QuizSessionResult(
+          totalWords: _quizWords.length,
+          correctCount: _correctCount,
+          wrongAnswers: List.unmodifiable(_wrongAnswers),
+        ),
+      );
       return;
     }
 
@@ -117,16 +132,15 @@ class _QuizPageState extends ConsumerState<QuizPage> {
       _selected = null;
       _isCorrect = null;
       _isSubmitting = false;
+      _currentOptions = _buildOptionsForCurrentWord();
     });
   }
 
   @override
   Widget build(BuildContext context) {
     final word = _currentWord;
-    final progress = (_currentIndex + 1) / widget.words.length;
-    final prompt = _pickEnglish ? word.chinese : word.english;
-    final promptHint =
-        _pickEnglish ? '选择正确的英文单词' : '选择正确的中文释义';
+    final total = _quizWords.length;
+    final progress = total == 0 ? 0.0 : _answeredCount / total;
 
     return Padding(
       padding: const EdgeInsets.all(16),
@@ -136,11 +150,12 @@ class _QuizPageState extends ConsumerState<QuizPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('${_currentIndex + 1} / ${widget.words.length}'),
-              TextButton.icon(
-                onPressed: _selected == null ? _toggleDirection : null,
-                icon: const Icon(Icons.swap_horiz, size: 18),
-                label: Text(_pickEnglish ? '中→英' : '英→中'),
+              Text('$_answeredCount / $total'),
+              Text(
+                '第 ${_currentIndex + 1} 题',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.grey,
+                    ),
               ),
             ],
           ),
@@ -151,7 +166,7 @@ class _QuizPageState extends ConsumerState<QuizPage> {
           ),
           const SizedBox(height: 32),
           Text(
-            promptHint,
+            '选择正确的中文释义',
             style: Theme.of(context).textTheme.titleMedium,
             textAlign: TextAlign.center,
           ),
@@ -161,7 +176,7 @@ class _QuizPageState extends ConsumerState<QuizPage> {
             child: Padding(
               padding: const EdgeInsets.all(32),
               child: Text(
-                prompt,
+                word.english,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.bold,
@@ -172,13 +187,13 @@ class _QuizPageState extends ConsumerState<QuizPage> {
           const SizedBox(height: 24),
           Expanded(
             child: ListView.separated(
-              itemCount: _options.length,
+              itemCount: _currentOptions.length,
               separatorBuilder: (_, _) => const SizedBox(height: 12),
               itemBuilder: (context, index) {
-                final option = _options[index];
+                final option = _currentOptions[index];
                 Color? bgColor;
                 if (_selected != null) {
-                  if (option == _correctAnswer) {
+                  if (QuizGenerator.matchesAnswer(option, _correctAnswer)) {
                     bgColor = Colors.green.withValues(alpha: 0.2);
                   } else if (option == _selected) {
                     bgColor = Colors.red.withValues(alpha: 0.2);

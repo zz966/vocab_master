@@ -1,7 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/learning_session.dart';
 import 'package:vocab_master/utils/reminder_message.dart';
 import 'package:vocab_master/utils/session_date_group.dart';
+
+import 'helpers/model_fixtures.dart';
 
 void main() {
   group('formatSessionDateLabel', () {
@@ -20,12 +21,12 @@ void main() {
     test('groups sessions under same date label', () {
       final day = DateTime(2026, 6, 16, 10);
       final sessions = [
-        LearningSession()
-          ..sessionType = 'flashcard'
-          ..startedAt = day,
-        LearningSession()
-          ..sessionType = 'quiz'
-          ..startedAt = day.add(const Duration(hours: 2)),
+        testSession(sessionType: 'flashcard', startedAt: day),
+        testSession(
+          id: 'session_2',
+          sessionType: 'quiz',
+          startedAt: day.add(const Duration(hours: 2)),
+        ),
       ];
 
       final groups = groupSessionsByDate(sessions);

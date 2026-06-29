@@ -1,22 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/providers/search_provider.dart';
 import 'package:vocab_master/utils/search_results_export.dart';
 
-void main() {
-  Word sampleWord() {
-    return Word()
-      ..english = 'test'
-      ..chinese = '测试'
-      ..bookIds = [1];
-  }
+import 'helpers/model_fixtures.dart';
 
+void main() {
   test('formatSearchResultsShareText summarizes search results', () {
     final text = formatSearchResultsShareText(
       query: 'app',
-      words: [sampleWord()],
+      words: [testWord(id: 'w1', english: 'test', chinese: '测试')],
       filter: const WordSearchFilter(favoritesOnly: true),
     );
 
@@ -28,7 +22,7 @@ void main() {
   test('SearchResultsExportCodec produces JSON with query metadata', () {
     final json = SearchResultsExportCodec.toJson(
       query: 'hello',
-      words: [sampleWord()],
+      words: [testWord(id: 'w1', english: 'test', chinese: '测试')],
     );
     final data = jsonDecode(json) as Map<String, dynamic>;
 

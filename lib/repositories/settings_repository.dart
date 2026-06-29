@@ -1,43 +1,41 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
 
-import '../database/isar_service.dart';
+import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
 import '../models/review_record.dart';
 import '../models/user_settings.dart';
 
 class SettingsRepository {
-  SettingsRepository(this._isar);
-
-  final Isar _isar;
-
   Future<UserSettings> getSettings() async {
-    final existing = await _isar.userSettings.where().anyId().findFirst();
-    if (existing != null) {
-      return existing;
+    final existing = HiveService.getSettings();
+    var changed = false;
+
+    if (existing.defaultStudyMode == 'complete') {
+      existing.defaultStudyMode = 'flashcard';
+      changed = true;
     }
 
-    final settings = UserSettings();
-    await _isar.writeTxn(() async {
-      await _isar.userSettings.put(settings);
-    });
-    return settings;
+    if (changed) {
+      await saveSettings(existing);
+    } else if (HiveService.getAllBooks().isEmpty &&
+        existing.defaultBookIds.isEmpty &&
+        !existing.hasSeenOnboarding) {
+      await saveSettings(existing);
+    }
+
+    return existing;
   }
 
   Future<void> saveSettings(UserSettings settings) async {
-    settings.updatedAt = DateTime.now();
-    await _isar.writeTxn(() async {
-      await _isar.userSettings.put(settings);
-    });
+    await HiveService.saveSettings(settings);
   }
 
   Future<int> getTodayStudyCount() async {
     final now = DateTime.now();
     final startOfDay = DateTime(now.year, now.month, now.day);
-    return _isar.reviewRecords
-        .filter()
-        .reviewedAtGreaterThan(startOfDay)
-        .count();
+    return HiveService.getAllReviewRecords()
+        .where((record) => record.reviewedAt.isAfter(startOfDay))
+        .length;
   }
 
   Future<void> recordStudyDay(UserSettings settings) async {
@@ -69,41 +67,37 @@ class SettingsRepository {
   }
 
   Future<List<ReviewRecord>> getReviewRecordsForWord(
-    int wordId, {
+    String wordId, {
     int limit = 20,
-  }) {
-    return _isar.reviewRecords
-        .filter()
-        .wordIdEqualTo(wordId)
-        .sortByReviewedAtDesc()
-        .limit(limit)
-        .findAll();
+  }) async {
+    return HiveService.getAllReviewRecords()
+        .where((record) => record.wordId == wordId)
+        .take(limit)
+        .toList();
   }
 
   Future<List<ReviewRecord>> getReviewRecordsForSession(
     LearningSession session,
   ) async {
     final end = session.completedAt ?? DateTime.now();
-    return _isar.reviewRecords
-        .filter()
-        .reviewedAtGreaterThan(
-          session.startedAt.subtract(const Duration(microseconds: 1)),
+    return HiveService.getAllReviewRecords()
+        .where(
+          (record) =>
+              record.reviewedAt.isAfter(
+                session.startedAt.subtract(const Duration(microseconds: 1)),
+              ) &&
+              record.reviewedAt.isBefore(end.add(const Duration(seconds: 1))),
         )
-        .reviewedAtLessThan(end.add(const Duration(seconds: 1)))
-        .sortByReviewedAt()
-        .findAll();
+        .toList()
+      ..sort((a, b) => a.reviewedAt.compareTo(b.reviewedAt));
   }
 
   Future<void> addReviewRecord(ReviewRecord record) async {
-    await _isar.writeTxn(() async {
-      await _isar.reviewRecords.put(record);
-    });
+    await HiveService.saveReviewRecord(record);
   }
 
   Future<void> clearReviewRecords() async {
-    await _isar.writeTxn(() async {
-      await _isar.reviewRecords.clear();
-    });
+    await HiveService.clearReviewRecords();
   }
 
   Future<void> resetStreak(UserSettings settings) async {
@@ -116,5 +110,5 @@ class SettingsRepository {
 }
 
 final settingsRepositoryProvider = Provider<SettingsRepository>((ref) {
-  return SettingsRepository(IsarService.instance);
+  return SettingsRepository();
 });

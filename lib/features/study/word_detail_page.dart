@@ -18,9 +18,9 @@ class WordDetailPage extends ConsumerStatefulWidget {
     this.bookTitle,
   });
 
-  final int wordId;
-  final List<int>? wordIds;
-  final int? bookId;
+  final String wordId;
+  final List<String>? wordIds;
+  final String? bookId;
   final String? bookTitle;
 
   @override
@@ -28,7 +28,7 @@ class WordDetailPage extends ConsumerStatefulWidget {
 }
 
 class _WordDetailPageState extends ConsumerState<WordDetailPage> {
-  late int _currentWordId;
+  late String _currentWordId;
   bool _loading = true;
   Word? _word;
   List<Word> _peerWords = [];
@@ -41,12 +41,15 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     _loadWord(_currentWordId);
   }
 
-  Future<void> _loadWord(int wordId) async {
+  Future<void> _loadWord(String wordId) async {
     setState(() => _loading = true);
 
     final wordRepo = ref.read(wordRepositoryProvider);
     final bookRepo = ref.read(bookRepositoryProvider);
-    final word = await wordRepo.getWord(wordId);
+    final word = await wordRepo.getWord(
+      wordId,
+      bookId: widget.bookId,
+    );
 
     if (!mounted) {
       return;
@@ -69,10 +72,18 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
       peerWords = await wordRepo.getWordsForBooks(word.bookIds);
     }
 
-    if (word.memoryTips == null || word.structuredExamples == null) {
+    final hasImportedRichContent = word.definitions != null ||
+        word.englishDefinitions != null ||
+        word.collocations != null ||
+        word.synonymDetails != null ||
+        word.synonyms.isNotEmpty ||
+        (word.memoryTips?.etymology?.trim().isNotEmpty ?? false);
+
+    if (!hasImportedRichContent &&
+        (word.memoryTips == null || word.structuredExamples.isEmpty)) {
       final peerEnglish = peerWords.map((item) => item.english).toList();
       WordEnrichment.apply(word, peerWords: peerEnglish);
-      await wordRepo.saveWord(word);
+      await wordRepo.saveWord(word, bookId: bookId);
     }
 
     if (!mounted) {
@@ -86,7 +97,7 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     });
   }
 
-  int? _primaryBookId(Word word) {
+  String? _primaryBookId(Word word) {
     if (widget.bookId != null) {
       return widget.bookId;
     }
@@ -96,14 +107,14 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     return word.bookIds.first;
   }
 
-  List<int> get _navigationIds {
+  List<String> get _navigationIds {
     if (widget.wordIds != null && widget.wordIds!.isNotEmpty) {
       return widget.wordIds!;
     }
     return [_currentWordId];
   }
 
-  int? get _previousWordId {
+  String? get _previousWordId {
     final ids = _navigationIds;
     final index = ids.indexOf(_currentWordId);
     if (index <= 0) {
@@ -112,7 +123,7 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     return ids[index - 1];
   }
 
-  int? get _nextWordId {
+  String? get _nextWordId {
     final ids = _navigationIds;
     final index = ids.indexOf(_currentWordId);
     if (index == -1 || index >= ids.length - 1) {
@@ -121,7 +132,21 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     return ids[index + 1];
   }
 
-  void _goToWord(int wordId) {
+  int get _currentIndex {
+    final index = _navigationIds.indexOf(_currentWordId);
+    return index < 0 ? 0 : index;
+  }
+
+  /// 关卡内逐词浏览进度：第 n 词显示 n/总数，学完本关最后一个词为 100%。
+  double? get _sessionProgress {
+    final ids = _navigationIds;
+    if (ids.length <= 1) {
+      return null;
+    }
+    return (_currentIndex + 1) / ids.length;
+  }
+
+  void _goToWord(String wordId) {
     setState(() => _currentWordId = wordId);
     _loadWord(wordId);
   }
@@ -137,8 +162,13 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
   Widget build(BuildContext context) {
     final word = _word;
     final bookId = widget.bookId ?? (word != null ? _primaryBookId(word) : null);
-    final bookProgressAsync =
-        bookId == null ? null : ref.watch(bookProgressProvider(bookId));
+    final sessionProgress = _sessionProgress;
+    final navigationTotal = _navigationIds.length;
+    final bookProgress =
+        bookId != null ? ref.watch(bookProgressProvider(bookId)) : null;
+    final bookProgressAsync = sessionProgress == null ? bookProgress : null;
+    final bookCoverColor =
+        bookProgress?.valueOrNull?.book.coverColor ?? '#607D8B';
 
     return Scaffold(
       appBar: AppBar(
@@ -173,6 +203,11 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
           ? null
           : _WordDetailBottomBar(
               bookProgressAsync: bookProgressAsync,
+              sessionProgress: sessionProgress,
+              sessionCurrent: sessionProgress == null ? null : _currentIndex + 1,
+              sessionTotal:
+                  sessionProgress == null ? null : navigationTotal,
+              progressColor: bookCoverColor,
               onPrevious: _previousWordId == null
                   ? null
                   : () => _goToWord(_previousWordId!),
@@ -234,9 +269,17 @@ class _WordDetailBottomBar extends StatelessWidget {
     required this.bookProgressAsync,
     required this.onPrevious,
     required this.onNext,
+    this.sessionProgress,
+    this.sessionCurrent,
+    this.sessionTotal,
+    this.progressColor,
   });
 
   final AsyncValue<BookProgress?>? bookProgressAsync;
+  final double? sessionProgress;
+  final int? sessionCurrent;
+  final int? sessionTotal;
+  final String? progressColor;
   final VoidCallback? onPrevious;
   final VoidCallback? onNext;
 
@@ -251,7 +294,15 @@ class _WordDetailBottomBar extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            if (bookProgressAsync != null)
+            if (sessionProgress != null)
+              _buildProgressSection(
+                theme: theme,
+                label: '学习进度',
+                value: sessionProgress!,
+                trailing: '${sessionCurrent ?? 0}/${sessionTotal ?? 0}',
+                color: parseHexColor(progressColor ?? '#607D8B'),
+              )
+            else if (bookProgressAsync != null)
               bookProgressAsync!.when(
                 loading: () => const LinearProgressIndicator(),
                 error: (_, _) => const SizedBox.shrink(),
@@ -259,38 +310,12 @@ class _WordDetailBottomBar extends StatelessWidget {
                   if (progress == null) {
                     return const SizedBox.shrink();
                   }
-                  final percent = (progress.learnedRate * 100).round();
-                  final color = parseHexColor(progress.book.coverColor);
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '学习进度',
-                            style: theme.textTheme.bodySmall,
-                          ),
-                          Text(
-                            '$percent%',
-                            style: theme.textTheme.bodySmall?.copyWith(
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 6),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(4),
-                        child: LinearProgressIndicator(
-                          value: progress.learnedRate,
-                          minHeight: 6,
-                          backgroundColor: color.withValues(alpha: 0.15),
-                          color: color,
-                        ),
-                      ),
-                      const SizedBox(height: 12),
-                    ],
+                  return _buildProgressSection(
+                    theme: theme,
+                    label: '学习进度',
+                    value: progress.learnedRate,
+                    trailing: '${(progress.learnedRate * 100).round()}%',
+                    color: parseHexColor(progress.book.coverColor),
                   );
                 },
               ),
@@ -314,6 +339,43 @@ class _WordDetailBottomBar extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildProgressSection({
+    required ThemeData theme,
+    required String label,
+    required double value,
+    required String trailing,
+    required Color color,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(label, style: theme.textTheme.bodySmall),
+            Text(
+              trailing,
+              style: theme.textTheme.bodySmall?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: LinearProgressIndicator(
+            value: value.clamp(0.0, 1.0),
+            minHeight: 6,
+            backgroundColor: color.withValues(alpha: 0.15),
+            color: color,
+          ),
+        ),
+        const SizedBox(height: 12),
+      ],
     );
   }
 }

@@ -1,3 +1,4 @@
+import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
 import '../models/review_record.dart';
 import '../models/word.dart';
@@ -21,7 +22,7 @@ class StudyService {
   Future<void> rateWord({
     required Word word,
     required StudyQuality quality,
-    int? bookId,
+    String? bookId,
     LearningSession? session,
   }) async {
     final previousInterval = word.sm2Interval;
@@ -47,16 +48,18 @@ class StudyService {
       word.inWrongBook = false;
     }
 
-    await _wordRepository.saveWord(word);
+    await _wordRepository.saveWord(word, bookId: bookId);
 
-    final record = ReviewRecord()
-      ..wordId = word.id
-      ..bookId = bookId
-      ..quality = quality.value
-      ..reviewedAt = DateTime.now()
-      ..previousInterval = previousInterval
-      ..newInterval = sm2.interval
-      ..easeFactor = sm2.easeFactor;
+    final record = ReviewRecord(
+      id: HiveService.nextId('review'),
+      wordId: word.id,
+      bookId: bookId,
+      quality: quality.value,
+      reviewedAt: DateTime.now(),
+      previousInterval: previousInterval,
+      newInterval: sm2.interval,
+      easeFactor: sm2.easeFactor,
+    );
     await _settingsRepository.addReviewRecord(record);
 
     final settings = await _settingsRepository.getSettings();

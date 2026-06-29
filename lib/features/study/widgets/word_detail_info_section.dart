@@ -4,7 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../models/word.dart';
 import '../../../providers/settings_provider.dart';
 import '../../../providers/study_provider.dart';
-
+import '../../../utils/phonetic_utils.dart';
+import '../../../utils/word_display_utils.dart';
 
 class WordDetailInfoSection extends ConsumerWidget {
   const WordDetailInfoSection({super.key, required this.word});
@@ -14,8 +15,16 @@ class WordDetailInfoSection extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final phonetic = word.phonetic?.trim();
-    final definitions = word.definitions ?? const <WordDefinition>[];
+    final definitions = displayDefinitions(word);
+    final phoneticUk = resolvePhoneticUk(
+      phoneticUk: word.phoneticUk,
+      phoneticUs: word.phoneticUs,
+    );
+    final phoneticUs = resolvePhoneticUs(
+      phoneticUk: word.phoneticUk,
+      phoneticUs: word.phoneticUs,
+    );
+    final hasPhonetic = phoneticUk.isNotEmpty || phoneticUs.isNotEmpty;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
@@ -28,21 +37,28 @@ class WordDetailInfoSection extends ConsumerWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          if (phonetic != null && phonetic.isNotEmpty) ...[
-            const SizedBox(height: 12),
-            _PhoneticRow(
-              label: '英',
-              phonetic: phonetic,
-              onSpeak: () => _speak(ref, word.english, 'en-GB'),
-            ),
-            const SizedBox(height: 8),
-            _PhoneticRow(
-              label: '美',
-              phonetic: phonetic,
-              onSpeak: () => _speak(ref, word.english, 'en-US'),
-            ),
-          ] else ...[
-            const SizedBox(height: 12),
+          const SizedBox(height: 12),
+          if (hasPhonetic)
+            Row(
+              children: [
+                Expanded(
+                  child: _PhoneticItem(
+                    label: '英',
+                    phonetic: phoneticUk,
+                    onSpeak: () => _speak(ref, word.english, 'en-GB'),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _PhoneticItem(
+                    label: '美',
+                    phonetic: phoneticUs,
+                    onSpeak: () => _speak(ref, word.english, 'en-US'),
+                  ),
+                ),
+              ],
+            )
+          else
             Row(
               children: [
                 _AccentChip(
@@ -56,7 +72,6 @@ class WordDetailInfoSection extends ConsumerWidget {
                 ),
               ],
             ),
-          ],
           const SizedBox(height: 16),
           if (definitions.isNotEmpty)
             ...definitions.map(
@@ -85,8 +100,7 @@ class WordDetailInfoSection extends ConsumerWidget {
             Text.rich(
               TextSpan(
                 children: [
-                  if (word.partOfSpeech != null &&
-                      word.partOfSpeech!.trim().isNotEmpty)
+                  if (word.partOfSpeech.trim().isNotEmpty)
                     TextSpan(
                       text: '${word.partOfSpeech} ',
                       style: theme.textTheme.titleMedium?.copyWith(
@@ -117,8 +131,8 @@ class WordDetailInfoSection extends ConsumerWidget {
   }
 }
 
-class _PhoneticRow extends StatelessWidget {
-  const _PhoneticRow({
+class _PhoneticItem extends StatelessWidget {
+  const _PhoneticItem({
     required this.label,
     required this.phonetic,
     required this.onSpeak,

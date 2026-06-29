@@ -1,16 +1,41 @@
-import 'package:isar/isar.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 part 'review_record.g.dart';
 
-@collection
+@HiveType(typeId: 10)
 class ReviewRecord {
-  Id id = Isar.autoIncrement;
+  @HiveField(0)
+  String id;
 
-  late int wordId;
-  int? bookId;
-  late int quality;
-  late DateTime reviewedAt;
-  double previousInterval = 0;
-  double newInterval = 0;
-  double easeFactor = 2.5;
+  @HiveField(1)
+  String wordId;
+
+  @HiveField(2)
+  String? bookId;
+
+  @HiveField(3)
+  int quality;
+
+  @HiveField(4)
+  DateTime reviewedAt;
+
+  @HiveField(5)
+  double previousInterval;
+
+  @HiveField(6)
+  double newInterval;
+
+  @HiveField(7)
+  double easeFactor;
+
+  ReviewRecord({
+    required this.id,
+    required this.wordId,
+    this.bookId,
+    required this.quality,
+    required this.reviewedAt,
+    this.previousInterval = 0,
+    this.newInterval = 0,
+    this.easeFactor = 2.5,
+  });
 }

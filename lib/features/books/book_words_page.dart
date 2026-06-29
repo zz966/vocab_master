@@ -12,7 +12,7 @@ class BookWordsPage extends ConsumerStatefulWidget {
     required this.bookTitle,
   });
 
-  final int bookId;
+  final String bookId;
   final String bookTitle;
 
   @override

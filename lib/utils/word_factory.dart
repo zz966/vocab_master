@@ -7,45 +7,54 @@ class WordFactory {
 
   static Word fromImport(
     WordImportData data, {
-    required List<int> bookIds,
+    required String bookId,
+    required int wordIndex,
     List<String>? peerWords,
   }) {
-    final word = Word()
-      ..english = data.english.trim()
-      ..chinese = data.chinese.trim()
-      ..phonetic = data.phonetic?.trim()
-      ..partOfSpeech = data.partOfSpeech?.trim()
-      ..examples = data.examples
-      ..definitions = data.definitions
+    final word = BookWord(
+      id: '${bookId}_$wordIndex',
+      word: data.english.trim(),
+      definitionCn: data.chinese.trim(),
+      phoneticUk: data.phonetic?.trim() ?? '',
+      phoneticUs: data.phonetic?.trim() ?? '',
+      partOfSpeech: data.partOfSpeech?.trim() ?? '',
+      legacyExamples: data.examples,
+      imageUrl: data.imageUrl,
+      definitions: data.definitions
           ?.map(
-            (item) => WordDefinition()
-              ..partOfSpeech = item.partOfSpeech
-              ..meaning = item.meaning,
+            (item) => WordDefinition(
+              partOfSpeech: item.partOfSpeech,
+              meaning: item.meaning,
+            ),
           )
-          .toList()
-      ..structuredExamples = data.structuredExamples
+          .toList(),
+      structuredExamplesRich: data.structuredExamples
           ?.map(
-            (item) => WordExample()
-              ..english = item.english
-              ..chinese = item.chinese
-              ..partOfSpeech = item.partOfSpeech
-              ..meaning = item.meaning,
+            (item) => WordExample(
+              english: item.english,
+              chinese: item.chinese,
+              partOfSpeech: item.partOfSpeech,
+              meaning: item.meaning,
+            ),
           )
-          .toList()
-      ..collocations = data.collocations
+          .toList(),
+      collocations: data.collocations
           ?.map(
-            (item) => WordPhrase()
-              ..phrase = item.phrase
-              ..translation = item.translation,
+            (item) => WordPhrase(
+              phrase: item.phrase,
+              translation: item.translation,
+            ),
           )
-          .toList()
-      ..memoryTips = data.memoryTips == null
+          .toList(),
+      memoryTips: data.memoryTips == null
           ? null
-          : (MemoryTips()
-            ..etymology = data.memoryTips!.etymology
-            ..mnemonic = data.memoryTips!.mnemonic
-            ..association = data.memoryTips!.association)
-      ..bookIds = bookIds;
+          : MemoryTips(
+              etymology: data.memoryTips!.etymology,
+              mnemonic: data.memoryTips!.mnemonic,
+              association: data.memoryTips!.association,
+            ),
+      bookIds: [bookId],
+    );
 
     WordEnrichment.apply(word, peerWords: peerWords);
     return word;

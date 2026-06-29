@@ -1,0 +1,3902 @@
+{
+  "bookId": "TEST_40",
+  "bookName": "测试词库（40词）",
+  "description": "用于流程测试：第1关30词 + 第2关10词 | content-v7",
+  "totalWords": 40,
+  "cover": "",
+  "category": "test",
+  "difficulty": "入门",
+  "coverColor": "#FF5722",
+  "words": [
+    {
+      "id": "TEST_40_1",
+      "word": "adrift",
+      "phoneticUk": "/əˈdrɪft/",
+      "phoneticUs": "/əˈdrɪft/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "漫无目的地； 漂浮着",
+      "examples": [
+        {
+          "en": "The boat was set adrift in the open sea.",
+          "cn": "小船被放到公海上漂流。"
+        },
+        {
+          "en": "He felt adrift after losing his job.",
+          "cn": "失业后他感到茫然无措。"
+        },
+        {
+          "en": "The survivors were found adrift on a raft.",
+          "cn": "幸存者在筏子上漂流时被发现。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "aimless",
+          "meaning": "漫无目的的"
+        },
+        {
+          "word": "drifting",
+          "meaning": "漂流；漫无目的"
+        },
+        {
+          "word": "afloat",
+          "meaning": "漂浮着；茫然无措的"
+        },
+        {
+          "word": "rudderless",
+          "meaning": "无舵的；无方向的"
+        }
+      ],
+      "root": "drift",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "漫无目的地；漂浮着"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "floating without steering or mooring; lacking purpose or direction"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "set adrift",
+          "translation": "使漂流；使茫然无措",
+          "example": {
+            "en": "The article explains how to use set adrift correctly.",
+            "cn": "这篇文章解释了如何正确使用 set adrift（使漂流）。"
+          }
+        },
+        {
+          "phrase": "cast adrift",
+          "translation": "使漂泊无依",
+          "example": {
+            "en": "The article explains how to use cast adrift correctly.",
+            "cn": "这篇文章解释了如何正确使用 cast adrift（使漂泊无依）。"
+          }
+        },
+        {
+          "phrase": "cut adrift",
+          "translation": "使孤立无援",
+          "example": {
+            "en": "The article explains how to use cut adrift correctly.",
+            "cn": "这篇文章解释了如何正确使用 cut adrift（使孤立无援）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "a-（处于…状态）+ drift（漂流），字面即「在漂流中」。",
+        "mnemonic": "联想：adrift 像「a drift（一次漂流）」，船无人掌舵四处漂。",
+        "association": "联想：adrift → 漫无目的地漂浮"
+      }
+    },
+    {
+      "id": "TEST_40_2",
+      "word": "aftermath",
+      "phoneticUk": "/ˈɑːftəmæθ/",
+      "phoneticUs": "/ˈæftərmæθ/",
+      "partOfSpeech": "n.",
+      "definitionCn": "后果；余波",
+      "examples": [
+        {
+          "en": "In the aftermath of the storm, roads were blocked.",
+          "cn": "暴风雨过后，道路被堵住了。"
+        },
+        {
+          "en": "The country struggled in the aftermath of war.",
+          "cn": "战后该国陷入困境。"
+        },
+        {
+          "en": "She helped rebuild the town in the aftermath of the earthquake.",
+          "cn": "地震后她帮助重建小镇。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "consequence",
+          "meaning": "后果；结果"
+        },
+        {
+          "word": "repercussion",
+          "meaning": "反响；余波"
+        },
+        {
+          "word": "fallout",
+          "meaning": "余波；不良后果"
+        },
+        {
+          "word": "wake",
+          "meaning": "尾迹；余波"
+        }
+      ],
+      "root": "after",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "后果；余波"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "the consequences or results of a significant unpleasant event"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "in the aftermath of",
+          "translation": "在…之后；余波中",
+          "example": {
+            "en": "The article explains how to use in the aftermath of correctly.",
+            "cn": "这篇文章解释了如何正确使用 in the aftermath of（在…之后）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "after（之后）+ math（古义为收割），原指「收割之后长出的第二茬草」，引申为事件后的遗留影响。",
+        "mnemonic": "拆分：after + math，事件「之后」才算清「账目」——即后果。",
+        "association": "联想：aftermath → 灾难过后的余波"
+      }
+    },
+    {
+      "id": "TEST_40_3",
+      "word": "afterworld",
+      "phoneticUk": "/ˈɑːftəwɜːld/",
+      "phoneticUs": "/ˈæftərwɜːrld/",
+      "partOfSpeech": "n.",
+      "definitionCn": "阴间",
+      "examples": [
+        {
+          "en": "Ancient Egyptians believed in an afterworld.",
+          "cn": "古埃及人相信有来世。"
+        },
+        {
+          "en": "The poem describes a peaceful afterworld.",
+          "cn": "这首诗描绘了一个宁静的阴间。"
+        },
+        {
+          "en": "Many cultures have stories about the afterworld.",
+          "cn": "许多文化都有关于来世的传说。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "afterlife",
+          "meaning": "来世；死后世界"
+        },
+        {
+          "word": "hereafter",
+          "meaning": "此后；来世"
+        },
+        {
+          "word": "netherworld",
+          "meaning": "阴间；冥界"
+        }
+      ],
+      "root": "after",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "阴间；来世"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a world or existence believed to come after death"
+        }
+      ],
+      "collocations": [],
+      "memoryTips": {
+        "etymology": "after（之后）+ world（世界），死后所去的世界。",
+        "mnemonic": "联想：afterworld = after + world，人死后去的「另一个世界」。",
+        "association": "联想：afterworld → 阴间、来世"
+      }
+    },
+    {
+      "id": "TEST_40_4",
+      "word": "ample",
+      "phoneticUk": "/ˈæmpl/",
+      "phoneticUs": "/ˈæmpl/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "足够的；丰富的",
+      "examples": [
+        {
+          "en": "There is ample evidence to support the claim.",
+          "cn": "有充分证据支持这一说法。"
+        },
+        {
+          "en": "The hotel provides ample space for meetings.",
+          "cn": "酒店提供充足的会议空间。"
+        },
+        {
+          "en": "We have ample time to finish the project.",
+          "cn": "我们有充足的时间完成项目。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "plentiful",
+          "meaning": "丰富的；充足的"
+        },
+        {
+          "word": "abundant",
+          "meaning": "丰富的；充裕的"
+        },
+        {
+          "word": "sufficient",
+          "meaning": "足够的；充分的"
+        },
+        {
+          "word": "generous",
+          "meaning": "慷慨的；丰富的"
+        }
+      ],
+      "root": "ampl",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "足够的；丰富的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "more than enough; plentiful in size, amount, or scope"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "ample evidence",
+          "translation": "充分证据",
+          "example": {
+            "en": "The article explains how to use ample evidence correctly.",
+            "cn": "这篇文章解释了如何正确使用 ample evidence（充分证据）。"
+          }
+        },
+        {
+          "phrase": "ample time",
+          "translation": "充足的时间",
+          "example": {
+            "en": "The article explains how to use ample time correctly.",
+            "cn": "这篇文章解释了如何正确使用 ample time（充足的时间）。"
+          }
+        },
+        {
+          "phrase": "ample space",
+          "translation": "充足的空间",
+          "example": {
+            "en": "The article explains how to use ample space correctly.",
+            "cn": "这篇文章解释了如何正确使用 ample space（充足的空间）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自拉丁语 amplus（大的、宽敞的），与 amplify（放大）同源。",
+        "mnemonic": "谐音：ample 像「俺够」，资源「俺够」用——充足。",
+        "association": "联想：ample → 充足丰富"
+      }
+    },
+    {
+      "id": "TEST_40_5",
+      "word": "ascertain",
+      "phoneticUk": "/ˌæsəˈteɪn/",
+      "phoneticUs": "/ˌæsərˈteɪn/",
+      "partOfSpeech": "v.",
+      "definitionCn": "确定，查明",
+      "examples": [
+        {
+          "en": "Police are trying to ascertain the cause of the fire.",
+          "cn": "警方正试图查明起火原因。"
+        },
+        {
+          "en": "We need to ascertain whether the data is accurate.",
+          "cn": "我们需要确认数据是否准确。"
+        },
+        {
+          "en": "It was difficult to ascertain the truth.",
+          "cn": "很难查明真相。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "determine",
+          "meaning": "确定；查明"
+        },
+        {
+          "word": "establish",
+          "meaning": "确立；查明"
+        },
+        {
+          "word": "verify",
+          "meaning": "核实；查证"
+        },
+        {
+          "word": "find out",
+          "meaning": "查明；发现"
+        }
+      ],
+      "root": "cert",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "确定；查明"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to find out or learn with certainty through investigation or effort"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "ascertain the truth",
+          "translation": "查明真相",
+          "example": {
+            "en": "The article explains how to use ascertain the truth correctly.",
+            "cn": "这篇文章解释了如何正确使用 ascertain the truth（查明真相）。"
+          }
+        },
+        {
+          "phrase": "ascertain whether",
+          "translation": "确定是否",
+          "example": {
+            "en": "The article explains how to use ascertain whether correctly.",
+            "cn": "这篇文章解释了如何正确使用 ascertain whether（确定是否）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "as-（加强）+ certain（确定的），即「使变得确定」。",
+        "mnemonic": "联想：ascertain 内含 certain（确定），加强后就是「查明确定」。",
+        "association": "联想：ascertain → 查明真相"
+      }
+    },
+    {
+      "id": "TEST_40_6",
+      "word": "assure",
+      "phoneticUk": "/əˈʃʊə(r)/",
+      "phoneticUs": "/əˈʃʊr/",
+      "partOfSpeech": "v.",
+      "definitionCn": "向...保证，使...确信",
+      "examples": [
+        {
+          "en": "I assure you that everything will be fine.",
+          "cn": "我向你保证一切都会好起来。"
+        },
+        {
+          "en": "The doctor assured the patient of a full recovery.",
+          "cn": "医生向病人保证会完全康复。"
+        },
+        {
+          "en": "She assured herself that the door was locked.",
+          "cn": "她确认门已经锁好。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "guarantee",
+          "meaning": "保证；担保"
+        },
+        {
+          "word": "reassure",
+          "meaning": "使安心；再保证"
+        },
+        {
+          "word": "promise",
+          "meaning": "承诺；保证"
+        },
+        {
+          "word": "convince",
+          "meaning": "使确信；说服"
+        }
+      ],
+      "root": "sur",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "向…保证；使…确信"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to tell someone confidently that something is true, or to make a situation certain"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "assure oneself",
+          "translation": "弄清楚，查明",
+          "example": {
+            "en": "The article explains how to use assure oneself correctly.",
+            "cn": "这篇文章解释了如何正确使用 assure oneself（弄清楚，查明）。"
+          }
+        },
+        {
+          "phrase": "assure of",
+          "translation": "vt. 向...保证）；查明（使相信",
+          "example": {
+            "en": "The article explains how to use assure of correctly.",
+            "cn": "这篇文章解释了如何正确使用 assure of（vt. 向...保证））。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "as-（加强）+ sure（确信），即「使确信」。",
+        "mnemonic": "联想：assure 就是 a + sure，「给你一个 sure」——保证。",
+        "association": "联想：assure → 向人保证"
+      }
+    },
+    {
+      "id": "TEST_40_7",
+      "word": "attain",
+      "phoneticUk": "/əˈteɪn/",
+      "phoneticUs": "/əˈteɪn/",
+      "partOfSpeech": "v.",
+      "definitionCn": "获得；得到",
+      "examples": [
+        {
+          "en": "She worked hard to attain her goals.",
+          "cn": "她努力以实现目标。"
+        },
+        {
+          "en": "The company hopes to attain higher profits this year.",
+          "cn": "公司希望今年获得更高利润。"
+        },
+        {
+          "en": "He finally attained the rank of professor.",
+          "cn": "他终于获得了教授职称。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "achieve",
+          "meaning": "达到；实现"
+        },
+        {
+          "word": "reach",
+          "meaning": "达到；抵达"
+        },
+        {
+          "word": "accomplish",
+          "meaning": "完成；实现"
+        },
+        {
+          "word": "gain",
+          "meaning": "获得；收益"
+        }
+      ],
+      "root": "tain",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "获得；达到"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to succeed in achieving or reaching something, especially after effort"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "attain a goal",
+          "translation": "实现目标",
+          "example": {
+            "en": "The article explains how to use attain a goal correctly.",
+            "cn": "这篇文章解释了如何正确使用 attain a goal（实现目标）。"
+          }
+        },
+        {
+          "phrase": "attain success",
+          "translation": "获得成功",
+          "example": {
+            "en": "The article explains how to use attain success correctly.",
+            "cn": "这篇文章解释了如何正确使用 attain success（获得成功）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "at-（向）+ tain（持有，来自拉丁语 tenere），即「握在手中」→ 获得。",
+        "mnemonic": "联想：attain 像 at + gain，「到达并得到」。",
+        "association": "联想：attain → 努力获得"
+      }
+    },
+    {
+      "id": "TEST_40_8",
+      "word": "autopsy",
+      "phoneticUk": "/ˈɔːtɒpsi/",
+      "phoneticUs": "/ˈɔːtɑːpsi/",
+      "partOfSpeech": "n.",
+      "definitionCn": "尸体剖检",
+      "examples": [
+        {
+          "en": "The autopsy revealed the cause of death.",
+          "cn": "尸检揭示了死因。"
+        },
+        {
+          "en": "An autopsy was performed on the victim.",
+          "cn": "对受害者进行了尸检。"
+        },
+        {
+          "en": "The report was based on the autopsy findings.",
+          "cn": "报告基于尸检结果。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "postmortem",
+          "meaning": "死后检查；验尸"
+        },
+        {
+          "word": "necropsy",
+          "meaning": "尸体剖检；验尸（动物）"
+        },
+        {
+          "word": "dissection",
+          "meaning": "解剖；剖析"
+        }
+      ],
+      "root": "opsy",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "尸体剖检；验尸"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "an examination of a dead body to determine the cause of death or the nature of disease"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "perform an autopsy",
+          "translation": "进行尸检",
+          "example": {
+            "en": "The article explains how to use perform an autopsy correctly.",
+            "cn": "这篇文章解释了如何正确使用 perform an autopsy（进行尸检）。"
+          }
+        },
+        {
+          "phrase": "autopsy report",
+          "translation": "尸检报告",
+          "example": {
+            "en": "The article explains how to use autopsy report correctly.",
+            "cn": "这篇文章解释了如何正确使用 autopsy report（尸检报告）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "auto-（自己）+ -opsy（看，来自希腊语），字面「亲自查看」→ 验尸。",
+        "mnemonic": "拆分：auto（自动/自己）+ opsy（观察），亲自查看遗体。",
+        "association": "联想：autopsy → 验尸检查"
+      }
+    },
+    {
+      "id": "TEST_40_9",
+      "word": "Bible",
+      "phoneticUk": "/ˈbaɪbl/",
+      "phoneticUs": "/ˈbaɪbl/",
+      "partOfSpeech": "n.",
+      "definitionCn": "圣经",
+      "examples": [
+        {
+          "en": "She reads the Bible every morning.",
+          "cn": "她每天早晨读圣经。"
+        },
+        {
+          "en": "The Bible has influenced Western culture deeply.",
+          "cn": "圣经深刻影响了西方文化。"
+        },
+        {
+          "en": "He quoted a passage from the Holy Bible.",
+          "cn": "他引用了《圣经》中的一段话。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "scripture",
+          "meaning": "经文；圣典"
+        },
+        {
+          "word": "holy book",
+          "meaning": "圣书；宗教经典"
+        },
+        {
+          "word": "Good Book",
+          "meaning": "圣经（《圣经》别称）"
+        }
+      ],
+      "root": "bibl",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "圣经"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "the sacred scriptures of Christianity, consisting of the Old and New Testaments"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "holy bible",
+          "translation": "n. 圣经",
+          "example": {
+            "en": "The article explains how to use holy bible correctly.",
+            "cn": "这篇文章解释了如何正确使用 holy bible（n. 圣经）。"
+          }
+        },
+        {
+          "phrase": "bible society",
+          "translation": "圣经公会",
+          "example": {
+            "en": "The article explains how to use bible society correctly.",
+            "cn": "这篇文章解释了如何正确使用 bible society（圣经公会）。"
+          }
+        },
+        {
+          "phrase": "family bible",
+          "translation": "家庭圣经；家庭用大型圣经",
+          "example": {
+            "en": "The article explains how to use family bible correctly.",
+            "cn": "这篇文章解释了如何正确使用 family bible（家庭圣经）。"
+          }
+        },
+        {
+          "phrase": "bible school",
+          "translation": "圣经学校",
+          "example": {
+            "en": "The article explains how to use bible school correctly.",
+            "cn": "这篇文章解释了如何正确使用 bible school（圣经学校）。"
+          }
+        },
+        {
+          "phrase": "bible paper",
+          "translation": "圣经纸；字典纸；印度纸",
+          "example": {
+            "en": "The article explains how to use bible paper correctly.",
+            "cn": "这篇文章解释了如何正确使用 bible paper（圣经纸）。"
+          }
+        },
+        {
+          "phrase": "american bible society",
+          "translation": "美国圣经学会（1816年创立于美国纽约的基督教国际组织）",
+          "example": {
+            "en": "The article explains how to use american bible society correctly.",
+            "cn": "这篇文章解释了如何正确使用 american bible society（美国圣经学会（1816年创立于美国纽约的基督教国际组织））。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自希腊语 biblos（书），biblia 意为「书卷」。",
+        "mnemonic": "联想：Bible 首字母大写，专指基督教《圣经》。",
+        "association": "联想：Bible → 基督教经典"
+      }
+    },
+    {
+      "id": "TEST_40_10",
+      "word": "charitable",
+      "phoneticUk": "/ˈtʃærətəbl/",
+      "phoneticUs": "/ˈtʃærətəbl/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "仁慈的",
+      "examples": [
+        {
+          "en": "She is known for her charitable work.",
+          "cn": "她以慈善工作闻名。"
+        },
+        {
+          "en": "The organization runs charitable programs for children.",
+          "cn": "该机构为儿童开展慈善项目。"
+        },
+        {
+          "en": "He made a charitable donation to the hospital.",
+          "cn": "他向医院进行了慈善捐赠。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "benevolent",
+          "meaning": "仁慈的；乐善好施的"
+        },
+        {
+          "word": "philanthropic",
+          "meaning": "博爱的；慈善的"
+        },
+        {
+          "word": "generous",
+          "meaning": "慷慨的；丰富的"
+        },
+        {
+          "word": "kind",
+          "meaning": "善良的；仁慈的"
+        }
+      ],
+      "root": "char",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "仁慈的；慈善的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "relating to the giving of help or money to those in need; kindly and forgiving"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "charitable foundation",
+          "translation": "慈善基金，慈善机构",
+          "example": {
+            "en": "The article explains how to use charitable foundation correctly.",
+            "cn": "这篇文章解释了如何正确使用 charitable foundation（慈善基金，慈善机构）。"
+          }
+        },
+        {
+          "phrase": "charitable donation",
+          "translation": "慈善捐款",
+          "example": {
+            "en": "The article explains how to use charitable donation correctly.",
+            "cn": "这篇文章解释了如何正确使用 charitable donation（慈善捐款）。"
+          }
+        },
+        {
+          "phrase": "charitable organization",
+          "translation": "慈善组织",
+          "example": {
+            "en": "The article explains how to use charitable organization correctly.",
+            "cn": "这篇文章解释了如何正确使用 charitable organization（慈善组织）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "charity（慈善）+ -able（形容词后缀），表示「具有慈善性质的」。",
+        "mnemonic": "联想：charitable 来自 charity，充满善意的。",
+        "association": "联想：charitable → 慈善仁慈"
+      }
+    },
+    {
+      "id": "TEST_40_11",
+      "word": "combination",
+      "phoneticUk": "/ˌkɒmbɪˈneɪʃn/",
+      "phoneticUs": "/ˌkɑːmbɪˈneɪʃn/",
+      "partOfSpeech": "n.",
+      "definitionCn": "结合体，混合物",
+      "examples": [
+        {
+          "en": "The dish is a combination of sweet and sour flavors.",
+          "cn": "这道菜是酸甜口味的结合。"
+        },
+        {
+          "en": "A combination of factors led to the accident.",
+          "cn": "多种因素共同导致了事故。"
+        },
+        {
+          "en": "This lock requires a combination of numbers.",
+          "cn": "这把锁需要一组数字密码。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "blend",
+          "meaning": "混合；融合"
+        },
+        {
+          "word": "mixture",
+          "meaning": "混合物；混合"
+        },
+        {
+          "word": "union",
+          "meaning": "联合；结合"
+        },
+        {
+          "word": "fusion",
+          "meaning": "融合；联合"
+        }
+      ],
+      "root": "bin",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "结合体；混合物；组合"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a joining or merging of different things or parts into one"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "combination of",
+          "translation": "…的组合",
+          "example": {
+            "en": "The article explains how to use combination of correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination of（…的组合）。"
+          }
+        },
+        {
+          "phrase": "in combination",
+          "translation": "结合",
+          "example": {
+            "en": "The article explains how to use in combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 in combination（结合）。"
+          }
+        },
+        {
+          "phrase": "combination with",
+          "translation": "与…结合",
+          "example": {
+            "en": "The article explains how to use combination with correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination with（与…结合）。"
+          }
+        },
+        {
+          "phrase": "in combination with",
+          "translation": "与…结合，与…联合",
+          "example": {
+            "en": "The article explains how to use in combination with correctly.",
+            "cn": "这篇文章解释了如何正确使用 in combination with（与…结合，与…联合）。"
+          }
+        },
+        {
+          "phrase": "linear combination",
+          "translation": "线性组合",
+          "example": {
+            "en": "The article explains how to use linear combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 linear combination（线性组合）。"
+          }
+        },
+        {
+          "phrase": "color combination",
+          "translation": "配色；颜色合成",
+          "example": {
+            "en": "The article explains how to use color combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 color combination（配色）。"
+          }
+        },
+        {
+          "phrase": "business combination",
+          "translation": "企业合并",
+          "example": {
+            "en": "The article explains how to use business combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 business combination（企业合并）。"
+          }
+        },
+        {
+          "phrase": "chemical combination",
+          "translation": "化合；化合作用",
+          "example": {
+            "en": "The article explains how to use chemical combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 chemical combination（化合）。"
+          }
+        },
+        {
+          "phrase": "combination skin",
+          "translation": "混合性皮肤",
+          "example": {
+            "en": "The article explains how to use combination skin correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination skin（混合性皮肤）。"
+          }
+        },
+        {
+          "phrase": "permutation and combination",
+          "translation": "n. [数]排列组合",
+          "example": {
+            "en": "The article explains how to use permutation and combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 permutation and combination（n. [数]排列组合）。"
+          }
+        },
+        {
+          "phrase": "key combination",
+          "translation": "[计]组合键，关键字组合",
+          "example": {
+            "en": "The article explains how to use key combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 key combination（[计]组合键，关键字组合）。"
+          }
+        },
+        {
+          "phrase": "combination property",
+          "translation": "综合性能",
+          "example": {
+            "en": "The article explains how to use combination property correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination property（综合性能）。"
+          }
+        },
+        {
+          "phrase": "load combination",
+          "translation": "荷载组合，负载组合",
+          "example": {
+            "en": "The article explains how to use load combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 load combination（荷载组合，负载组合）。"
+          }
+        },
+        {
+          "phrase": "convex combination",
+          "translation": "[数]凸组合",
+          "example": {
+            "en": "The article explains how to use convex combination correctly.",
+            "cn": "这篇文章解释了如何正确使用 convex combination（[数]凸组合）。"
+          }
+        },
+        {
+          "phrase": "combination of enterprise",
+          "translation": "企业合并",
+          "example": {
+            "en": "The article explains how to use combination of enterprise correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination of enterprise（企业合并）。"
+          }
+        },
+        {
+          "phrase": "combination lock",
+          "translation": "暗码锁；号码锁",
+          "example": {
+            "en": "The article explains how to use combination lock correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination lock（暗码锁）。"
+          }
+        },
+        {
+          "phrase": "combination valve",
+          "translation": "复合阀",
+          "example": {
+            "en": "The article explains how to use combination valve correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination valve（复合阀）。"
+          }
+        },
+        {
+          "phrase": "combination drilling",
+          "translation": "联合钻眼，联合钻井",
+          "example": {
+            "en": "The article explains how to use combination drilling correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination drilling（联合钻眼，联合钻井）。"
+          }
+        },
+        {
+          "phrase": "combination switch",
+          "translation": "组合开关；控制器",
+          "example": {
+            "en": "The article explains how to use combination switch correctly.",
+            "cn": "这篇文章解释了如何正确使用 combination switch（组合开关）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "combine（结合）+ -ation（名词后缀），表示结合的结果或方式。",
+        "mnemonic": "联想：combination = combine + nation，多者「结合成一体」。",
+        "association": "联想：combination → 组合混合"
+      }
+    },
+    {
+      "id": "TEST_40_12",
+      "word": "concept",
+      "phoneticUk": "/ˈkɒnsept/",
+      "phoneticUs": "/ˈkɑːnsept/",
+      "partOfSpeech": "n.",
+      "definitionCn": "观念；想法",
+      "examples": [
+        {
+          "en": "The concept of time varies across cultures.",
+          "cn": "时间的概念因文化而异。"
+        },
+        {
+          "en": "She explained the basic concept clearly.",
+          "cn": "她清楚地解释了基本概念。"
+        },
+        {
+          "en": "This design concept won the competition.",
+          "cn": "这一设计理念赢得了比赛。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "idea",
+          "meaning": "想法；主意"
+        },
+        {
+          "word": "notion",
+          "meaning": "观念；想法"
+        },
+        {
+          "word": "conception",
+          "meaning": "概念；构想"
+        },
+        {
+          "word": "thought",
+          "meaning": "思想；想法"
+        }
+      ],
+      "root": "cept",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "观念；概念；想法"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "an abstract idea or general notion formed in the mind"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "new concept",
+          "translation": "新概念",
+          "example": {
+            "en": "The article explains how to use new concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 new concept（新概念）。"
+          }
+        },
+        {
+          "phrase": "basic concept",
+          "translation": "基本概念；本义",
+          "example": {
+            "en": "The article explains how to use basic concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 basic concept（基本概念）。"
+          }
+        },
+        {
+          "phrase": "design concept",
+          "translation": "设计理念；设计构思；设计原理",
+          "example": {
+            "en": "The article explains how to use design concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 design concept（设计理念）。"
+          }
+        },
+        {
+          "phrase": "concept design",
+          "translation": "概念设计",
+          "example": {
+            "en": "The article explains how to use concept design correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept design（概念设计）。"
+          }
+        },
+        {
+          "phrase": "marketing concept",
+          "translation": "市场营销观念",
+          "example": {
+            "en": "The article explains how to use marketing concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 marketing concept（市场营销观念）。"
+          }
+        },
+        {
+          "phrase": "general concept",
+          "translation": "一般概念；概念知识",
+          "example": {
+            "en": "The article explains how to use general concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 general concept（一般概念）。"
+          }
+        },
+        {
+          "phrase": "product concept",
+          "translation": "产品概念",
+          "example": {
+            "en": "The article explains how to use product concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 product concept（产品概念）。"
+          }
+        },
+        {
+          "phrase": "key concept",
+          "translation": "关键概念；基本概念；主要概念",
+          "example": {
+            "en": "The article explains how to use key concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 key concept（关键概念）。"
+          }
+        },
+        {
+          "phrase": "concept map",
+          "translation": "概念图",
+          "example": {
+            "en": "The article explains how to use concept map correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept map（概念图）。"
+          }
+        },
+        {
+          "phrase": "concept car",
+          "translation": "概念车",
+          "example": {
+            "en": "The article explains how to use concept car correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept car（概念车）。"
+          }
+        },
+        {
+          "phrase": "concept development",
+          "translation": "概念发展",
+          "example": {
+            "en": "The article explains how to use concept development correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept development（概念发展）。"
+          }
+        },
+        {
+          "phrase": "time concept",
+          "translation": "时间概念",
+          "example": {
+            "en": "The article explains how to use time concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 time concept（时间概念）。"
+          }
+        },
+        {
+          "phrase": "concept art",
+          "translation": "概念艺术；概念创作图",
+          "example": {
+            "en": "The article explains how to use concept art correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept art（概念艺术）。"
+          }
+        },
+        {
+          "phrase": "operational concept",
+          "translation": "操作概念；作战原则",
+          "example": {
+            "en": "The article explains how to use operational concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 operational concept（操作概念）。"
+          }
+        },
+        {
+          "phrase": "production concept",
+          "translation": "生产观念",
+          "example": {
+            "en": "The article explains how to use production concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 production concept（生产观念）。"
+          }
+        },
+        {
+          "phrase": "concept vehicle",
+          "translation": "概念车",
+          "example": {
+            "en": "The article explains how to use concept vehicle correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept vehicle（概念车）。"
+          }
+        },
+        {
+          "phrase": "accounting concept",
+          "translation": "会计基础理论；会计学概念；会计观念",
+          "example": {
+            "en": "The article explains how to use accounting concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 accounting concept（会计基础理论）。"
+          }
+        },
+        {
+          "phrase": "concept learning",
+          "translation": "概念学习",
+          "example": {
+            "en": "The article explains how to use concept learning correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept learning（概念学习）。"
+          }
+        },
+        {
+          "phrase": "spatial concept",
+          "translation": "空间概念",
+          "example": {
+            "en": "The article explains how to use spatial concept correctly.",
+            "cn": "这篇文章解释了如何正确使用 spatial concept（空间概念）。"
+          }
+        },
+        {
+          "phrase": "concept formation",
+          "translation": "概念形成",
+          "example": {
+            "en": "The article explains how to use concept formation correctly.",
+            "cn": "这篇文章解释了如何正确使用 concept formation（概念形成）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（共同）+ cept（抓，来自 capere），把要点「一起抓住」→ 概念。",
+        "mnemonic": "联想：concept 与 conceive（构想）同源，都是「抓住想法」。",
+        "association": "联想：concept → 抽象概念"
+      }
+    },
+    {
+      "id": "TEST_40_13",
+      "word": "congress",
+      "phoneticUk": "/ˈkɒŋɡres/",
+      "phoneticUs": "/ˈkɑːŋɡrəs/",
+      "partOfSpeech": "n.",
+      "definitionCn": "国会；大会",
+      "examples": [
+        {
+          "en": "Congress passed a new education bill.",
+          "cn": "国会通过了一项新的教育法案。"
+        },
+        {
+          "en": "Members of congress debated the issue for hours.",
+          "cn": "国会议员就该问题辩论了数小时。"
+        },
+        {
+          "en": "The president addressed a joint session of congress.",
+          "cn": "总统向国会联席会议发表了讲话。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "parliament",
+          "meaning": "议会；国会"
+        },
+        {
+          "word": "assembly",
+          "meaning": "议会；集会"
+        },
+        {
+          "word": "conference",
+          "meaning": "会议；代表大会"
+        },
+        {
+          "word": "legislature",
+          "meaning": "立法机关"
+        }
+      ],
+      "root": "gress",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "国会；代表大会"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a formal meeting or series of meetings; the national legislative body of the United States"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "national people's congress",
+          "translation": "全国人民代表大会",
+          "example": {
+            "en": "The article explains how to use national people's congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 national people's congress（全国人民代表大会）。"
+          }
+        },
+        {
+          "phrase": "library of congress",
+          "translation": "n. 美国国会图书馆",
+          "example": {
+            "en": "The article explains how to use library of congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 library of congress（n. 美国国会图书馆）。"
+          }
+        },
+        {
+          "phrase": "congress party",
+          "translation": "国大党",
+          "example": {
+            "en": "The article explains how to use congress party correctly.",
+            "cn": "这篇文章解释了如何正确使用 congress party（国大党）。"
+          }
+        },
+        {
+          "phrase": "african national congress",
+          "translation": "非洲国民大会",
+          "example": {
+            "en": "The article explains how to use african national congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 african national congress（非洲国民大会）。"
+          }
+        },
+        {
+          "phrase": "continental congress",
+          "translation": "大陆会议",
+          "example": {
+            "en": "The article explains how to use continental congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 continental congress（大陆会议）。"
+          }
+        },
+        {
+          "phrase": "member of congress",
+          "translation": "国会议员；美国众议院议员",
+          "example": {
+            "en": "The article explains how to use member of congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 member of congress（国会议员）。"
+          }
+        },
+        {
+          "phrase": "act of congress",
+          "translation": "国会法",
+          "example": {
+            "en": "The article explains how to use act of congress correctly.",
+            "cn": "这篇文章解释了如何正确使用 act of congress（国会法）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（共同）+ gress（走），众人「走到一起」开会。",
+        "mnemonic": "联想：congress 与 progress（前进）同根 gress，代表「走到一起来商议」。",
+        "association": "联想：congress → 国会大会"
+      }
+    },
+    {
+      "id": "TEST_40_14",
+      "word": "consequence",
+      "phoneticUk": "/ˈkɒnsɪkwəns/",
+      "phoneticUs": "/ˈkɑːnsəkwens/",
+      "partOfSpeech": "n.",
+      "definitionCn": "结果",
+      "examples": [
+        {
+          "en": "Every action has a consequence.",
+          "cn": "每个行动都有后果。"
+        },
+        {
+          "en": "He faced the consequence of his mistake.",
+          "cn": "他承担了错误的后果。"
+        },
+        {
+          "en": "As a consequence, the meeting was cancelled.",
+          "cn": "因此，会议被取消了。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "result",
+          "meaning": "结果；后果"
+        },
+        {
+          "word": "outcome",
+          "meaning": "结果；结局"
+        },
+        {
+          "word": "effect",
+          "meaning": "效果；影响"
+        },
+        {
+          "word": "repercussion",
+          "meaning": "反响；余波"
+        }
+      ],
+      "root": "sequ",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "结果；后果"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a result or effect of an action or condition, often one that is unwelcome"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "as a consequence",
+          "translation": "因此，结果",
+          "example": {
+            "en": "The article explains how to use as a consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 as a consequence（因此，结果）。"
+          }
+        },
+        {
+          "phrase": "in consequence",
+          "translation": "因此；结果",
+          "example": {
+            "en": "The article explains how to use in consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 in consequence（因此）。"
+          }
+        },
+        {
+          "phrase": "as a consequence of",
+          "translation": "因此；由于…的结果",
+          "example": {
+            "en": "The article explains how to use as a consequence of correctly.",
+            "cn": "这篇文章解释了如何正确使用 as a consequence of（因此）。"
+          }
+        },
+        {
+          "phrase": "in consequence of",
+          "translation": "由于…的缘故",
+          "example": {
+            "en": "The article explains how to use in consequence of correctly.",
+            "cn": "这篇文章解释了如何正确使用 in consequence of（由于…的缘故）。"
+          }
+        },
+        {
+          "phrase": "of consequence",
+          "translation": "重要，有意义",
+          "example": {
+            "en": "The article explains how to use of consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 of consequence（重要，有意义）。"
+          }
+        },
+        {
+          "phrase": "of no consequence",
+          "translation": "无足轻重",
+          "example": {
+            "en": "The article explains how to use of no consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 of no consequence（无足轻重）。"
+          }
+        },
+        {
+          "phrase": "evil consequence",
+          "translation": "恶果",
+          "example": {
+            "en": "The article explains how to use evil consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 evil consequence（恶果）。"
+          }
+        },
+        {
+          "phrase": "immediate consequence",
+          "translation": "直接后果",
+          "example": {
+            "en": "The article explains how to use immediate consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 immediate consequence（直接后果）。"
+          }
+        },
+        {
+          "phrase": "economic consequence",
+          "translation": "经济后果；经济结果",
+          "example": {
+            "en": "The article explains how to use economic consequence correctly.",
+            "cn": "这篇文章解释了如何正确使用 economic consequence（经济后果）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（共同）+ sequ（跟随）+ -ence，事件「随后而来」的东西。",
+        "mnemonic": "联想：consequence 内含 sequence（顺序），按顺序跟在后面的就是后果。",
+        "association": "联想：consequence → 行动后果"
+      }
+    },
+    {
+      "id": "TEST_40_15",
+      "word": "contagious",
+      "phoneticUk": "/kənˈteɪdʒəs/",
+      "phoneticUs": "/kənˈteɪdʒəs/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "有感染力的；会蔓延的",
+      "examples": [
+        {
+          "en": "The flu is highly contagious.",
+          "cn": "流感传染性很强。"
+        },
+        {
+          "en": "Her laughter was contagious.",
+          "cn": "她的笑声很有感染力。"
+        },
+        {
+          "en": "Keep away if the disease is contagious.",
+          "cn": "如果疾病有传染性，请远离。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "infectious",
+          "meaning": "传染性的；有感染力的"
+        },
+        {
+          "word": "communicable",
+          "meaning": "可传染的；可传播的"
+        },
+        {
+          "word": "catching",
+          "meaning": "传染性的；有感染力的"
+        },
+        {
+          "word": "transmissible",
+          "meaning": "可传播的；可传染的"
+        }
+      ],
+      "root": "tag",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "传染性的；有感染力的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "able to spread from one person or organism to another by direct or indirect contact"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "contagious disease",
+          "translation": "接触传染病",
+          "example": {
+            "en": "The article explains how to use contagious disease correctly.",
+            "cn": "这篇文章解释了如何正确使用 contagious disease（接触传染病）。"
+          }
+        },
+        {
+          "phrase": "highly contagious",
+          "translation": "传染性极强",
+          "example": {
+            "en": "The article explains how to use highly contagious correctly.",
+            "cn": "这篇文章解释了如何正确使用 highly contagious（传染性极强）。"
+          }
+        },
+        {
+          "phrase": "contagious laughter",
+          "translation": "有感染力的笑声",
+          "example": {
+            "en": "The article explains how to use contagious laughter correctly.",
+            "cn": "这篇文章解释了如何正确使用 contagious laughter（有感染力的笑声）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（共同）+ tag（接触）+ -ious，「彼此接触」而传播。",
+        "mnemonic": "联想：contagious 核心是 contact（接触），接触即传染。",
+        "association": "联想：contagious → 接触传染"
+      }
+    },
+    {
+      "id": "TEST_40_16",
+      "word": "contemporary",
+      "phoneticUk": "/kənˈtemprəri/",
+      "phoneticUs": "/kənˈtempəreri/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "当代的；同时代的",
+      "examples": [
+        {
+          "en": "She enjoys contemporary art.",
+          "cn": "她喜欢当代艺术。"
+        },
+        {
+          "en": "The novel reflects contemporary society.",
+          "cn": "这部小说反映了当代社会。"
+        },
+        {
+          "en": "Shakespeare and his contemporary writers shaped English drama.",
+          "cn": "莎士比亚及其同时代作家塑造了英国戏剧。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "modern",
+          "meaning": "现代的；当代的"
+        },
+        {
+          "word": "current",
+          "meaning": "当前的；现行的"
+        },
+        {
+          "word": "present-day",
+          "meaning": "当代的；现今的"
+        },
+        {
+          "word": "coeval",
+          "meaning": "同时代的"
+        }
+      ],
+      "root": "tempor",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "当代的；同时代的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "belonging to or occurring in the present time; living or existing at the same time"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "contemporary art",
+          "translation": "当代艺术",
+          "example": {
+            "en": "The article explains how to use contemporary art correctly.",
+            "cn": "这篇文章解释了如何正确使用 contemporary art（当代艺术）。"
+          }
+        },
+        {
+          "phrase": "contemporary literature",
+          "translation": "n. 现代文学",
+          "example": {
+            "en": "The article explains how to use contemporary literature correctly.",
+            "cn": "这篇文章解释了如何正确使用 contemporary literature（n. 现代文学）。"
+          }
+        },
+        {
+          "phrase": "the contemporary era",
+          "translation": "当代",
+          "example": {
+            "en": "The article explains how to use the contemporary era correctly.",
+            "cn": "这篇文章解释了如何正确使用 the contemporary era（当代）。"
+          }
+        },
+        {
+          "phrase": "contemporary western philosophy",
+          "translation": "当代西方哲学",
+          "example": {
+            "en": "The article explains how to use contemporary western philosophy correctly.",
+            "cn": "这篇文章解释了如何正确使用 contemporary western philosophy（当代西方哲学）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（共同）+ tempor（时间）+ -ary，「处于同一时间」的。",
+        "mnemonic": "联想：contemporary 内含 temporal（时间的），共处于同一时代。",
+        "association": "联想：contemporary → 当代同时代"
+      }
+    },
+    {
+      "id": "TEST_40_17",
+      "word": "contempt",
+      "phoneticUk": "/kənˈtempt/",
+      "phoneticUs": "/kənˈtempt/",
+      "partOfSpeech": "n.",
+      "definitionCn": "轻视；蔑视",
+      "examples": [
+        {
+          "en": "He showed contempt for the rules.",
+          "cn": "他对规则表现出蔑视。"
+        },
+        {
+          "en": "She looked at him with contempt.",
+          "cn": "她轻蔑地看着他。"
+        },
+        {
+          "en": "Contempt of court is a serious offense.",
+          "cn": "藐视法庭是严重违法行为。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "scorn",
+          "meaning": "蔑视；嘲笑"
+        },
+        {
+          "word": "disdain",
+          "meaning": "蔑视；鄙弃"
+        },
+        {
+          "word": "derision",
+          "meaning": "嘲笑；嘲弄"
+        },
+        {
+          "word": "disrespect",
+          "meaning": "不尊重；无礼"
+        }
+      ],
+      "root": "tempt",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "轻视；蔑视"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "the feeling that someone or something is worthless or deserving scorn"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "contempt of court",
+          "translation": "蔑视法庭；对法院的藐视罪",
+          "example": {
+            "en": "The article explains how to use contempt of court correctly.",
+            "cn": "这篇文章解释了如何正确使用 contempt of court（蔑视法庭）。"
+          }
+        },
+        {
+          "phrase": "in contempt of",
+          "translation": "不顾；不把…放在眼里；藐视",
+          "example": {
+            "en": "The article explains how to use in contempt of correctly.",
+            "cn": "这篇文章解释了如何正确使用 in contempt of（不顾）。"
+          }
+        },
+        {
+          "phrase": "beneath contempt",
+          "translation": "卑鄙到极点的",
+          "example": {
+            "en": "The article explains how to use beneath contempt correctly.",
+            "cn": "这篇文章解释了如何正确使用 beneath contempt（卑鄙到极点的）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "con-（加强）+ tempt（轻视），来自拉丁语 contemnere。",
+        "mnemonic": "联想：contempt 语气比 contemptuous 更直接，就是「看不起」。",
+        "association": "联想：contempt → 蔑视轻视"
+      }
+    },
+    {
+      "id": "TEST_40_18",
+      "word": "crave",
+      "phoneticUk": "/kreɪv/",
+      "phoneticUs": "/kreɪv/",
+      "partOfSpeech": "v.",
+      "definitionCn": "渴望，热望",
+      "examples": [
+        {
+          "en": "After exercise, I crave a cold drink.",
+          "cn": "运动后，我渴望喝杯冷饮。"
+        },
+        {
+          "en": "She craves attention from her peers.",
+          "cn": "她渴望得到同伴的关注。"
+        },
+        {
+          "en": "Many people crave stability in uncertain times.",
+          "cn": "许多人在动荡时期渴望稳定。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "desire",
+          "meaning": "渴望；欲望"
+        },
+        {
+          "word": "long for",
+          "meaning": "渴望；向往"
+        },
+        {
+          "word": "yearn",
+          "meaning": "渴望；向往"
+        },
+        {
+          "word": "hunger",
+          "meaning": "饥饿；渴望"
+        }
+      ],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "渴望；热望"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to feel a powerful desire for something"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "crave for",
+          "translation": "渴望",
+          "example": {
+            "en": "The article explains how to use crave for correctly.",
+            "cn": "这篇文章解释了如何正确使用 crave for（渴望）。"
+          }
+        },
+        {
+          "phrase": "crave attention",
+          "translation": "渴望关注",
+          "example": {
+            "en": "The article explains how to use crave attention correctly.",
+            "cn": "这篇文章解释了如何正确使用 crave attention（渴望关注）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自古英语 crafian（要求、恳求），后引申为强烈渴望。",
+        "mnemonic": "联想：crave 发音类似「渴瑞夫」，渴极了就「渴望」水喝。",
+        "association": "联想：crave → 强烈渴望"
+      }
+    },
+    {
+      "id": "TEST_40_19",
+      "word": "deprive",
+      "phoneticUk": "/dɪˈpraɪv/",
+      "phoneticUs": "/dɪˈpraɪv/",
+      "partOfSpeech": "v.",
+      "definitionCn": "剥夺，使丧失",
+      "examples": [
+        {
+          "en": "No one should deprive children of education.",
+          "cn": "任何人都不应剥夺儿童受教育的权利。"
+        },
+        {
+          "en": "Lack of sleep can deprive you of energy.",
+          "cn": "睡眠不足会使你失去精力。"
+        },
+        {
+          "en": "The law deprives felons of voting rights.",
+          "cn": "法律剥夺重罪犯的选举权。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "strip",
+          "meaning": "剥去；剥夺"
+        },
+        {
+          "word": "dispossess",
+          "meaning": "剥夺（财产）；使丧失"
+        },
+        {
+          "word": "deny",
+          "meaning": "否认；剥夺"
+        },
+        {
+          "word": "rob",
+          "meaning": "抢夺；剥夺"
+        }
+      ],
+      "root": "priv",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "剥夺；使丧失"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to take something important or necessary away from someone"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "deprive of",
+          "translation": "vt. 剥夺；失去",
+          "example": {
+            "en": "The article explains how to use deprive of correctly.",
+            "cn": "这篇文章解释了如何正确使用 deprive of（vt. 剥夺）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "de-（离开）+ prive（私人的），使不再拥有私有的东西→ 剥夺。",
+        "mnemonic": "联想：deprive = de + private，拿走原本属于你的东西。",
+        "association": "联想：deprive → 剥夺权利"
+      }
+    },
+    {
+      "id": "TEST_40_20",
+      "word": "detect",
+      "phoneticUk": "/dɪˈtekt/",
+      "phoneticUs": "/dɪˈtekt/",
+      "partOfSpeech": "v.",
+      "definitionCn": "察觉；侦查",
+      "examples": [
+        {
+          "en": "The sensor can detect small changes in temperature.",
+          "cn": "传感器能检测到温度的微小变化。"
+        },
+        {
+          "en": "Doctors detected the disease early.",
+          "cn": "医生早期发现了这种疾病。"
+        },
+        {
+          "en": "It is hard to detect lies without evidence.",
+          "cn": "没有证据很难识破谎言。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "discover",
+          "meaning": "发现；查明"
+        },
+        {
+          "word": "notice",
+          "meaning": "注意到；察觉"
+        },
+        {
+          "word": "identify",
+          "meaning": "识别；确认"
+        },
+        {
+          "word": "spot",
+          "meaning": "发现；察觉"
+        }
+      ],
+      "root": "tect",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "察觉；侦查；检测"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to discover or notice the presence of something that is hidden, difficult to see, or not obvious"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "detect a problem",
+          "translation": "发现问题",
+          "example": {
+            "en": "The article explains how to use detect a problem correctly.",
+            "cn": "这篇文章解释了如何正确使用 detect a problem（发现问题）。"
+          }
+        },
+        {
+          "phrase": "early detect",
+          "translation": "早期发现",
+          "example": {
+            "en": "The article explains how to use early detect correctly.",
+            "cn": "这篇文章解释了如何正确使用 early detect（早期发现）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "de-（去掉遮盖）+ tect（覆盖），揭开覆盖物→ 发现。",
+        "mnemonic": "联想：detect 与 protect（保护/覆盖）相对，去掉遮盖就能「察觉」。",
+        "association": "联想：detect → 察觉发现"
+      }
+    },
+    {
+      "id": "TEST_40_21",
+      "word": "deter",
+      "phoneticUk": "/dɪˈtɜː(r)/",
+      "phoneticUs": "/dɪˈtɜːr/",
+      "partOfSpeech": "v.",
+      "definitionCn": "阻止，制止",
+      "examples": [
+        {
+          "en": "High fines deter people from speeding.",
+          "cn": "高额罚款威慑人们超速。"
+        },
+        {
+          "en": "Security cameras deter shoplifting.",
+          "cn": "监控摄像头能震慑扒窃行为。"
+        },
+        {
+          "en": "Nothing could deter her from pursuing her dream.",
+          "cn": "没有什么能阻止她追求梦想。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "discourage",
+          "meaning": "使气馁；阻止"
+        },
+        {
+          "word": "prevent",
+          "meaning": "阻止；预防"
+        },
+        {
+          "word": "dissuade",
+          "meaning": "劝阻；劝止"
+        },
+        {
+          "word": "inhibit",
+          "meaning": "抑制；阻止"
+        }
+      ],
+      "root": "ter",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "阻止；制止；威慑"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to discourage someone from doing something by making them doubt or fear the consequences"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "deter from",
+          "translation": "阻止；威慑不做某事",
+          "example": {
+            "en": "The article explains how to use deter from correctly.",
+            "cn": "这篇文章解释了如何正确使用 deter from（阻止）。"
+          }
+        },
+        {
+          "phrase": "deter crime",
+          "translation": "震慑犯罪",
+          "example": {
+            "en": "The article explains how to use deter crime correctly.",
+            "cn": "这篇文章解释了如何正确使用 deter crime（震慑犯罪）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "de-（离开）+ ter（害怕），使人「因害怕而退缩」。",
+        "mnemonic": "联想：deter 让人 deter（吓退），不敢行动。",
+        "association": "联想：deter → 威慑阻止"
+      }
+    },
+    {
+      "id": "TEST_40_22",
+      "word": "disgrace",
+      "phoneticUk": "/dɪsˈɡreɪs/",
+      "phoneticUs": "/dɪsˈɡreɪs/",
+      "partOfSpeech": "v&n.",
+      "definitionCn": "耻辱",
+      "examples": [
+        {
+          "en": "His behavior was a disgrace to the family.",
+          "cn": "他的行为是家族的耻辱。"
+        },
+        {
+          "en": "The scandal brought disgrace upon the company.",
+          "cn": "丑闻给公司带来了耻辱。"
+        },
+        {
+          "en": "He felt disgrace after the public apology.",
+          "cn": "公开道歉后他感到羞愧。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "shame",
+          "meaning": "羞耻；耻辱"
+        },
+        {
+          "word": "dishonor",
+          "meaning": "耻辱；玷辱"
+        },
+        {
+          "word": "humiliation",
+          "meaning": "羞辱；耻辱"
+        },
+        {
+          "word": "ignominy",
+          "meaning": "耻辱；可耻"
+        }
+      ],
+      "root": "grace",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "耻辱"
+        },
+        {
+          "partOfSpeech": "v.",
+          "meaning": "使丢脸"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "loss of reputation or respect as the result of a dishonorable act"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "in disgrace",
+          "translation": "很不讨人喜欢",
+          "example": {
+            "en": "The article explains how to use in disgrace correctly.",
+            "cn": "这篇文章解释了如何正确使用 in disgrace（很不讨人喜欢）。"
+          }
+        },
+        {
+          "phrase": "bring disgrace on",
+          "translation": "给…带来耻辱",
+          "example": {
+            "en": "The article explains how to use bring disgrace on correctly.",
+            "cn": "这篇文章解释了如何正确使用 bring disgrace on（给…带来耻辱）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "dis-（否定）+ grace（优雅、荣誉），失去体面→ 耻辱。",
+        "mnemonic": "联想：disgrace 是 grace（荣耀）的反面。",
+        "association": "联想：disgrace → 耻辱丢脸"
+      }
+    },
+    {
+      "id": "TEST_40_23",
+      "word": "dispel",
+      "phoneticUk": "/dɪˈspel/",
+      "phoneticUs": "/dɪˈspel/",
+      "partOfSpeech": "v.",
+      "definitionCn": "消除（疑虑等）",
+      "examples": [
+        {
+          "en": "Sunlight dispelled the morning fog.",
+          "cn": "阳光驱散了晨雾。"
+        },
+        {
+          "en": "The speech helped dispel their fears.",
+          "cn": "演讲帮助消除了他们的恐惧。"
+        },
+        {
+          "en": "Facts can dispel rumors quickly.",
+          "cn": "事实能迅速澄清谣言。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "dissipate",
+          "meaning": "消散；驱散"
+        },
+        {
+          "word": "banish",
+          "meaning": "驱逐；消除"
+        },
+        {
+          "word": "eliminate",
+          "meaning": "消除；淘汰"
+        },
+        {
+          "word": "clear",
+          "meaning": "清除；驱散"
+        }
+      ],
+      "root": "pel",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "消除；驱散（疑虑、恐惧等）"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to make a doubt, feeling, or belief disappear"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "dispel doubts",
+          "translation": "消除疑虑",
+          "example": {
+            "en": "The article explains how to use dispel doubts correctly.",
+            "cn": "这篇文章解释了如何正确使用 dispel doubts（消除疑虑）。"
+          }
+        },
+        {
+          "phrase": "dispel rumors",
+          "translation": "澄清谣言",
+          "example": {
+            "en": "The article explains how to use dispel rumors correctly.",
+            "cn": "这篇文章解释了如何正确使用 dispel rumors（澄清谣言）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "dis-（分开）+ pel（驱动），把阴霾「驱散开」。",
+        "mnemonic": "联想：dispel 与 repel（击退）同根 pel，都是「推开」。",
+        "association": "联想：dispel → 驱散疑虑"
+      }
+    },
+    {
+      "id": "TEST_40_24",
+      "word": "dispute",
+      "phoneticUk": "/dɪˈspjuːt/",
+      "phoneticUs": "/dɪˈspjuːt/",
+      "partOfSpeech": "v.",
+      "definitionCn": "争论；对...提出质疑",
+      "examples": [
+        {
+          "en": "The two nations dispute the border territory.",
+          "cn": "两国对边境领土存在争议。"
+        },
+        {
+          "en": "They dispute the accuracy of the report.",
+          "cn": "他们对报告的准确性有异议。"
+        },
+        {
+          "en": "The labor dispute was settled peacefully.",
+          "cn": "劳资纠纷得到了和平解决。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "debate",
+          "meaning": "辩论；争论"
+        },
+        {
+          "word": "quarrel",
+          "meaning": "争吵；口角"
+        },
+        {
+          "word": "contest",
+          "meaning": "争论；竞赛"
+        },
+        {
+          "word": "challenge",
+          "meaning": "挑战；质疑"
+        }
+      ],
+      "root": "put",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "争论；对…提出质疑"
+        },
+        {
+          "partOfSpeech": "n.",
+          "meaning": "争端；争论"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to argue or debate about something; to question whether something is true or valid"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "dispute resolution",
+          "translation": "[法律]调解纠纷",
+          "example": {
+            "en": "The article explains how to use dispute resolution correctly.",
+            "cn": "这篇文章解释了如何正确使用 dispute resolution（[法律]调解纠纷）。"
+          }
+        },
+        {
+          "phrase": "in dispute",
+          "translation": "在争论中",
+          "example": {
+            "en": "The article explains how to use in dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 in dispute（在争论中）。"
+          }
+        },
+        {
+          "phrase": "labor dispute",
+          "translation": "劳动争议；劳资纠纷",
+          "example": {
+            "en": "The article explains how to use labor dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 labor dispute（劳动争议）。"
+          }
+        },
+        {
+          "phrase": "dispute about",
+          "translation": "争论，辩论",
+          "example": {
+            "en": "The article explains how to use dispute about correctly.",
+            "cn": "这篇文章解释了如何正确使用 dispute about（争论，辩论）。"
+          }
+        },
+        {
+          "phrase": "trade dispute",
+          "translation": "贸易纠纷",
+          "example": {
+            "en": "The article explains how to use trade dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 trade dispute（贸易纠纷）。"
+          }
+        },
+        {
+          "phrase": "beyond dispute",
+          "translation": "无疑地；没有争论余地",
+          "example": {
+            "en": "The article explains how to use beyond dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 beyond dispute（无疑地）。"
+          }
+        },
+        {
+          "phrase": "labour dispute",
+          "translation": "劳资争议",
+          "example": {
+            "en": "The article explains how to use labour dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 labour dispute（劳资争议）。"
+          }
+        },
+        {
+          "phrase": "legal dispute",
+          "translation": "法律纠纷",
+          "example": {
+            "en": "The article explains how to use legal dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 legal dispute（法律纠纷）。"
+          }
+        },
+        {
+          "phrase": "dispute settlement body",
+          "translation": "争端解决机构；争端处理机构；争端解决机制",
+          "example": {
+            "en": "The article explains how to use dispute settlement body correctly.",
+            "cn": "这篇文章解释了如何正确使用 dispute settlement body（争端解决机构）。"
+          }
+        },
+        {
+          "phrase": "under dispute",
+          "translation": "在争论中",
+          "example": {
+            "en": "The article explains how to use under dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 under dispute（在争论中）。"
+          }
+        },
+        {
+          "phrase": "settle dispute",
+          "translation": "解决争端；解决争议",
+          "example": {
+            "en": "The article explains how to use settle dispute correctly.",
+            "cn": "这篇文章解释了如何正确使用 settle dispute（解决争端）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "dis-（分开）+ put（思考），各自「想的不一样」→ 争论。",
+        "mnemonic": "联想：dispute 就是观点 put（放）不到一起。",
+        "association": "联想：dispute → 争论纠纷"
+      }
+    },
+    {
+      "id": "TEST_40_25",
+      "word": "disseminate",
+      "phoneticUk": "/dɪˈsemɪneɪt/",
+      "phoneticUs": "/dɪˈsemɪneɪt/",
+      "partOfSpeech": "v.",
+      "definitionCn": "散布，传播",
+      "examples": [
+        {
+          "en": "The agency disseminates public health information.",
+          "cn": "该机构传播公共卫生信息。"
+        },
+        {
+          "en": "Social media helps disseminate news quickly.",
+          "cn": "社交媒体有助于快速传播新闻。"
+        },
+        {
+          "en": "Teachers disseminate knowledge to students.",
+          "cn": "教师向学生传播知识。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "spread",
+          "meaning": "传播；散布"
+        },
+        {
+          "word": "distribute",
+          "meaning": "分发；散布"
+        },
+        {
+          "word": "circulate",
+          "meaning": "流通；传播"
+        },
+        {
+          "word": "propagate",
+          "meaning": "传播；繁殖"
+        }
+      ],
+      "root": "semin",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "散布；传播"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to spread information, knowledge, or ideas widely among many people"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "disseminate information",
+          "translation": "传播信息",
+          "example": {
+            "en": "The article explains how to use disseminate information correctly.",
+            "cn": "这篇文章解释了如何正确使用 disseminate information（传播信息）。"
+          }
+        },
+        {
+          "phrase": "disseminate knowledge",
+          "translation": "传播知识",
+          "example": {
+            "en": "The article explains how to use disseminate knowledge correctly.",
+            "cn": "这篇文章解释了如何正确使用 disseminate knowledge（传播知识）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "dis-（向各处）+ semin（种子）+ -ate，像撒种一样「广泛播散」。",
+        "mnemonic": "联想：disseminate 内含 seed/semin（种子），把种子撒出去就是传播。",
+        "association": "联想：disseminate → 广泛传播"
+      }
+    },
+    {
+      "id": "TEST_40_26",
+      "word": "dove",
+      "phoneticUk": "/dʌv/",
+      "phoneticUs": "/dʌv/",
+      "partOfSpeech": "n.",
+      "definitionCn": "鸽",
+      "examples": [
+        {
+          "en": "A white dove landed on the windowsill.",
+          "cn": "一只白鸽落在窗台上。"
+        },
+        {
+          "en": "The dove is a symbol of peace.",
+          "cn": "鸽子是和平的象征。"
+        },
+        {
+          "en": "Children fed the dove in the park.",
+          "cn": "孩子们在公园里喂鸽子。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "pigeon",
+          "meaning": "鸽子"
+        },
+        {
+          "word": "peace bird",
+          "meaning": "和平之鸟；鸽子"
+        }
+      ],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "鸽子"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a bird of the pigeon family, often used as a symbol of peace"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "dove of peace",
+          "translation": "和平鸽",
+          "example": {
+            "en": "The article explains how to use dove of peace correctly.",
+            "cn": "这篇文章解释了如何正确使用 dove of peace（和平鸽）。"
+          }
+        },
+        {
+          "phrase": "white dove",
+          "translation": "白鸽",
+          "example": {
+            "en": "The article explains how to use white dove correctly.",
+            "cn": "这篇文章解释了如何正确使用 white dove（白鸽）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自古英语 dufe，与 dive（俯冲）有关，指俯冲而下的鸟。",
+        "mnemonic": "联想：dove 是和平象征，与 hawk（鹰）常对比。",
+        "association": "联想：dove → 和平鸽"
+      }
+    },
+    {
+      "id": "TEST_40_27",
+      "word": "drag",
+      "phoneticUk": "/dræɡ/",
+      "phoneticUs": "/dræɡ/",
+      "partOfSpeech": "v.",
+      "definitionCn": "拖拽； 吃力地往前拉",
+      "examples": [
+        {
+          "en": "Don't drag your feet on this decision.",
+          "cn": "别在这个决定上拖拉。"
+        },
+        {
+          "en": "He had to drag the heavy box upstairs.",
+          "cn": "他不得不把沉重的箱子拖上楼。"
+        },
+        {
+          "en": "The meeting seemed to drag on forever.",
+          "cn": "会议似乎没完没了地拖着。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "pull",
+          "meaning": "拉；拖"
+        },
+        {
+          "word": "haul",
+          "meaning": "拖运；用力拉"
+        },
+        {
+          "word": "tow",
+          "meaning": "拖；牵引"
+        },
+        {
+          "word": "trail",
+          "meaning": "拖；追踪"
+        }
+      ],
+      "root": "drag",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "拖拽；吃力地往前拉"
+        },
+        {
+          "partOfSpeech": "n.",
+          "meaning": "累赘；拖曳"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to pull something along the ground or another surface with effort; to proceed or cause to proceed slowly"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "drag on",
+          "translation": "拖延",
+          "example": {
+            "en": "The article explains how to use drag on correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag on（拖延）。"
+          }
+        },
+        {
+          "phrase": "drag and drop",
+          "translation": "拖放",
+          "example": {
+            "en": "The article explains how to use drag and drop correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag and drop（拖放）。"
+          }
+        },
+        {
+          "phrase": "drag reduction",
+          "translation": "减阻",
+          "example": {
+            "en": "The article explains how to use drag reduction correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag reduction（减阻）。"
+          }
+        },
+        {
+          "phrase": "drag coefficient",
+          "translation": "阻力系数；曳引系数",
+          "example": {
+            "en": "The article explains how to use drag coefficient correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag coefficient（阻力系数）。"
+          }
+        },
+        {
+          "phrase": "drag in",
+          "translation": "插入讨论中；拉进",
+          "example": {
+            "en": "The article explains how to use drag in correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag in（插入讨论中）。"
+          }
+        },
+        {
+          "phrase": "drag force",
+          "translation": "拖曳力，曳力",
+          "example": {
+            "en": "The article explains how to use drag force correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag force（拖曳力，曳力）。"
+          }
+        },
+        {
+          "phrase": "click and drag",
+          "translation": "单击并拖动",
+          "example": {
+            "en": "The article explains how to use click and drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 click and drag（单击并拖动）。"
+          }
+        },
+        {
+          "phrase": "drag down",
+          "translation": "向下拖",
+          "example": {
+            "en": "The article explains how to use drag down correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag down（向下拖）。"
+          }
+        },
+        {
+          "phrase": "aerodynamic drag",
+          "translation": "空气动力阻力",
+          "example": {
+            "en": "The article explains how to use aerodynamic drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 aerodynamic drag（空气动力阻力）。"
+          }
+        },
+        {
+          "phrase": "friction drag",
+          "translation": "摩阻；磨擦阻力",
+          "example": {
+            "en": "The article explains how to use friction drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 friction drag（摩阻）。"
+          }
+        },
+        {
+          "phrase": "air drag",
+          "translation": "空气阻力",
+          "example": {
+            "en": "The article explains how to use air drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 air drag（空气阻力）。"
+          }
+        },
+        {
+          "phrase": "drag along",
+          "translation": "拖着脚走，慢慢地行走",
+          "example": {
+            "en": "The article explains how to use drag along correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag along（拖着脚走，慢慢地行走）。"
+          }
+        },
+        {
+          "phrase": "drag out",
+          "translation": "拖延",
+          "example": {
+            "en": "The article explains how to use drag out correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag out（拖延）。"
+          }
+        },
+        {
+          "phrase": "frictional drag",
+          "translation": "摩擦阻力；摩擦拽力",
+          "example": {
+            "en": "The article explains how to use frictional drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 frictional drag（摩擦阻力）。"
+          }
+        },
+        {
+          "phrase": "drag link",
+          "translation": "拉杆",
+          "example": {
+            "en": "The article explains how to use drag link correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag link（拉杆）。"
+          }
+        },
+        {
+          "phrase": "drag racing",
+          "translation": "直线加速赛；短程高速赛车；减重短程高速汽车赛；街头飚车（汽车）",
+          "example": {
+            "en": "The article explains how to use drag racing correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag racing（直线加速赛）。"
+          }
+        },
+        {
+          "phrase": "drag torque",
+          "translation": "阻力矩；曳力矩；拖曳转矩",
+          "example": {
+            "en": "The article explains how to use drag torque correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag torque（阻力矩）。"
+          }
+        },
+        {
+          "phrase": "drag chain",
+          "translation": "牵引链",
+          "example": {
+            "en": "The article explains how to use drag chain correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag chain（牵引链）。"
+          }
+        },
+        {
+          "phrase": "wave drag",
+          "translation": "波阻",
+          "example": {
+            "en": "The article explains how to use wave drag correctly.",
+            "cn": "这篇文章解释了如何正确使用 wave drag（波阻）。"
+          }
+        },
+        {
+          "phrase": "drag over",
+          "translation": "拖过；拖出",
+          "example": {
+            "en": "The article explains how to use drag over correctly.",
+            "cn": "这篇文章解释了如何正确使用 drag over（拖过）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自古英语 dragan（拉、拖），与 draw 同源。",
+        "mnemonic": "联想：drag on（拖延）像时间被「拖着走」。",
+        "association": "联想：drag → 拖拽拖延"
+      }
+    },
+    {
+      "id": "TEST_40_28",
+      "word": "ensure",
+      "phoneticUk": "/ɪnˈʃʊə(r)/",
+      "phoneticUs": "/ɪnˈʃʊr/",
+      "partOfSpeech": "v.",
+      "definitionCn": "保证，确保",
+      "examples": [
+        {
+          "en": "Please ensure that all doors are locked.",
+          "cn": "请确保所有门都已锁好。"
+        },
+        {
+          "en": "Good planning will ensure success.",
+          "cn": "良好的规划将确保成功。"
+        },
+        {
+          "en": "The law ensures equal rights for citizens.",
+          "cn": "法律保障公民平等权利。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "guarantee",
+          "meaning": "保证；担保"
+        },
+        {
+          "word": "secure",
+          "meaning": "确保；使安全"
+        },
+        {
+          "word": "make certain",
+          "meaning": "确保；弄确实"
+        },
+        {
+          "word": "safeguard",
+          "meaning": "保护；保障"
+        }
+      ],
+      "root": "sur",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "保证；确保"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to make certain that something will occur or be the case"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "ensure public security",
+          "translation": "保安",
+          "example": {
+            "en": "The article explains how to use ensure public security correctly.",
+            "cn": "这篇文章解释了如何正确使用 ensure public security（保安）。"
+          }
+        },
+        {
+          "phrase": "ensure from",
+          "translation": "v. 保护",
+          "example": {
+            "en": "The article explains how to use ensure from correctly.",
+            "cn": "这篇文章解释了如何正确使用 ensure from（v. 保护）。"
+          }
+        },
+        {
+          "phrase": "ensure safety",
+          "translation": "确保安全",
+          "example": {
+            "en": "The article explains how to use ensure safety correctly.",
+            "cn": "这篇文章解释了如何正确使用 ensure safety（确保安全）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "en-（使）+ sure（确定），即「使确定发生」。",
+        "mnemonic": "辨析：ensure（确保）强调结果；assure（向人保证）强调安抚对方。",
+        "association": "联想：ensure → 确保无误"
+      }
+    },
+    {
+      "id": "TEST_40_29",
+      "word": "especially",
+      "phoneticUk": "/ɪˈspeʃəli/",
+      "phoneticUs": "/ɪˈspeʃəli/",
+      "partOfSpeech": "adv.",
+      "definitionCn": "尤其，特别是",
+      "examples": [
+        {
+          "en": "I love fruit, especially strawberries.",
+          "cn": "我喜欢水果，尤其是草莓。"
+        },
+        {
+          "en": "Drive carefully, especially in the rain.",
+          "cn": "小心驾驶，尤其是在雨中。"
+        },
+        {
+          "en": "She is especially talented in music.",
+          "cn": "她在音乐方面特别有天赋。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "particularly",
+          "meaning": "尤其；特别"
+        },
+        {
+          "word": "notably",
+          "meaning": "显著地；尤其"
+        },
+        {
+          "word": "chiefly",
+          "meaning": "主要地；首先"
+        },
+        {
+          "word": "above all",
+          "meaning": "最重要的是；首先"
+        }
+      ],
+      "root": "spec",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adv.",
+          "meaning": "尤其；特别"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adv.",
+          "meaning": "used to single out one person, thing, or situation over all others; particularly"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "especially english",
+          "translation": "具有英国特征的",
+          "example": {
+            "en": "The article explains how to use especially english correctly.",
+            "cn": "这篇文章解释了如何正确使用 especially english（具有英国特征的）。"
+          }
+        },
+        {
+          "phrase": "especially when",
+          "translation": "尤其是在…时候",
+          "example": {
+            "en": "The article explains how to use especially when correctly.",
+            "cn": "这篇文章解释了如何正确使用 especially when（尤其是在…时候）。"
+          }
+        },
+        {
+          "phrase": "especially for",
+          "translation": "尤其适用于",
+          "example": {
+            "en": "The article explains how to use especially for correctly.",
+            "cn": "这篇文章解释了如何正确使用 especially for（尤其适用于）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "especial（特别的）+ -ly（副词后缀）。",
+        "mnemonic": "联想：especially = special（特别）+ ly，特别地。",
+        "association": "联想：especially → 尤其特别"
+      }
+    },
+    {
+      "id": "TEST_40_30",
+      "word": "expel",
+      "phoneticUk": "/ɪkˈspel/",
+      "phoneticUs": "/ɪkˈspel/",
+      "partOfSpeech": "v.",
+      "definitionCn": "驱逐；赶走；把…除名",
+      "examples": [
+        {
+          "en": "The school may expel students who cheat.",
+          "cn": "学校可能开除作弊的学生。"
+        },
+        {
+          "en": "The body expels toxins through the liver.",
+          "cn": "身体通过肝脏排出毒素。"
+        },
+        {
+          "en": "He was expelled from the club for misconduct.",
+          "cn": "他因行为不当被俱乐部除名。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "eject",
+          "meaning": "驱逐；弹出"
+        },
+        {
+          "word": "oust",
+          "meaning": "驱逐；罢黜"
+        },
+        {
+          "word": "banish",
+          "meaning": "驱逐；消除"
+        },
+        {
+          "word": "remove",
+          "meaning": "移除；开除"
+        }
+      ],
+      "root": "pel",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "驱逐；开除；排出"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "v.",
+          "meaning": "to force someone to leave a place, organization, or school; to drive out or discharge"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "expel from",
+          "translation": "v. 驱逐出；开除；排出",
+          "example": {
+            "en": "The article explains how to use expel from correctly.",
+            "cn": "这篇文章解释了如何正确使用 expel from（v. 驱逐出）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "ex-（向外）+ pel（驱动），把人或物「驱赶出去」。",
+        "mnemonic": "联想：expel 与 propel（推进）同根，一个是向外推，一个是向前推。",
+        "association": "联想：expel → 驱逐开除"
+      }
+    },
+    {
+      "id": "TEST_40_31",
+      "word": "fate",
+      "phoneticUk": "/feɪt/",
+      "phoneticUs": "/feɪt/",
+      "partOfSpeech": "n.",
+      "definitionCn": "命运",
+      "examples": [
+        {
+          "en": "She accepted her fate calmly.",
+          "cn": "她平静地接受了命运。"
+        },
+        {
+          "en": "No one can escape fate forever.",
+          "cn": "没有人能永远逃脱命运。"
+        },
+        {
+          "en": "The fate of the project is still uncertain.",
+          "cn": "项目的命运仍不确定。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "destiny",
+          "meaning": "命运；天命"
+        },
+        {
+          "word": "fortune",
+          "meaning": "命运；财富"
+        },
+        {
+          "word": "lot",
+          "meaning": "命运；份额"
+        },
+        {
+          "word": "doom",
+          "meaning": "厄运；注定"
+        }
+      ],
+      "root": "fat",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "命运；宿命"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "the development of events outside a person's control, regarded as predetermined; destiny"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "as sure as fate",
+          "translation": "千真万确",
+          "example": {
+            "en": "The article explains how to use as sure as fate correctly.",
+            "cn": "这篇文章解释了如何正确使用 as sure as fate（千真万确）。"
+          }
+        },
+        {
+          "phrase": "meet one's fate",
+          "translation": "遭遇命运；赴死",
+          "example": {
+            "en": "The article explains how to use meet one's fate correctly.",
+            "cn": "这篇文章解释了如何正确使用 meet one's fate（遭遇命运）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自拉丁语 fatum（神谕、天命），与 fairy（命运女神）相关。",
+        "mnemonic": "联想：fate 与 fatal（致命的）同源，命运有时很「致命」。",
+        "association": "联想：fate → 命中注定"
+      }
+    },
+    {
+      "id": "TEST_40_32",
+      "word": "federal",
+      "phoneticUk": "/ˈfedərəl/",
+      "phoneticUs": "/ˈfedərəl/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "联邦的",
+      "examples": [
+        {
+          "en": "Federal law overrides state law in this case.",
+          "cn": "在这种情况下联邦法律优先于州法律。"
+        },
+        {
+          "en": "The federal government announced new policies.",
+          "cn": "联邦政府宣布了新政策。"
+        },
+        {
+          "en": "He works for a federal agency.",
+          "cn": "他在一家联邦机构工作。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "national",
+          "meaning": "国家的；全国的"
+        },
+        {
+          "word": "central",
+          "meaning": "中央的；核心的"
+        },
+        {
+          "word": "union",
+          "meaning": "联合；结合"
+        },
+        {
+          "word": "governmental",
+          "meaning": "政府的；官方的"
+        }
+      ],
+      "root": "fed",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "联邦的；联邦政府的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "having or relating to a system of government in which several states form a unity but remain independent in internal affairs"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "federal reserve",
+          "translation": "（美国）联邦储备系统",
+          "example": {
+            "en": "The article explains how to use federal reserve correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal reserve（（美国）联邦储备系统）。"
+          }
+        },
+        {
+          "phrase": "federal government",
+          "translation": "联邦政府",
+          "example": {
+            "en": "The article explains how to use federal government correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal government（联邦政府）。"
+          }
+        },
+        {
+          "phrase": "federal law",
+          "translation": "联邦法律",
+          "example": {
+            "en": "The article explains how to use federal law correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal law（联邦法律）。"
+          }
+        },
+        {
+          "phrase": "federal funds",
+          "translation": "联邦资金",
+          "example": {
+            "en": "The article explains how to use federal funds correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal funds（联邦资金）。"
+          }
+        },
+        {
+          "phrase": "federal court",
+          "translation": "联邦法院",
+          "example": {
+            "en": "The article explains how to use federal court correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal court（联邦法院）。"
+          }
+        },
+        {
+          "phrase": "federal budget",
+          "translation": "联邦预算",
+          "example": {
+            "en": "The article explains how to use federal budget correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal budget（联邦预算）。"
+          }
+        },
+        {
+          "phrase": "federal reserve board",
+          "translation": "（美国）联邦储备金监察小组",
+          "example": {
+            "en": "The article explains how to use federal reserve board correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal reserve board（（美国）联邦储备金监察小组）。"
+          }
+        },
+        {
+          "phrase": "federal communications commission",
+          "translation": "联邦通信委员会",
+          "example": {
+            "en": "The article explains how to use federal communications commission correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal communications commission（联邦通信委员会）。"
+          }
+        },
+        {
+          "phrase": "federal reserve bank",
+          "translation": "（美）联邦储备银行",
+          "example": {
+            "en": "The article explains how to use federal reserve bank correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal reserve bank（（美）联邦储备银行）。"
+          }
+        },
+        {
+          "phrase": "federal agency",
+          "translation": "联邦机构；联邦政府机构",
+          "example": {
+            "en": "The article explains how to use federal agency correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal agency（联邦机构）。"
+          }
+        },
+        {
+          "phrase": "federal bureau of investigation",
+          "translation": "n. （美）联邦调查局",
+          "example": {
+            "en": "The article explains how to use federal bureau of investigation correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal bureau of investigation（n. （美）联邦调查局）。"
+          }
+        },
+        {
+          "phrase": "federal funds rate",
+          "translation": "联邦基金利率",
+          "example": {
+            "en": "The article explains how to use federal funds rate correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal funds rate（联邦基金利率）。"
+          }
+        },
+        {
+          "phrase": "federal deposit insurance corporation",
+          "translation": "美国联邦存款保险公司",
+          "example": {
+            "en": "The article explains how to use federal deposit insurance corporation correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal deposit insurance corporation（美国联邦存款保险公司）。"
+          }
+        },
+        {
+          "phrase": "federal trade commission",
+          "translation": "联邦贸易委员会，联邦商务委员会（FTC）",
+          "example": {
+            "en": "The article explains how to use federal trade commission correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal trade commission（联邦贸易委员会，联邦商务委员会（FTC））。"
+          }
+        },
+        {
+          "phrase": "federal republic of germany",
+          "translation": "德意志联邦共和国",
+          "example": {
+            "en": "The article explains how to use federal republic of germany correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal republic of germany（德意志联邦共和国）。"
+          }
+        },
+        {
+          "phrase": "federal reserve system",
+          "translation": "（美）联邦准备制度",
+          "example": {
+            "en": "The article explains how to use federal reserve system correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal reserve system（（美）联邦准备制度）。"
+          }
+        },
+        {
+          "phrase": "federal tax",
+          "translation": "（美）联邦税",
+          "example": {
+            "en": "The article explains how to use federal tax correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal tax（（美）联邦税）。"
+          }
+        },
+        {
+          "phrase": "federal aviation administration",
+          "translation": "[运输工程]联邦航空管理局",
+          "example": {
+            "en": "The article explains how to use federal aviation administration correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal aviation administration（[运输工程]联邦航空管理局）。"
+          }
+        },
+        {
+          "phrase": "federal district",
+          "translation": "联邦特区（联邦政府所在地区，等于Federal District）",
+          "example": {
+            "en": "The article explains how to use federal district correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal district（联邦特区（联邦政府所在地区，等于Federal District））。"
+          }
+        },
+        {
+          "phrase": "federal express",
+          "translation": "联邦快递，美国联邦快递公司",
+          "example": {
+            "en": "The article explains how to use federal express correctly.",
+            "cn": "这篇文章解释了如何正确使用 federal express（联邦快递，美国联邦快递公司）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自拉丁语 foedus（盟约、条约），联邦即「盟约之国」。",
+        "mnemonic": "联想：federal government = 联邦政府，与 state（州）相对。",
+        "association": "联想：federal → 联邦体制"
+      }
+    },
+    {
+      "id": "TEST_40_33",
+      "word": "generations",
+      "phoneticUk": "/ˌdʒenəˈreɪʃnz/",
+      "phoneticUs": "/ˌdʒenəˈreɪʃnz/",
+      "partOfSpeech": "n.",
+      "definitionCn": "数代人",
+      "examples": [
+        {
+          "en": "Stories passed down through generations.",
+          "cn": "故事代代相传。"
+        },
+        {
+          "en": "Younger generations prefer digital payments.",
+          "cn": "年轻一代更喜欢数字支付。"
+        },
+        {
+          "en": "The tradition spans many generations.",
+          "cn": "这一传统延续了好几代人。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "age groups",
+          "meaning": "年龄群体；世代"
+        },
+        {
+          "word": "cohorts",
+          "meaning": "同龄群体；一代人"
+        },
+        {
+          "word": "descendants",
+          "meaning": "后裔；子孙"
+        },
+        {
+          "word": "offspring",
+          "meaning": "后代；子女"
+        }
+      ],
+      "root": "gen",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "一代人；世代（generation 的复数）"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "all the people born and living at about the same time, regarded collectively; successive stages in a family lineage"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "alternation of generations",
+          "translation": "世代交替",
+          "example": {
+            "en": "The article explains how to use alternation of generations correctly.",
+            "cn": "这篇文章解释了如何正确使用 alternation of generations（世代交替）。"
+          }
+        },
+        {
+          "phrase": "through generations",
+          "translation": "代代相传",
+          "example": {
+            "en": "The article explains how to use through generations correctly.",
+            "cn": "这篇文章解释了如何正确使用 through generations（代代相传）。"
+          }
+        },
+        {
+          "phrase": "younger generations",
+          "translation": "年轻一代",
+          "example": {
+            "en": "The article explains how to use younger generations correctly.",
+            "cn": "这篇文章解释了如何正确使用 younger generations（年轻一代）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "generation（一代）+ -s 复数；gene（基因）+ generate（产生）→ 繁衍出的一代代人。",
+        "mnemonic": "联想：generations 来自 generate（产生），一代代「产生」下去。",
+        "association": "联想：generations → 数代人"
+      }
+    },
+    {
+      "id": "TEST_40_34",
+      "word": "grit",
+      "phoneticUk": "/ɡrɪt/",
+      "phoneticUs": "/ɡrɪt/",
+      "partOfSpeech": "n.",
+      "definitionCn": "毅力",
+      "examples": [
+        {
+          "en": "Success often requires grit and patience.",
+          "cn": "成功往往需要毅力和耐心。"
+        },
+        {
+          "en": "Sand and grit covered the road.",
+          "cn": "沙砾覆盖了路面。"
+        },
+        {
+          "en": "Her grit helped her overcome every obstacle.",
+          "cn": "她的坚韧帮助她克服了每一个障碍。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "courage",
+          "meaning": "勇气"
+        },
+        {
+          "word": "determination",
+          "meaning": "决心；坚定"
+        },
+        {
+          "word": "fortitude",
+          "meaning": "刚毅；坚忍"
+        },
+        {
+          "word": "perseverance",
+          "meaning": "毅力；坚持不懈"
+        }
+      ],
+      "root": "grit",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "毅力；勇气；沙砾"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "courage and resolve; strength of character; also, small loose particles of stone or sand"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "grit chamber",
+          "translation": "沉砂池",
+          "example": {
+            "en": "The article explains how to use grit chamber correctly.",
+            "cn": "这篇文章解释了如何正确使用 grit chamber（沉砂池）。"
+          }
+        },
+        {
+          "phrase": "steel grit",
+          "translation": "钢砂；钢丸；钢粒",
+          "example": {
+            "en": "The article explains how to use steel grit correctly.",
+            "cn": "这篇文章解释了如何正确使用 steel grit（钢砂）。"
+          }
+        },
+        {
+          "phrase": "true grit",
+          "translation": "真正的勇气；坚毅",
+          "example": {
+            "en": "The article explains how to use true grit correctly.",
+            "cn": "这篇文章解释了如何正确使用 true grit（真正的勇气）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "原义为「沙砾」，沙砾粗糙坚硬，引申为「坚韧不拔」。",
+        "mnemonic": "联想：grit 像 grit（沙粒）一样磨人，但也磨出毅力。",
+        "association": "联想：grit → 坚毅毅力"
+      }
+    },
+    {
+      "id": "TEST_40_35",
+      "word": "gritty",
+      "phoneticUk": "/ˈɡrɪti/",
+      "phoneticUs": "/ˈɡrɪti/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "勇敢的，坚毅的",
+      "examples": [
+        {
+          "en": "The film tells a gritty story of urban life.",
+          "cn": "这部电影讲述了残酷的城市生活故事。"
+        },
+        {
+          "en": "His gritty determination impressed the coach.",
+          "cn": "他坚韧不拔的决心打动了教练。"
+        },
+        {
+          "en": "The gritty texture of the bread was unusual.",
+          "cn": "面包粗粝的口感很特别。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "resilient",
+          "meaning": "有韧性的；能迅速恢复的"
+        },
+        {
+          "word": "tough",
+          "meaning": "坚韧的；强硬的"
+        },
+        {
+          "word": "determined",
+          "meaning": "坚决的；下定决心的"
+        },
+        {
+          "word": "courageous",
+          "meaning": "勇敢的"
+        }
+      ],
+      "root": "grit",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "坚毅的；粗粝的；有沙砾的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "showing courage and resolve; containing or resembling grit; harshly realistic"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "gritty realism",
+          "translation": "粗粝的现实主义",
+          "example": {
+            "en": "The article explains how to use gritty realism correctly.",
+            "cn": "这篇文章解释了如何正确使用 gritty realism（粗粝的现实主义）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "grit（沙砾/毅力）+ -y，既指「含沙砾的」，也指「有毅力的」。",
+        "mnemonic": "联想：gritty 是 grit 的形容词，坚韧不拔的。",
+        "association": "联想：gritty → 勇敢坚毅"
+      }
+    },
+    {
+      "id": "TEST_40_36",
+      "word": "gutter",
+      "phoneticUk": "/ˈɡʌtə(r)/",
+      "phoneticUs": "/ˈɡʌtər/",
+      "partOfSpeech": "n.",
+      "definitionCn": "（路边）排水沟",
+      "examples": [
+        {
+          "en": "Leaves clogged the gutter after the storm.",
+          "cn": "暴风雨后落叶堵住了排水沟。"
+        },
+        {
+          "en": "Water flowed along the gutter into the drain.",
+          "cn": "水沿着檐沟流入下水道。"
+        },
+        {
+          "en": "He fixed the broken gutter on the roof.",
+          "cn": "他修好了屋顶上破损的檐沟。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "drain",
+          "meaning": "排水；耗尽"
+        },
+        {
+          "word": "ditch",
+          "meaning": "沟渠；抛弃"
+        },
+        {
+          "word": "channel",
+          "meaning": "渠道；沟渠"
+        },
+        {
+          "word": "sewer",
+          "meaning": "下水道；污水渠"
+        }
+      ],
+      "root": "gut",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "（路边）排水沟；檐沟"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a shallow trough fixed beneath the edge of a roof or along a street to carry off rainwater"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "in the gutter",
+          "translation": "[美国俚语]",
+          "example": {
+            "en": "The article explains how to use in the gutter correctly.",
+            "cn": "这篇文章解释了如何正确使用 in the gutter（[美国俚语]）。"
+          }
+        },
+        {
+          "phrase": "rain gutter",
+          "translation": "雨水檐沟",
+          "example": {
+            "en": "The article explains how to use rain gutter correctly.",
+            "cn": "这篇文章解释了如何正确使用 rain gutter（雨水檐沟）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自古法语 goutiere（排水沟），与 gout（一滴）相关。",
+        "mnemonic": "联想：gutter 收集雨水，in the gutter 引申为「堕落到底层」。",
+        "association": "联想：gutter → 排水沟"
+      }
+    },
+    {
+      "id": "TEST_40_37",
+      "word": "hippie",
+      "phoneticUk": "/ˈhɪpi/",
+      "phoneticUs": "/ˈhɪpi/",
+      "partOfSpeech": "n.",
+      "definitionCn": "嬉皮士",
+      "examples": [
+        {
+          "en": "The hippie movement peaked in the 1960s.",
+          "cn": "嬉皮运动在20世纪60年代达到顶峰。"
+        },
+        {
+          "en": "She dressed like a hippie at the festival.",
+          "cn": "她在音乐节上打扮得像个嬉皮士。"
+        },
+        {
+          "en": "Hippie culture promoted peace and love.",
+          "cn": "嬉皮文化倡导和平与爱。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "bohemian",
+          "meaning": "波西米亚人；特立独行者"
+        },
+        {
+          "word": "flower child",
+          "meaning": "花童世代；嬉皮青年"
+        },
+        {
+          "word": "nonconformist",
+          "meaning": "不墨守成规者；异见者"
+        }
+      ],
+      "root": "hip",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "嬉皮士"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "a young person in the 1960s and 1970s who rejected conventional society and promoted peace and love"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "hippie culture",
+          "translation": "嬉皮文化",
+          "example": {
+            "en": "The article explains how to use hippie culture correctly.",
+            "cn": "这篇文章解释了如何正确使用 hippie culture（嬉皮文化）。"
+          }
+        },
+        {
+          "phrase": "hippie movement",
+          "translation": "嬉皮运动",
+          "example": {
+            "en": "The article explains how to use hippie movement correctly.",
+            "cn": "这篇文章解释了如何正确使用 hippie movement（嬉皮运动）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "来自 hip（时髦、知情）+ -ie，指反主流文化的年轻人。",
+        "mnemonic": "联想：hippie 追求 peace & love，留长发、穿花衣。",
+        "association": "联想：hippie → 60年代嬉皮士"
+      }
+    },
+    {
+      "id": "TEST_40_38",
+      "word": "immortality",
+      "phoneticUk": "/ˌɪmɔːˈtæləti/",
+      "phoneticUs": "/ˌɪmɔːrˈtæləti/",
+      "partOfSpeech": "n.",
+      "definitionCn": "永生，不朽",
+      "examples": [
+        {
+          "en": "Ancient poets wrote about immortality.",
+          "cn": "古代诗人写过关于永生的诗篇。"
+        },
+        {
+          "en": "The hero sought immortality in legend.",
+          "cn": "传说中英雄追求长生不老。"
+        },
+        {
+          "en": "Art can grant a kind of immortality to creators.",
+          "cn": "艺术能给创作者一种不朽。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "eternity",
+          "meaning": "永恒；永远"
+        },
+        {
+          "word": "perpetuity",
+          "meaning": "永久；永恒"
+        },
+        {
+          "word": "everlasting life",
+          "meaning": "永生；来世永存"
+        },
+        {
+          "word": "endlessness",
+          "meaning": "无尽；永恒"
+        }
+      ],
+      "root": "mort",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "永生；不朽"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "the ability to live forever; lasting fame or remembrance that never ends"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "seek immortality",
+          "translation": "追求永生",
+          "example": {
+            "en": "The article explains how to use seek immortality correctly.",
+            "cn": "这篇文章解释了如何正确使用 seek immortality（追求永生）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "im-（不）+ mortal（会死的）+ -ity，「不会死亡」的状态。",
+        "mnemonic": "联想：immortality = im + mortal，否定「凡人必死」。",
+        "association": "联想：immortality → 永生不朽"
+      }
+    },
+    {
+      "id": "TEST_40_39",
+      "word": "indolence",
+      "phoneticUk": "/ˈɪndələns/",
+      "phoneticUs": "/ˈɪndələns/",
+      "partOfSpeech": "n.",
+      "definitionCn": "懒惰；懒散",
+      "examples": [
+        {
+          "en": "Indolence will not lead to success.",
+          "cn": "懒惰不会带来成功。"
+        },
+        {
+          "en": "He was criticized for his indolence.",
+          "cn": "他因懒散受到批评。"
+        },
+        {
+          "en": "The heat encouraged indolence on summer afternoons.",
+          "cn": "夏日的炎热让人午后慵懒。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "laziness",
+          "meaning": "懒惰；懒散"
+        },
+        {
+          "word": "sloth",
+          "meaning": "懒惰；怠惰"
+        },
+        {
+          "word": "idleness",
+          "meaning": "闲散；懒惰"
+        },
+        {
+          "word": "inactivity",
+          "meaning": "不活动；懒散"
+        }
+      ],
+      "root": "dol",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "懒惰；懒散"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "n.",
+          "meaning": "avoidance of activity or exertion; laziness"
+        }
+      ],
+      "collocations": [],
+      "memoryTips": {
+        "etymology": "in-（不）+ dol（痛苦）+ -ence，「不愿承受努力之苦」→ 懒惰。",
+        "mnemonic": "联想：indolence 就是不愿 dol（痛苦/付出），所以懒散。",
+        "association": "联想：indolence → 懒惰懈怠"
+      }
+    },
+    {
+      "id": "TEST_40_40",
+      "word": "insecure",
+      "phoneticUk": "/ˌɪnsɪˈkjʊə(r)/",
+      "phoneticUs": "/ˌɪnsɪˈkjʊr/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "不安全的",
+      "examples": [
+        {
+          "en": "She felt insecure about her presentation.",
+          "cn": "她对自己的演讲感到没把握。"
+        },
+        {
+          "en": "The insecure lock needs to be replaced.",
+          "cn": "这把不牢固的锁需要更换。"
+        },
+        {
+          "en": "Teenagers often feel insecure about their appearance.",
+          "cn": "青少年常对自己的外表感到不自信。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "uncertain",
+          "meaning": "不确定的；没把握的"
+        },
+        {
+          "word": "unstable",
+          "meaning": "不稳定的；动荡的"
+        },
+        {
+          "word": "vulnerable",
+          "meaning": "脆弱的；易受伤害的"
+        },
+        {
+          "word": "anxious",
+          "meaning": "焦虑的；不安的"
+        }
+      ],
+      "root": "sec",
+      "masteryLevel": 0,
+      "lastReviewTime": null,
+      "definitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "不安全的；缺乏自信的"
+        }
+      ],
+      "englishDefinitions": [
+        {
+          "partOfSpeech": "adj.",
+          "meaning": "not firm or fixed; liable to give way or break; lacking confidence or assurance"
+        }
+      ],
+      "collocations": [
+        {
+          "phrase": "feel insecure",
+          "translation": "感到不安/不自信",
+          "example": {
+            "en": "The article explains how to use feel insecure correctly.",
+            "cn": "这篇文章解释了如何正确使用 feel insecure（感到不安/不自信）。"
+          }
+        },
+        {
+          "phrase": "insecure about",
+          "translation": "对…缺乏安全感",
+          "example": {
+            "en": "The article explains how to use insecure about correctly.",
+            "cn": "这篇文章解释了如何正确使用 insecure about（对…缺乏安全感）。"
+          }
+        }
+      ],
+      "memoryTips": {
+        "etymology": "in-（否定）+ secure（安全的），既指物理不安全，也指心理不踏实。",
+        "mnemonic": "联想：insecure = in + secure，secure 的反面。",
+        "association": "联想：insecure → 不安全不自信"
+      }
+    }
+  ]
+}

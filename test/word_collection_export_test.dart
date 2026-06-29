@@ -1,21 +1,15 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/utils/word_collection_export.dart';
 
-void main() {
-  Word sampleWord(String english, String chinese) {
-    return Word()
-      ..english = english
-      ..chinese = chinese
-      ..bookIds = [1];
-  }
+import 'helpers/model_fixtures.dart';
 
+void main() {
   test('WordCollectionExportCodec produces CSV with headers', () {
     final csv = WordCollectionExportCodec.toCsv([
-      sampleWord('apple', '苹果'),
-      sampleWord('banana', '香蕉'),
+      testWord(id: 'w1', english: 'apple', chinese: '苹果'),
+      testWord(id: 'w2', english: 'banana', chinese: '香蕉'),
     ]);
 
     final lines = csv.trim().split('\n');
@@ -27,7 +21,7 @@ void main() {
 
   test('WordCollectionExportCodec produces valid JSON', () {
     final json = WordCollectionExportCodec.toJson(
-      [sampleWord('cat', '猫')],
+      [testWord(id: 'w1', english: 'cat', chinese: '猫')],
       kind: WordCollectionKind.favorites,
     );
     final data = jsonDecode(json) as Map<String, dynamic>;
@@ -41,7 +35,7 @@ void main() {
   test('formatWordCollectionShareText previews words', () {
     final text = formatWordCollectionShareText(
       kind: WordCollectionKind.wrongBook,
-      words: [sampleWord('dog', '狗')],
+      words: [testWord(id: 'w1', english: 'dog', chinese: '狗')],
     );
 
     expect(text, contains('错题本'));

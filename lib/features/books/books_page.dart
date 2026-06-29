@@ -5,8 +5,8 @@ import '../../core/category_labels.dart';
 import '../../providers/book_provider.dart';
 import '../../providers/study_provider.dart';
 import '../../repositories/book_repository.dart';
-import '../study/word_detail_page.dart';
 import '../../widgets/async_value_view.dart';
+import 'level_selection_page.dart';
 import 'widgets/book_list_item.dart';
 
 class BooksPage extends ConsumerStatefulWidget {
@@ -37,14 +37,9 @@ class _BooksPageState extends ConsumerState<BooksPage> {
       return;
     }
 
-    final sortedWords = words.toList()
-      ..sort((a, b) => a.english.compareTo(b.english));
-
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => WordDetailPage(
-          wordId: sortedWords.first.id,
-          wordIds: sortedWords.map((word) => word.id).toList(),
+        builder: (_) => LevelSelectionPage(
           bookId: progress.book.id,
           bookTitle: progress.book.title,
         ),
@@ -90,7 +85,11 @@ class _BooksPageState extends ConsumerState<BooksPage> {
                     ? const Center(child: Text('该分类暂无单词书'))
                     : RefreshIndicator(
                         onRefresh: () async {
+                          await ref
+                              .read(bookRepositoryProvider)
+                              .ensureTestBook();
                           invalidateStudyData(ref);
+                          ref.invalidate(booksProvider);
                           await ref.read(booksProvider.future);
                         },
                         child: ListView.separated(

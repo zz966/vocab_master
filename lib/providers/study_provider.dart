@@ -32,11 +32,11 @@ final studyServiceProvider = Provider<StudyService>((ref) {
 });
 
 /// Selected WordBook IDs for the current study session (multi-select).
-class SelectedBookIdsNotifier extends Notifier<List<int>> {
+class SelectedBookIdsNotifier extends Notifier<List<String>> {
   @override
-  List<int> build() => [];
+  List<String> build() => [];
 
-  void toggle(int bookId) {
+  void toggle(String bookId) {
     if (state.contains(bookId)) {
       state = state.where((id) => id != bookId).toList();
     } else {
@@ -44,7 +44,7 @@ class SelectedBookIdsNotifier extends Notifier<List<int>> {
     }
   }
 
-  void setAll(List<int> bookIds) {
+  void setAll(List<String> bookIds) {
     state = bookIds;
   }
 
@@ -54,7 +54,7 @@ class SelectedBookIdsNotifier extends Notifier<List<int>> {
 }
 
 final selectedBookIdsProvider =
-    NotifierProvider<SelectedBookIdsNotifier, List<int>>(
+    NotifierProvider<SelectedBookIdsNotifier, List<String>>(
   SelectedBookIdsNotifier.new,
 );
 
@@ -90,7 +90,7 @@ final dailyQuotaRemainingProvider = FutureProvider<int>((ref) async {
 });
 
 final dueWordsCountProvider =
-    FutureProvider.family<int, List<int>>((ref, bookIds) async {
+    FutureProvider.family<int, List<String>>((ref, bookIds) async {
   if (bookIds.isEmpty) {
     return 0;
   }
@@ -99,7 +99,7 @@ final dueWordsCountProvider =
   return words.length;
 });
 
-Future<List<Word>> _loadStudyWords(Ref ref, List<int> bookIds) async {
+Future<List<Word>> _loadStudyWords(Ref ref, List<String> bookIds) async {
   if (bookIds.isEmpty) {
     return [];
   }
@@ -125,7 +125,7 @@ Future<List<Word>> _loadStudyWords(Ref ref, List<int> bookIds) async {
 
 /// Word queue for selected books (due words, quota-capped, ordered).
 final studyWordsProvider =
-    FutureProvider.family<List<Word>, List<int>>((ref, bookIds) {
+    FutureProvider.family<List<Word>, List<String>>((ref, bookIds) {
   return _loadStudyWords(ref, bookIds);
 });
 
@@ -177,12 +177,12 @@ final wrongBookCountProvider = FutureProvider<int>((ref) async {
 });
 
 final favoritesProvider =
-    FutureProvider.family<List<Word>, List<int>?>((ref, bookIds) async {
+    FutureProvider.family<List<Word>, List<String>?>((ref, bookIds) async {
   return ref.watch(wordRepositoryProvider).getFavoriteWords(bookIds: bookIds);
 });
 
 final wrongBookProvider =
-    FutureProvider.family<List<Word>, List<int>?>((ref, bookIds) async {
+    FutureProvider.family<List<Word>, List<String>?>((ref, bookIds) async {
   return ref.watch(wordRepositoryProvider).getWrongBookWords(bookIds: bookIds);
 });
 

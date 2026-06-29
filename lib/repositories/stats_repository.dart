@@ -1,10 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
 
-import '../database/isar_service.dart';
-import '../models/learning_session.dart';
-import '../models/review_record.dart';
-import '../models/word.dart';
+import '../core/hive/hive_service.dart';
 
 class DailyStudyStat {
   const DailyStudyStat({required this.date, required this.count});
@@ -53,16 +49,11 @@ class SessionSummary {
 }
 
 class StatsRepository {
-  StatsRepository(this._isar);
-
-  final Isar _isar;
-
   Future<SessionSummary> getSessionSummary({int days = 7}) async {
     final since = DateTime.now().subtract(Duration(days: days));
-    final sessions = await _isar.learningSessions
-        .filter()
-        .startedAtGreaterThan(since)
-        .findAll();
+    final sessions = HiveService.getAllSessions()
+        .where((session) => session.startedAt.isAfter(since))
+        .toList();
 
     var studied = 0;
     var correct = 0;
@@ -86,11 +77,15 @@ class StatsRepository {
     for (var i = days - 1; i >= 0; i--) {
       final day = today.subtract(Duration(days: i));
       final nextDay = day.add(const Duration(days: 1));
-      final count = await _isar.reviewRecords
-          .filter()
-          .reviewedAtGreaterThan(day.subtract(const Duration(microseconds: 1)))
-          .reviewedAtLessThan(nextDay)
-          .count();
+      final count = HiveService.getAllReviewRecords()
+          .where(
+            (record) =>
+                record.reviewedAt.isAfter(
+                  day.subtract(const Duration(microseconds: 1)),
+                ) &&
+                record.reviewedAt.isBefore(nextDay),
+          )
+          .length;
       stats.add(DailyStudyStat(date: day, count: count));
     }
 
@@ -102,18 +97,15 @@ class StatsRepository {
   Future<List<DailyStudyStat>> getLast30DaysStats() => getDailyStats(days: 30);
 
   Future<int> getTotalWordsStudied() async {
-    return _isar.reviewRecords.count();
+    return HiveService.getAllReviewRecords().length;
   }
 
   Future<List<DailyStudyStat>> getDailyStatsForBook(
-    int bookId, {
+    String bookId, {
     int days = 30,
   }) async {
-    final words = await _isar.words
-        .filter()
-        .bookIdsElementEqualTo(bookId)
-        .findAll();
-    final wordIds = words.map((word) => word.id).toSet();
+    final book = HiveService.getBook(bookId);
+    final wordIds = book?.words.map((word) => word.id).toSet() ?? {};
 
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
@@ -122,33 +114,32 @@ class StatsRepository {
     for (var i = days - 1; i >= 0; i--) {
       final day = today.subtract(Duration(days: i));
       final nextDay = day.add(const Duration(days: 1));
-      final records = await _isar.reviewRecords
-          .filter()
-          .reviewedAtGreaterThan(day.subtract(const Duration(microseconds: 1)))
-          .reviewedAtLessThan(nextDay)
-          .findAll();
-
-      final count = records
+      final records = HiveService.getAllReviewRecords()
+          .where(
+            (record) =>
+                record.reviewedAt.isAfter(
+                  day.subtract(const Duration(microseconds: 1)),
+                ) &&
+                record.reviewedAt.isBefore(nextDay),
+          )
           .where(
             (record) =>
                 record.bookId == bookId || wordIds.contains(record.wordId),
           )
-          .length;
-      stats.add(DailyStudyStat(date: day, count: count));
+          .toList();
+
+      stats.add(DailyStudyStat(date: day, count: records.length));
     }
 
     return stats;
   }
 
   Future<List<DailyAccuracyStat>> getDailyAccuracyForBook(
-    int bookId, {
+    String bookId, {
     int days = 7,
   }) async {
-    final words = await _isar.words
-        .filter()
-        .bookIdsElementEqualTo(bookId)
-        .findAll();
-    final wordIds = words.map((word) => word.id).toSet();
+    final book = HiveService.getBook(bookId);
+    final wordIds = book?.words.map((word) => word.id).toSet() ?? {};
 
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
@@ -157,13 +148,14 @@ class StatsRepository {
     for (var i = days - 1; i >= 0; i--) {
       final day = today.subtract(Duration(days: i));
       final nextDay = day.add(const Duration(days: 1));
-      final records = await _isar.reviewRecords
-          .filter()
-          .reviewedAtGreaterThan(day.subtract(const Duration(microseconds: 1)))
-          .reviewedAtLessThan(nextDay)
-          .findAll();
-
-      final bookRecords = records
+      final bookRecords = HiveService.getAllReviewRecords()
+          .where(
+            (record) =>
+                record.reviewedAt.isAfter(
+                  day.subtract(const Duration(microseconds: 1)),
+                ) &&
+                record.reviewedAt.isBefore(nextDay),
+          )
           .where(
             (record) =>
                 record.bookId == bookId || wordIds.contains(record.wordId),
@@ -188,10 +180,13 @@ class StatsRepository {
   Future<({int studied, int correct})> getTodayStudyStats() async {
     final now = DateTime.now();
     final startOfDay = DateTime(now.year, now.month, now.day);
-    final records = await _isar.reviewRecords
-        .filter()
-        .reviewedAtGreaterThan(startOfDay.subtract(const Duration(microseconds: 1)))
-        .findAll();
+    final records = HiveService.getAllReviewRecords()
+        .where(
+          (record) => record.reviewedAt.isAfter(
+            startOfDay.subtract(const Duration(microseconds: 1)),
+          ),
+        )
+        .toList();
 
     final correct = records.where((record) => record.quality >= 2).length;
     return (studied: records.length, correct: correct);
@@ -199,5 +194,5 @@ class StatsRepository {
 }
 
 final statsRepositoryProvider = Provider<StatsRepository>((ref) {
-  return StatsRepository(IsarService.instance);
+  return StatsRepository();
 });

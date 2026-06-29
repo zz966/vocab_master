@@ -28,7 +28,7 @@ class WordCollectionPage extends ConsumerStatefulWidget {
 }
 
 class _WordCollectionPageState extends ConsumerState<WordCollectionPage> {
-  int? _bookFilterId;
+  String? _bookFilterId;
   String _searchQuery = '';
 
   WordCollectionKind get _kind => widget.isWrongBook

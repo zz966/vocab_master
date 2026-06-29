@@ -16,7 +16,6 @@ class StudyModeList extends StatelessWidget {
           child: _ModeCard(
             icon: switch (mode) {
               StudyMode.flashcard => Icons.bolt,
-              StudyMode.complete => Icons.auto_stories_outlined,
               StudyMode.quiz => Icons.quiz_outlined,
               StudyMode.spelling => Icons.spellcheck,
               StudyMode.listening => Icons.hearing,

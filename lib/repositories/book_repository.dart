@@ -1,13 +1,9 @@
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
 
-import '../data/built_in_books.dart';
-import '../database/isar_service.dart';
+import '../core/hive/hive_service.dart';
 import '../models/word.dart';
 import '../models/word_book.dart';
 import '../utils/book_export.dart';
-import '../utils/kylebing_vocab_codec.dart';
 import '../utils/word_factory.dart';
 
 class BookProgress {
@@ -33,20 +29,24 @@ class BookProgress {
 }
 
 class BookRepository {
-  BookRepository(this._isar);
-
-  final Isar _isar;
-
-  Future<List<WordBook>> getAllBooks() {
-    return _isar.wordBooks.where().anyId().findAll();
+  Future<List<WordBook>> getAllBooks() async {
+    await HiveService.importTestBookIfNeeded();
+    return HiveService.getAllBooks();
   }
 
-  Future<WordBook?> getBook(int id) {
-    return _isar.wordBooks.get(id);
+  Future<WordBook?> getBook(String id) async {
+    return HiveService.getBook(id);
   }
 
-  Future<List<Word>> getWordsForBook(int bookId) {
-    return _isar.words.filter().bookIdsElementEqualTo(bookId).findAll();
+  Future<List<Word>> getWordsForBook(String bookId) async {
+    final book = await getBook(bookId);
+    if (book == null) {
+      return [];
+    }
+    return book.words.map((word) {
+      word.attachBookId(bookId);
+      return word;
+    }).toList();
   }
 
   Future<List<WordBook>> getBooksForWord(Word word) async {
@@ -54,6 +54,15 @@ class BookRepository {
     for (final bookId in word.bookIds) {
       final book = await getBook(bookId);
       if (book != null) {
+        books.add(book);
+      }
+    }
+    if (books.isNotEmpty) {
+      return books;
+    }
+
+    for (final book in await getAllBooks()) {
+      if (book.words.any((item) => item.id == word.id)) {
         books.add(book);
       }
     }
@@ -88,47 +97,32 @@ class BookRepository {
     String category = 'custom',
     String? coverColor,
   }) async {
-    final book = WordBook()
-      ..title = title
-      ..description = description
-      ..category = category
-      ..coverColor = coverColor ?? '#607D8B';
-
-    await _isar.writeTxn(() async {
-      await _isar.wordBooks.put(book);
-    });
+    final book = Book(
+      bookId: HiveService.nextId('book'),
+      bookName: title,
+      description: description ?? '',
+      category: category,
+      coverColor: coverColor ?? '#607D8B',
+    );
+    await HiveService.saveBook(book);
     return book;
   }
 
   Future<void> updateBook(WordBook book) async {
-    await _isar.writeTxn(() async {
-      await _isar.wordBooks.put(book);
-    });
+    await HiveService.saveBook(book);
   }
 
-  Future<bool> deleteBook(int bookId) async {
+  Future<bool> deleteBook(String bookId) async {
     final book = await getBook(bookId);
     if (book == null || book.category != 'custom') {
       return false;
     }
-
-    await _isar.writeTxn(() async {
-      final words = await getWordsForBook(bookId);
-      for (final word in words) {
-        word.bookIds.remove(bookId);
-        if (word.bookIds.isEmpty) {
-          await _isar.words.delete(word.id);
-        } else {
-          await _isar.words.put(word);
-        }
-      }
-      await _isar.wordBooks.delete(bookId);
-    });
+    await HiveService.deleteBook(bookId);
     return true;
   }
 
   Future<void> addWordToBook({
-    required int bookId,
+    required String bookId,
     required String english,
     required String chinese,
     String? phonetic,
@@ -146,55 +140,51 @@ class BookRepository {
   }
 
   Future<void> _addImportDataToBook({
-    required int bookId,
+    required String bookId,
     required WordImportData item,
     List<String>? peerWords,
   }) async {
-    await _isar.writeTxn(() async {
-      final existing = await _isar.words
-          .filter()
-          .englishEqualTo(item.english, caseSensitive: false)
-          .findFirst();
+    final book = await getBook(bookId);
+    if (book == null) {
+      return;
+    }
 
-      if (existing != null) {
-        if (!existing.bookIds.contains(bookId)) {
-          existing.bookIds = [...existing.bookIds, bookId];
-          await _isar.words.put(existing);
-        }
-      } else {
-        final word = WordFactory.fromImport(
-          item,
-          bookIds: [bookId],
-          peerWords: peerWords,
-        );
-        await _isar.words.put(word);
-      }
+    final existing = book.words
+        .where(
+          (word) =>
+              word.english.toLowerCase() == item.english.trim().toLowerCase(),
+        )
+        .firstOrNull;
 
-      await _updateBookWordCount(bookId);
-    });
+    if (existing != null) {
+      return;
+    }
+
+    final peers = peerWords ?? book.words.map((word) => word.english).toList();
+    final word = WordFactory.fromImport(
+      item,
+      bookId: bookId,
+      wordIndex: book.words.length + 1,
+      peerWords: peers,
+    );
+    book.words.add(word);
+    await HiveService.saveBook(book);
   }
 
   Future<void> removeWordFromBook({
-    required int bookId,
-    required int wordId,
+    required String bookId,
+    required String wordId,
   }) async {
-    await _isar.writeTxn(() async {
-      final word = await _isar.words.get(wordId);
-      if (word == null) {
-        return;
-      }
+    final book = await getBook(bookId);
+    if (book == null) {
+      return;
+    }
 
-      word.bookIds.remove(bookId);
-      if (word.bookIds.isEmpty) {
-        await _isar.words.delete(wordId);
-      } else {
-        await _isar.words.put(word);
-      }
-      await _updateBookWordCount(bookId);
-    });
+    book.words.removeWhere((word) => word.id == wordId);
+    await HiveService.saveBook(book);
   }
 
-  Future<String> exportBookJson(int bookId) async {
+  Future<String> exportBookJson(String bookId) async {
     final book = await getBook(bookId);
     if (book == null) {
       throw StateError('单词书不存在');
@@ -203,107 +193,41 @@ class BookRepository {
     return BookExportCodec.encode(book, words);
   }
 
-  Future<void> seedBuiltInBooks() async {
-    if (await _isar.wordBooks.count() > 0) {
-      return;
-    }
-
-    for (final definition in BuiltInBooks.books) {
-      final json = await rootBundle.loadString(definition.assetPath);
-      await _importBuiltInBook(definition, json);
-    }
+  Future<void> seedBuiltInBooks() {
+    return HiveService.seedBuiltInBooks();
   }
 
-  Future<void> _importBuiltInBook(
-    BuiltInBookDefinition definition,
-    String json,
-  ) async {
-    final words = KyleBingVocabCodec.decode(json);
-    final peerWords = words.map((item) => item.english).toList();
-
-    await _isar.writeTxn(() async {
-      final book = WordBook()
-        ..title = definition.title
-        ..description = definition.description
-        ..category = definition.category
-        ..coverColor = definition.coverColor;
-      await _isar.wordBooks.put(book);
-
-      for (final item in words) {
-        final existing = await _isar.words
-            .filter()
-            .englishEqualTo(item.english, caseSensitive: false)
-            .findFirst();
-
-        if (existing != null) {
-          if (!existing.bookIds.contains(book.id)) {
-            existing.bookIds = [...existing.bookIds, book.id];
-            await _isar.words.put(existing);
-          }
-        } else {
-          final word = WordFactory.fromImport(
-            item,
-            bookIds: [book.id],
-            peerWords: peerWords,
-          );
-          await _isar.words.put(word);
-        }
-      }
-
-      await _updateBookWordCount(book.id);
-    });
+  Future<void> ensureTestBook() {
+    return HiveService.importTestBookIfNeeded();
   }
 
   Future<WordBook> importBookFromJson(String json) async {
     final data = BookExportCodec.decode(json);
+    final book = Book(
+      bookId: HiveService.nextId('book'),
+      bookName: data.title,
+      description: data.description ?? '',
+      category: 'custom',
+      coverColor: data.coverColor ?? '#607D8B',
+    );
 
-    return _isar.writeTxn(() async {
-      final book = WordBook()
-        ..title = data.title
-        ..description = data.description
-        ..category = 'custom'
-        ..coverColor = data.coverColor;
-      await _isar.wordBooks.put(book);
-
-      final peerWords = data.words.map((item) => item.english).toList();
-      for (final item in data.words) {
-        final existing = await _isar.words
-            .filter()
-            .englishEqualTo(item.english, caseSensitive: false)
-            .findFirst();
-
-        if (existing != null) {
-          if (!existing.bookIds.contains(book.id)) {
-            existing.bookIds = [...existing.bookIds, book.id];
-            await _isar.words.put(existing);
-          }
-        } else {
-          final word = WordFactory.fromImport(
-            item,
-            bookIds: [book.id],
-            peerWords: peerWords,
-          );
-          await _isar.words.put(word);
-        }
-      }
-
-      await _updateBookWordCount(book.id);
-      return book;
-    });
-  }
-
-  Future<void> _updateBookWordCount(int bookId) async {
-    final book = await _isar.wordBooks.get(bookId);
-    if (book == null) {
-      return;
+    final peerWords = data.words.map((item) => item.english).toList();
+    for (var i = 0; i < data.words.length; i++) {
+      book.words.add(
+        WordFactory.fromImport(
+          data.words[i],
+          bookId: book.bookId,
+          wordIndex: i + 1,
+          peerWords: peerWords,
+        ),
+      );
     }
-    final count =
-        await _isar.words.filter().bookIdsElementEqualTo(bookId).count();
-    book.totalWords = count;
-    await _isar.wordBooks.put(book);
+
+    await HiveService.saveBook(book);
+    return book;
   }
 }
 
 final bookRepositoryProvider = Provider<BookRepository>((ref) {
-  return BookRepository(IsarService.instance);
+  return BookRepository();
 });

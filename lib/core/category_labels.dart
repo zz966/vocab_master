@@ -5,6 +5,7 @@ const bookCategoryLabels = <String, String>{
   'ielts': '雅思',
   'toefl': '考研',
   'custom': '自定义',
+  'test': '测试',
 };
 
 String categoryLabel(String category) =>
@@ -22,4 +23,12 @@ const bookDifficultyLabels = <String, String>{
 String categoryDifficulty(String category) =>
     bookDifficultyLabels[category] ?? '通用';
 
-const bookCategories = ['basic', 'cet4', 'cet6', 'ielts', 'toefl', 'custom'];
+const bookCategories = [
+  'basic',
+  'cet4',
+  'cet6',
+  'ielts',
+  'toefl',
+  'custom',
+  'test',
+];

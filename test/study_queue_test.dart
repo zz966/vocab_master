@@ -1,22 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/utils/study_queue.dart';
 
-Word _word(String english, {int familiarity = 0}) {
-  return Word()
-    ..english = english
-    ..chinese = english
-    ..bookIds = [1]
-    ..familiarity = familiarity;
-}
+import 'helpers/model_fixtures.dart';
 
 void main() {
   test('buildStudyQueue orders by ascending familiarity', () {
     final queue = buildStudyQueue(
       [
-        _word('zebra', familiarity: 3),
-        _word('apple', familiarity: 0),
-        _word('mango', familiarity: 1),
+        testWord(id: 'w1', english: 'zebra', familiarity: 3),
+        testWord(id: 'w2', english: 'apple', familiarity: 0),
+        testWord(id: 'w3', english: 'mango', familiarity: 1),
       ],
       StudyQueueOrder.familiarity,
     );
@@ -26,9 +19,9 @@ void main() {
 
   test('buildStudyQueue random mode preserves word count', () {
     final input = [
-      _word('a', familiarity: 0),
-      _word('b', familiarity: 2),
-      _word('c', familiarity: 1),
+      testWord(id: 'w1', english: 'a', familiarity: 0),
+      testWord(id: 'w2', english: 'b', familiarity: 2),
+      testWord(id: 'w3', english: 'c', familiarity: 1),
     ];
     final queue = buildStudyQueue(input, StudyQueueOrder.random);
 

@@ -32,7 +32,7 @@ import 'widgets/book_study_trend_chart.dart';
 class BookDetailPage extends ConsumerWidget {
   const BookDetailPage({super.key, required this.bookId});
 
-  final int bookId;
+  final String bookId;
 
   Future<void> _resetBookProgress(
     BuildContext context,
@@ -537,7 +537,7 @@ class BookDetailPage extends ConsumerWidget {
   Future<void> _exportBook(
     BuildContext context,
     WidgetRef ref,
-    int bookId,
+    String bookId,
     String title, {
     bool shareAfter = false,
   }) async {

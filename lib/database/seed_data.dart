@@ -1,46 +1,61 @@
+import '../models/book_model.dart';
 import '../models/word.dart';
 import '../models/word_book.dart';
 
 class SeedData {
   static List<WordBook> get books => [
-        WordBook()
-          ..title = '基础1000词'
-          ..description = '最常用的1000个英语基础词汇'
-          ..category = 'basic'
-          ..coverColor = '#4CAF50',
-        WordBook()
-          ..title = 'CET4 核心词汇'
-          ..description = '大学英语四级考试核心词汇'
-          ..category = 'cet4'
-          ..coverColor = '#2196F3',
-        WordBook()
-          ..title = 'CET6 核心词汇'
-          ..description = '大学英语六级考试核心词汇'
-          ..category = 'cet6'
-          ..coverColor = '#9C27B0',
-        WordBook()
-          ..title = '雅思高频词汇'
-          ..description = 'IELTS 考试高频核心词汇'
-          ..category = 'ielts'
-          ..coverColor = '#FF9800',
-        WordBook()
-          ..title = 'TOEFL 高频词汇'
-          ..description = '托福考试高频核心词汇'
-          ..category = 'toefl'
-          ..coverColor = '#F44336',
+        Book(
+          bookId: 'seed_basic',
+          bookName: '基础1000词',
+          description: '最常用的1000个英语基础词汇',
+          category: 'basic',
+          coverColor: '#4CAF50',
+        ),
+        Book(
+          bookId: 'seed_cet4',
+          bookName: 'CET4 核心词汇',
+          description: '大学英语四级考试核心词汇',
+          category: 'cet4',
+          coverColor: '#2196F3',
+        ),
+        Book(
+          bookId: 'seed_cet6',
+          bookName: 'CET6 核心词汇',
+          description: '大学英语六级考试核心词汇',
+          category: 'cet6',
+          coverColor: '#9C27B0',
+        ),
+        Book(
+          bookId: 'seed_ielts',
+          bookName: '雅思高频词汇',
+          description: 'IELTS 考试高频核心词汇',
+          category: 'ielts',
+          coverColor: '#FF9800',
+        ),
+        Book(
+          bookId: 'seed_toefl',
+          bookName: 'TOEFL 高频词汇',
+          description: '托福考试高频核心词汇',
+          category: 'toefl',
+          coverColor: '#F44336',
+        ),
       ];
 
-  static List<Word> wordsForBook(int bookId, String category) {
+  static List<Word> wordsForBook(String bookId, String category) {
     final samples = _samplesByCategory[category] ?? _commonSamples;
     return samples
+        .asMap()
+        .entries
         .map(
-          (sample) => Word()
-            ..english = sample.english
-            ..chinese = sample.chinese
-            ..phonetic = sample.phonetic
-            ..partOfSpeech = sample.partOfSpeech
-            ..examples = sample.examples
-            ..bookIds = [bookId],
+          (entry) => BookWord(
+            id: '${bookId}_${entry.key + 1}',
+            word: entry.value.english,
+            definitionCn: entry.value.chinese,
+            phoneticUk: entry.value.phonetic ?? '',
+            partOfSpeech: entry.value.partOfSpeech ?? '',
+            legacyExamples: entry.value.examples,
+            bookIds: [bookId],
+          ),
         )
         .toList();
   }
@@ -120,7 +135,7 @@ final _samplesByCategory = <String, List<_WordSample>>{
     const _WordSample(
       english: 'active',
       chinese: '积极的；活跃的',
-      phonetic: '/ˈæktɪv/',
+      phonetic: '/ɑːˈtɪv/',
       partOfSpeech: 'adj.',
       examples: ['He leads an active lifestyle.'],
     ),

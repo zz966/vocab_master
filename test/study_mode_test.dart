@@ -5,7 +5,7 @@ void main() {
   group('StudyMode.fromId', () {
     test('returns matching mode for valid id', () {
       expect(StudyMode.fromId('quiz'), StudyMode.quiz);
-      expect(StudyMode.fromId('complete'), StudyMode.complete);
+      expect(StudyMode.fromId('complete'), StudyMode.flashcard);
       expect(StudyMode.fromId('listening'), StudyMode.listening);
     });
 

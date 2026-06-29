@@ -17,7 +17,7 @@ class SpellingPage extends ConsumerStatefulWidget {
   });
 
   final List<Word> words;
-  final List<int> bookIds;
+  final List<String> bookIds;
   final LearningSession? session;
   final Future<void> Function()? onSessionComplete;
   final VoidCallback? onProgressUpdate;

@@ -38,7 +38,7 @@ class SessionFilterState {
 
   final SessionFilter typeFilter;
   final SessionDateRange dateRange;
-  final int? bookId;
+  final String? bookId;
   final DateTimeRange? customRange;
 }
 
@@ -63,7 +63,7 @@ class SessionFilterPrefs {
     final typeFilter = _parseTypeFilter(typeName) ?? SessionFilter.all;
     final dateRange = _parseDateRange(dateName) ?? SessionDateRange.all;
     final bookId =
-        prefs.containsKey(_bookIdKey) ? prefs.getInt(_bookIdKey) : null;
+        prefs.containsKey(_bookIdKey) ? prefs.getString(_bookIdKey) : null;
 
     DateTimeRange? customRange;
     final customStart = prefs.getString(_customStartKey);
@@ -95,7 +95,7 @@ class SessionFilterPrefs {
   static Future<void> save({
     required SessionFilter typeFilter,
     required SessionDateRange dateRange,
-    int? bookId,
+    String? bookId,
     DateTimeRange? customRange,
   }) async {
     final prefs = await SharedPreferences.getInstance();
@@ -105,7 +105,7 @@ class SessionFilterPrefs {
     if (bookId == null) {
       await prefs.remove(_bookIdKey);
     } else {
-      await prefs.setInt(_bookIdKey, bookId);
+      await prefs.setString(_bookIdKey, bookId);
     }
 
     if (dateRange == SessionDateRange.custom && customRange != null) {

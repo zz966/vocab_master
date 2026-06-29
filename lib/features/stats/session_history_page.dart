@@ -30,7 +30,7 @@ class SessionHistoryPage extends ConsumerStatefulWidget {
 
   final SessionDateRange? initialDateRange;
   final DateTimeRange? initialCustomRange;
-  final int? initialBookId;
+  final String? initialBookId;
 
   @override
   ConsumerState<SessionHistoryPage> createState() =>
@@ -41,9 +41,9 @@ class _SessionHistoryPageState extends ConsumerState<SessionHistoryPage> {
   late SessionFilter _filter;
   late SessionDateRange _dateRange;
   DateTimeRange? _customRange;
-  int? _bookFilterId;
+  String? _bookFilterId;
   bool _selectionMode = false;
-  final Set<int> _selectedIds = {};
+  final Set<String> _selectedIds = {};
 
   @override
   void initState() {
@@ -162,7 +162,7 @@ class _SessionHistoryPageState extends ConsumerState<SessionHistoryPage> {
     });
   }
 
-  void _toggleSelection(int sessionId) {
+  void _toggleSelection(String sessionId) {
     setState(() {
       if (_selectedIds.contains(sessionId)) {
         _selectedIds.remove(sessionId);

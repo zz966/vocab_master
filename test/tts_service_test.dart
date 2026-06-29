@@ -56,7 +56,7 @@ void main() {
     });
 
     test('speak at least 5 seed words and their examples', () async {
-      final samples = SeedData.wordsForBook(1, 'basic');
+      final samples = SeedData.wordsForBook('seed_basic', 'basic');
       expect(samples.length, greaterThanOrEqualTo(5));
 
       for (final word in samples.take(5)) {

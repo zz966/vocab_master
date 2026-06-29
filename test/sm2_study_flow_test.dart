@@ -1,18 +1,17 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/utils/sm2_algorithm.dart';
 import 'package:vocab_master/utils/study_quality.dart';
 
+import 'helpers/model_fixtures.dart';
+
 void main() {
   test('SM-2 Good rating increases familiarity and schedules next review', () {
-    final word = Word()
-      ..english = 'hello'
-      ..chinese = '你好'
-      ..bookIds = [1]
-      ..familiarity = 0
-      ..reviewCount = 0
-      ..easeFactor = 2.5
-      ..sm2Interval = 0;
+    final word = testWord(
+      id: 'w1',
+      english: 'hello',
+      chinese: '你好',
+      familiarity: 0,
+    );
 
     final sm2 = Sm2Algorithm.calculate(
       quality: StudyQuality.good.value,
@@ -38,12 +37,13 @@ void main() {
   });
 
   test('SM-2 forgotten rating resets repetitions and reviews soon', () {
-    final word = Word()
-      ..english = 'world'
-      ..chinese = '世界'
-      ..bookIds = [1]
-      ..familiarity = 3
-      ..reviewCount = 2
+    final word = testWord(
+      id: 'w2',
+      english: 'world',
+      chinese: '世界',
+      familiarity: 3,
+      reviewCount: 2,
+    )
       ..easeFactor = 2.5
       ..sm2Interval = 6;
 

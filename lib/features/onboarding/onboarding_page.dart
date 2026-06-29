@@ -26,7 +26,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
     _OnboardStep(
       icon: Icons.style,
       title: '多种学习模式',
-      description: '速刷、完整学习、选择题、拼写、听音选义，满足不同场景需求。',
+      description: '速刷、选择题、拼写、听音选义，满足不同场景需求。',
     ),
     _OnboardStep(
       icon: Icons.track_changes,

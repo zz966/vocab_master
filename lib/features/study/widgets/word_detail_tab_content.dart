@@ -54,7 +54,7 @@ class _ExamplesContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final examples = word.structuredExamples ?? const <WordExample>[];
     if (examples.isEmpty) {
-      return const _EmptyContent(message: '暂无例句');
+      return const _EmptyContent(message: '没有');
     }
 
     return ListView.separated(
@@ -113,7 +113,7 @@ class _PhrasesContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final phrases = word.collocations ?? const <WordPhrase>[];
     if (phrases.isEmpty) {
-      return const _EmptyContent(message: '暂无常用短语');
+      return const _EmptyContent(message: '没有');
     }
 
     return ListView.separated(
@@ -122,27 +122,73 @@ class _PhrasesContent extends StatelessWidget {
       separatorBuilder: (context, index) => const SizedBox(height: 8),
       itemBuilder: (context, index) {
         final phrase = phrases[index];
-        return ListTile(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          tileColor: Theme.of(context).colorScheme.surfaceContainerLow,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          title: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Text(
-                  phrase.phrase,
-                  style: const TextStyle(fontWeight: FontWeight.w600),
+        final exampleEnglish = phrase.exampleEnglish?.trim() ?? '';
+        final exampleChinese = phrase.exampleChinese?.trim() ?? '';
+
+        return Card(
+          elevation: 0,
+          color: Theme.of(context).colorScheme.surfaceContainerLow,
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        phrase.phrase,
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                    ),
+                    TtsSpeakButton(
+                      text: phrase.phrase,
+                      tooltip: '朗读短语',
+                      icon: Icons.volume_up_outlined,
+                    ),
+                  ],
                 ),
-              ),
-              TtsSpeakButton(
-                text: phrase.phrase,
-                tooltip: '朗读短语',
-                icon: Icons.volume_up_outlined,
-              ),
-            ],
+                const SizedBox(height: 4),
+                Text(
+                  phrase.translation,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                ),
+                if (exampleEnglish.isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          exampleEnglish,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ),
+                      TtsSpeakButton(
+                        text: exampleEnglish,
+                        tooltip: '朗读例句',
+                        icon: Icons.volume_up_outlined,
+                      ),
+                    ],
+                  ),
+                  if (exampleChinese.isNotEmpty) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      exampleChinese,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: Theme.of(context).colorScheme.onSurfaceVariant,
+                          ),
+                    ),
+                  ],
+                ],
+              ],
+            ),
           ),
-          subtitle: Text(phrase.translation),
         );
       },
     );
@@ -160,17 +206,17 @@ class _SynonymsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final synonyms = WordEnrichment.buildSynonyms(word, peerWords);
-    if (synonyms.isEmpty) {
-      return const _EmptyContent(message: '暂无近义词');
+    final synonymItems = _synonymItems(word, peerWords);
+    if (synonymItems.isEmpty) {
+      return const _EmptyContent(message: '没有');
     }
 
     return ListView.separated(
       padding: const EdgeInsets.all(16),
-      itemCount: synonyms.length,
+      itemCount: synonymItems.length,
       separatorBuilder: (context, index) => const SizedBox(height: 8),
       itemBuilder: (context, index) {
-        final item = synonyms[index];
+        final item = synonymItems[index];
         return ListTile(
           contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           tileColor: Theme.of(context).colorScheme.surfaceContainerLow,
@@ -191,7 +237,12 @@ class _SynonymsContent extends StatelessWidget {
               ),
             ],
           ),
-          subtitle: Text(item.explanation),
+          subtitle: Text(
+            item.explanation.trim().isEmpty ? '没有' : item.explanation,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
+          ),
         );
       },
     );
@@ -205,17 +256,11 @@ class _EnglishDefinitionContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final definitions = word.definitions ?? const <WordDefinition>[];
-    final examples = word.structuredExamples ?? const <WordExample>[];
+    final definitions =
+        word.englishDefinitions ?? word.definitions ?? const <WordDefinition>[];
 
     if (definitions.isEmpty) {
-      return _EmptyContent(
-        message: 'No English definition available.',
-        child: Text(
-          word.english,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-      );
+      return const _EmptyContent(message: '没有');
     }
 
     return ListView.separated(
@@ -224,18 +269,6 @@ class _EnglishDefinitionContent extends StatelessWidget {
       separatorBuilder: (context, index) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
         final definition = definitions[index];
-        final matchedExample = examples
-            .where(
-              (example) =>
-                  example.partOfSpeech == definition.partOfSpeech &&
-                  example.meaning == definition.meaning,
-            )
-            .map((example) => example.english)
-            .firstOrNull;
-
-        final englishText = matchedExample ??
-            'The word "${word.english}" (${definition.partOfSpeech}) '
-                'expresses the meaning of "${definition.meaning}".';
 
         return Card(
           elevation: 0,
@@ -245,17 +278,31 @@ class _EnglishDefinitionContent extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  definition.partOfSpeech,
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontWeight: FontWeight.w600,
+                if (definition.partOfSpeech.trim().isNotEmpty)
+                  Text(
+                    definition.partOfSpeech,
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                          color: Theme.of(context).colorScheme.primary,
+                          fontWeight: FontWeight.w600,
+                        ),
+                  ),
+                if (definition.partOfSpeech.trim().isNotEmpty)
+                  const SizedBox(height: 6),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        definition.meaning,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  englishText,
-                  style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                    TtsSpeakButton(
+                      text: definition.meaning,
+                      tooltip: '朗读英语释义',
+                      icon: Icons.volume_up_outlined,
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -274,8 +321,15 @@ class _EtymologyContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final etymology = word.memoryTips?.etymology?.trim();
-    if (etymology == null || etymology.isEmpty) {
-      return const _EmptyContent(message: '暂无词根词缀信息');
+    final root = word.root.trim();
+    final text = (etymology != null && etymology.isNotEmpty)
+        ? etymology
+        : root.isNotEmpty
+            ? '词根：$root'
+            : null;
+
+    if (text == null) {
+      return const _EmptyContent(message: '没有');
     }
 
     return ListView(
@@ -287,7 +341,7 @@ class _EtymologyContent extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              etymology,
+              text,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
@@ -295,6 +349,22 @@ class _EtymologyContent extends StatelessWidget {
       ],
     );
   }
+}
+
+List<ConfusableWord> _synonymItems(Word word, List<Word> peerWords) {
+  if (word.synonymDetails != null && word.synonymDetails!.isNotEmpty) {
+    return word.synonymDetails!;
+  }
+  if (word.synonyms.isNotEmpty) {
+    return word.synonyms
+        .map(
+          (item) => ConfusableWord()
+            ..word = item
+            ..explanation = '',
+        )
+        .toList();
+  }
+  return WordEnrichment.buildSynonyms(word, peerWords);
 }
 
 class _EmptyContent extends StatelessWidget {

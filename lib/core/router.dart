@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../features/books/book_detail_page.dart';
 import '../features/books/book_selection_page.dart';
 import '../features/books/books_page.dart';
+import '../features/books/level_selection_page.dart';
 import '../features/home/home_page.dart';
 import '../features/shell/main_shell.dart';
 import '../features/stats/me_page.dart';
@@ -27,6 +28,7 @@ abstract final class AppRoutes {
   static const me = '/me';
   static const bookSelection = '/books/select';
   static const bookDetail = '/books/detail';
+  static const bookLevels = '/books/levels';
   static const studySession = '/study/session';
 }
 
@@ -53,13 +55,27 @@ class AppRouter {
         ),
       AppRoutes.bookDetail => MaterialPageRoute<void>(
           builder: (_) {
-            final bookId = settings.arguments as int?;
+            final bookId = settings.arguments as String?;
             if (bookId == null) {
               return const Scaffold(
                 body: Center(child: Text('缺少单词书 ID')),
               );
             }
             return BookDetailPage(bookId: bookId);
+          },
+        ),
+      AppRoutes.bookLevels => MaterialPageRoute<void>(
+          builder: (_) {
+            final args = settings.arguments;
+            if (args is Map<String, String>) {
+              return LevelSelectionPage(
+                bookId: args['bookId']!,
+                bookTitle: args['bookTitle'] ?? '关卡列表',
+              );
+            }
+            return const Scaffold(
+              body: Center(child: Text('缺少单词书参数')),
+            );
           },
         ),
       AppRoutes.studySession => MaterialPageRoute<void>(
@@ -75,7 +91,22 @@ class AppRouter {
     };
   }
 
-  static Future<void> pushBookDetail(BuildContext context, int bookId) {
+  static Future<void> pushBookLevels(
+    BuildContext context, {
+    required String bookId,
+    required String bookTitle,
+  }) {
+    return Navigator.of(context).push<void>(
+      MaterialPageRoute<void>(
+        builder: (_) => LevelSelectionPage(
+          bookId: bookId,
+          bookTitle: bookTitle,
+        ),
+      ),
+    );
+  }
+
+  static Future<void> pushBookDetail(BuildContext context, String bookId) {
     return Navigator.of(context).push<void>(
       MaterialPageRoute<void>(
         builder: (_) => BookDetailPage(bookId: bookId),

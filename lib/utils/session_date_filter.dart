@@ -52,7 +52,7 @@ bool matchesSessionDateRange(
 DateTime _dayStart(DateTime date) =>
     DateTime(date.year, date.month, date.day);
 
-bool matchesSessionBookFilter(LearningSession session, int? bookId) {
+bool matchesSessionBookFilter(LearningSession session, String? bookId) {
   if (bookId == null) {
     return true;
   }
@@ -64,7 +64,7 @@ bool matchesSessionFilters(
   required bool Function(LearningSession session) typeFilter,
   required SessionDateRange dateRange,
   DateTimeRange? customRange,
-  int? bookId,
+  String? bookId,
   DateTime? now,
 }) {
   return typeFilter(session) &&

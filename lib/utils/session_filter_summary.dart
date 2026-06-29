@@ -118,7 +118,7 @@ Future<void> shareSessionFilterSummary({
 bool hasActiveSessionFilters({
   required SessionFilter typeFilter,
   required SessionDateRange dateRange,
-  int? bookId,
+  String? bookId,
 }) {
   return typeFilter != SessionFilter.all ||
       dateRange != SessionDateRange.all ||

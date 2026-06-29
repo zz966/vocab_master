@@ -10,14 +10,14 @@ class WordSearchFilter {
     this.wrongBookOnly = false,
   });
 
-  final int? bookId;
+  final String? bookId;
   final bool favoritesOnly;
   final bool wrongBookOnly;
 
   static const none = WordSearchFilter();
 
   WordSearchFilter copyWith({
-    int? bookId,
+    String? bookId,
     bool clearBookId = false,
     bool? favoritesOnly,
     bool? wrongBookOnly,

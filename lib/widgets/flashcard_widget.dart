@@ -23,7 +23,7 @@ class FlashcardWidget extends ConsumerStatefulWidget {
   });
 
   final List<Word> words;
-  final List<int> bookIds;
+  final List<String> bookIds;
   final LearningSession? session;
   final Future<void> Function()? onSessionComplete;
   final VoidCallback? onProgressUpdate;
@@ -333,7 +333,7 @@ class _QuickStudyCard extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          '根据第一反应选择记忆状态，完整模式可查看记忆方法、例句和易混词。',
+          '根据第一反应选择记忆状态，可在单词详情页查看例句和记忆提示。',
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodySmall,
         ),

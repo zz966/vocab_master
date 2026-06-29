@@ -1,29 +1,27 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
 
-import '../database/isar_service.dart';
+import '../core/hive/hive_service.dart';
 import '../models/word.dart';
 import '../utils/review_filter.dart';
 import '../utils/word_progress.dart';
 
 class WordRepository {
-  WordRepository(this._isar);
-
-  final Isar _isar;
-
-  Future<List<Word>> getWordsForBooks(List<int> bookIds) async {
+  Future<List<Word>> getWordsForBooks(List<String> bookIds) async {
     if (bookIds.isEmpty) {
       return [];
     }
 
-    final seen = <int>{};
+    final seen = <String>{};
     final words = <Word>[];
 
     for (final bookId in bookIds) {
-      final bookWords =
-          await _isar.words.filter().bookIdsElementEqualTo(bookId).findAll();
-      for (final word in bookWords) {
+      final book = HiveService.getBook(bookId);
+      if (book == null) {
+        continue;
+      }
+      for (final word in book.words) {
         if (seen.add(word.id)) {
+          word.attachBookId(bookId);
           words.add(word);
         }
       }
@@ -33,7 +31,7 @@ class WordRepository {
     return words;
   }
 
-  Future<List<Word>> getDueWordsForBooks(List<int> bookIds) async {
+  Future<List<Word>> getDueWordsForBooks(List<String> bookIds) async {
     final now = DateTime.now();
     final words = await getWordsForBooks(bookIds);
     return words
@@ -44,35 +42,74 @@ class WordRepository {
         .toList();
   }
 
-  Future<List<Word>> getReviewWordsForBooks(List<int> bookIds) async {
+  Future<List<Word>> getReviewWordsForBooks(List<String> bookIds) async {
     final words = await getWordsForBooks(bookIds);
     return getTodayReviewWords(words, bookIds: bookIds);
   }
 
-  Future<List<Word>> getFavoriteWords({List<int>? bookIds}) async {
+  Future<List<Word>> getFavoriteWords({List<String>? bookIds}) async {
     if (bookIds == null || bookIds.isEmpty) {
-      return _isar.words.filter().isFavoriteEqualTo(true).findAll();
+      return _allWords().where((word) => word.isFavorite).toList();
     }
     final words = await getWordsForBooks(bookIds);
     return words.where((word) => word.isFavorite).toList();
   }
 
-  Future<List<Word>> getWrongBookWords({List<int>? bookIds}) async {
+  Future<List<Word>> getWrongBookWords({List<String>? bookIds}) async {
     if (bookIds == null || bookIds.isEmpty) {
-      return _isar.words.filter().inWrongBookEqualTo(true).findAll();
+      return _allWords().where((word) => word.inWrongBook).toList();
     }
     final words = await getWordsForBooks(bookIds);
     return words.where((word) => word.inWrongBook).toList();
   }
 
-  Future<Word?> getWord(int id) {
-    return _isar.words.get(id);
+  Future<Word?> getWord(String id, {String? bookId}) async {
+    if (bookId != null) {
+      final book = HiveService.getBook(bookId);
+      final word = book?.words.where((item) => item.id == id).firstOrNull;
+      if (word != null) {
+        word.attachBookId(bookId);
+        return word;
+      }
+    }
+
+    for (final book in HiveService.getAllBooks()) {
+      for (final word in book.words) {
+        if (word.id == id) {
+          word.attachBookId(book.bookId);
+          return word;
+        }
+      }
+    }
+    return null;
   }
 
-  Future<void> saveWord(Word word) async {
-    await _isar.writeTxn(() async {
-      await _isar.words.put(word);
-    });
+  Future<void> saveWord(Word word, {String? bookId}) async {
+    final targetBookId =
+        bookId ?? (word.bookIds.isNotEmpty ? word.bookIds.first : null);
+    if (targetBookId == null) {
+      for (final book in HiveService.getAllBooks()) {
+        final index = book.words.indexWhere((item) => item.id == word.id);
+        if (index >= 0) {
+          book.words[index] = word;
+          await HiveService.saveBook(book);
+          return;
+        }
+      }
+      return;
+    }
+
+    final book = HiveService.getBook(targetBookId);
+    if (book == null) {
+      return;
+    }
+
+    final index = book.words.indexWhere((item) => item.id == word.id);
+    if (index >= 0) {
+      word.attachBookId(targetBookId);
+      book.words[index] = word;
+      await HiveService.saveBook(book);
+    }
   }
 
   Future<void> toggleFavorite(Word word) async {
@@ -98,13 +135,12 @@ class WordRepository {
   }
 
   Future<void> resetAllLearningProgress() async {
-    await _isar.writeTxn(() async {
-      final words = await _isar.words.where().findAll();
-      for (final word in words) {
+    for (final book in HiveService.getAllBooks()) {
+      for (final word in book.words) {
         resetWordLearningState(word);
-        await _isar.words.put(word);
       }
-    });
+      await HiveService.saveBook(book);
+    }
   }
 
   Future<void> resetWordProgress(Word word) async {
@@ -112,15 +148,15 @@ class WordRepository {
     await saveWord(word);
   }
 
-  Future<void> resetBookProgress(int bookId) async {
-    await _isar.writeTxn(() async {
-      final words =
-          await _isar.words.filter().bookIdsElementEqualTo(bookId).findAll();
-      for (final word in words) {
-        resetWordLearningState(word);
-        await _isar.words.put(word);
-      }
-    });
+  Future<void> resetBookProgress(String bookId) async {
+    final book = HiveService.getBook(bookId);
+    if (book == null) {
+      return;
+    }
+    for (final word in book.words) {
+      resetWordLearningState(word);
+    }
+    await HiveService.saveBook(book);
   }
 
   Future<void> updateWordFields(
@@ -138,7 +174,7 @@ class WordRepository {
           ? null
           : phonetic.trim()
       ..partOfSpeech = partOfSpeech == null || partOfSpeech.trim().isEmpty
-          ? null
+          ? ''
           : partOfSpeech.trim()
       ..examples = examples;
     await saveWord(word);
@@ -146,7 +182,7 @@ class WordRepository {
 
   Future<List<Word>> searchWords(
     String query, {
-    int? bookId,
+    String? bookId,
     bool favoritesOnly = false,
     bool wrongBookOnly = false,
   }) async {
@@ -157,8 +193,8 @@ class WordRepository {
 
     List<Word> results;
     if (bookId != null) {
-      final words =
-          await _isar.words.filter().bookIdsElementEqualTo(bookId).findAll();
+      final book = HiveService.getBook(bookId);
+      final words = book?.words ?? const <Word>[];
       results = words
           .where(
             (word) =>
@@ -167,20 +203,24 @@ class WordRepository {
                     .contains(trimmed.toLowerCase()) ||
                 word.chinese.contains(trimmed),
           )
+          .map((word) {
+            word.attachBookId(bookId);
+            return word;
+          })
           .toList();
     } else {
-      final englishMatches = await _isar.words
-          .filter()
-          .englishContains(trimmed, caseSensitive: false)
-          .findAll();
-      final chineseMatches =
-          await _isar.words.filter().chineseContains(trimmed).findAll();
-
-      final seen = <int>{};
+      final seen = <String>{};
       results = <Word>[];
-      for (final word in [...englishMatches, ...chineseMatches]) {
-        if (seen.add(word.id)) {
-          results.add(word);
+      for (final book in HiveService.getAllBooks()) {
+        for (final word in book.words) {
+          final matches = word.english
+                  .toLowerCase()
+                  .contains(trimmed.toLowerCase()) ||
+              word.chinese.contains(trimmed);
+          if (matches && seen.add(word.id)) {
+            word.attachBookId(book.bookId);
+            results.add(word);
+          }
         }
       }
     }
@@ -195,8 +235,19 @@ class WordRepository {
     results.sort((a, b) => a.english.compareTo(b.english));
     return results;
   }
+
+  List<Word> _allWords() {
+    final words = <Word>[];
+    for (final book in HiveService.getAllBooks()) {
+      for (final word in book.words) {
+        word.attachBookId(book.bookId);
+        words.add(word);
+      }
+    }
+    return words;
+  }
 }
 
 final wordRepositoryProvider = Provider<WordRepository>((ref) {
-  return WordRepository(IsarService.instance);
+  return WordRepository();
 });

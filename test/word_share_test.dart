@@ -1,19 +1,20 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/word.dart';
-import 'package:vocab_master/models/word_book.dart';
 import 'package:vocab_master/utils/word_share.dart';
+
+import 'helpers/model_fixtures.dart';
 
 void main() {
   test('formatWordShareText includes core fields and books', () {
-    final word = Word()
-      ..english = 'apple'
-      ..chinese = '苹果'
+    final word = testWord(
+      id: 'w1',
+      english: 'apple',
+      chinese: '苹果',
+      examples: ['An apple a day.'],
+    )
       ..phonetic = '/ˈæpl/'
-      ..partOfSpeech = 'n.'
-      ..examples = ['An apple a day.']
-      ..bookIds = [1];
+      ..partOfSpeech = 'n.';
 
-    final book = WordBook()..title = 'CET-4';
+    final book = testBook(bookName: 'CET-4');
 
     final text = formatWordShareText(word, books: [book]);
 

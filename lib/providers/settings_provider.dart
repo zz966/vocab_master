@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/user_settings.dart';
 import '../repositories/settings_repository.dart';
 
-/// Loads and caches [UserSettings] from Isar via [AsyncNotifier].
+/// Loads and caches [UserSettings] from Hive via [AsyncNotifier].
 class SettingsNotifier extends AsyncNotifier<UserSettings> {
   @override
   Future<UserSettings> build() async {

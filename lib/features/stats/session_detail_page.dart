@@ -12,7 +12,7 @@ import '../study/word_detail_page.dart';
 class SessionDetailPage extends ConsumerWidget {
   const SessionDetailPage({super.key, required this.sessionId});
 
-  final int sessionId;
+  final String sessionId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

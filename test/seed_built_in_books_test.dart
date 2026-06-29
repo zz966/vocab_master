@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:vocab_master/data/built_in_books.dart';
 import 'package:vocab_master/features/books/books_page.dart';
 import 'package:vocab_master/features/books/widgets/book_list_item.dart';
-import 'package:vocab_master/models/word_book.dart';
+import 'package:vocab_master/models/book_model.dart';
 import 'package:vocab_master/providers/book_provider.dart';
 import 'package:vocab_master/repositories/book_repository.dart';
 import 'package:vocab_master/utils/kylebing_vocab_codec.dart';
@@ -49,12 +49,14 @@ void main() {
     final progressList = BuiltInBooks.books
         .map(
           (definition) => BookProgress(
-            book: WordBook()
-              ..title = definition.title
-              ..description = definition.description
-              ..category = definition.category
-              ..coverColor = definition.coverColor
-              ..totalWords = 120,
+            book: Book(
+              bookId: definition.assetPath.split('/').last.replaceAll('.json', ''),
+              bookName: definition.title,
+              description: definition.description,
+              category: definition.category,
+              coverColor: definition.coverColor,
+              totalWords: 120,
+            ),
             totalWords: 120,
             masteredWords: 0,
             learnedWords: 0,

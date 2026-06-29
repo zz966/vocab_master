@@ -1,0 +1,195 @@
+{
+  "bookId": "CET4_1",
+  "bookName": "大学英语四级核心词汇",
+  "description": "四级高频词汇，含例句和真题",
+  "totalWords": 4568,
+  "cover": "assets/books/cet4.jpg",
+  "category": "CET4",
+  "difficulty": "中级",
+  "words": [
+    {
+      "id": "CET4_1_1",
+      "word": "abruptly",
+      "phoneticUk": "/ə'brʌptli/",
+      "phoneticUs": "/ə'brʌptli/",
+      "partOfSpeech": "adv.",
+      "definitionCn": "突然地；唐突地",
+      "examples": [
+        {
+          "en": "The path ends off abruptly.",
+          "cn": "这条路突然到头了。"
+        },
+        {
+          "en": "The ground rises abruptly.",
+          "cn": "地势突然隆起。"
+        }
+      ],
+      "synonyms": ["suddenly", "shortly"],
+      "root": "abrupt",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_2",
+      "word": "absorb",
+      "phoneticUk": "/əb'sɔ:b/",
+      "phoneticUs": "/æbˈsɔrb/",
+      "partOfSpeech": "v.",
+      "definitionCn": "吸收；吸引；使全神贯注",
+      "examples": [
+        {
+          "en": "Plants absorb nutrients from the soil.",
+          "cn": "植物从土壤中吸收养分。"
+        }
+      ],
+      "synonyms": ["attract", "engage"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_3",
+      "word": "abuse",
+      "phoneticUk": "/ə'bjuːz/",
+      "phoneticUs": "/ə'bjus/",
+      "partOfSpeech": "v./n.",
+      "definitionCn": "滥用；虐待",
+      "examples": [
+        {
+          "en": "Williams abused his position as Mayor.",
+          "cn": "威廉斯滥用市长权力。"
+        }
+      ],
+      "synonyms": ["maltreat", "misuse"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_4",
+      "word": "academic",
+      "phoneticUk": "/ˌækə'demɪk/",
+      "phoneticUs": "/ˌækə'demɪk/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "学术的；学校的",
+      "examples": [
+        {
+          "en": "He possessed no academic qualifications.",
+          "cn": "他没有学历。"
+        }
+      ],
+      "synonyms": ["scholarly", "educational"],
+      "root": "academy",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_5",
+      "word": "access",
+      "phoneticUk": "/'ækses/",
+      "phoneticUs": "/'ækses/",
+      "partOfSpeech": "n./v.",
+      "definitionCn": "接近；获取；入口",
+      "examples": [
+        {
+          "en": "Users can access their voice mail remotely.",
+          "cn": "用户可以远程获取语音邮件。"
+        }
+      ],
+      "synonyms": ["approach", "entry"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_6",
+      "word": "accessible",
+      "phoneticUk": "/ək'sesəbl/",
+      "phoneticUs": "/ək'sesəbl/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "易接近的；可进入的",
+      "examples": [
+        {
+          "en": "The island is only accessible by boat.",
+          "cn": "这个岛只有坐船才能到。"
+        }
+      ],
+      "synonyms": ["approachable"],
+      "root": "access",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_7",
+      "word": "accommodate",
+      "phoneticUk": "/ə'kɒmədeɪt/",
+      "phoneticUs": "/ə'kɑːmədeɪt/",
+      "partOfSpeech": "v.",
+      "definitionCn": "容纳；适应；提供住宿",
+      "examples": [
+        {
+          "en": "The island was used to accommodate child refugees.",
+          "cn": "该岛用于收容儿童难民。"
+        }
+      ],
+      "synonyms": ["adapt", "house"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_8",
+      "word": "accomplish",
+      "phoneticUk": "/ə'kʌmplɪʃ/",
+      "phoneticUs": "/ə'kɑːmplɪʃ/",
+      "partOfSpeech": "v.",
+      "definitionCn": "完成；实现",
+      "examples": [
+        {
+          "en": "We have accomplished all we set out to do.",
+          "cn": "所有计划要做的事情，我们都已完成。"
+        }
+      ],
+      "synonyms": ["achieve", "complete"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_9",
+      "word": "accumulate",
+      "phoneticUk": "/ə'kjuːmjəleɪt/",
+      "phoneticUs": "/ə'kjuːmjəleɪt/",
+      "partOfSpeech": "v.",
+      "definitionCn": "积累；积聚",
+      "examples": [
+        {
+          "en": "It is unjust that a privileged few should continue to accumulate wealth.",
+          "cn": "少数特权阶级继续积聚财富，这是不公平的。"
+        }
+      ],
+      "synonyms": ["collect", "gather"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    },
+    {
+      "id": "CET4_1_10",
+      "word": "accurate",
+      "phoneticUk": "/'ækjʊrət/",
+      "phoneticUs": "/'ækjərət/",
+      "partOfSpeech": "adj.",
+      "definitionCn": "精确的；准确的",
+      "examples": [
+        {
+          "en": "The brochure tries to give a fair and accurate description.",
+          "cn": "该手册尽量公正、准确地介绍每一家酒店。"
+        }
+      ],
+      "synonyms": ["precise", "exact"],
+      "root": "",
+      "masteryLevel": 0,
+      "lastReviewTime": null
+    }
+  ]
+}

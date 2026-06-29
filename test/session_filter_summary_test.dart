@@ -32,7 +32,7 @@ void main() {
       hasActiveSessionFilters(
         typeFilter: SessionFilter.all,
         dateRange: SessionDateRange.last7Days,
-        bookId: 1,
+        bookId: 'book_1',
       ),
       isTrue,
     );

@@ -20,7 +20,7 @@ void main() {
     await SessionFilterPrefs.save(
       typeFilter: SessionFilter.review,
       dateRange: SessionDateRange.custom,
-      bookId: 3,
+      bookId: 'book_3',
       customRange: customRange,
     );
 
@@ -28,7 +28,7 @@ void main() {
     expect(restored, isNotNull);
     expect(restored!.typeFilter, SessionFilter.review);
     expect(restored.dateRange, SessionDateRange.custom);
-    expect(restored.bookId, 3);
+    expect(restored.bookId, 'book_3');
     expect(restored.customRange?.start, customRange.start);
     expect(restored.customRange?.end, customRange.end);
   });
@@ -42,7 +42,7 @@ void main() {
     await SessionFilterPrefs.save(
       typeFilter: SessionFilter.study,
       dateRange: SessionDateRange.last7Days,
-      bookId: 2,
+      bookId: 'book_2',
     );
     await SessionFilterPrefs.clear();
     final restored = await SessionFilterPrefs.load();

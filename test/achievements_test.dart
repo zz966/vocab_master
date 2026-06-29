@@ -13,7 +13,6 @@ void main() {
         favoritesCount: 12,
         sessionTypes: {
           'flashcard',
-          'complete',
           'quiz',
           'spelling',
           'listening',

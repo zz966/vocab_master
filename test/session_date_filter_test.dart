@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vocab_master/models/learning_session.dart';
 import 'package:vocab_master/utils/session_date_filter.dart';
+
+import 'helpers/model_fixtures.dart';
 
 void main() {
   final now = DateTime(2026, 6, 16, 12);
 
-  LearningSession sessionOn(DateTime date) {
-    return LearningSession()..startedAt = date;
-  }
-
   test('matchesSessionDateRange allows all dates for all range', () {
-    final session = sessionOn(DateTime(2020, 1, 1));
+    final session = testSession(startedAt: DateTime(2020, 1, 1));
     expect(
       matchesSessionDateRange(
         session.startedAt,
@@ -25,7 +22,7 @@ void main() {
   test('matchesSessionDateRange filters last 7 days', () {
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 6, 16)).startedAt,
+        testSession(startedAt: DateTime(2026, 6, 16)).startedAt,
         range: SessionDateRange.last7Days,
         now: now,
       ),
@@ -33,7 +30,7 @@ void main() {
     );
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 6, 10)).startedAt,
+        testSession(startedAt: DateTime(2026, 6, 10)).startedAt,
         range: SessionDateRange.last7Days,
         now: now,
       ),
@@ -41,7 +38,7 @@ void main() {
     );
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 6, 9)).startedAt,
+        testSession(startedAt: DateTime(2026, 6, 9)).startedAt,
         range: SessionDateRange.last7Days,
         now: now,
       ),
@@ -50,10 +47,10 @@ void main() {
   });
 
   test('matchesSessionBookFilter matches sessions containing book id', () {
-    final session = LearningSession()..bookIds = [1, 3];
+    final session = testSession(bookIds: ['book_1', 'book_3']);
     expect(matchesSessionBookFilter(session, null), isTrue);
-    expect(matchesSessionBookFilter(session, 1), isTrue);
-    expect(matchesSessionBookFilter(session, 2), isFalse);
+    expect(matchesSessionBookFilter(session, 'book_1'), isTrue);
+    expect(matchesSessionBookFilter(session, 'book_2'), isFalse);
   });
 
   test('matchesSessionDateRange filters custom range inclusively', () {
@@ -64,7 +61,7 @@ void main() {
 
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 6, 1)).startedAt,
+        testSession(startedAt: DateTime(2026, 6, 1)).startedAt,
         range: SessionDateRange.custom,
         customRange: custom,
         now: now,
@@ -73,7 +70,7 @@ void main() {
     );
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 6, 10, 23, 59)).startedAt,
+        testSession(startedAt: DateTime(2026, 6, 10, 23, 59)).startedAt,
         range: SessionDateRange.custom,
         customRange: custom,
         now: now,
@@ -82,7 +79,7 @@ void main() {
     );
     expect(
       matchesSessionDateRange(
-        sessionOn(DateTime(2026, 5, 31)).startedAt,
+        testSession(startedAt: DateTime(2026, 5, 31)).startedAt,
         range: SessionDateRange.custom,
         customRange: custom,
         now: now,

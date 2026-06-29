@@ -35,8 +35,8 @@ class _EditBookPageState extends ConsumerState<EditBookPage> {
     super.initState();
     _titleController = TextEditingController(text: widget.book.title);
     _descController =
-        TextEditingController(text: widget.book.description ?? '');
-    _coverColor = widget.book.coverColor ?? '#607D8B';
+        TextEditingController(text: widget.book.description);
+    _coverColor = widget.book.coverColor;
   }
 
   @override
@@ -55,8 +55,7 @@ class _EditBookPageState extends ConsumerState<EditBookPage> {
     setState(() => _saving = true);
     widget.book
       ..title = title
-      ..description =
-          _descController.text.trim().isEmpty ? null : _descController.text.trim()
+      ..description = _descController.text.trim()
       ..coverColor = _coverColor;
 
     await ref.read(bookRepositoryProvider).updateBook(widget.book);

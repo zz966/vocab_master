@@ -2,25 +2,27 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vocab_master/core/achievements.dart';
-import 'package:vocab_master/models/learning_session.dart';
 import 'package:vocab_master/models/user_settings.dart';
-import 'package:vocab_master/models/word_book.dart';
 import 'package:vocab_master/repositories/book_repository.dart';
 import 'package:vocab_master/repositories/stats_repository.dart';
 import 'package:vocab_master/utils/stats_export.dart';
 
+import 'helpers/model_fixtures.dart';
+
 void main() {
   test('StatsExportCodec produces valid JSON summary', () {
-    final settings = UserSettings()
-      ..dailyGoal = 30
-      ..currentStreak = 5
-      ..longestStreak = 10
-      ..defaultStudyMode = 'quiz'
-      ..unlockedAchievementIds = ['first_session'];
+    final settings = UserSettings(
+      dailyGoal: 30,
+      currentStreak: 5,
+      longestStreak: 10,
+      defaultStudyMode: 'quiz',
+      unlockedAchievementIds: ['first_session'],
+    );
 
-    final book = WordBook()
-      ..title = 'CET-4'
-      ..category = 'exam'
+    final book = testBook(
+      bookName: 'CET-4',
+      category: 'exam',
+    )
       ..totalWords = 100;
 
     final books = [
@@ -44,10 +46,11 @@ void main() {
       summary7: summary7,
       summary30: summary7,
       recentSessions: [
-        LearningSession()
-          ..sessionType = 'flashcard'
-          ..wordsStudied = 10
-          ..wordsCorrect = 8,
+        testSession(
+          sessionType: 'flashcard',
+          wordsStudied: 10,
+          wordsCorrect: 8,
+        ),
       ],
       totalWordsStudied: 200,
       achievements: evaluateAchievements(

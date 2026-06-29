@@ -28,7 +28,7 @@ class SessionDetail {
 }
 
 final sessionDetailProvider =
-    FutureProvider.family<SessionDetail?, int>((ref, sessionId) async {
+    FutureProvider.family<SessionDetail?, String>((ref, sessionId) async {
   final session =
       await ref.watch(sessionRepositoryProvider).getSession(sessionId);
   if (session == null) {

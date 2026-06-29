@@ -1,15 +1,6 @@
-import 'package:isar/isar.dart';
+import 'book_model.dart';
 
-part 'word_book.g.dart';
+export 'book_extensions.dart';
+export 'book_model.dart' show Book;
 
-@collection
-class WordBook {
-  Id id = Isar.autoIncrement;
-
-  late String title;
-  String? description;
-  late String category;
-  int totalWords = 0;
-  String? coverColor;
-  DateTime createdAt = DateTime.now();
-}
+typedef WordBook = Book;

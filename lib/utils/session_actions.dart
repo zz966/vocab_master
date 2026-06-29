@@ -47,7 +47,7 @@ Future<void> _refreshSessionData(WidgetRef ref) async {
 
 Future<void> deleteSessionRecord({
   required WidgetRef ref,
-  required int sessionId,
+  required String sessionId,
 }) async {
   await ref.read(sessionRepositoryProvider).deleteSession(sessionId);
   await _refreshSessionData(ref);
@@ -55,7 +55,7 @@ Future<void> deleteSessionRecord({
 
 Future<void> deleteSessionRecords({
   required WidgetRef ref,
-  required List<int> sessionIds,
+  required List<String> sessionIds,
 }) async {
   if (sessionIds.isEmpty) {
     return;

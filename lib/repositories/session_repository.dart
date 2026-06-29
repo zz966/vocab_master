@@ -1,27 +1,22 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:isar/isar.dart';
 
-import '../database/isar_service.dart';
+import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
 import '../utils/study_quality.dart';
 
 class SessionRepository {
-  SessionRepository(this._isar);
-
-  final Isar _isar;
-
   Future<LearningSession> startSession({
     required String sessionType,
-    required List<int> bookIds,
+    required List<String> bookIds,
   }) async {
-    final session = LearningSession()
-      ..sessionType = sessionType
-      ..bookIds = bookIds
-      ..startedAt = DateTime.now();
+    final session = LearningSession(
+      id: HiveService.nextId('session'),
+      sessionType: sessionType,
+      bookIds: bookIds,
+      startedAt: DateTime.now(),
+    );
 
-    await _isar.writeTxn(() async {
-      await _isar.learningSessions.put(session);
-    });
+    await HiveService.saveSession(session);
     return session;
   }
 
@@ -33,76 +28,54 @@ class SessionRepository {
     if (quality.value >= 2) {
       session.wordsCorrect += 1;
     }
-    await _isar.writeTxn(() async {
-      await _isar.learningSessions.put(session);
-    });
+    await HiveService.saveSession(session);
   }
 
   Future<void> completeSession(LearningSession session) async {
     session.completedAt = DateTime.now();
-    await _isar.writeTxn(() async {
-      await _isar.learningSessions.put(session);
-    });
+    await HiveService.saveSession(session);
   }
 
-  Future<LearningSession?> getSession(int id) {
-    return _isar.learningSessions.get(id);
+  Future<LearningSession?> getSession(String id) async {
+    return HiveService.getSession(id);
   }
 
-  Future<List<LearningSession>> getRecentSessions({int limit = 30}) {
-    return _isar.learningSessions
-        .where()
-        .sortByStartedAtDesc()
-        .limit(limit)
-        .findAll();
+  Future<List<LearningSession>> getRecentSessions({int limit = 30}) async {
+    return HiveService.getAllSessions().take(limit).toList();
   }
 
-  Future<void> deleteSession(int id) async {
-    await _isar.writeTxn(() async {
-      await _isar.learningSessions.delete(id);
-    });
+  Future<void> deleteSession(String id) async {
+    await HiveService.deleteSession(id);
   }
 
-  Future<void> deleteSessions(List<int> ids) async {
-    if (ids.isEmpty) {
-      return;
+  Future<void> deleteSessions(List<String> ids) async {
+    for (final id in ids) {
+      await HiveService.deleteSession(id);
     }
-    await _isar.writeTxn(() async {
-      for (final id in ids) {
-        await _isar.learningSessions.delete(id);
-      }
-    });
   }
 
   Future<void> clearAllSessions() async {
-    await _isar.writeTxn(() async {
-      await _isar.learningSessions.clear();
-    });
+    await HiveService.clearSessions();
   }
 
   Future<int> cleanupStaleSessions({
     Duration maxAge = const Duration(hours: 24),
   }) async {
     final cutoff = DateTime.now().subtract(maxAge);
-    final stale = await _isar.learningSessions
-        .filter()
-        .completedAtIsNull()
-        .startedAtLessThan(cutoff)
-        .findAll();
+    final stale = HiveService.getAllSessions()
+        .where(
+          (session) =>
+              session.completedAt == null && session.startedAt.isBefore(cutoff),
+        )
+        .toList();
 
-    if (stale.isEmpty) {
-      return 0;
+    for (final session in stale) {
+      await HiveService.deleteSession(session.id);
     }
-
-    await _isar.writeTxn(() async {
-      for (final session in stale) {
-        await _isar.learningSessions.delete(session.id);
-      }
-    });
     return stale.length;
   }
 }
 
 final sessionRepositoryProvider = Provider<SessionRepository>((ref) {
-  return SessionRepository(IsarService.instance);
+  return SessionRepository();
 });
