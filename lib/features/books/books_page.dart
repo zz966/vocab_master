@@ -168,12 +168,12 @@ class _CategoryTabBar extends StatelessWidget {
   final ValueChanged<String?> onCategorySelected;
 
   List<String?> get _tabCategories {
-    final categories = books
+    final available = books
         .map((item) => item.book.category)
         .where((category) => category.isNotEmpty)
-        .toSet()
-        .toList()
-      ..sort();
+        .toSet();
+    final categories =
+        bookCategoryOrder.where(available.contains).toList(growable: false);
     return [null, ...categories];
   }
 

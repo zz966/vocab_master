@@ -27,6 +27,26 @@ bool bookNeedsRichContentRefresh(Book book) {
   return book.words.any((word) => !isRichBookWord(word));
 }
 
+/// assets 内置词书是否应覆盖 Hive 中已有数据。
+bool bookNeedsBundledAssetRefresh({
+  required Book? existing,
+  required Book incoming,
+}) {
+  if (existing == null) {
+    return true;
+  }
+  if (bookNeedsRichContentRefresh(existing)) {
+    return true;
+  }
+  if (existing.words.length != incoming.words.length) {
+    return true;
+  }
+  if (existing.totalWords != incoming.totalWords) {
+    return true;
+  }
+  return false;
+}
+
 bool _collocationsMissingExamples(BookWord word) {
   final phrases = word.collocations;
   if (phrases == null || phrases.isEmpty) {

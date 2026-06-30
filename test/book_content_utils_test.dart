@@ -16,6 +16,66 @@ void main() {
     expect(bookNeedsRichContentRefresh(book), isFalse);
   });
 
+  test('bookNeedsBundledAssetRefresh detects word count changes', () {
+    final rich = BookWord(
+      id: 'w1',
+      word: 'test',
+      phoneticUk: '/test/',
+      phoneticUs: '/test/',
+      partOfSpeech: 'n.',
+      definitionCn: '测试',
+      sentenceExamples: List.generate(
+        3,
+        (index) => BookWordExample(en: 'Ex $index.', cn: '例 $index。'),
+      ),
+      definitions: [WordDefinition(partOfSpeech: 'n.', meaning: '测试')],
+      englishDefinitions: [
+        WordDefinition(partOfSpeech: 'n.', meaning: 'test'),
+      ],
+      synonymDetails: [
+        ConfusableWord(word: 'exam', explanation: '考试'),
+      ],
+      collocations: [
+        WordPhrase(
+          phrase: 'test case',
+          translation: '测试用例',
+          exampleEnglish: 'Write a test case.',
+          exampleChinese: '写一个测试用例。',
+        ),
+      ],
+    );
+
+    final existing = Book(
+      bookId: 'CET4_CORE',
+      bookName: '四级',
+      totalWords: 1,
+      words: [rich],
+    );
+    final incoming = Book(
+      bookId: 'CET4_CORE',
+      bookName: '四级',
+      totalWords: 2,
+      words: [rich, rich],
+    );
+
+    expect(
+      bookNeedsBundledAssetRefresh(existing: existing, incoming: incoming),
+      isTrue,
+    );
+    expect(
+      bookNeedsBundledAssetRefresh(
+        existing: existing,
+        incoming: Book(
+          bookId: 'CET4_CORE',
+          bookName: '四级',
+          totalWords: 1,
+          words: [rich],
+        ),
+      ),
+      isFalse,
+    );
+  });
+
   test('isRichBookWord rejects legacy simplified words', () {
     final legacy = BookWord(
       id: 'legacy_1',

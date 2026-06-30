@@ -151,18 +151,31 @@ class HiveService {
   static Box<PointTransaction> get _pointTransactions =>
       Hive.box<PointTransaction>(pointTransactionsBoxName);
 
-  /// 内置词书资源，格式与 [test_40.json] 一致（富内容词库）。
-  static const bundledBookAssets = <String>[
-    'assets/books/test_40.json',
-  ];
-
   static Future<void> importInitialBooks() async {
     await importBundledBooksIfNeeded();
   }
 
+  /// 扫描 [assets/books/] 下全部 `.json`（跳过 `_` 前缀文件），导入富内容词书。
+  static Future<List<String>> discoverBundledBookAssets() async {
+    final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+    final paths = manifest
+        .listAssets()
+        .where((path) {
+          if (!path.startsWith('assets/books/') || !path.endsWith('.json')) {
+            return false;
+          }
+          final fileName = path.split('/').last;
+          return !fileName.startsWith('_');
+        })
+        .toList()
+      ..sort();
+    return paths;
+  }
+
   /// 导入/更新 assets 中的富内容词书，并校验 Hive 中数据符合 test_40 结构。
   static Future<void> importBundledBooksIfNeeded() async {
-    for (final assetPath in bundledBookAssets) {
+    final assetPaths = await discoverBundledBookAssets();
+    for (final assetPath in assetPaths) {
       await _importBookAssetIfNeeded(assetPath);
     }
   }
@@ -174,7 +187,7 @@ class HiveService {
       attachBookIds(book);
 
       final existing = _books.get(book.bookId);
-      if (existing != null && !bookNeedsRichContentRefresh(existing)) {
+      if (!bookNeedsBundledAssetRefresh(existing: existing, incoming: book)) {
         return;
       }
 

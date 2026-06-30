@@ -286,6 +286,15 @@ MainShell
 | 文件 | bookId | 词数 | 用途 |
 |------|--------|------|------|
 | `test_40.json` | `TEST_40` | 40 | 富内容标准词库；2 关（30+10） |
+| `cet4_core.json` | `CET4_CORE` | 4544 | 四级完整词库（CET4_1+2+3 合并去重；源库 7508 条含重复词条） |
+| `cet6_core.json` | `CET6_CORE` | 3991 | 六级完整词库（CET6_1+2+3 合并去重；源库 5651 条） |
+| `IELTS.json` | `IELTS` | 5275 | 雅思词库（IELTS_2+3 合并去重） |
+| `kaoyan_core.json` | `KAOYAN_CORE` | 5047 | 考研词库（KaoYan_1+2+3 合并去重） |
+| `TOEFL.json` | `TOEFL` | 10367 | 托福词库（TOEFL_2+3 合并去重） |
+| `senior_core.json` | `SENIOR_CORE` | 6555 | 高中词库（GaoZhong+人教+北师大 合并去重） |
+| `junior_core.json` | `JUNIOR_CORE` | 3118 | 初中词库（ChuZhong+人教+外研社 合并去重） |
+| `SAT.json` | `SAT` | 4463 | SAT 词库（SAT_2+3 合并去重） |
+| `GRE.json` | `GRE` | 9984 | GRE 词库（GRE_2+3 合并去重） |
 
 词书 JSON 由 `Book.fromJson` 解析，导入时经 `book_content_utils` 校验并附加 `bookIds`。
 
@@ -307,11 +316,33 @@ MainShell
 
 ---
 
-## 8. 未完成 / 待开发
+## 8. 扩充词库（路线 A）
+
+### 8.1 添加一本新词书
+
+1. 在 `assets/books/` 新建 `your_book.json`（格式对齐 `test_40.json`）
+2. 词条模板见 `tools/book_word_template.json`
+3. 内置词书生成：`python tools/build_cet4_core.py` / `build_cet6_core.py` / `build_ielts.py`，再运行 `python tools/validate_book_json.py`
+4. 重启 App — `HiveService` 会自动扫描 `assets/books/*.json` 并导入（`_` 前缀文件跳过）
+5. 若 JSON 中 `category` 为新值，在 `category_labels.dart` 补展示文案
+
+### 8.2 词书 JSON 顶层字段
+
+| 字段 | 说明 |
+|------|------|
+| `bookId` | 唯一 ID（建议大写+下划线，如 `CET4_CORE`） |
+| `bookName` | 列表展示名称 |
+| `description` | 简介 |
+| `totalWords` | 词数（须与 `words` 数组长度一致） |
+| `category` | 分类 key（对应 `category_labels`） |
+| `difficulty` / `coverColor` | 可选展示信息 |
+| `words` | 富内容词条数组 |
+
+### 8.3 待开发
 
 | 项目 | 说明 |
 |------|------|
-| **自定义词书** | 仅支持内置 JSON 词库 |
+| **自定义词书** | 用户自行导入 JSON（非内置 assets） |
 
 ---
 
@@ -376,7 +407,7 @@ VocabMaster 当前是一个**功能聚焦、本地优先**的单词学习 App：
 - **成熟可用**：三模式词书学习、关卡挑战星级、查单词、TTS、签到积分、设置与通知
 - **数据模型清晰**：`BookWord` 已对齐 `test_40` 富内容格式，学习状态简化为 `learned` 布尔；schema v4 自动迁移
 - **架构清晰**：Feature 分层 + Repository + Riverpod + Hive 持久化
-- **主要缺口**：学习历史展示、自定义词书
-- **可扩展**：新增内置词书时在 `category_labels.dart` 补充分类文案即可
+- **主要缺口**：真实词库体量、学习历史展示、自定义词书导入
+- **可扩展**：在 `assets/books/` 添加 JSON 即可自动导入；新分类补 `category_labels.dart`
 
-建议下一步视需求实现 **学习记录浏览**，或继续扩充 `assets/books/` 富内容词库。
+当前优先路线：**扩充 `assets/books/` 富内容词库**（校验脚本 `tools/validate_book_json.py`）。

@@ -124,3 +124,6 @@ app.*.symbols
 /android/app/build/
 /android/.gradle/
 *.jks
+
+# CET4 词书构建缓存
+tools/_cet*.json

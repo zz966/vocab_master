@@ -1,0 +1,39 @@
+{
+  "id": "BOOK_ID_1",
+  "word": "example",
+  "phoneticUk": "/ɪɡˈzɑːmpl/",
+  "phoneticUs": "/ɪɡˈzæmpl/",
+  "partOfSpeech": "n.",
+  "definitionCn": "例子；范例",
+  "examples": [
+    { "en": "This is a good example.", "cn": "这是一个好例子。" },
+    { "en": "Follow my example and try again.", "cn": "跟着我的例子再试一次。" },
+    { "en": "The teacher showed an example on the board.", "cn": "老师在黑板上展示了一个例子。" }
+  ],
+  "synonyms": [
+    { "word": "instance", "meaning": "实例" },
+    { "word": "sample", "meaning": "样本" }
+  ],
+  "root": "ex- + ampl",
+  "definitions": [
+    { "partOfSpeech": "n.", "meaning": "例子；范例" }
+  ],
+  "englishDefinitions": [
+    { "partOfSpeech": "n.", "meaning": "a thing characteristic of its kind" }
+  ],
+  "collocations": [
+    {
+      "phrase": "for example",
+      "translation": "例如",
+      "example": {
+        "en": "Many fruits are healthy; apples, for example, are rich in fiber.",
+        "cn": "许多水果有益健康，例如苹果富含纤维。"
+      }
+    }
+  ],
+  "memoryTips": {
+    "etymology": "来自拉丁语 exemplum（样本）。",
+    "mnemonic": "ex-am-ple：考试里的例题就是 example。",
+    "association": "联想：example → 范例"
+  }
+}
