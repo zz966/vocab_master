@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/book_model.dart';
 import '../../models/learning_session.dart';
@@ -11,6 +12,7 @@ import '../../models/level_study_progress.dart';
 import '../../models/point_transaction.dart';
 import '../../models/review_record.dart';
 import '../../models/user_settings.dart';
+import '../../utils/book_content_utils.dart';
 
 
 class HiveService {
@@ -26,6 +28,9 @@ class HiveService {
   static const pointTransactionsBoxName = 'point_transactions';
 
   static bool _initialized = false;
+
+  static const _bookWordSchemaVersionKey = 'book_word_hive_schema';
+  static const _currentBookWordSchemaVersion = 3;
 
   static const _allBoxNames = [
     booksBoxName,
@@ -45,6 +50,7 @@ class HiveService {
     await Hive.initFlutter();
     _registerAdapters();
 
+    await _resetBooksBoxIfSchemaChanged();
     await _openBoxOrReset<Book>(booksBoxName);
     await _openBoxOrReset<UserSettings>(settingsBoxName);
     await _openBoxOrReset<LearningSession>(sessionsBoxName);
@@ -54,6 +60,26 @@ class HiveService {
     await _openBoxOrReset<PointTransaction>(pointTransactionsBoxName);
 
     _initialized = true;
+  }
+
+  static Future<void> _resetBooksBoxIfSchemaChanged() async {
+    final prefs = await SharedPreferences.getInstance();
+    final stored = prefs.getInt(_bookWordSchemaVersionKey) ?? 0;
+    if (stored == _currentBookWordSchemaVersion) {
+      return;
+    }
+
+    await _closeBoxIfOpen(booksBoxName);
+    try {
+      await Hive.deleteBoxFromDisk(booksBoxName);
+    } on Object catch (error) {
+      debugPrint('BookWord schema 升级，删除旧 books box 失败: $error');
+    }
+    await prefs.setInt(
+      _bookWordSchemaVersionKey,
+      _currentBookWordSchemaVersion,
+    );
+    debugPrint('📦 BookWord Hive schema 已升级到 v$_currentBookWordSchemaVersion');
   }
 
   static Future<void> resetAllBoxes() async {
@@ -132,103 +158,62 @@ class HiveService {
   static Box<PointTransaction> get _pointTransactions =>
       Hive.box<PointTransaction>(pointTransactionsBoxName);
 
-  static Future<void> importInitialBooks() async {
-    if (_books.isEmpty) {
-      try {
-        final jsonStr =
-            await rootBundle.loadString('assets/books/cet4_1.json');
-        final book = Book.fromJson(jsonDecode(jsonStr) as Map<String, dynamic>);
-        _attachBookIds(book);
-        await saveBook(book);
-        debugPrint(
-          '✅ CET4 单词书导入成功，共 ${book.words.length} 个单词（bookId: ${book.bookId}）',
-        );
-      } catch (e, stackTrace) {
-        debugPrint('❌ 导入 cet4_1.json 失败: $e');
-        debugPrint('$stackTrace');
-      }
-    }
+  /// 内置词书资源，格式与 [test_40.json] 一致（富内容词库）。
+  static const bundledBookAssets = <String>[
+    'assets/books/test_40.json',
+  ];
 
-    await importTestBookIfNeeded();
+  /// 已移除的旧版词书，启动时从 Hive 清理，避免遗留简化结构数据。
+  static const legacyBookIdsToRemove = <String>[
+    'CET4_1',
+  ];
+
+  static Future<void> importInitialBooks() async {
+    await _purgeLegacyBooks();
+    await importBundledBooksIfNeeded();
   }
 
-  static const testBookId = 'TEST_40';
+  /// 导入/更新 assets 中的富内容词书，并校验 Hive 中数据符合 test_40 结构。
+  static Future<void> importBundledBooksIfNeeded() async {
+    for (final assetPath in bundledBookAssets) {
+      await _importBookAssetIfNeeded(assetPath);
+    }
+  }
 
-  /// 导入 40 词测试词库（第 1 关 30 词 + 第 2 关 10 词），便于流程验证。
-  static Future<void> importTestBookIfNeeded() async {
+  static Future<void> _purgeLegacyBooks() async {
+    for (final bookId in legacyBookIdsToRemove) {
+      if (!_books.containsKey(bookId)) {
+        continue;
+      }
+      await deleteBook(bookId);
+      debugPrint('🗑️ 已移除旧版词书 $bookId');
+    }
+  }
+
+  static Future<void> _importBookAssetIfNeeded(String assetPath) async {
     try {
-      final jsonStr =
-          await rootBundle.loadString('assets/books/test_40.json');
+      final jsonStr = await rootBundle.loadString(assetPath);
       final book = Book.fromJson(jsonDecode(jsonStr) as Map<String, dynamic>);
-      _attachBookIds(book);
+      attachBookIds(book);
 
-      final existing = _books.get(testBookId);
+      final existing = _books.get(book.bookId);
+      if (existing != null && !bookNeedsRichContentRefresh(existing)) {
+        return;
+      }
+
       if (existing != null) {
-        if (!_needsTestBookContentRefresh(existing)) {
-          return;
-        }
-        _preserveWordLearningState(from: existing, into: book);
+        preserveWordLearningState(from: existing, into: book);
       }
 
       await saveBook(book);
       debugPrint(
         existing == null
-            ? '✅ 测试词库导入成功，共 ${book.words.length} 个单词（bookId: ${book.bookId}）'
-            : '✅ 测试词库内容已更新，共 ${book.words.length} 个单词（bookId: ${book.bookId}）',
+            ? '✅ 词书导入成功，共 ${book.words.length} 个单词（bookId: ${book.bookId}）'
+            : '✅ 词书内容已更新为富内容格式，共 ${book.words.length} 个单词（bookId: ${book.bookId}）',
       );
     } catch (e, stackTrace) {
-      debugPrint('❌ 导入 test_40.json 失败: $e');
+      debugPrint('❌ 导入 $assetPath 失败: $e');
       debugPrint('$stackTrace');
-    }
-  }
-
-  static bool _collocationsMissingExamples(BookWord word) {
-    final phrases = word.collocations;
-    if (phrases == null || phrases.isEmpty) {
-      return false;
-    }
-    return phrases.any(
-      (phrase) => (phrase.exampleEnglish ?? '').trim().isEmpty,
-    );
-  }
-
-  static bool _needsTestBookContentRefresh(Book book) {
-    if (!book.description.contains('content-v7')) {
-      return true;
-    }
-    return book.words.any(
-      (word) =>
-          word.sentenceExamples.length < 3 ||
-          word.definitions == null ||
-          word.englishDefinitions == null ||
-          word.synonymDetails == null ||
-          word.synonymDetails!.any((item) => item.explanation.trim().isEmpty) ||
-          _collocationsMissingExamples(word) ||
-          word.phoneticUk.trim().isEmpty,
-    );
-  }
-
-  static void _preserveWordLearningState({
-    required Book from,
-    required Book into,
-  }) {
-    final previousWords = {for (final word in from.words) word.id: word};
-    for (final word in into.words) {
-      final previous = previousWords[word.id];
-      if (previous == null) {
-        continue;
-      }
-      word
-        ..masteryLevel = previous.masteryLevel
-        ..lastReviewTime = previous.lastReviewTime
-        ..reviewCount = previous.reviewCount
-        ..correctStreak = previous.correctStreak;
-    }
-  }
-
-  static void _attachBookIds(Book book) {
-    for (final word in book.words) {
-      word.bookIds = [book.bookId];
     }
   }
 
@@ -308,7 +293,6 @@ class HiveService {
   static Map<String, LevelChallengeProgress> getLevelChallengeProgressForBook(
     String bookId,
   ) {
-    final prefix = '${bookId}_';
     return Map.fromEntries(
       _levelChallenges.values
           .where((item) => item.bookId == bookId)

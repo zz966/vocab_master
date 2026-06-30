@@ -20,10 +20,10 @@ void main() {
 
   test('parseLevelChallengeSessionType supports book ids with underscores', () {
     final parsed = parseLevelChallengeSessionType(
-      'level_cet4_1_2_challenge_spelling',
+      'level_my_custom_book_2_challenge_spelling',
     );
 
-    expect(parsed?.bookId, 'cet4_1');
+    expect(parsed?.bookId, 'my_custom_book');
     expect(parsed?.levelIndex, 2);
     expect(parsed?.mode, StudyMode.spelling);
   });

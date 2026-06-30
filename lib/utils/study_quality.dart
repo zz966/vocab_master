@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 enum StudyQuality {
-  again(0, '忘了', Colors.red),
-  hard(1, '模糊', Colors.orange),
-  good(2, '记住了', Colors.green),
-  easy(3, '太简单', Colors.blue);
+  again(0, '答错', Colors.red),
+  good(2, '答对', Colors.green);
 
   const StudyQuality(this.value, this.label, this.color);
 
@@ -12,17 +10,12 @@ enum StudyQuality {
   final String label;
   final Color color;
 
-  static const feedbackValues = [
-    StudyQuality.again,
-    StudyQuality.hard,
-    StudyQuality.good,
-  ];
-
   static StudyQuality? fromValue(int value) {
-    for (final quality in StudyQuality.values) {
-      if (quality.value == value) {
-        return quality;
-      }
+    if (value >= good.value) {
+      return good;
+    }
+    if (value == again.value) {
+      return again;
     }
     return null;
   }

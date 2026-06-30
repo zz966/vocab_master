@@ -9,6 +9,5 @@ export 'book_model.dart'
         WordDefinition,
         WordExample,
         WordPhrase;
-export 'book_word_extensions.dart';
 
 typedef Word = BookWord;

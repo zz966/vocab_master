@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../models/word.dart';
+import '../../../utils/book_content_utils.dart';
 import '../../../utils/word_enrichment.dart';
 import 'example_sentence_row.dart';
 import 'highlighted_text.dart';
@@ -52,7 +53,7 @@ class _ExamplesContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final examples = word.structuredExamples ?? const <WordExample>[];
+    final examples = word.structuredExamples;
     if (examples.isEmpty) {
       return const _EmptyContent(message: '没有');
     }
@@ -363,6 +364,9 @@ List<ConfusableWord> _synonymItems(Word word, List<Word> peerWords) {
             ..explanation = '',
         )
         .toList();
+  }
+  if (isRichBookWord(word)) {
+    return const [];
   }
   return WordEnrichment.buildSynonyms(word, peerWords);
 }

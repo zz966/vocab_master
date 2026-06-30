@@ -25,7 +25,7 @@ class BookProgress {
 
 class BookRepository {
   Future<List<WordBook>> getAllBooks() async {
-    await HiveService.importTestBookIfNeeded();
+    await HiveService.importBundledBooksIfNeeded();
     return HiveService.getAllBooks();
   }
 
@@ -95,7 +95,7 @@ class BookRepository {
     return computeOverviewStats(words);
   }
 
-  Future<void> ensureTestBook() {
-    return HiveService.importTestBookIfNeeded();
+  Future<void> refreshBundledBooks() {
+    return HiveService.importBundledBooksIfNeeded();
   }
 }

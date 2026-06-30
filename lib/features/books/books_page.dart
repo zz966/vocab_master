@@ -9,7 +9,7 @@ import '../../providers/study_provider.dart';
 import '../../repositories/book_repository.dart';
 import '../../widgets/async_value_view.dart';
 import 'widgets/book_list_item.dart';
-import 'widgets/book_mode_picker_sheet.dart';
+import 'widgets/book_mode_picker_dialog.dart';
 
 class BooksPage extends ConsumerStatefulWidget {
   const BooksPage({super.key});
@@ -108,6 +108,7 @@ class _BooksPageState extends ConsumerState<BooksPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               _CategoryTabBar(
+                books: books,
                 selectedCategory: _categoryFilter,
                 onCategorySelected: (category) {
                   setState(() => _categoryFilter = category);
@@ -120,7 +121,7 @@ class _BooksPageState extends ConsumerState<BooksPage> {
                         onRefresh: () async {
                           await ref
                               .read(bookRepositoryProvider)
-                              .ensureTestBook();
+                              .refreshBundledBooks();
                           invalidateStudyData(ref);
                           ref.invalidate(booksProvider);
                           await ref.read(booksProvider.future);
@@ -157,17 +158,24 @@ class _BooksPageState extends ConsumerState<BooksPage> {
 
 class _CategoryTabBar extends StatelessWidget {
   const _CategoryTabBar({
+    required this.books,
     required this.selectedCategory,
     required this.onCategorySelected,
   });
 
+  final List<BookProgress> books;
   final String? selectedCategory;
   final ValueChanged<String?> onCategorySelected;
 
-  static const _tabCategories = [
-    null,
-    ...bookCategories,
-  ];
+  List<String?> get _tabCategories {
+    final categories = books
+        .map((item) => item.book.category)
+        .where((category) => category.isNotEmpty)
+        .toSet()
+        .toList()
+      ..sort();
+    return [null, ...categories];
+  }
 
   @override
   Widget build(BuildContext context) {

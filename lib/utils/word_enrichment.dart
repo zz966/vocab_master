@@ -37,11 +37,11 @@ class WordEnrichment {
   static void apply(Word word, {List<String>? peerWords}) {
     word.memoryTips ??= _buildMemoryTips(word);
     word.definitions ??= _buildDefinitions(word);
-    word.structuredExamples ??= _buildStructuredExamples(word);
+    if (word.sentenceExamples.isEmpty) {
+      word.structuredExamples = _buildStructuredExamples(word);
+    }
     word.structuredExamples = _ensureExamplesForDefinitions(word);
     word.collocations ??= _buildCollocations(word);
-    word.confusableWords ??= _buildConfusableWords(word, peerWords ?? const []);
-    word.examples ??= _legacyExamples(word);
   }
 
   /// Finds peer words with overlapping Chinese meanings for the synonyms tab.
@@ -140,7 +140,7 @@ class WordEnrichment {
   }
 
   static List<WordDefinition> _buildDefinitions(Word word) {
-    if (word.partOfSpeech == null || word.partOfSpeech!.trim().isEmpty) {
+    if (word.partOfSpeech.trim().isEmpty) {
       return [
         WordDefinition()
           ..partOfSpeech = '释义'
@@ -149,7 +149,7 @@ class WordEnrichment {
     }
 
     final segments = word.chinese.split('；');
-    final types = word.partOfSpeech!.split('/');
+    final types = word.partOfSpeech.split('/');
 
     if (types.length == segments.length) {
       return List.generate(types.length, (index) {
@@ -161,7 +161,7 @@ class WordEnrichment {
 
     return [
       WordDefinition()
-        ..partOfSpeech = word.partOfSpeech!.trim()
+        ..partOfSpeech = word.partOfSpeech.trim()
         ..meaning = word.chinese,
     ];
   }
@@ -170,17 +170,14 @@ class WordEnrichment {
     final examples = <WordExample>[];
     final definitions = word.definitions ?? _buildDefinitions(word);
 
-    if (word.examples != null) {
-      for (final raw in word.examples!) {
-        final parsed = _parseLegacyExample(raw);
-        examples.add(
-          WordExample()
-            ..english = parsed.english
-            ..chinese = parsed.chinese
-            ..partOfSpeech = definitions.first.partOfSpeech
-            ..meaning = definitions.first.meaning,
-        );
-      }
+    for (final example in word.sentenceExamples) {
+      examples.add(
+        WordExample()
+          ..english = example.en
+          ..chinese = example.cn
+          ..partOfSpeech = definitions.first.partOfSpeech
+          ..meaning = definitions.first.meaning,
+      );
     }
 
     final collocations = word.collocations ?? _buildCollocations(word);
@@ -222,7 +219,7 @@ class WordEnrichment {
 
   static List<WordExample> _ensureExamplesForDefinitions(Word word) {
     final definitions = word.definitions ?? _buildDefinitions(word);
-    final examples = [...(word.structuredExamples ?? const <WordExample>[])];
+    final examples = [...word.structuredExamples];
 
     for (final definition in definitions) {
       final hasExample = examples.any((example) {
@@ -253,102 +250,20 @@ class WordEnrichment {
   }
 
   static List<WordPhrase> _buildCollocations(Word word) {
-    if (word.examples == null) {
+    if (word.sentenceExamples.isEmpty) {
       return [];
     }
 
-    return word.examples!
-        .map(_parseLegacyExample)
-        .where((item) => item.chinese.isNotEmpty)
+    return word.sentenceExamples
+        .where((item) => item.cn.isNotEmpty)
         .map(
           (item) => WordPhrase()
-            ..phrase = item.english
-            ..translation = item.chinese,
+            ..phrase = item.en
+            ..translation = item.cn,
         )
         .where((item) => item.phrase.split(' ').length <= 5)
         .take(8)
         .toList();
-  }
-
-  static List<ConfusableWord> _buildConfusableWords(
-    Word word,
-    List<String> peerWords,
-  ) {
-    final lower = word.english.toLowerCase();
-    final candidates = peerWords
-        .where((peer) => peer.toLowerCase() != lower)
-        .where((peer) => _isSimilar(lower, peer.toLowerCase()))
-        .take(3)
-        .toList();
-
-    return candidates
-        .map(
-          (peer) => ConfusableWord()
-            ..word = peer
-            ..explanation =
-                '「$peer」与「${word.english}」拼写相近，注意区分含义：${word.chinese.split('；').first}。'
-            ..exampleEnglish =
-                'Compare "$peer" and "${word.english}" in context.'
-            ..exampleChinese = '在语境中区分 $peer 与 ${word.english} 的用法。',
-        )
-        .toList();
-  }
-
-  static List<String>? _legacyExamples(Word word) {
-    final structured =
-        word.structuredExamples ?? _buildStructuredExamples(word);
-    if (structured.isEmpty) {
-      return word.examples;
-    }
-    return structured.map((item) {
-      if (item.chinese.isEmpty) {
-        return item.english;
-      }
-      return '${item.english}: ${item.chinese}';
-    }).toList();
-  }
-
-  static bool _isSimilar(String a, String b) {
-    if ((a.length - b.length).abs() > 2) {
-      return false;
-    }
-    if (a.startsWith(b.substring(0, b.length.clamp(0, 3))) ||
-        b.startsWith(a.substring(0, a.length.clamp(0, 3)))) {
-      return true;
-    }
-    return _editDistance(a, b) <= 2;
-  }
-
-  static int _editDistance(String a, String b) {
-    final dp = List.generate(a.length + 1, (_) => List.filled(b.length + 1, 0));
-    for (var i = 0; i <= a.length; i++) {
-      dp[i][0] = i;
-    }
-    for (var j = 0; j <= b.length; j++) {
-      dp[0][j] = j;
-    }
-    for (var i = 1; i <= a.length; i++) {
-      for (var j = 1; j <= b.length; j++) {
-        final cost = a[i - 1] == b[j - 1] ? 0 : 1;
-        dp[i][j] = [
-          dp[i - 1][j] + 1,
-          dp[i][j - 1] + 1,
-          dp[i - 1][j - 1] + cost,
-        ].reduce((left, right) => left < right ? left : right);
-      }
-    }
-    return dp[a.length][b.length];
-  }
-
-  static _ParsedExample _parseLegacyExample(String raw) {
-    final separator = raw.indexOf(': ');
-    if (separator == -1) {
-      return _ParsedExample(english: raw.trim(), chinese: '');
-    }
-    return _ParsedExample(
-      english: raw.substring(0, separator).trim(),
-      chinese: raw.substring(separator + 2).trim(),
-    );
   }
 
   static String _exampleFromPhrase(String word, String phrase) {
@@ -363,11 +278,4 @@ class WordEnrichment {
     }
     return 'A common phrase is "$trimmed" with "$word".';
   }
-}
-
-class _ParsedExample {
-  const _ParsedExample({required this.english, required this.chinese});
-
-  final String english;
-  final String chinese;
 }

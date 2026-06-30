@@ -3,6 +3,24 @@ import 'package:vocab_master/models/learning_session.dart';
 import 'package:vocab_master/models/review_record.dart';
 import 'package:vocab_master/models/word.dart';
 
+List<BookWordExample> _examplesFromStrings(List<String>? examples) {
+  if (examples == null) {
+    return [];
+  }
+  return examples
+      .map((raw) {
+        final separator = raw.indexOf(': ');
+        if (separator == -1) {
+          return BookWordExample(en: raw.trim(), cn: '');
+        }
+        return BookWordExample(
+          en: raw.substring(0, separator).trim(),
+          cn: raw.substring(separator + 2).trim(),
+        );
+      })
+      .toList();
+}
+
 Word testWord({
   String id = 'word_1',
   String english = 'test',
@@ -21,7 +39,7 @@ Word testWord({
     reviewCount: reviewCount,
     lastReviewTime: nextReview,
     masteryLevel: familiarity,
-    legacyExamples: examples,
+    sentenceExamples: _examplesFromStrings(examples),
   );
 }
 

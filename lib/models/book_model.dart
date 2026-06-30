@@ -105,51 +105,36 @@ class BookWord {
   List<BookWordExample> sentenceExamples;
 
   @HiveField(7)
-  List<String> synonyms;
-
-  @HiveField(8)
   String root;
 
-  @HiveField(9)
+  @HiveField(8)
   int masteryLevel;
 
-  @HiveField(10)
+  @HiveField(9)
   DateTime? lastReviewTime;
 
-  @HiveField(11)
+  @HiveField(10)
   int reviewCount;
 
-  @HiveField(12)
+  @HiveField(11)
   int correctStreak;
 
-  @HiveField(17)
-  String? imageUrl;
-
-  @HiveField(18)
+  @HiveField(12)
   List<WordDefinition>? definitions;
 
-  @HiveField(19)
-  List<WordExample>? structuredExamplesRich;
-
-  @HiveField(20)
+  @HiveField(13)
   List<WordPhrase>? collocations;
 
-  @HiveField(21)
-  List<ConfusableWord>? confusableWords;
-
-  @HiveField(22)
+  @HiveField(14)
   MemoryTips? memoryTips;
 
-  @HiveField(23)
+  @HiveField(15)
   List<String> bookIds;
 
-  @HiveField(24)
-  List<String>? legacyExamples;
-
-  @HiveField(25)
+  @HiveField(16)
   List<WordDefinition>? englishDefinitions;
 
-  @HiveField(26)
+  @HiveField(17)
   List<ConfusableWord>? synonymDetails;
 
   BookWord({
@@ -160,20 +145,15 @@ class BookWord {
     this.partOfSpeech = '',
     this.definitionCn = '',
     List<BookWordExample>? sentenceExamples,
-    this.synonyms = const [],
     this.root = '',
     this.masteryLevel = 0,
     this.lastReviewTime,
     this.reviewCount = 0,
     this.correctStreak = 0,
-    this.imageUrl,
     this.definitions,
-    this.structuredExamplesRich,
     this.collocations,
-    this.confusableWords,
     this.memoryTips,
     List<String>? bookIds,
-    this.legacyExamples,
     this.englishDefinitions,
     this.synonymDetails,
   })  : sentenceExamples = sentenceExamples ?? [],
@@ -193,11 +173,6 @@ class BookWord {
               (e) => BookWordExample.fromJson(e as Map<String, dynamic>),
             )
             .toList(),
-        synonyms: synonymDetails
-                ?.map((item) => item.word)
-                .where((item) => item.trim().isNotEmpty)
-                .toList() ??
-            List<String>.from(json['synonyms'] ?? const []),
         synonymDetails: synonymDetails,
         root: json['root'] as String? ?? '',
         masteryLevel: json['masteryLevel'] as int? ?? 0,
@@ -206,7 +181,6 @@ class BookWord {
             : DateTime.tryParse(json['lastReviewTime'].toString()),
         reviewCount: json['reviewCount'] as int? ?? 0,
         correctStreak: json['correctStreak'] as int? ?? 0,
-        imageUrl: json['imageUrl'] as String?,
         bookIds: List<String>.from(json['bookIds'] ?? const []),
         definitions: _definitionsFromJson(json['definitions']),
         englishDefinitions: _definitionsFromJson(json['englishDefinitions']),
@@ -334,22 +308,20 @@ class BookWord {
         'partOfSpeech': partOfSpeech,
         'definitionCn': definitionCn,
         'examples': sentenceExamples.map((e) => e.toJson()).toList(),
-        'synonyms': synonymDetails != null && synonymDetails!.isNotEmpty
-            ? synonymDetails!
-                .map(
-                  (item) => {
-                    'word': item.word,
-                    'meaning': item.explanation,
-                  },
-                )
-                .toList()
-            : synonyms,
+        if (synonymDetails != null && synonymDetails!.isNotEmpty)
+          'synonyms': synonymDetails!
+              .map(
+                (item) => {
+                  'word': item.word,
+                  'meaning': item.explanation,
+                },
+              )
+              .toList(),
         'root': root,
         'masteryLevel': masteryLevel,
         'lastReviewTime': lastReviewTime?.toIso8601String(),
         'reviewCount': reviewCount,
         'correctStreak': correctStreak,
-        if (imageUrl != null) 'imageUrl': imageUrl,
         if (bookIds.isNotEmpty) 'bookIds': bookIds,
         if (definitions != null && definitions!.isNotEmpty)
           'definitions': definitions!
@@ -426,10 +398,17 @@ class BookWord {
 
   set nextReview(DateTime? value) => lastReviewTime = value;
 
-  List<WordExample> get structuredExamples {
-    if (structuredExamplesRich != null && structuredExamplesRich!.isNotEmpty) {
-      return structuredExamplesRich!;
+  List<String> get synonyms {
+    if (synonymDetails == null || synonymDetails!.isEmpty) {
+      return const [];
     }
+    return synonymDetails!
+        .map((item) => item.word)
+        .where((item) => item.trim().isNotEmpty)
+        .toList();
+  }
+
+  List<WordExample> get structuredExamples {
     if (sentenceExamples.isEmpty) {
       return const [];
     }
@@ -438,46 +417,30 @@ class BookWord {
           (example) => WordExample(
             english: example.en,
             chinese: example.cn,
-            partOfSpeech: partOfSpeech.isEmpty ? null : partOfSpeech,
-            meaning: definitionCn.isEmpty ? null : definitionCn,
+            partOfSpeech: example.partOfSpeech ??
+                (partOfSpeech.isEmpty ? null : partOfSpeech),
+            meaning:
+                example.meaning ?? (definitionCn.isEmpty ? null : definitionCn),
           ),
         )
         .toList();
   }
 
   set structuredExamples(List<WordExample>? value) {
-    structuredExamplesRich = value;
-  }
-
-  List<String>? get examples {
-    if (legacyExamples != null) {
-      return legacyExamples;
+    if (value == null || value.isEmpty) {
+      sentenceExamples = [];
+      return;
     }
-    if (structuredExamplesRich != null && structuredExamplesRich!.isNotEmpty) {
-      return structuredExamplesRich!
-          .map((item) {
-            if (item.chinese.isEmpty) {
-              return item.english;
-            }
-            return '${item.english}: ${item.chinese}';
-          })
-          .toList();
-    }
-    if (sentenceExamples.isNotEmpty) {
-      return sentenceExamples
-          .map((item) {
-            if (item.cn.isEmpty) {
-              return item.en;
-            }
-            return '${item.en}: ${item.cn}';
-          })
-          .toList();
-    }
-    return null;
-  }
-
-  set examples(List<String>? value) {
-    legacyExamples = value;
+    sentenceExamples = value
+        .map(
+          (example) => BookWordExample(
+            en: example.english,
+            cn: example.chinese,
+            partOfSpeech: example.partOfSpeech,
+            meaning: example.meaning,
+          ),
+        )
+        .toList();
   }
 
   void attachBookId(String bookId) {
@@ -495,9 +458,17 @@ class BookWordExample {
   @HiveField(1)
   final String cn;
 
+  @HiveField(2)
+  final String? partOfSpeech;
+
+  @HiveField(3)
+  final String? meaning;
+
   BookWordExample({
     required this.en,
     required this.cn,
+    this.partOfSpeech,
+    this.meaning,
   });
 
   factory BookWordExample.fromJson(Map<String, dynamic> json) => BookWordExample(

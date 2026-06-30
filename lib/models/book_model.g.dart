@@ -85,29 +85,24 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       partOfSpeech: fields[4] as String,
       definitionCn: fields[5] as String,
       sentenceExamples: (fields[6] as List?)?.cast<BookWordExample>(),
-      synonyms: (fields[7] as List).cast<String>(),
-      root: fields[8] as String,
-      masteryLevel: fields[9] as int,
-      lastReviewTime: fields[10] as DateTime?,
-      reviewCount: fields[11] as int,
-      correctStreak: fields[12] as int,
-      imageUrl: fields[17] as String?,
-      definitions: (fields[18] as List?)?.cast<WordDefinition>(),
-      structuredExamplesRich: (fields[19] as List?)?.cast<WordExample>(),
-      collocations: (fields[20] as List?)?.cast<WordPhrase>(),
-      confusableWords: (fields[21] as List?)?.cast<ConfusableWord>(),
-      memoryTips: fields[22] as MemoryTips?,
-      bookIds: (fields[23] as List?)?.cast<String>(),
-      legacyExamples: (fields[24] as List?)?.cast<String>(),
-      englishDefinitions: (fields[25] as List?)?.cast<WordDefinition>(),
-      synonymDetails: (fields[26] as List?)?.cast<ConfusableWord>(),
+      root: fields[7] as String,
+      masteryLevel: fields[8] as int,
+      lastReviewTime: fields[9] as DateTime?,
+      reviewCount: fields[10] as int,
+      correctStreak: fields[11] as int,
+      definitions: (fields[12] as List?)?.cast<WordDefinition>(),
+      collocations: (fields[13] as List?)?.cast<WordPhrase>(),
+      memoryTips: fields[14] as MemoryTips?,
+      bookIds: (fields[15] as List?)?.cast<String>(),
+      englishDefinitions: (fields[16] as List?)?.cast<WordDefinition>(),
+      synonymDetails: (fields[17] as List?)?.cast<ConfusableWord>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, BookWord obj) {
     writer
-      ..writeByte(23)
+      ..writeByte(18)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -123,36 +118,26 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       ..writeByte(6)
       ..write(obj.sentenceExamples)
       ..writeByte(7)
-      ..write(obj.synonyms)
-      ..writeByte(8)
       ..write(obj.root)
-      ..writeByte(9)
+      ..writeByte(8)
       ..write(obj.masteryLevel)
-      ..writeByte(10)
+      ..writeByte(9)
       ..write(obj.lastReviewTime)
-      ..writeByte(11)
+      ..writeByte(10)
       ..write(obj.reviewCount)
-      ..writeByte(12)
+      ..writeByte(11)
       ..write(obj.correctStreak)
-      ..writeByte(17)
-      ..write(obj.imageUrl)
-      ..writeByte(18)
+      ..writeByte(12)
       ..write(obj.definitions)
-      ..writeByte(19)
-      ..write(obj.structuredExamplesRich)
-      ..writeByte(20)
+      ..writeByte(13)
       ..write(obj.collocations)
-      ..writeByte(21)
-      ..write(obj.confusableWords)
-      ..writeByte(22)
+      ..writeByte(14)
       ..write(obj.memoryTips)
-      ..writeByte(23)
+      ..writeByte(15)
       ..write(obj.bookIds)
-      ..writeByte(24)
-      ..write(obj.legacyExamples)
-      ..writeByte(25)
+      ..writeByte(16)
       ..write(obj.englishDefinitions)
-      ..writeByte(26)
+      ..writeByte(17)
       ..write(obj.synonymDetails);
   }
 
@@ -180,17 +165,23 @@ class BookWordExampleAdapter extends TypeAdapter<BookWordExample> {
     return BookWordExample(
       en: fields[0] as String,
       cn: fields[1] as String,
+      partOfSpeech: fields[2] as String?,
+      meaning: fields[3] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, BookWordExample obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.en)
       ..writeByte(1)
-      ..write(obj.cn);
+      ..write(obj.cn)
+      ..writeByte(2)
+      ..write(obj.partOfSpeech)
+      ..writeByte(3)
+      ..write(obj.meaning);
   }
 
   @override

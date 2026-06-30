@@ -6,9 +6,9 @@ import '../../models/word.dart';
 import '../../providers/book_provider.dart';
 import '../../providers/study_provider.dart';
 import '../../providers/repository_providers.dart';
-import '../../providers/word_provider.dart';
 import '../../repositories/book_repository.dart';
 import '../../utils/auto_read.dart';
+import '../../utils/book_content_utils.dart';
 import '../../utils/color_utils.dart';
 import '../../utils/level_utils.dart';
 import '../../utils/word_enrichment.dart';
@@ -102,14 +102,7 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
       peerWords = await wordRepo.getWordsForBooks(word.bookIds);
     }
 
-    final hasImportedRichContent = word.definitions != null ||
-        word.englishDefinitions != null ||
-        word.collocations != null ||
-        word.synonymDetails != null ||
-        word.synonyms.isNotEmpty ||
-        (word.memoryTips?.etymology?.trim().isNotEmpty ?? false);
-
-    if (!hasImportedRichContent &&
+    if (!isRichBookWord(word) &&
         (word.memoryTips == null || word.structuredExamples.isEmpty)) {
       final peerEnglish = peerWords.map((item) => item.english).toList();
       WordEnrichment.apply(word, peerWords: peerEnglish);

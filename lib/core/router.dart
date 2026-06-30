@@ -8,6 +8,7 @@ import '../features/home/home_page.dart';
 import '../features/shell/main_shell.dart';
 import '../features/stats/me_page.dart';
 import '../features/search/word_lookup_page.dart';
+import '../features/study/word_detail_page.dart';
 
 /// Tab indices for [MainShell] bottom navigation.
 abstract final class AppTab {
@@ -135,6 +136,29 @@ class AppRouter {
         builder: (_) => ChallengeLevelsPage(
           bookId: bookId,
           bookTitle: bookTitle,
+        ),
+      ),
+    );
+  }
+
+  static Future<void> pushWordDetail(
+    BuildContext context, {
+    required String wordId,
+    String? bookId,
+    String? bookTitle,
+    List<String>? wordIds,
+    int? levelIndex,
+    int? initialMaxWordIndex,
+  }) {
+    return Navigator.of(context).push<void>(
+      MaterialPageRoute<void>(
+        builder: (_) => WordDetailPage(
+          wordId: wordId,
+          bookId: bookId,
+          bookTitle: bookTitle,
+          wordIds: wordIds,
+          levelIndex: levelIndex,
+          initialMaxWordIndex: initialMaxWordIndex,
         ),
       ),
     );

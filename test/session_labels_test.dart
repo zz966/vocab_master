@@ -7,7 +7,7 @@ void main() {
     expect(sessionTypeLabel('spelling'), '拼写练习');
     expect(sessionTypeLabel('listening'), '听音选义');
     expect(
-      sessionTypeLabel('level_cet4_1_0_challenge_quiz'),
+      sessionTypeLabel('level_TEST_40_0_challenge_quiz'),
       '关卡 1 · 选择题',
     );
     expect(sessionTypeLabel('unknown_type'), 'unknown_type');

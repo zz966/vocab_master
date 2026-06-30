@@ -20,7 +20,6 @@ void main() {
     expect(word.definitions, isNotEmpty);
     expect(word.structuredExamples, isNotEmpty);
     expect(word.collocations, isNotEmpty);
-    expect(word.confusableWords, isNotEmpty);
   });
 
   test('WordEnrichment guarantees examples for each definition', () {
