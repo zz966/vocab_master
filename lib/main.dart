@@ -5,20 +5,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/hive/hive_service.dart';
 import 'core/router.dart';
 import 'core/theme.dart';
-import 'models/user_settings.dart';
-import 'features/onboarding/onboarding_page.dart';
 import 'features/shell/main_shell.dart';
+import 'providers/repository_providers.dart';
 import 'providers/settings_provider.dart';
-import 'providers/study_provider.dart';
-import 'providers/word_provider.dart';
-import 'repositories/book_repository.dart';
 import 'repositories/session_repository.dart';
-import 'repositories/settings_repository.dart';
-import 'repositories/stats_repository.dart';
 import 'services/notification_service.dart';
 import 'services/tts_service.dart';
 import 'utils/reminder_message.dart';
-import 'widgets/async_value_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -63,13 +56,6 @@ class _VocabMasterAppState extends ConsumerState<VocabMasterApp> {
     if (!_defaultsApplied && settingsAsync.hasValue) {
       _defaultsApplied = true;
       final settings = settingsAsync.value!;
-      if (settings.defaultBookIds.isNotEmpty) {
-        Future.microtask(() {
-          ref
-              .read(selectedBookIdsProvider.notifier)
-              .setAll(settings.defaultBookIds);
-        });
-      }
       Future.microtask(() async {
         try {
           await TtsService.instance.setSpeechRate(settings.speechRate);
@@ -77,8 +63,6 @@ class _VocabMasterAppState extends ConsumerState<VocabMasterApp> {
           await NotificationService.instance.requestPermissionIfNeeded();
           final body = await buildDailyReminderMessage(
             settingsRepository: ref.read(settingsRepositoryProvider),
-            wordRepository: ref.read(wordRepositoryProvider),
-            bookRepository: ref.read(bookRepositoryProvider),
             statsRepository: ref.read(statsRepositoryProvider),
           );
           await NotificationService.instance.syncReminder(settings, body: body);
@@ -115,13 +99,7 @@ class _VocabMasterAppState extends ConsumerState<VocabMasterApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: AsyncValueView<UserSettings>(
-        value: settingsAsync,
-        onRetry: () => ref.invalidate(settingsProvider),
-        data: (settings) => settings.hasSeenOnboarding
-            ? const MainShell()
-            : const OnboardingPage(),
-      ),
+      home: const MainShell(),
     );
   }
 }

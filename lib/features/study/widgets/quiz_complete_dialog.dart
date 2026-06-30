@@ -80,13 +80,13 @@ Future<QuizCompleteAction> showQuizCompleteDialog(
         actions: [
           TextButton(
             onPressed: () =>
-                Navigator.of(context).pop(QuizCompleteAction.finish),
-            child: const Text('完成'),
+                Navigator.of(context).pop(QuizCompleteAction.restart),
+            child: const Text('再来一轮'),
           ),
           FilledButton(
             onPressed: () =>
-                Navigator.of(context).pop(QuizCompleteAction.restart),
-            child: const Text('再来一轮'),
+                Navigator.of(context).pop(QuizCompleteAction.finish),
+            child: const Text('完成'),
           ),
         ],
       );

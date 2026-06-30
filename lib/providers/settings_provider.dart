@@ -1,22 +1,23 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../models/user_settings.dart';
-import '../repositories/settings_repository.dart';
+import 'repository_providers.dart';
 
-/// Loads and caches [UserSettings] from Hive via [AsyncNotifier].
-class SettingsNotifier extends AsyncNotifier<UserSettings> {
+part 'settings_provider.g.dart';
+
+@riverpod
+class Settings extends _$Settings {
   @override
   Future<UserSettings> build() async {
     return ref.watch(settingsRepositoryProvider).getSettings();
   }
 
-  /// Persists settings and updates local state.
   Future<void> save(UserSettings settings) async {
     await ref.read(settingsRepositoryProvider).saveSettings(settings);
     state = AsyncData(settings);
   }
 
-  /// Reloads settings from storage (e.g. after external invalidation).
   Future<void> reload() async {
     state = const AsyncLoading();
     state = AsyncData(
@@ -25,11 +26,7 @@ class SettingsNotifier extends AsyncNotifier<UserSettings> {
   }
 }
 
-final settingsProvider =
-    AsyncNotifierProvider<SettingsNotifier, UserSettings>(
-  SettingsNotifier.new,
-);
-
-final todayStudyCountProvider = FutureProvider<int>((ref) async {
+@riverpod
+Future<int> todayStudyCount(Ref ref) async {
   return ref.watch(settingsRepositoryProvider).getTodayStudyCount();
-});
+}

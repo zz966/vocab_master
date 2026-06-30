@@ -1,4 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
@@ -76,6 +76,3 @@ class SessionRepository {
   }
 }
 
-final sessionRepositoryProvider = Provider<SessionRepository>((ref) {
-  return SessionRepository();
-});

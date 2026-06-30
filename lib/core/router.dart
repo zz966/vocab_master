@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../features/books/book_detail_page.dart';
-import '../features/books/book_selection_page.dart';
 import '../features/books/books_page.dart';
+import '../features/books/challenge_levels_page.dart';
 import '../features/books/level_selection_page.dart';
+import '../features/books/quick_browse_page.dart';
 import '../features/home/home_page.dart';
 import '../features/shell/main_shell.dart';
 import '../features/stats/me_page.dart';
 import '../features/search/word_lookup_page.dart';
-import '../features/study/study_session_page.dart';
-import '../core/study_mode.dart';
 
 /// Tab indices for [MainShell] bottom navigation.
 abstract final class AppTab {
@@ -26,10 +24,9 @@ abstract final class AppRoutes {
   static const books = '/books';
   static const study = '/study';
   static const me = '/me';
-  static const bookSelection = '/books/select';
-  static const bookDetail = '/books/detail';
   static const bookLevels = '/books/levels';
-  static const studySession = '/study/session';
+  static const quickBrowse = '/books/quick-browse';
+  static const challengeLevels = '/books/challenge';
 }
 
 class AppRouter {
@@ -50,20 +47,6 @@ class AppRouter {
       AppRoutes.me => MaterialPageRoute<void>(
           builder: (_) => const MePage(),
         ),
-      AppRoutes.bookSelection => MaterialPageRoute<void>(
-          builder: (_) => const BookSelectionPage(),
-        ),
-      AppRoutes.bookDetail => MaterialPageRoute<void>(
-          builder: (_) {
-            final bookId = settings.arguments as String?;
-            if (bookId == null) {
-              return const Scaffold(
-                body: Center(child: Text('缺少单词书 ID')),
-              );
-            }
-            return BookDetailPage(bookId: bookId);
-          },
-        ),
       AppRoutes.bookLevels => MaterialPageRoute<void>(
           builder: (_) {
             final args = settings.arguments;
@@ -78,11 +61,32 @@ class AppRouter {
             );
           },
         ),
-      AppRoutes.studySession => MaterialPageRoute<void>(
+      AppRoutes.quickBrowse => MaterialPageRoute<void>(
           builder: (_) {
             final args = settings.arguments;
-            final mode = args is StudyMode ? args : StudyMode.quiz;
-            return StudySessionPage(mode: mode);
+            if (args is Map<String, String>) {
+              return QuickBrowsePage(
+                bookId: args['bookId']!,
+                bookTitle: args['bookTitle'] ?? '速刷模式',
+              );
+            }
+            return const Scaffold(
+              body: Center(child: Text('缺少单词书参数')),
+            );
+          },
+        ),
+      AppRoutes.challengeLevels => MaterialPageRoute<void>(
+          builder: (_) {
+            final args = settings.arguments;
+            if (args is Map<String, String>) {
+              return ChallengeLevelsPage(
+                bookId: args['bookId']!,
+                bookTitle: args['bookTitle'] ?? '挑战模式',
+              );
+            }
+            return const Scaffold(
+              body: Center(child: Text('缺少单词书参数')),
+            );
           },
         ),
       _ => MaterialPageRoute<void>(
@@ -106,29 +110,32 @@ class AppRouter {
     );
   }
 
-  static Future<void> pushBookDetail(BuildContext context, String bookId) {
-    return Navigator.of(context).push<void>(
-      MaterialPageRoute<void>(
-        builder: (_) => BookDetailPage(bookId: bookId),
-      ),
-    );
-  }
-
-  static Future<void> pushBookSelection(BuildContext context) {
-    return Navigator.of(context).push<void>(
-      MaterialPageRoute<void>(
-        builder: (_) => const BookSelectionPage(),
-      ),
-    );
-  }
-
-  static Future<void> pushStudySession(
+  static Future<void> pushQuickBrowse(
     BuildContext context, {
-    required StudyMode mode,
+    required String bookId,
+    required String bookTitle,
   }) {
     return Navigator.of(context).push<void>(
       MaterialPageRoute<void>(
-        builder: (_) => StudySessionPage(mode: mode),
+        builder: (_) => QuickBrowsePage(
+          bookId: bookId,
+          bookTitle: bookTitle,
+        ),
+      ),
+    );
+  }
+
+  static Future<void> pushChallengeLevels(
+    BuildContext context, {
+    required String bookId,
+    required String bookTitle,
+  }) {
+    return Navigator.of(context).push<void>(
+      MaterialPageRoute<void>(
+        builder: (_) => ChallengeLevelsPage(
+          bookId: bookId,
+          bookTitle: bookTitle,
+        ),
       ),
     );
   }

@@ -122,18 +122,6 @@ class BookWord {
   @HiveField(12)
   int correctStreak;
 
-  @HiveField(13)
-  double easeFactor;
-
-  @HiveField(14)
-  double sm2Interval;
-
-  @HiveField(15)
-  bool isFavorite;
-
-  @HiveField(16)
-  bool inWrongBook;
-
   @HiveField(17)
   String? imageUrl;
 
@@ -178,10 +166,6 @@ class BookWord {
     this.lastReviewTime,
     this.reviewCount = 0,
     this.correctStreak = 0,
-    this.easeFactor = 2.5,
-    this.sm2Interval = 0,
-    this.isFavorite = false,
-    this.inWrongBook = false,
     this.imageUrl,
     this.definitions,
     this.structuredExamplesRich,
@@ -222,10 +206,6 @@ class BookWord {
             : DateTime.tryParse(json['lastReviewTime'].toString()),
         reviewCount: json['reviewCount'] as int? ?? 0,
         correctStreak: json['correctStreak'] as int? ?? 0,
-        easeFactor: (json['easeFactor'] as num?)?.toDouble() ?? 2.5,
-        sm2Interval: (json['sm2Interval'] as num?)?.toDouble() ?? 0,
-        isFavorite: json['isFavorite'] as bool? ?? false,
-        inWrongBook: json['inWrongBook'] as bool? ?? false,
         imageUrl: json['imageUrl'] as String?,
         bookIds: List<String>.from(json['bookIds'] ?? const []),
         definitions: _definitionsFromJson(json['definitions']),
@@ -369,10 +349,6 @@ class BookWord {
         'lastReviewTime': lastReviewTime?.toIso8601String(),
         'reviewCount': reviewCount,
         'correctStreak': correctStreak,
-        'easeFactor': easeFactor,
-        'sm2Interval': sm2Interval,
-        'isFavorite': isFavorite,
-        'inWrongBook': inWrongBook,
         if (imageUrl != null) 'imageUrl': imageUrl,
         if (bookIds.isNotEmpty) 'bookIds': bookIds,
         if (definitions != null && definitions!.isNotEmpty)

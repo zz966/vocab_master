@@ -1,4 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 import '../core/hive/hive_service.dart';
 import '../core/points_constants.dart';
@@ -107,6 +107,3 @@ class PointsRepository {
   }
 }
 
-final pointsRepositoryProvider = Provider<PointsRepository>((ref) {
-  return PointsRepository(ref.watch(settingsRepositoryProvider));
-});

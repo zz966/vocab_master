@@ -6,13 +6,15 @@ import '../../models/word_book.dart';
 import '../../providers/book_provider.dart';
 import '../../providers/repository_providers.dart';
 import '../../providers/study_provider.dart';
+import '../../utils/level_challenge.dart';
 import '../../utils/level_utils.dart';
-import '../study/word_detail_page.dart';
+import '../study/study_session_page.dart';
+import 'widgets/challenge_mode_picker_sheet.dart';
 import 'widgets/level_card.dart';
 import 'widgets/level_grid.dart';
 
-class LevelSelectionPage extends ConsumerStatefulWidget {
-  const LevelSelectionPage({
+class ChallengeLevelsPage extends ConsumerStatefulWidget {
+  const ChallengeLevelsPage({
     super.key,
     required this.bookId,
     required this.bookTitle,
@@ -22,12 +24,12 @@ class LevelSelectionPage extends ConsumerStatefulWidget {
   final String bookTitle;
 
   @override
-  ConsumerState<LevelSelectionPage> createState() => _LevelSelectionPageState();
+  ConsumerState<ChallengeLevelsPage> createState() =>
+      _ChallengeLevelsPageState();
 }
 
-class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage> {
+class _ChallengeLevelsPageState extends ConsumerState<ChallengeLevelsPage> {
   List<BookLevel> _levels = const [];
-  Map<int, int> _levelStudyProgress = const {};
   bool _loading = true;
   WordBook? _book;
 
@@ -41,14 +43,8 @@ class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage> {
     setState(() => _loading = true);
 
     final bookRepo = ref.read(bookRepositoryProvider);
-    final studyRepo = ref.read(levelStudyRepositoryProvider);
     final book = await bookRepo.getBook(widget.bookId);
     final words = await bookRepo.getWordsForBook(widget.bookId);
-    final levels = splitWordsIntoLevels(words);
-    final levelStudyProgress = await studyRepo.getProgressPercentsForBook(
-      bookId: widget.bookId,
-      levels: levels,
-    );
 
     if (!mounted) {
       return;
@@ -56,44 +52,43 @@ class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage> {
 
     setState(() {
       _book = book;
-      _levels = levels;
-      _levelStudyProgress = levelStudyProgress;
+      _levels = splitWordsIntoLevels(words);
       _loading = false;
     });
   }
 
-  Future<void> _startStudyLevel(BookLevel level) async {
-    final sortedWords = level.words.toList()
-      ..sort((a, b) => a.english.compareTo(b.english));
-    if (sortedWords.isEmpty) {
+  Future<void> _startChallengeLevel(BookLevel level) async {
+    final mode = await showChallengeModePicker(context);
+    if (mode == null || !mounted) {
       return;
     }
 
-    final studyRepo = ref.read(levelStudyRepositoryProvider);
-    final maxWordIndex = await studyRepo.getMaxWordIndex(
-      widget.bookId,
-      level.index,
+    final challengeRef = LevelChallengeRef(
+      bookId: widget.bookId,
+      levelIndex: level.index,
+      mode: mode,
+    );
+
+    final starEarned = await Navigator.of(context).push<bool>(
+      MaterialPageRoute<bool>(
+        builder: (_) => StudySessionPage(
+          mode: mode,
+          words: level.words,
+          sessionType: challengeRef.sessionType,
+        ),
+      ),
     );
 
     if (!mounted) {
       return;
     }
 
-    await Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (_) => WordDetailPage(
-          wordId: sortedWords.first.id,
-          wordIds: sortedWords.map((word) => word.id).toList(),
-          bookId: widget.bookId,
-          bookTitle: widget.bookTitle,
-          levelIndex: level.index,
-          initialMaxWordIndex: maxWordIndex,
-        ),
-      ),
-    );
+    await _loadLevels();
 
-    if (mounted) {
-      await _loadLevels();
+    if (starEarned == true && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('${mode.title} 满分通关，获得 1 颗星！')),
+      );
     }
   }
 
@@ -111,7 +106,7 @@ class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('关卡列表'),
+        title: const Text('挑战模式'),
       ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
@@ -120,10 +115,9 @@ class _LevelSelectionPageState extends ConsumerState<LevelSelectionPage> {
               : LevelGrid(
                   levels: _levels,
                   levelStars: levelStarCounts,
-                  levelStudyProgress: _levelStudyProgress,
                   accentColor: accentColor,
                   onRefresh: _loadLevels,
-                  onLevelTap: _startStudyLevel,
+                  onLevelTap: _startChallengeLevel,
                 ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: AppTab.books,

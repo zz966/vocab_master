@@ -132,7 +132,7 @@ class NotificationService {
       return;
     }
 
-    if (!settings.reminderEnabled || !settings.weeklyReportEnabled) {
+    if (!settings.reminderEnabled) {
       await _plugin.cancel(2);
       return;
     }

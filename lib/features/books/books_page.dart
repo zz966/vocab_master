@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/category_labels.dart';
+import '../../core/router.dart';
 import '../../providers/book_provider.dart';
+import '../../providers/repository_providers.dart';
 import '../../providers/study_provider.dart';
 import '../../repositories/book_repository.dart';
 import '../../widgets/async_value_view.dart';
-import 'level_selection_page.dart';
 import 'widgets/book_list_item.dart';
+import 'widgets/book_mode_picker_sheet.dart';
 
 class BooksPage extends ConsumerStatefulWidget {
   const BooksPage({super.key});
@@ -19,32 +21,63 @@ class BooksPage extends ConsumerStatefulWidget {
 class _BooksPageState extends ConsumerState<BooksPage> {
   String? _categoryFilter;
 
-  Future<void> _handleBookTap(BookProgress progress) async {
-    ref.read(selectedBookIdsProvider.notifier).setAll([progress.book.id]);
-
+  Future<bool> _ensureBookHasWords(BookProgress progress) async {
     final words = await ref
         .read(bookRepositoryProvider)
         .getWordsForBook(progress.book.id);
 
     if (!mounted) {
-      return;
+      return false;
     }
 
     if (words.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('该单词书暂无单词')),
       );
+      return false;
+    }
+
+    return true;
+  }
+
+  Future<void> _handleBookTap(BookProgress progress) async {
+    if (!await _ensureBookHasWords(progress)) {
       return;
     }
 
-    await Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (_) => LevelSelectionPage(
+    if (!mounted) {
+      return;
+    }
+
+    final mode = await showBookModePicker(
+      context,
+      bookTitle: progress.book.title,
+    );
+
+    if (!mounted || mode == null) {
+      return;
+    }
+
+    switch (mode) {
+      case BookStudyMode.quickBrowse:
+        await AppRouter.pushQuickBrowse(
+          context,
           bookId: progress.book.id,
           bookTitle: progress.book.title,
-        ),
-      ),
-    );
+        );
+      case BookStudyMode.normal:
+        await AppRouter.pushBookLevels(
+          context,
+          bookId: progress.book.id,
+          bookTitle: progress.book.title,
+        );
+      case BookStudyMode.challenge:
+        await AppRouter.pushChallengeLevels(
+          context,
+          bookId: progress.book.id,
+          bookTitle: progress.book.title,
+        );
+    }
   }
 
   @override

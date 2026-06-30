@@ -10,6 +10,7 @@ import '../../providers/study_provider.dart';
 import '../../utils/auto_read.dart';
 import '../../utils/quiz_generator.dart';
 import '../../utils/study_quality.dart';
+import 'widgets/tts_speak_button.dart';
 
 class QuizPage extends ConsumerStatefulWidget {
   const QuizPage({
@@ -183,13 +184,27 @@ class _QuizPageState extends ConsumerState<QuizPage> {
           Card(
             elevation: 4,
             child: Padding(
-              padding: const EdgeInsets.all(32),
-              child: Text(
-                word.english,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Text(
+                      word.english,
+                      textAlign: TextAlign.center,
+                      style:
+                          Theme.of(context).textTheme.headlineMedium?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
                     ),
+                  ),
+                  TtsSpeakButton(
+                    text: word.english,
+                    icon: Icons.volume_up_outlined,
+                    iconSize: 28,
+                  ),
+                ],
               ),
             ),
           ),

@@ -1,5 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../core/hive/hive_service.dart';
 import '../models/learning_session.dart';
 import '../models/review_record.dart';
@@ -8,24 +6,7 @@ import '../utils/overview_stats.dart';
 
 class SettingsRepository {
   Future<UserSettings> getSettings() async {
-    final existing = HiveService.getSettings();
-    var changed = false;
-
-    if (existing.defaultStudyMode == 'complete' ||
-        existing.defaultStudyMode == 'flashcard') {
-      existing.defaultStudyMode = 'quiz';
-      changed = true;
-    }
-
-    if (changed) {
-      await saveSettings(existing);
-    } else if (HiveService.getAllBooks().isEmpty &&
-        existing.defaultBookIds.isEmpty &&
-        !existing.hasSeenOnboarding) {
-      await saveSettings(existing);
-    }
-
-    return existing;
+    return HiveService.getSettings();
   }
 
   Future<void> saveSettings(UserSettings settings) async {
@@ -106,7 +87,3 @@ class SettingsRepository {
     await saveSettings(settings);
   }
 }
-
-final settingsRepositoryProvider = Provider<SettingsRepository>((ref) {
-  return SettingsRepository();
-});

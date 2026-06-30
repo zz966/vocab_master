@@ -1,12 +1,16 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../core/points_constants.dart';
 import '../models/check_in_result.dart';
 import '../models/point_transaction.dart';
-import '../providers/settings_provider.dart';
-import '../repositories/points_repository.dart';
+import 'repository_providers.dart';
+import 'settings_provider.dart';
 
-final checkInStatusProvider = Provider<CheckInStatus>((ref) {
+part 'points_provider.g.dart';
+
+@riverpod
+CheckInStatus checkInStatus(Ref ref) {
   final settings = ref.watch(settingsProvider).valueOrNull;
   if (settings == null) {
     return const CheckInStatus(
@@ -21,18 +25,18 @@ final checkInStatusProvider = Provider<CheckInStatus>((ref) {
     );
   }
   return ref.watch(pointsRepositoryProvider).buildStatus(settings);
-});
+}
 
-final pointsHistoryProvider =
-    FutureProvider<List<PointTransaction>>((ref) async {
+@riverpod
+Future<List<PointTransaction>> pointsHistory(Ref ref) async {
   ref.watch(settingsProvider);
   return ref
       .read(pointsRepositoryProvider)
       .getRecentTransactions(limit: PointsConstants.pointsHistoryPreviewLimit);
-});
+}
 
-final allPointsHistoryProvider =
-    FutureProvider<List<PointTransaction>>((ref) async {
+@riverpod
+Future<List<PointTransaction>> allPointsHistory(Ref ref) async {
   ref.watch(settingsProvider);
   return ref.read(pointsRepositoryProvider).getAllTransactions();
-});
+}

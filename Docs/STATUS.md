@@ -1,363 +1,336 @@
 # VocabMaster 项目现状报告
 
-> 分析基准：`E:\FlutterProject\vocab_master` · 版本 `1.0.0+1` · Flutter SDK `^3.12.2` · 更新日期：2026-06-29
+> 生成日期：2026-06-30  
+> 版本：1.0.0+1  
+> SDK：Dart ^3.12.2 / Flutter
 
 ---
 
-## 1. 项目概览
+## 1. 项目概述
 
-VocabMaster 是一款**本地化**英语词汇学习应用，数据全部存储在设备本地（Hive），无后端服务。支持 Android、iOS、Windows 桌面与 Web 构建，当前主流程围绕「单词书 → 关卡 → 学习/测试」展开。
+**VocabMaster** 是一款面向 Android、iOS、Windows、Web 的英语单词学习应用。数据全部存储在本地（Hive），无后端服务。当前产品形态已大幅精简，聚焦「内置词书 → 关卡学习/挑战 → 签到积分」核心闭环。
 
-| 维度 | 现状 |
+### 技术栈
+
+| 类别 | 选型 |
 |------|------|
-| 架构 | Feature 分层 + Repository + Service |
-| 状态管理 | Flutter Riverpod 2.x（手写 Provider，未使用 `@riverpod` 代码生成） |
-| 本地存储 | Hive 6 个 Box + SharedPreferences（会话筛选偏好） |
-| 测试 | 38 个测试文件，**93** 项单元/集成测试通过 |
-| 内置词库 | `cet4_1.json`、`test_40.json`（已移除 KyleBing 词库） |
+| UI 框架 | Flutter + Material 3 |
+| 状态管理 | `flutter_riverpod` + `riverpod_annotation`（代码生成） |
+| 本地存储 | `hive` / `hive_flutter` |
+| 语音 | `flutter_tts` |
+| 通知 | `flutter_local_notifications` + `timezone` |
+| 其他 | `intl`、`shared_preferences`、`path_provider` |
+
+### 质量指标
+
+- **单元/集成测试**：49 项，全部通过
+- **静态分析**：无 error（仅 warning/info）
+- **构建**：Windows Release 构建通过
 
 ---
 
-## 2. 已实现的主要功能模块
+## 2. 项目结构
 
-### 2.1 应用启动与导航
+```
+lib/
+├── main.dart                 # 启动、Hive 初始化、通知同步
+├── core/
+│   ├── hive/hive_service.dart    # Hive 盒子与词书导入
+│   ├── router.dart               # 命名路由
+│   ├── theme.dart                # 亮/暗主题
+│   ├── study_mode.dart           # 学习模式枚举
+│   ├── session_labels.dart       # 会话类型文案
+│   ├── category_labels.dart      # 词书分类标签
+│   └── points_constants.dart     # 积分常量
+├── models/                   # Hive 数据模型（含 .g.dart）
+├── repositories/             # 数据访问层（6 个 Repository）
+├── providers/                # Riverpod Provider（代码生成）
+├── services/                 # StudyService、TtsService、NotificationService
+├── features/
+│   ├── shell/main_shell.dart     # 底部导航壳
+│   ├── home/home_page.dart       # 首页
+│   ├── books/                    # 单词书 & 关卡
+│   ├── study/                    # 学习会话 & 单词详情
+│   ├── search/word_lookup_page.dart  # 查单词（占位）
+│   ├── stats/me_page.dart        # 我的
+│   ├── settings/settings_page.dart
+│   └── about/about_page.dart
+├── utils/                    # 工具函数
+└── widgets/                  # 通用组件
 
-- **首次引导**（`OnboardingPage`）：3 页滑动介绍，完成后写入 `hasSeenOnboarding`
-- **主壳**（`MainShell`）：底部 4 Tab — 首页 / 单词书 / 查单词 / 我的
-- **路由**（`AppRouter`）：命名路由 + 部分 `MaterialPageRoute` 直推
+assets/
+├── books/cet4_1.json         # CET-4 词库（首次启动导入）
+├── books/test_40.json        # 40 词测试词库
+└── icon/app_icon.png
 
-### 2.2 单词书与关卡
+test/                         # 17 个测试文件，49 个用例
+```
 
-- **词书列表**（`BooksPage`）：分类筛选、下拉刷新、显示学习进度
-- **关卡列表**（`LevelSelectionPage`）：
-  - **学习 Tab**：按关（每关 30 词）进入 `WordDetailPage` 逐词浏览
-  - **测试 Tab**：选择题 / 拼写 / 听音三种关卡挑战，满分得星
-- **内置词库导入**：首次启动导入 CET-4；`test_40` 测试书自动维护/升级
-- **自定义词书**（`CreateBookPage`）：代码完整，但入口极窄（见「未完成」）
-- **词书管理子功能**（在 `BookDetailPage` 内）：编辑、单词管理、浏览、统计图表、导出、重置进度、删除 — **页面已实现，但主流程未接入**
+---
 
-### 2.3 学习系统
+## 3. 导航与页面
+
+### 3.1 启动流程
+
+```
+main()
+  → HiveService.init() + 导入词书 + 默认设置
+  → TtsService / NotificationService 初始化
+  → ProviderScope → MaterialApp(home: MainShell)
+```
+
+初始化失败时自动 `resetAllBoxes()` 后重试。
+
+### 3.2 底部导航（MainShell）
+
+| Tab | 页面 | 状态 |
+|-----|------|------|
+| 首页 | `HomePage` | ✅ 快捷入口（跳转单词书 / 查单词） |
+| 单词书 | `BooksPage` | ✅ 分类筛选、词书列表、进度展示 |
+| 查单词 | `WordLookupPage` | ⚠️ **仅占位**，body 为空 |
+| 我的 | `MePage` | ✅ 签到、积分、统计、设置入口 |
+
+### 3.3 子页面（Navigator push）
+
+| 页面 | 入口 | 功能 |
+|------|------|------|
+| `LevelSelectionPage` | 点击词书 | 关卡网格；「学习」Tab 浏览单词，「测试」Tab 挑战 |
+| `WordDetailPage` | 关卡学习 Tab | 单词详情（释义、例句、TTS 自动朗读） |
+| `StudySessionPage` | 关卡测试 Tab | 选择题 / 拼写 / 听音挑战 |
+| `SettingsPage` | 我的页 | 学习/TTS/主题/提醒设置 |
+| `AboutPage` | 设置页 | 应用介绍 |
+| `PointsHistoryPage` | 我的页 | 完整积分流水 |
+
+### 3.4 主用户路径
+
+```
+MainShell
+  └─ 单词书 → 选词书 → 关卡列表
+        ├─ 学习 Tab → WordDetailPage（浏览，不写测试进度）
+        └─ 测试 Tab → 选模式 → StudySessionPage（写学习记录）
+  └─ 我的 → 签到 / 积分 / 设置
+```
+
+---
+
+## 4. 已实现核心功能
+
+### 4.1 词书与关卡
+
+- 首次启动从 `assets/books/cet4_1.json` 导入 CET-4 词书
+- 自动导入/更新 `TEST_40` 测试词书（40 词，用于流程验证）
+- 词书按分类 Tab 筛选（四级、六级、雅思、托福、测试等）
+- 每本书按 **30 词/关** 切分关卡（`splitWordsIntoLevels`）
+- 关卡卡片显示星星数（0–3），来自挑战满分记录
+
+### 4.2 学习模式
 
 | 模式 | 页面 | 说明 |
 |------|------|------|
-| 选择题 | `QuizPage` | 看英文选中文，四选一 |
-| 拼写 | `SpellingPage` | 看中文拼英文，支持首字母提示 |
-| 听音选义 | `ListeningPage` | TTS 播放 + 四选一 |
+| 浏览学习 | `WordDetailPage` | 单词卡片、多 Tab 详情、自动朗读 |
+| 选择题 | `QuizPage` | 四选一，英→中 |
+| 拼写练习 | `SpellingPage` | 根据释义拼写英文 |
+| 听音选义 | `ListeningPage` | TTS 播放后选择释义 |
 
-- **学习调度**（`StudyProgress`）：简化间隔重复（非 SM-2），记录熟悉度、复习间隔、错题标记
-- **每日配额**：默认每日 20 词（`dailyGoal`），学完当日待学词后提示完成
-- **学习队列**：支持按熟悉度 / 随机排序（`StudyQueueOrder`）
-- **会话记录**：每次学习写入 `LearningSession` + `ReviewRecord`
-- **完成弹窗**：普通完成 / 选择题错题回顾 / 复习完成 / 成就解锁
+测试完成后弹出 `QuizCompleteDialog`，支持再来一轮或返回。
 
-### 2.4 单词详情
+### 4.3 关卡挑战与星级
 
-- **WordDetailPage**：音标、释义、例句、短语、近义词、英英释义、词根词缀
-- **自动朗读**：开启设置后进入/切换单词自动 TTS
-- **手动发音**：英/美音按钮、例句朗读按钮
-- **词内导航**：关卡学习模式下支持上一词/下一词与进度条
+- 会话类型：`level_{bookId}_{levelIndex}_challenge_{mode}`
+- 满分（100% 正确率）记录一种模式完成，最多 3 颗星（三种模式各 1 颗）
+- 进度存于 `LevelChallengeProgress`（Hive）
 
-### 2.5 TTS 语音
+### 4.4 学习进度
 
-- **TtsService**：`flutter_tts`，支持语速（0.2–1.0）、美式/英式口音
-- **自动朗读**（`auto_read.dart`）：学习页 + 单词详情页统一逻辑
-- **设置页试听**：`Practice makes perfect.` 可点击预览当前语速/口音
+- 答对：`masteryLevel`（熟悉度 0–5）+1，`reviewCount` +1
+- 每次答题写入 `ReviewRecord`，更新学习连续天数
+- 学习会话写入 `LearningSession`（开始/完成、正确率统计）
+- **无**间隔重复调度、每日配额、复习队列
 
-### 2.6 签到与积分
+### 4.5 TTS 与自动朗读
 
-- **每日签到**（`MePage` + `PointsRepository`）：+50 积分，连续签到天数
-- **签到日历**（7 日视图）
-- **积分明细**（`PointsHistorySection` / `PointsHistoryPage`）
-- **用户等级**：按积分映射等级（`resolveUserLevel`）
+- `TtsService` 单例，支持美式/英式口音、语速调节
+- 设置页可试听语速
+- `auto_read.dart`：学习页根据 `autoReadEnabled` 自动发音
 
-### 2.7 统计与历史
+### 4.6 签到与积分
 
-- **我的页整体统计**：今日学习、连续打卡、已学/总量、掌握率
-- **学习会话历史**（`SessionHistoryPage`）：筛选、分组、导出 CSV/JSON、分享、周报卡片
-- **会话详情**（`SessionDetailPage`）：单词级回顾
-- **词书级图表**（在 `BookDetailPage`）：学习日历、趋势图、正确率图（fl_chart）
+- 每日签到 +50 积分（`PointsConstants.dailyCheckInReward`）
+- 连续签到天数、7 日签到日历
+- 用户等级 `resolveUserLevel()`：
+  - Lv.1：0–199
+  - Lv.2：200–499
+  - Lv.3：500–999
+  - Lv.4：1000–1999
+  - Lv.5+：2000 起每 1000 分 +1 级
+- 积分流水 `PointTransaction` 持久化
 
-### 2.8 设置
+### 4.7 通知提醒
 
-- 自动朗读、朗读语速（含试听）、发音口音
-- 外观主题（跟随系统 / 浅色 / 深色）
-- 每日提醒 + 提醒时间（**仅 Android/iOS 有效**）
-- 关于页
+- 每日学习提醒（可设时间，默认 20:00）
+- 每周日周报推送（随「每日提醒」开关联动）
+- 桌面端 / Web 显示不支持推送的提示，设置仍会保存
+- 文案由 `reminder_message.dart` 生成
 
-### 2.9 成就系统（后端逻辑）
+### 4.8 设置
 
-- 11 项成就定义（`achievements.dart`）
-- 学习结束时评估并弹窗（`AchievementUnlockDialog`）
-- 解锁 ID 持久化在 `UserSettings.unlockedAchievementIds`
-- **无成就列表页**（只能被动弹窗看到）
-
-### 2.10 导出与分享
-
-- 词书导出、词书统计导出、会话导出
-- 学习完成/周报/会话分享（`share_plus`）
-- 图片保存（`gal`，移动端相册）
-
-### 2.11 通知提醒
-
-- 每日学习提醒 + 每周周报（`NotificationService` + `timezone`）
-- 启动与保存设置时同步调度
-- **Windows / Web / 桌面端：静默跳过，不推送**
+| 设置项 | 存储字段 | UI |
+|--------|----------|-----|
+| 自动朗读 | `autoReadEnabled` | ✅ |
+| 朗读语速 | `speechRate` | ✅ + 试听 |
+| 发音口音 | `ttsAccent` | ✅ 美/英 |
+| 主题模式 | `themeMode` | ✅ 系统/浅/深 |
+| 每日提醒 | `reminderEnabled` + `reminderTime` | ✅ |
 
 ---
 
-## 3. 核心页面列表
+## 5. 数据结构
 
-### 3.1 主导航（Bottom Tab）
+### 5.1 Hive 存储盒子
 
-| Tab | 页面 | 路径 | 状态 |
-|-----|------|------|------|
-| 首页 | `HomePage` | `features/home/` | ✅ 入口页（背单词 / 查单词） |
-| 单词书 | `BooksPage` | `features/books/` | ✅ 主学习入口 |
-| 查单词 | `WordLookupPage` | `features/search/` | ❌ **空壳占位** |
-| 我的 | `MePage` | `features/stats/` | ✅ 签到、统计、设置入口 |
+| Box 名称 | 模型 | 用途 |
+|----------|------|------|
+| `books` | `Book` / `BookWord` | 词书及单词 |
+| `settings` | `UserSettings` | 用户设置（单条 key=`default`） |
+| `sessions` | `LearningSession` | 学习会话记录 |
+| `review_records` | `ReviewRecord` | 单次答题记录 |
+| `level_challenges` | `LevelChallengeProgress` | 关卡挑战星级 |
+| `point_transactions` | `PointTransaction` | 积分流水 |
 
-### 3.2 学习流程页面
+打开失败时 `_openBoxOrReset` 自动删盘重建。
 
-| 页面 | 作用 | 可达性 |
-|------|------|--------|
-| `OnboardingPage` | 首次引导 | ✅ 自动 |
-| `LevelSelectionPage` | 关卡列表（学习/测试） | ✅ 从词书列表进入 |
-| `WordDetailPage` | 单词详情 + 关卡逐词学习 | ✅ 从关卡「学习」Tab |
-| `StudySessionPage` | 学习会话容器 | ✅ 关卡挑战 / 词书详情（间接） |
-| `QuizPage` / `SpellingPage` / `ListeningPage` | 三种学习模式 | ✅ |
-| `BookSelectionPage` | 多选词书混合学习 | ⚠️ **仅有路由，主 UI 无入口** |
+### 5.2 核心模型字段
 
-### 3.3 词书管理页面
+**Book / BookWord**
 
-| 页面 | 作用 | 可达性 |
-|------|------|--------|
-| `BookDetailPage` | 词书详情、图表、学习入口、管理菜单 | ⚠️ **主流程未链接** |
-| `BookWordsPage` | 浏览词书单词列表 | ⚠️ 仅经 `BookDetailPage` |
-| `ManageWordsPage` | 增删改单词 | ⚠️ 仅经 `BookDetailPage` |
-| `EditBookPage` | 编辑词书信息 | ⚠️ 仅经 `BookDetailPage` |
-| `CreateBookPage` | 创建自定义词书 | ⚠️ 仅经 `add_to_custom_book_sheet`（本身未挂载） |
-| `ImportBookPage` | JSON 导入词书 | ❌ **无任何导航入口** |
-| `AddWordPage` | 添加单词 | ⚠️ 经 `ManageWordsPage` |
+- 基本信息：`word`、`definitionCn`、音标、词性、释义列表、例句、搭配、记忆技巧等
+- 学习状态：`masteryLevel`（0–5）、`reviewCount`、`correctStreak`、`lastReviewTime`
+- 关联：`bookIds`
 
-### 3.4 用户与统计页面
+**UserSettings**
 
-| 页面 | 作用 | 可达性 |
-|------|------|--------|
-| `MePage` | 个人中心 | ✅ |
-| `PointsHistoryPage` | 积分明细 | ✅ 从我的页进入 |
-| `SettingsPage` | 设置 | ✅ |
-| `AboutPage` | 关于 | ✅ |
-| `SessionHistoryPage` | 学习历史 | ⚠️ 主要从 `BookDetailPage`（主流程不可达） |
-| `SessionDetailPage` | 单次会话详情 | ⚠️ 经历史页 |
+- 外观：`themeMode`
+- 学习/TTS：`autoReadEnabled`、`speechRate`、`ttsAccent`
+- 提醒：`reminderEnabled`、`reminderTime`
+- 打卡：`currentStreak`、`longestStreak`、`lastStudyDate`
+- 签到：`pointsBalance`、`checkInStreak`、`checkInDates`、`displayName` 等
 
----
+**LearningSession**
 
-## 4. 数据存储结构
+- `sessionType`、`bookIds`、`wordsStudied`、`wordsCorrect`、`startedAt`、`completedAt`
 
-### 4.1 Hive Box 一览
+**ReviewRecord**
 
-| Box 名称 | 存储类型 | Key 规则 | 用途 |
-|----------|----------|----------|------|
-| `books` | `Book` | `bookId` | 所有单词书及嵌套单词数据 |
-| `settings` | `UserSettings` | 固定 `'default'` | 用户设置、打卡、积分、成就 |
-| `sessions` | `LearningSession` | `session.id` | 学习会话记录 |
-| `review_records` | `ReviewRecord` | `record.id` | 单词级复习/答题记录 |
-| `level_challenges` | `LevelChallengeProgress` | `{bookId}_{levelIndex}` | 关卡星级进度 |
-| `point_transactions` | `PointTransaction` | `transaction.id` | 积分流水 |
+- `wordId`、`bookId`、`quality`（1=again, 2=hard, 3=good）、`reviewedAt`
 
-### 4.2 Hive TypeAdapter（typeId）
+**LevelChallengeProgress**
 
-| typeId | 模型 | 说明 |
-|--------|------|------|
-| 0 | `Book` | 单词书 |
-| 1 | `BookWord` | 单词（含学习状态字段） |
-| 2 | `BookWordExample` | 例句 |
-| 3 | `MemoryTips` | 记忆技巧 |
-| 4 | `WordDefinition` | 结构化释义 |
-| 5 | `WordExample` | 结构化例句 |
-| 6 | `WordPhrase` | 搭配短语 |
-| 7 | `ConfusableWord` | 易混词 |
-| 8 | `UserSettings` | 用户设置 |
-| 9 | `LearningSession` | 学习会话 |
-| 10 | `ReviewRecord` | 复习记录 |
-| 11 | `LevelChallengeProgress` | 关卡挑战 |
-| 12 | `PointTransaction` | 积分交易 |
+- `bookId`、`levelIndex`、`completedModes`（quiz/spelling/listening）
 
-### 4.3 BookWord 关键学习字段
+### 5.3 Riverpod Provider 一览
 
-```
-masteryLevel, lastReviewTime, reviewCount, correctStreak,
-easeFactor, sm2Interval（字段名遗留，实际存复习间隔天数）,
-isFavorite, inWrongBook
-```
-
-### 4.4 UserSettings 主要字段
-
-| 字段 | 默认值 | UI 是否暴露 |
-|------|--------|-------------|
-| `dailyGoal` | 20 | ❌ 设置页已移除 |
-| `autoReadEnabled` | true | ✅ |
-| `speechRate` / `ttsAccent` | 0.45 / en-US | ✅ |
-| `themeMode` | system | ✅ |
-| `reminderEnabled` / `reminderTime` | false / 20:00 | ✅（移动端有效） |
-| `allowExtraStudy` | false | ❌ 无 UI |
-| `quizPickEnglish` | true | ❌ 无 UI，代码固定英→中 |
-| `defaultStudyMode` | quiz | ❌ 无 UI |
-| `weeklyReportEnabled` | true | ❌ 无 UI |
-| `pointsBalance` / `checkInStreak` | 0 | ✅ 展示 |
-| `displayName` | 学习者 | ❌ 不可编辑 |
-| `unlockedAchievementIds` | [] | ❌ 无列表页 |
-
-### 4.5 其他存储
-
-- **SharedPreferences**：`SessionFilterPrefs`（会话历史筛选状态）
-- **Assets**：`assets/books/cet4_1.json`、`test_40.json`、`assets/icon/`
-- **导出文件**：写入应用文档目录（`path_provider`），支持 CSV/JSON/PNG
-
-### 4.6 数据访问层（Repository）
-
-| Repository | 职责 |
-|------------|------|
-| `BookRepository` | 词书 CRUD、进度统计、导入导出 |
-| `WordRepository` | 单词读写、收藏、错题、复习队列 |
-| `SettingsRepository` | 设置读写、打卡天数、复习记录 |
-| `SessionRepository` | 学习会话生命周期 |
-| `StatsRepository` | 日统计、周报、正确率趋势 |
-| `LevelChallengeRepository` | 关卡星级 |
-| `PointsRepository` | 签到、积分流水 |
+| 文件 | Provider | 说明 |
+|------|----------|------|
+| `repository_providers` | `*RepositoryProvider` × 7 | Repository 单例注入 |
+| `settings_provider` | `settingsProvider`、`todayStudyCountProvider` | 设置与今日学习数 |
+| `book_provider` | `booksProvider`、`bookProgressProvider`、`globalOverviewStatsProvider` | 词书进度 |
+| `study_provider` | `ttsServiceProvider`、`studyServiceProvider`、`currentStudySessionProvider`、`navigationIndexProvider` | 学习/TTS/导航 |
+| `points_provider` | `checkInStatusProvider`、`pointsHistoryProvider`、`allPointsHistoryProvider` | 签到积分 |
 
 ---
 
-## 5. 状态管理（Riverpod Provider）
+## 6. 内置词库资源
 
-### 5.1 Provider 文件与职责
+| 文件 | bookId | 词数 | 用途 |
+|------|--------|------|------|
+| `cet4_1.json` | 导入时生成 | ~完整 CET-4 | 默认词书 |
+| `test_40.json` | `TEST_40` | 40 | 开发测试；2 关（30+10） |
 
-| 文件 | 主要 Provider | 类型 |
-|------|---------------|------|
-| `settings_provider.dart` | `settingsProvider` | `AsyncNotifierProvider` |
-| | `todayStudyCountProvider` | `FutureProvider` |
-| `book_provider.dart` | `booksProvider` | `AsyncNotifierProvider` |
-| | `bookProgressProvider` | `FutureProvider.family` |
-| | `bookWordsProvider` | `FutureProvider.family` |
-| | `globalOverviewStatsProvider` | `FutureProvider` |
-| `study_provider.dart` | `selectedBookIdsProvider` | `NotifierProvider` |
-| | `studyWordsProvider` | `FutureProvider.family` |
-| | `dailyQuotaRemainingProvider` | `FutureProvider` |
-| | `navigationIndexProvider` | `StateProvider` |
-| | `currentStudySessionProvider` | `StateProvider` |
-| | `ttsServiceProvider` / `studyServiceProvider` | `Provider` |
-| | `invalidateStudyData()` | 批量失效工具函数 |
-| `review_provider.dart` | `todayReviewWordsProvider` | `FutureProvider.family` |
-| `points_provider.dart` | `checkInStatusProvider` | `Provider` |
-| | `pointsHistoryProvider` | `FutureProvider` |
-| `stats_provider.dart` | `recentSessionsProvider` | `FutureProvider` |
-| | `last7DaysStatsProvider` | `FutureProvider` |
-| | `bookDailyStatsProvider` | `FutureProvider.family` |
-| `achievements_provider.dart` | `achievementsProvider` | `FutureProvider` |
-| `session_detail_provider.dart` | `sessionDetailProvider` | `FutureProvider.family` |
-| `export_refresh_provider.dart` | `exportFilesRevisionProvider` | `StateProvider` |
-| `word_provider.dart` | 仅 re-export `word_repository` | — |
+词书 JSON 由 `Book.fromJson` 解析，导入时自动附加 `bookIds`。
 
-### 5.2 状态流示意
+---
+
+## 7. 已移除功能（历史精简）
+
+以下功能曾在早期版本存在，**当前代码库已删除**：
+
+| 类别 | 已移除 |
+|------|--------|
+| 引导 | OnboardingPage |
+| 词书管理 | 创建/编辑/导入词书、词书详情、错题本/收藏夹管理 |
+| 学习系统 | SM-2、闪卡、学习队列、每日配额、学习调度 |
+| 成就 | 成就定义、解锁弹窗、成就 Provider |
+| 导出分享 | CSV/JSON 导出、分享、学习记录历史页 |
+| 其他 | `fl_chart` 图表、自定义词书 CRUD、收藏/错题本字段 |
+
+---
+
+## 8. 未完成 / 待开发
+
+| 项目 | 说明 |
+|------|------|
+| **查单词页** | `WordLookupPage` 为空壳；`WordRepository.searchWords()` 已实现但未接入 UI |
+| **学习记录 UI** | `LearningSession` 仍写入 Hive，但无历史列表页面 |
+| **自定义词书** | Repository 已移除创建/编辑能力，仅支持内置 JSON 词库 |
+| **pubspec 描述** | 仍写「自定义单词书」，与实际不符，建议更新 |
+
+---
+
+## 9. 测试覆盖
+
+| 领域 | 测试文件 |
+|------|----------|
+| 词书模型 | `book_model_test` |
+| 关卡/挑战 | `level_utils_test`、`level_challenge_test`、`test_40_flow_test` |
+| 测验生成 | `quiz_generator_test` |
+| 签到积分 | `check_in_utils_test` |
+| 统计 | `overview_stats_test` |
+| TTS | `tts_service_test` |
+| 单词增强 | `word_enrichment_test` |
+| 其他工具 | `study_mode_test`、`study_quality_test`、`phonetic_utils_test` 等 |
+
+---
+
+## 10. 架构简图
 
 ```mermaid
 flowchart TB
-  UI[Feature Pages] --> P[Riverpod Providers]
-  P --> R[Repositories]
-  R --> H[HiveService / 6 Boxes]
-  P --> S[Services: TTS / Notification / Study]
-```
+  subgraph UI
+    MS[MainShell]
+    BP[BooksPage]
+    LP[LevelSelectionPage]
+    WD[WordDetailPage]
+    SS[StudySessionPage]
+    MP[MePage]
+  end
 
-### 5.3 注意事项
+  subgraph State
+    RP[Riverpod Providers]
+  end
 
-- `riverpod_annotation` / `riverpod_generator` 在 `pubspec.yaml` 中声明，**但 lib 内未使用代码生成**
-- 部分 Provider 直接读 `settingsRepository` 而非 `settingsProvider`，存在轻微状态源分裂
-- `invalidateStudyData()` 是学习后刷新数据的核心枢纽
+  subgraph Data
+    REPO[Repositories]
+    HIVE[(Hive Boxes)]
+  end
 
----
-
-## 6. 服务层
-
-| 服务 | 文件 | 功能 |
-|------|------|------|
-| `TtsService` | `tts_service.dart` | 单例 TTS，语速/口音/朗读/停止 |
-| `StudyService` | `study_service.dart` | 答题评分、写复习记录、更新打卡 |
-| `NotificationService` | `notification_service.dart` | 本地通知调度（移动端） |
-| `HiveService` | `hive_service.dart` | Box 初始化、词库种子、CRUD |
-
----
-
-## 7. 尚未完成 / 存在问题
-
-### 7.1 空壳或未接入 UI 的功能
-
-| 项目 | 现状 |
-|------|------|
-| **查单词页** | `WordLookupPage` 仅空 `Scaffold`，底部 Tab 占位 |
-| **复习模式** | `reviewOnly: true` 的 `StudySessionPage` + `todayReviewWordsProvider` 已实现，**无入口** |
-| **收藏 / 错题本** | 数据字段 + `StudyService.toggleFavorite` 存在，**无 UI、无专项学习入口** |
-| **BookDetailPage** | 功能丰富（图表、导出、历史、直接学习），**主词书列表未链接** |
-| **BookSelectionPage** | 多选混合学习完整，**仅路由注册，无按钮入口** |
-| **ImportBookPage** | 导入逻辑完整，**无任何导航入口** |
-| **CreateBookPage** | 仅 `add_to_custom_book_sheet` 引用，而该 Sheet **未被任何页面调用** |
-| **成就列表页** | 仅有解锁弹窗，无法查看全部成就进度 |
-| **用户昵称编辑** | `displayName` 固定「学习者」 |
-
-### 7.2 设置项有模型无 UI
-
-- `dailyGoal`（每日目标）— 仍影响学习配额，但设置页已移除调节入口
-- `allowExtraStudy`（加练模式）— 关闭时严格限每日词数
-- `quizPickEnglish` — 模型默认 true，代码写死 `pickEnglish: false`（仅英→中）
-- `defaultStudyMode` — 无选择入口
-- `weeklyReportEnabled` — 无开关，默认开启
-
-### 7.3 平台能力缺口
-
-- **推送提醒**：Windows / Web 不支持（设置页已有说明）
-- **成就文案**：`all_modes` 描述仍为「5 种学习模式」，实际仅 3 种
-
-### 7.4 架构/代码遗留
-
-- `sm2Interval` 字段名仍保留（算法已换为 `StudyProgress`）
-- `session_labels` 仍映射旧 `flashcard` 类型（兼容历史数据）
-- `BookDetailPage` 中 `import_book_page.dart` 为**未使用 import**
-- 部分导出/分享/图表组件已实现，因 `BookDetailPage` 不可达而**间接闲置**
-
-### 7.5 测试覆盖盲区
-
-- 无 Widget/集成测试覆盖主 UI 流程
-- 无 `auto_read`、设置页试听等新增功能的专项测试
-- 查单词、复习入口等缺失功能亦无测试需求（因未实现）
-
----
-
-## 8. 主用户路径（当前实际可用）
-
-```
-启动 → 引导（首次）→ MainShell
-  ├─ 首页 → 跳转「单词书」Tab
-  ├─ 单词书 → 选书 → 关卡列表
-  │     ├─ 学习 Tab → 单词详情（逐词浏览 + TTS）
-  │     └─ 测试 Tab → 选择题/拼写/听音挑战（得星）
-  ├─ 查单词 → （空）
-  └─ 我的 → 签到 / 积分 / 统计 / 设置
+  MS --> BP --> LP
+  LP --> WD
+  LP --> SS
+  MS --> MP
+  UI --> RP --> REPO --> HIVE
+  SS --> StudyService
+  StudyService --> REPO
 ```
 
 ---
 
-## 9. 建议开发优先级
+## 11. 总结
 
-1. 词书列表增加进入 `BookDetailPage` 的入口（或合并详情能力到现有关卡页）
-2. 实现 `WordLookupPage` 查词功能
-3. 恢复复习模式入口
-4. 接通 `BookSelectionPage` 或明确废弃
-5. 收藏/错题本 UI 与专项练习
-6. 成就列表页 + 修正成就文案
+VocabMaster 当前是一个**功能聚焦、本地优先**的单词学习 App：
 
----
+- **成熟可用**：词书关卡、三种测试模式、星级挑战、TTS、签到积分、设置与通知
+- **架构清晰**：Feature 分层 + Repository + Riverpod 代码生成 + Hive 持久化
+- **主要缺口**：查单词 UI、学习历史展示
+- **技术债**：Hive 模型字段 index 留有空洞（兼容旧数据）；`pubspec` 描述需同步
 
-## 10. 总结
-
-VocabMaster 已具备较完整的**本地词书学习内核**：关卡制学习、三种练习模式、TTS、学习进度调度、签到积分、会话记录与导出能力。近期迭代已移除 KyleBing 词库、SM-2 和闪卡模式，并补齐了自动朗读与设置页语速试听。
-
-当前最大差距在**产品层连接**：大量已实现页面（词书详情、导入、多选学习、复习、收藏错题、查单词）**未挂到主导航**，用户实际能走通的路线比代码能力窄得多。
+建议下一步优先实现 **查单词页**（对接已有 `searchWords`），其次视需求决定是否恢复学习记录浏览或精简会话存储逻辑。

@@ -91,10 +91,6 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       lastReviewTime: fields[10] as DateTime?,
       reviewCount: fields[11] as int,
       correctStreak: fields[12] as int,
-      easeFactor: fields[13] as double,
-      sm2Interval: fields[14] as double,
-      isFavorite: fields[15] as bool,
-      inWrongBook: fields[16] as bool,
       imageUrl: fields[17] as String?,
       definitions: (fields[18] as List?)?.cast<WordDefinition>(),
       structuredExamplesRich: (fields[19] as List?)?.cast<WordExample>(),
@@ -111,7 +107,7 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
   @override
   void write(BinaryWriter writer, BookWord obj) {
     writer
-      ..writeByte(27)
+      ..writeByte(23)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -138,14 +134,6 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       ..write(obj.reviewCount)
       ..writeByte(12)
       ..write(obj.correctStreak)
-      ..writeByte(13)
-      ..write(obj.easeFactor)
-      ..writeByte(14)
-      ..write(obj.sm2Interval)
-      ..writeByte(15)
-      ..write(obj.isFavorite)
-      ..writeByte(16)
-      ..write(obj.inWrongBook)
       ..writeByte(17)
       ..write(obj.imageUrl)
       ..writeByte(18)

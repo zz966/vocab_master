@@ -7,6 +7,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../../models/book_model.dart';
 import '../../models/learning_session.dart';
 import '../../models/level_challenge_progress.dart';
+import '../../models/level_study_progress.dart';
 import '../../models/point_transaction.dart';
 import '../../models/review_record.dart';
 import '../../models/user_settings.dart';
@@ -21,6 +22,7 @@ class HiveService {
   static const sessionsBoxName = 'sessions';
   static const reviewRecordsBoxName = 'review_records';
   static const levelChallengesBoxName = 'level_challenges';
+  static const levelStudyBoxName = 'level_study';
   static const pointTransactionsBoxName = 'point_transactions';
 
   static bool _initialized = false;
@@ -31,6 +33,7 @@ class HiveService {
     sessionsBoxName,
     reviewRecordsBoxName,
     levelChallengesBoxName,
+    levelStudyBoxName,
     pointTransactionsBoxName,
   ];
 
@@ -47,6 +50,7 @@ class HiveService {
     await _openBoxOrReset<LearningSession>(sessionsBoxName);
     await _openBoxOrReset<ReviewRecord>(reviewRecordsBoxName);
     await _openBoxOrReset<LevelChallengeProgress>(levelChallengesBoxName);
+    await _openBoxOrReset<LevelStudyProgress>(levelStudyBoxName);
     await _openBoxOrReset<PointTransaction>(pointTransactionsBoxName);
 
     _initialized = true;
@@ -105,6 +109,7 @@ class HiveService {
       ..registerAdapter(LearningSessionAdapter())
       ..registerAdapter(ReviewRecordAdapter())
       ..registerAdapter(LevelChallengeProgressAdapter())
+      ..registerAdapter(LevelStudyProgressAdapter())
       ..registerAdapter(PointTransactionAdapter());
   }
 
@@ -120,6 +125,9 @@ class HiveService {
 
   static Box<LevelChallengeProgress> get _levelChallenges =>
       Hive.box<LevelChallengeProgress>(levelChallengesBoxName);
+
+  static Box<LevelStudyProgress> get _levelStudy =>
+      Hive.box<LevelStudyProgress>(levelStudyBoxName);
 
   static Box<PointTransaction> get _pointTransactions =>
       Hive.box<PointTransaction>(pointTransactionsBoxName);
@@ -214,11 +222,7 @@ class HiveService {
         ..masteryLevel = previous.masteryLevel
         ..lastReviewTime = previous.lastReviewTime
         ..reviewCount = previous.reviewCount
-        ..correctStreak = previous.correctStreak
-        ..easeFactor = previous.easeFactor
-        ..sm2Interval = previous.sm2Interval
-        ..isFavorite = previous.isFavorite
-        ..inWrongBook = previous.inWrongBook;
+        ..correctStreak = previous.correctStreak;
     }
   }
 
@@ -233,10 +237,7 @@ class HiveService {
       return;
     }
 
-    final firstBook = _books.values.isEmpty ? null : _books.values.first;
-    final settings = UserSettings(
-      defaultBookIds: firstBook != null ? [firstBook.bookId] : [],
-    );
+    final settings = UserSettings();
     await _settings.put(settingsKey, settings);
   }
 
@@ -319,6 +320,28 @@ class HiveService {
     LevelChallengeProgress progress,
   ) async {
     await _levelChallenges.put(progress.storageKey, progress);
+  }
+
+  static LevelStudyProgress? getLevelStudyProgress(
+    String bookId,
+    int levelIndex,
+  ) {
+    return _levelStudy.get(levelStudyStorageKey(bookId, levelIndex));
+  }
+
+  static Map<int, LevelStudyProgress> getLevelStudyProgressForBook(
+    String bookId,
+  ) {
+    return {
+      for (final item in _levelStudy.values.where((entry) => entry.bookId == bookId))
+        item.levelIndex: item,
+    };
+  }
+
+  static Future<void> saveLevelStudyProgress(
+    LevelStudyProgress progress,
+  ) async {
+    await _levelStudy.put(progress.storageKey, progress);
   }
 
   static String nextId(String prefix) =>

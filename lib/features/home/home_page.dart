@@ -25,8 +25,9 @@ class HomePage extends ConsumerWidget {
                 width: double.infinity,
                 child: FilledButton.icon(
                   onPressed: () {
-                    ref.read(navigationIndexProvider.notifier).state =
-                        AppTab.books;
+                    ref
+                        .read(navigationIndexProvider.notifier)
+                        .setIndex(AppTab.books);
                   },
                   icon: const Icon(Icons.menu_book_outlined),
                   label: const Text('背单词'),
@@ -41,8 +42,9 @@ class HomePage extends ConsumerWidget {
                 width: double.infinity,
                 child: OutlinedButton.icon(
                   onPressed: () {
-                    ref.read(navigationIndexProvider.notifier).state =
-                        AppTab.study;
+                    ref
+                        .read(navigationIndexProvider.notifier)
+                        .setIndex(AppTab.study);
                   },
                   icon: const Icon(Icons.search),
                   label: const Text('查单词'),

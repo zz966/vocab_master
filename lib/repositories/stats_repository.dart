@@ -1,4 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 import '../core/hive/hive_service.dart';
 
@@ -191,6 +191,3 @@ class StatsRepository {
   }
 }
 
-final statsRepositoryProvider = Provider<StatsRepository>((ref) {
-  return StatsRepository();
-});

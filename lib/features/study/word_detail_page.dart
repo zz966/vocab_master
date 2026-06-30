@@ -1,12 +1,16 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/word.dart';
 import '../../providers/book_provider.dart';
 import '../../providers/study_provider.dart';
+import '../../providers/repository_providers.dart';
 import '../../providers/word_provider.dart';
 import '../../repositories/book_repository.dart';
 import '../../utils/auto_read.dart';
 import '../../utils/color_utils.dart';
+import '../../utils/level_utils.dart';
 import '../../utils/word_enrichment.dart';
 import 'widgets/word_detail_info_section.dart';
 import 'widgets/word_detail_tab_content.dart';
@@ -18,12 +22,16 @@ class WordDetailPage extends ConsumerStatefulWidget {
     this.wordIds,
     this.bookId,
     this.bookTitle,
+    this.levelIndex,
+    this.initialMaxWordIndex,
   });
 
   final String wordId;
   final List<String>? wordIds;
   final String? bookId;
   final String? bookTitle;
+  final int? levelIndex;
+  final int? initialMaxWordIndex;
 
   @override
   ConsumerState<WordDetailPage> createState() => _WordDetailPageState();
@@ -31,6 +39,7 @@ class WordDetailPage extends ConsumerStatefulWidget {
 
 class _WordDetailPageState extends ConsumerState<WordDetailPage> {
   late String _currentWordId;
+  late int _maxProgressIndex;
   bool _loading = true;
   Word? _word;
   List<Word> _peerWords = [];
@@ -40,7 +49,26 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
   void initState() {
     super.initState();
     _currentWordId = widget.wordId;
+    _maxProgressIndex = widget.initialMaxWordIndex ?? -1;
     _loadWord(_currentWordId);
+  }
+
+  bool get _tracksLevelStudyProgress =>
+      widget.bookId != null &&
+      widget.levelIndex != null &&
+      widget.wordIds != null &&
+      widget.wordIds!.length > 1;
+
+  Future<void> _persistMaxProgress(int maxWordIndex) async {
+    if (!_tracksLevelStudyProgress) {
+      return;
+    }
+
+    await ref.read(levelStudyRepositoryProvider).saveMaxProgress(
+          bookId: widget.bookId!,
+          levelIndex: widget.levelIndex!,
+          maxWordIndex: maxWordIndex,
+        );
   }
 
   Future<void> _loadWord(String wordId) async {
@@ -140,18 +168,42 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
     return index < 0 ? 0 : index;
   }
 
-  /// 关卡内逐词浏览进度：第 n 词显示 n/总数，学完本关最后一个词为 100%。
-  double? get _sessionProgress {
+  /// 进度条：只记录本关最高到达位置，只增不减。
+  double? get _sessionProgressBarValue {
     final ids = _navigationIds;
     if (ids.length <= 1) {
       return null;
     }
-    return (_currentIndex + 1) / ids.length;
+
+    if (_tracksLevelStudyProgress) {
+      return levelBrowseProgress(
+        currentIndex: _maxProgressIndex,
+        totalWords: ids.length,
+      );
+    }
+
+    return levelBrowseProgress(
+      currentIndex: _currentIndex,
+      totalWords: ids.length,
+    );
   }
 
-  void _goToWord(String wordId) {
+  void _goToWord(String wordId, {required bool forward}) {
     ref.read(ttsServiceProvider).stop();
-    setState(() => _currentWordId = wordId);
+    final newIndex = _navigationIds.indexOf(wordId);
+    final resolvedIndex = newIndex < 0 ? _currentIndex : newIndex;
+
+    if (_tracksLevelStudyProgress &&
+        forward &&
+        resolvedIndex > _maxProgressIndex) {
+      setState(() {
+        _currentWordId = wordId;
+        _maxProgressIndex = resolvedIndex;
+      });
+      unawaited(_persistMaxProgress(resolvedIndex));
+    } else {
+      setState(() => _currentWordId = wordId);
+    }
     _loadWord(wordId);
   }
 
@@ -166,11 +218,12 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
   Widget build(BuildContext context) {
     final word = _word;
     final bookId = widget.bookId ?? (word != null ? _primaryBookId(word) : null);
-    final sessionProgress = _sessionProgress;
+    final sessionProgressBar = _sessionProgressBarValue;
     final navigationTotal = _navigationIds.length;
     final bookProgress =
         bookId != null ? ref.watch(bookProgressProvider(bookId)) : null;
-    final bookProgressAsync = sessionProgress == null ? bookProgress : null;
+    final bookProgressAsync =
+        sessionProgressBar == null ? bookProgress : null;
     final bookCoverColor =
         bookProgress?.valueOrNull?.book.coverColor ?? '#607D8B';
 
@@ -207,16 +260,19 @@ class _WordDetailPageState extends ConsumerState<WordDetailPage> {
           ? null
           : _WordDetailBottomBar(
               bookProgressAsync: bookProgressAsync,
-              sessionProgress: sessionProgress,
-              sessionCurrent: sessionProgress == null ? null : _currentIndex + 1,
+              sessionProgress: sessionProgressBar,
+              sessionCurrent: sessionProgressBar == null
+                  ? null
+                  : _currentIndex + 1,
               sessionTotal:
-                  sessionProgress == null ? null : navigationTotal,
+                  sessionProgressBar == null ? null : navigationTotal,
               progressColor: bookCoverColor,
               onPrevious: _previousWordId == null
                   ? null
-                  : () => _goToWord(_previousWordId!),
-              onNext:
-                  _nextWordId == null ? null : () => _goToWord(_nextWordId!),
+                  : () => _goToWord(_previousWordId!, forward: false),
+              onNext: _nextWordId == null
+                  ? null
+                  : () => _goToWord(_nextWordId!, forward: true),
             ),
     );
   }

@@ -40,6 +40,29 @@ List<BookLevel> splitWordsIntoLevels(
 
 String levelDisplayName(int index) => '第${chineseOrdinal(index + 1)}关';
 
+/// 关卡内逐词浏览进度，与 [WordDetailPage] 底部学习进度条一致。
+double levelBrowseProgress({
+  required int currentIndex,
+  required int totalWords,
+}) {
+  if (totalWords <= 0) {
+    return 0;
+  }
+  return (currentIndex + 1) / totalWords;
+}
+
+int levelBrowseProgressPercent({
+  required int currentIndex,
+  required int totalWords,
+}) {
+  return (levelBrowseProgress(
+    currentIndex: currentIndex,
+    totalWords: totalWords,
+  ) *
+          100)
+      .round();
+}
+
 String chineseOrdinal(int number) {
   if (number <= 0) {
     return number.toString();

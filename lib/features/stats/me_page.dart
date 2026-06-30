@@ -5,7 +5,7 @@ import '../../providers/book_provider.dart';
 import '../../providers/points_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/study_provider.dart';
-import '../../repositories/points_repository.dart';
+import '../../providers/repository_providers.dart';
 import '../settings/settings_page.dart';
 import 'widgets/daily_check_in_card.dart';
 import 'widgets/me_profile_header.dart';

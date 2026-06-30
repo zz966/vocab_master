@@ -1,11 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../models/word.dart';
 import '../repositories/book_repository.dart';
 import '../utils/overview_stats.dart';
+import 'repository_providers.dart';
 
-/// All word books with per-book progress, backed by [AsyncNotifier].
-class BooksNotifier extends AsyncNotifier<List<BookProgress>> {
+part 'book_provider.g.dart';
+
+@riverpod
+class Books extends _$Books {
   @override
   Future<List<BookProgress>> build() async {
     return ref.watch(bookRepositoryProvider).getAllBookProgress();
@@ -19,26 +22,25 @@ class BooksNotifier extends AsyncNotifier<List<BookProgress>> {
   }
 }
 
-final booksProvider = AsyncNotifierProvider<BooksNotifier, List<BookProgress>>(
-  BooksNotifier.new,
-);
-
-final bookProgressProvider =
-    FutureProvider.family<BookProgress?, String>((ref, bookId) async {
+@riverpod
+Future<BookProgress?> bookProgress(Ref ref, String bookId) async {
   final repository = ref.watch(bookRepositoryProvider);
   final book = await repository.getBook(bookId);
   if (book == null) {
     return null;
   }
   return repository.getBookProgress(book);
-});
+}
 
-final bookWordsProvider =
-    FutureProvider.family<List<Word>, String>((ref, bookId) async {
-  return ref.watch(bookRepositoryProvider).getWordsForBook(bookId);
-});
-
-final globalOverviewStatsProvider = FutureProvider<OverviewStats>((ref) async {
+@riverpod
+Future<OverviewStats> globalOverviewStats(Ref ref) async {
   ref.watch(booksProvider);
   return ref.read(bookRepositoryProvider).getGlobalOverviewStats();
-});
+}
+
+@riverpod
+Future<Map<int, int>> levelChallengeStars(Ref ref, String bookId) async {
+  return ref
+      .read(levelChallengeRepositoryProvider)
+      .getStarCountsForBook(bookId);
+}

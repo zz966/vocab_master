@@ -1,7 +1,6 @@
 import '../repositories/book_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/stats_repository.dart';
-import '../repositories/word_repository.dart';
 
 String formatWeeklyReport({
   required int totalSessions,
@@ -47,20 +46,16 @@ Future<String> buildWeeklyReportMessage({
 
 String formatDailyReport({
   required int todayCount,
-  required int dailyGoal,
-  required int reviewCount,
   required int currentStreak,
   int? todayStudied,
   int? todayCorrect,
 }) {
-  final remaining = (dailyGoal - todayCount).clamp(0, dailyGoal);
   final parts = <String>['📚 每日学习报告'];
 
-  if (remaining > 0) {
-    parts.add('今日 $todayCount/$dailyGoal 词');
-    parts.add('还差 $remaining 词达标');
+  if (todayCount > 0) {
+    parts.add('今日已学 $todayCount 词');
   } else {
-    parts.add('今日目标已达成 ($todayCount 词)');
+    parts.add('今日尚未学习');
   }
 
   if (todayStudied != null &&
@@ -70,28 +65,16 @@ String formatDailyReport({
     parts.add('正确率 $accuracy%');
   }
 
-  if (reviewCount > 0) {
-    parts.add('$reviewCount 词待复习');
-  }
-
   parts.add('🔥 连续 $currentStreak 天');
   return parts.join(' · ');
 }
 
 Future<String> buildDailyReminderMessage({
   required SettingsRepository settingsRepository,
-  required WordRepository wordRepository,
-  required BookRepository bookRepository,
   StatsRepository? statsRepository,
 }) async {
   final settings = await settingsRepository.getSettings();
   final todayCount = await settingsRepository.getTodayStudyCount();
-
-  final bookIds =
-      (await bookRepository.getAllBooks()).map((book) => book.id).toList();
-  final reviewCount = bookIds.isEmpty
-      ? 0
-      : (await wordRepository.getReviewWordsForBooks(bookIds)).length;
 
   int? todayStudied;
   int? todayCorrect;
@@ -103,8 +86,6 @@ Future<String> buildDailyReminderMessage({
 
   return formatDailyReport(
     todayCount: todayCount,
-    dailyGoal: settings.dailyGoal,
-    reviewCount: reviewCount,
     currentStreak: settings.currentStreak,
     todayStudied: todayStudied,
     todayCorrect: todayCorrect,

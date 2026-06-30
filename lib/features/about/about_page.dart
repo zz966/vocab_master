@@ -37,7 +37,7 @@ class AboutPage extends StatelessWidget {
           const SizedBox(height: 24),
           const _FeatureRow(icon: Icons.quiz_outlined, text: '选择题 / 拼写 / 听音练习'),
           const _FeatureRow(icon: Icons.hearing, text: 'TTS 朗读'),
-          const _FeatureRow(icon: Icons.emoji_events, text: '关卡挑战与成就'),
+          const _FeatureRow(icon: Icons.emoji_events, text: '关卡挑战'),
           const _FeatureRow(icon: Icons.stars_rounded, text: '每日签到与积分'),
         ],
       ),

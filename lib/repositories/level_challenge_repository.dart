@@ -1,4 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 import '../core/hive/hive_service.dart';
 import '../core/study_mode.dart';
@@ -55,6 +55,3 @@ class LevelChallengeRepository {
   }
 }
 
-final levelChallengeRepositoryProvider = Provider<LevelChallengeRepository>(
-  (ref) => LevelChallengeRepository(),
-);

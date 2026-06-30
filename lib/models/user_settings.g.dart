@@ -17,24 +17,15 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return UserSettings(
-      defaultBookIds: (fields[0] as List?)?.cast<String>(),
-      dailyGoal: fields[1] == null ? 20 : fields[1] as int,
       themeMode: fields[2] == null ? 'system' : fields[2] as String,
       reminderEnabled: fields[3] == null ? false : fields[3] as bool,
-      weeklyReportEnabled: fields[4] == null ? true : fields[4] as bool,
       autoReadEnabled: fields[5] == null ? true : fields[5] as bool,
-      allowExtraStudy: fields[6] == null ? false : fields[6] as bool,
-      quizPickEnglish: fields[7] == null ? true : fields[7] as bool,
-      defaultStudyMode: fields[8] == null ? 'quiz' : fields[8] as String,
       speechRate: fields[9] == null ? 0.45 : fields[9] as double,
       ttsAccent: fields[10] == null ? 'en-US' : fields[10] as String,
       reminderTime: fields[11] as String?,
       currentStreak: fields[12] == null ? 0 : fields[12] as int,
       longestStreak: fields[13] == null ? 0 : fields[13] as int,
       lastStudyDate: fields[14] as DateTime?,
-      hasSeenOnboarding: fields[15] == null ? false : fields[15] as bool,
-      unlockedAchievementIds:
-          fields[16] == null ? [] : (fields[16] as List?)?.cast<String>(),
       updatedAt: fields[17] as DateTime?,
       pointsBalance: fields[18] == null ? 0 : fields[18] as int,
       checkInStreak: fields[19] == null ? 0 : fields[19] as int,
@@ -49,25 +40,13 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
   @override
   void write(BinaryWriter writer, UserSettings obj) {
     writer
-      ..writeByte(24)
-      ..writeByte(0)
-      ..write(obj.defaultBookIds)
-      ..writeByte(1)
-      ..write(obj.dailyGoal)
+      ..writeByte(16)
       ..writeByte(2)
       ..write(obj.themeMode)
       ..writeByte(3)
       ..write(obj.reminderEnabled)
-      ..writeByte(4)
-      ..write(obj.weeklyReportEnabled)
       ..writeByte(5)
       ..write(obj.autoReadEnabled)
-      ..writeByte(6)
-      ..write(obj.allowExtraStudy)
-      ..writeByte(7)
-      ..write(obj.quizPickEnglish)
-      ..writeByte(8)
-      ..write(obj.defaultStudyMode)
       ..writeByte(9)
       ..write(obj.speechRate)
       ..writeByte(10)
@@ -80,10 +59,6 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
       ..write(obj.longestStreak)
       ..writeByte(14)
       ..write(obj.lastStudyDate)
-      ..writeByte(15)
-      ..write(obj.hasSeenOnboarding)
-      ..writeByte(16)
-      ..write(obj.unlockedAchievementIds)
       ..writeByte(17)
       ..write(obj.updatedAt)
       ..writeByte(18)
