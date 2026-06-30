@@ -52,36 +52,6 @@ final wordRepositoryProvider = Provider<WordRepository>.internal(
 );
 
 typedef WordRepositoryRef = ProviderRef<WordRepository>;
-String _$sessionRepositoryHash() => r'bf19a6eca018c3e8b4ab64d11daaeabe757e5d3a';
-
-/// See also [sessionRepository].
-@ProviderFor(sessionRepository)
-final sessionRepositoryProvider = Provider<SessionRepository>.internal(
-  sessionRepository,
-  name: r'sessionRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$sessionRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef SessionRepositoryRef = ProviderRef<SessionRepository>;
-String _$statsRepositoryHash() => r'4ecd84e1fbafdbf16a47af0626368418cbdef017';
-
-/// See also [statsRepository].
-@ProviderFor(statsRepository)
-final statsRepositoryProvider = Provider<StatsRepository>.internal(
-  statsRepository,
-  name: r'statsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$statsRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef StatsRepositoryRef = ProviderRef<StatsRepository>;
 String _$levelChallengeRepositoryHash() =>
     r'9590657624e23cd41d89ef2b5639de385874643e';
 

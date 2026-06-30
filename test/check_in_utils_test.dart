@@ -38,7 +38,7 @@ void main() {
         calculateNextCheckInStreak(
           today: today,
           lastCheckIn: null,
-          currentStreak: 0,
+          checkInStreak: 0,
         ),
         1,
       );
@@ -51,7 +51,7 @@ void main() {
         calculateNextCheckInStreak(
           today: today,
           lastCheckIn: yesterday,
-          currentStreak: 3,
+          checkInStreak: 3,
         ),
         4,
       );
@@ -64,7 +64,7 @@ void main() {
         calculateNextCheckInStreak(
           today: today,
           lastCheckIn: last,
-          currentStreak: 5,
+          checkInStreak: 5,
         ),
         1,
       );
@@ -76,7 +76,7 @@ void main() {
         calculateNextCheckInStreak(
           today: today,
           lastCheckIn: today,
-          currentStreak: 7,
+          checkInStreak: 7,
         ),
         7,
       );

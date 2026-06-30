@@ -1,31 +1,12 @@
+/// 词书 [category] 字段 → 展示文案。未列出的分类原样显示。
 const bookCategoryLabels = <String, String>{
-  'basic': '基础',
-  'cet4': '四级',
-  'cet6': '六级',
-  'ielts': '雅思',
-  'toefl': '托福',
   'test': '测试',
 };
 
-String categoryLabel(String category) =>
-    bookCategoryLabels[category] ?? category.toUpperCase();
-
-const bookDifficultyLabels = <String, String>{
-  'basic': '入门',
-  'cet4': '中级',
-  'cet6': '中高级',
-  'ielts': '高级',
-  'toefl': '高级',
-};
-
-String categoryDifficulty(String category) =>
-    bookDifficultyLabels[category] ?? '通用';
-
-const bookCategories = [
-  'basic',
-  'cet4',
-  'cet6',
-  'ielts',
-  'toefl',
-  'test',
-];
+String categoryLabel(String category) {
+  final trimmed = category.trim();
+  if (trimmed.isEmpty) {
+    return '未分类';
+  }
+  return bookCategoryLabels[trimmed] ?? trimmed;
+}

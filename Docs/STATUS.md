@@ -56,7 +56,7 @@ lib/
 │   │       └── book_flow_bottom_nav.dart     # 词书流程共用底部导航
 │   ├── study/                    # 学习会话 & 单词详情
 │   ├── search/word_lookup_page.dart  # 查单词（搜索 + 跳转详情）
-│   ├── stats/me_page.dart        # 我的
+│   ├── me/me_page.dart           # 我的
 │   ├── settings/settings_page.dart
 │   └── about/about_page.dart
 ├── utils/                    # 工具函数（含 book_content_utils 富内容校验）
@@ -78,10 +78,9 @@ test/                         # 20 个测试文件，57 个用例
 ```
 main()
   → HiveService.init()
-      → BookWord schema 迁移检查（v3，变更时清空 books box）
+      → BookWord schema 迁移检查（v4，变更时清空 books box）
       → 打开全部 Hive box
   → HiveService.importInitialBooks()
-      → 清理旧版词书 ID（如 CET4_1）
       → importBundledBooksIfNeeded()
   → TtsService / NotificationService 初始化
   → ProviderScope → MaterialApp(home: MainShell)
@@ -150,7 +149,7 @@ MainShell
 
 测试完成后弹出 `QuizCompleteDialog`，支持再来一轮或返回。
 
-答题质量简化为两档：`StudyQuality.again`（答错）/ `StudyQuality.good`（答对）。
+答题结果通过 `StudyService.recordAnswer(isCorrect: bool)` 记录，答对即将 `BookWord.learned` 置为 `true`。
 
 ### 4.3 富内容词书
 
@@ -167,10 +166,10 @@ MainShell
 
 ### 4.5 学习进度
 
-- 答对：`masteryLevel`（熟悉度 0–5）+1，`reviewCount` +1
-- 每次答题写入 `ReviewRecord`，更新学习连续天数
-- 学习会话写入 `LearningSession`（开始/完成、正确率统计）
-- **无**间隔重复调度、每日配额、复习队列
+- 答对：`BookWord.learned = true`（答错不改变）
+- 每次答题经 `StudyService.recordAnswer()` 落库：每天每词最多一条 `AnswerRecord`（同日重复答题覆盖 `answeredAt`）
+- 进行中的练习仅用内存 `StudySessionProgress` 计数（不落盘）
+- **无**学习会话历史、周报推送、间隔重复调度、每日配额、复习队列
 
 ### 4.6 TTS 与自动朗读
 
@@ -187,8 +186,7 @@ MainShell
 
 ### 4.8 通知提醒
 
-- 每日学习提醒（可设时间，默认 20:00）
-- 每周日周报推送（随「每日提醒」开关联动）
+- 每日学习提醒（可设时间，默认 20:00），文案基于今日 `AnswerRecord` 汇总
 - 桌面端 / Web 显示不支持推送的提示，设置仍会保存
 
 ### 4.9 设置
@@ -211,30 +209,29 @@ MainShell
 |----------|------|------|
 | `books` | `Book` / `BookWord` | 词书及单词 |
 | `settings` | `UserSettings` | 用户设置（单条 key=`default`） |
-| `sessions` | `LearningSession` | 学习会话记录 |
-| `review_records` | `ReviewRecord` | 单次答题记录 |
+| `answer_records` | `AnswerRecord` | 答题记录（每天每词一条，统计来源） |
 | `level_challenges` | `LevelChallengeProgress` | 关卡挑战星级 |
 | `level_study` | `LevelStudyProgress` | 正常模式关卡浏览进度 |
 | `point_transactions` | `PointTransaction` | 积分流水 |
 
 打开失败时 `_openBoxOrReset` 自动删盘重建。
 
-### 5.2 BookWord 模型（Hive schema v3）
+### 5.2 BookWord 模型（Hive schema v4）
 
-`BookWord` 共 **18 个连续 `@HiveField`**，不再保留旧版空洞索引或 legacy 字段：
+`BookWord` 共 **15 个连续 `@HiveField`**，不再保留 SM-2 遗留字段：
 
 | 索引 | 字段 | 说明 |
 |------|------|------|
 | 0–5 | `id`、`word`、音标、`partOfSpeech`、`definitionCn` | 基本信息 |
 | 6 | `sentenceExamples` | 例句（JSON `examples` → `BookWordExample`） |
 | 7 | `root` | 词根词缀 |
-| 8–11 | `masteryLevel`、`lastReviewTime`、`reviewCount`、`correctStreak` | 学习状态 |
-| 12 | `definitions` | 中文释义列表 |
-| 13 | `collocations` | 常用短语 |
-| 14 | `memoryTips` | 记忆技巧 |
-| 15 | `bookIds` | 所属词书 |
-| 16 | `englishDefinitions` | 英文释义 |
-| 17 | `synonymDetails` | 近义词（含中文说明） |
+| 8 | `learned` | 是否已学习（答对过一次即为 `true`） |
+| 9 | `definitions` | 中文释义列表 |
+| 10 | `collocations` | 常用短语 |
+| 11 | `memoryTips` | 记忆技巧 |
+| 12 | `bookIds` | 所属词书 |
+| 13 | `englishDefinitions` | 英文释义 |
+| 14 | `synonymDetails` | 近义词（含中文说明） |
 
 **计算属性**（不单独存 Hive）：
 
@@ -242,7 +239,7 @@ MainShell
 |------|------|
 | `synonyms` | 从 `synonymDetails` 提取英文词列表 |
 | `structuredExamples` | 从 `sentenceExamples` 读写，供 UI / `WordEnrichment` 使用 |
-| `english` / `chinese` / `phonetic` / `familiarity` | 兼容别名 |
+| `english` / `chinese` / `phonetic` | 兼容别名 |
 
 **BookWordExample**（`@HiveType typeId: 2`）：
 
@@ -251,18 +248,32 @@ MainShell
 | `en` / `cn` | 例句英/中文（JSON 标准字段） |
 | `partOfSpeech` / `meaning` | 可选，供 `WordEnrichment` 写入多义项例句 |
 
-**Schema 迁移**：`HiveService` 在 `init()` 时检查 `book_word_hive_schema`（当前 v3）。版本不一致时删除 `books` box 并重新导入内置词书；签到、积分、挑战星级等其他 box 不受影响。
+**Schema 迁移**：`HiveService` 在 `init()` 时检查 `book_word_hive_schema`（当前 v4）。版本不一致时删除 `books` box 并重新导入内置词书；签到、积分、挑战星级等其他 box 不受影响。词书 JSON 可选字段 `learned`（默认 `false`），运行时由答题更新。
 
-### 5.3 ReviewRecord quality 字段
+### 5.3 AnswerRecord 字段
 
-- `0` = again（答错）
-- `2+` = good（答对）
+| 字段 | 说明 |
+|------|------|
+| `wordId` / `bookId` | 哪个词、哪本书 |
+| `answeredAt` | 最近一次答题时间 |
 
-### 5.4 Riverpod Provider 一览
+写入策略：`SettingsRepository.upsertTodayAnswerRecord()` — 同一天同一 `wordId` 已存在则覆盖 `answeredAt`，否则新建。不区分对错，仅表示「今天答过这道题」。
+
+### 5.4 整体统计与答题 API
+
+| UI 展示 | 来源 |
+|---------|------|
+| 今日学习 | 今日 `AnswerRecord` 按 `wordId` 计数 |
+| 连续学习 / 最长连续学习 | `UserSettings.studyStreak` / `longestStudyStreak`（有答题的天数，与签到无关） |
+| 已学习 / 总词汇 | 全库 `learned` 聚合（`computeOverviewStats`，按英文词去重） |
+
+挑战模式答题入口：`StudyService.recordAnswer(isCorrect: bool)`。
+
+### 5.5 Riverpod Provider 一览
 
 | 文件 | Provider | 说明 |
 |------|----------|------|
-| `repository_providers` | `*RepositoryProvider` × 7 | Repository 单例注入 |
+| `repository_providers` | `*RepositoryProvider` × 6 | Repository 单例注入 |
 | `settings_provider` | `settingsProvider`、`todayStudyCountProvider` | 设置与今日学习数 |
 | `book_provider` | `booksProvider`、`bookProgressProvider`、`globalOverviewStatsProvider` | 词书进度 |
 | `study_provider` | `ttsServiceProvider`、`studyServiceProvider`、`navigationIndexProvider` 等 | 学习/TTS/导航 |
@@ -289,7 +300,7 @@ MainShell
 | 模型扩展 | `book_word_extensions.dart`（与 `book_model` 重复） |
 | Provider | `word_provider.dart`（仅 re-export） |
 | UI 组件 | `book_mode_picker_sheet.dart`（改为 `book_mode_picker_dialog`） |
-| 学习系统 | SM-2、闪卡队列、每日配额、学习调度 |
+| 学习系统 | SM-2、`ReviewRecord`、闪卡队列、每日配额、学习调度、`LearningSession` 持久化、周报推送 |
 | 词书管理 | 创建/编辑/导入自定义词书 |
 | 其他 | 成就系统、导出分享、fl_chart 图表 |
 | **BookWord 旧字段** | `legacyExamples`、`structuredExamplesRich`、独立 `synonyms` 字段、`confusableWords`、`imageUrl`；HiveField 空洞索引（13–16） |
@@ -300,9 +311,7 @@ MainShell
 
 | 项目 | 说明 |
 |------|------|
-| **学习记录 UI** | `LearningSession` 仍写入 Hive，但无历史列表页面 |
 | **自定义词书** | 仅支持内置 JSON 词库 |
-| **pubspec 描述** | 仍写「自定义单词书」，与实际不符 |
 
 ---
 
@@ -317,7 +326,7 @@ MainShell
 | 统计 | `overview_stats_test` |
 | TTS | `tts_service_test` |
 | 单词增强 | `word_enrichment_test`、`word_display_utils_test` |
-| 其他工具 | `study_mode_test`、`study_quality_test`、`phonetic_utils_test`、`quick_browse_utils_test` 等 |
+| 其他工具 | `study_mode_test`、`phonetic_utils_test`、`quick_browse_utils_test` 等 |
 
 ---
 
@@ -365,9 +374,9 @@ flowchart TB
 VocabMaster 当前是一个**功能聚焦、本地优先**的单词学习 App：
 
 - **成熟可用**：三模式词书学习、关卡挑战星级、查单词、TTS、签到积分、设置与通知
-- **数据模型清晰**：`BookWord` 已对齐 `test_40` 富内容格式，无 legacy Hive 字段；schema v3 自动迁移
+- **数据模型清晰**：`BookWord` 已对齐 `test_40` 富内容格式，学习状态简化为 `learned` 布尔；schema v4 自动迁移
 - **架构清晰**：Feature 分层 + Repository + Riverpod + Hive 持久化
 - **主要缺口**：学习历史展示、自定义词书
-- **技术债**：`category_labels` 仍含已移除词库分类键名；`pubspec` 描述需同步
+- **可扩展**：新增内置词书时在 `category_labels.dart` 补充分类文案即可
 
 建议下一步视需求实现 **学习记录浏览**，或继续扩充 `assets/books/` 富内容词库。

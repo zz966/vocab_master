@@ -4,21 +4,21 @@ class CheckInResult {
     required this.alreadyCheckedIn,
     required this.pointsEarned,
     required this.newBalance,
-    required this.streak,
+    required this.checkInStreak,
   });
 
   final bool success;
   final bool alreadyCheckedIn;
   final int pointsEarned;
   final int newBalance;
-  final int streak;
+  final int checkInStreak;
 }
 
 class CheckInStatus {
   const CheckInStatus({
     required this.checkedInToday,
-    required this.streak,
-    required this.longestStreak,
+    required this.checkInStreak,
+    required this.longestCheckInStreak,
     required this.pointsBalance,
     required this.todayReward,
     required this.recentCheckInDates,
@@ -27,8 +27,8 @@ class CheckInStatus {
   });
 
   final bool checkedInToday;
-  final int streak;
-  final int longestStreak;
+  final int checkInStreak;
+  final int longestCheckInStreak;
   final int pointsBalance;
   final int todayReward;
   final List<String> recentCheckInDates;

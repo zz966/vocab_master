@@ -7,17 +7,12 @@ class BookProgress {
   const BookProgress({
     required this.book,
     required this.totalWords,
-    required this.masteredWords,
     required this.learnedWords,
   });
 
   final WordBook book;
   final int totalWords;
-  final int masteredWords;
   final int learnedWords;
-
-  double get masteryRate =>
-      totalWords == 0 ? 0 : masteredWords / totalWords;
 
   double get learnedRate =>
       totalWords == 0 ? 0 : learnedWords / totalWords;
@@ -66,13 +61,10 @@ class BookRepository {
 
   Future<BookProgress> getBookProgress(WordBook book) async {
     final words = await getWordsForBook(book.id);
-    final mastered =
-        words.where((word) => word.familiarity >= 4).length;
-    final learned = words.where((word) => word.familiarity > 0).length;
+    final learned = words.where((word) => word.learned).length;
     return BookProgress(
       book: book,
       totalWords: book.totalWords > 0 ? book.totalWords : words.length,
-      masteredWords: mastered,
       learnedWords: learned,
     );
   }

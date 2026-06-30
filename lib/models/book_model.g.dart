@@ -86,23 +86,20 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       definitionCn: fields[5] as String,
       sentenceExamples: (fields[6] as List?)?.cast<BookWordExample>(),
       root: fields[7] as String,
-      masteryLevel: fields[8] as int,
-      lastReviewTime: fields[9] as DateTime?,
-      reviewCount: fields[10] as int,
-      correctStreak: fields[11] as int,
-      definitions: (fields[12] as List?)?.cast<WordDefinition>(),
-      collocations: (fields[13] as List?)?.cast<WordPhrase>(),
-      memoryTips: fields[14] as MemoryTips?,
-      bookIds: (fields[15] as List?)?.cast<String>(),
-      englishDefinitions: (fields[16] as List?)?.cast<WordDefinition>(),
-      synonymDetails: (fields[17] as List?)?.cast<ConfusableWord>(),
+      learned: fields[8] as bool,
+      definitions: (fields[9] as List?)?.cast<WordDefinition>(),
+      collocations: (fields[10] as List?)?.cast<WordPhrase>(),
+      memoryTips: fields[11] as MemoryTips?,
+      bookIds: (fields[12] as List?)?.cast<String>(),
+      englishDefinitions: (fields[13] as List?)?.cast<WordDefinition>(),
+      synonymDetails: (fields[14] as List?)?.cast<ConfusableWord>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, BookWord obj) {
     writer
-      ..writeByte(18)
+      ..writeByte(15)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -120,24 +117,18 @@ class BookWordAdapter extends TypeAdapter<BookWord> {
       ..writeByte(7)
       ..write(obj.root)
       ..writeByte(8)
-      ..write(obj.masteryLevel)
+      ..write(obj.learned)
       ..writeByte(9)
-      ..write(obj.lastReviewTime)
-      ..writeByte(10)
-      ..write(obj.reviewCount)
-      ..writeByte(11)
-      ..write(obj.correctStreak)
-      ..writeByte(12)
       ..write(obj.definitions)
-      ..writeByte(13)
+      ..writeByte(10)
       ..write(obj.collocations)
-      ..writeByte(14)
+      ..writeByte(11)
       ..write(obj.memoryTips)
-      ..writeByte(15)
+      ..writeByte(12)
       ..write(obj.bookIds)
-      ..writeByte(16)
+      ..writeByte(13)
       ..write(obj.englishDefinitions)
-      ..writeByte(17)
+      ..writeByte(14)
       ..write(obj.synonymDetails);
   }
 

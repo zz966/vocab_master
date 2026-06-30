@@ -1,52 +1,44 @@
-import '../models/review_record.dart';
+import '../models/answer_record.dart';
 import '../models/word.dart';
 
 class OverviewStats {
   const OverviewStats({
     required this.totalWords,
     required this.learnedWords,
-    required this.masteredWords,
   });
 
   final int totalWords;
   final int learnedWords;
-  final int masteredWords;
-
-  double get masteryRate =>
-      totalWords == 0 ? 0 : masteredWords / totalWords;
 }
 
 OverviewStats computeOverviewStats(Iterable<Word> words) {
-  final maxFamiliarityByEnglish = <String, int>{};
+  final learnedByEnglish = <String, bool>{};
 
   for (final word in words) {
     final key = word.english.trim().toLowerCase();
     if (key.isEmpty) {
       continue;
     }
-    maxFamiliarityByEnglish.update(
+    learnedByEnglish.update(
       key,
-      (current) =>
-          word.familiarity > current ? word.familiarity : current,
-      ifAbsent: () => word.familiarity,
+      (current) => current || word.learned,
+      ifAbsent: () => word.learned,
     );
   }
 
-  final totalWords = maxFamiliarityByEnglish.length;
+  final totalWords = learnedByEnglish.length;
   final learnedWords =
-      maxFamiliarityByEnglish.values.where((value) => value > 0).length;
-  final masteredWords =
-      maxFamiliarityByEnglish.values.where((value) => value >= 4).length;
+      learnedByEnglish.values.where((learned) => learned).length;
 
   return OverviewStats(
     totalWords: totalWords,
     learnedWords: learnedWords,
-    masteredWords: masteredWords,
   );
 }
 
+/// 今日学习词数：每天每个 [wordId] 最多计 1 次。
 int countTodayStudiedWords(
-  Iterable<ReviewRecord> records, {
+  Iterable<AnswerRecord> records, {
   DateTime? now,
 }) {
   final anchor = now ?? DateTime.now();
@@ -56,8 +48,8 @@ int countTodayStudiedWords(
   return records
       .where(
         (record) =>
-            !record.reviewedAt.isBefore(startOfDay) &&
-            record.reviewedAt.isBefore(endOfDay),
+            !record.answeredAt.isBefore(startOfDay) &&
+            record.answeredAt.isBefore(endOfDay),
       )
       .map((record) => record.wordId)
       .toSet()

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/study_mode.dart';
-import '../../models/learning_session.dart';
 import '../../models/quiz_session_result.dart';
+import '../../models/study_session_progress.dart';
 import '../../models/word.dart';
 import '../../providers/repository_providers.dart';
 import '../../providers/study_provider.dart';
@@ -30,13 +30,13 @@ class StudySessionPage extends ConsumerStatefulWidget {
 }
 
 class _StudySessionPageState extends ConsumerState<StudySessionPage> {
-  LearningSession? _session;
+  late final StudySessionProgress _progress;
   bool _challengeStarEarned = false;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _startSession());
+    _progress = StudySessionProgress(sessionType: widget.sessionType);
   }
 
   List<String> _bookIdsForSession() {
@@ -47,34 +47,11 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
     return ids.toList();
   }
 
-  Future<void> _startSession() async {
-    final session = await ref.read(sessionRepositoryProvider).startSession(
-          sessionType: widget.sessionType,
-          bookIds: _bookIdsForSession(),
-        );
-
-    if (mounted) {
-      setState(() => _session = session);
-      ref.read(currentStudySessionProvider.notifier).set(session);
-    }
-  }
-
-  @override
-  void dispose() {
-    ref.read(currentStudySessionProvider.notifier).set(null);
-    super.dispose();
-  }
-
   Future<void> _completeQuizSession(QuizSessionResult quizResult) async {
     await _finishSession(quizResult: quizResult);
   }
 
   Future<void> _finishSession({required QuizSessionResult quizResult}) async {
-    final session = _session;
-    if (session != null) {
-      await ref.read(sessionRepositoryProvider).completeSession(session);
-    }
-
     if (!mounted) {
       return;
     }
@@ -117,18 +94,15 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
   }
 
   Future<bool> _awardLevelChallengeStarIfPerfect() async {
-    final challenge = parseLevelChallengeSessionType(
-      _session?.sessionType ?? widget.sessionType,
-    );
+    final challenge = parseLevelChallengeSessionType(_progress.sessionType);
     if (challenge == null || widget.words.isEmpty) {
       return false;
     }
 
-    final session = _session;
     if (!isPerfectChallengeScore(
       totalWords: widget.words.length,
-      wordsStudied: session?.wordsStudied ?? 0,
-      wordsCorrect: session?.wordsCorrect ?? 0,
+      wordsStudied: _progress.wordsStudied,
+      wordsCorrect: _progress.wordsCorrect,
     )) {
       return false;
     }
@@ -154,14 +128,14 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
             words: words,
             bookIds: bookIds,
             wordPool: words,
-            session: _session,
+            progress: _progress,
             onQuizComplete: _completeQuizSession,
             onProgressUpdate: _onProgressUpdate,
           ),
         StudyMode.spelling => SpellingPage(
             words: words,
             bookIds: bookIds,
-            session: _session,
+            progress: _progress,
             onSpellingComplete: _completeQuizSession,
             onProgressUpdate: _onProgressUpdate,
           ),
@@ -169,7 +143,7 @@ class _StudySessionPageState extends ConsumerState<StudySessionPage> {
             words: words,
             bookIds: bookIds,
             wordPool: words,
-            session: _session,
+            progress: _progress,
             onListeningComplete: _completeQuizSession,
             onProgressUpdate: _onProgressUpdate,
           ),

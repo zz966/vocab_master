@@ -34,7 +34,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     await ref.read(settingsProvider.notifier).save(settings);
     await ref.read(ttsServiceProvider).setSpeechRate(settings.speechRate);
     await ref.read(ttsServiceProvider).setAccent(settings.ttsAccent);
-    await syncAllReminders(ref, settings);
+    await syncDailyReminder(ref, settings);
     invalidateStudyData(ref);
     if (mounted) {
       setState(() => _saving = false);

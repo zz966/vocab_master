@@ -53,7 +53,7 @@ class _MePageState extends ConsumerState<MePage> {
         messenger.showSnackBar(
           SnackBar(
             content: Text(
-              '签到成功！+${result.pointsEarned} 积分，连续 ${result.streak} 天',
+              '签到成功！+${result.pointsEarned} 积分，连续 ${result.checkInStreak} 天',
             ),
           ),
         );
@@ -120,12 +120,12 @@ class _MePageState extends ConsumerState<MePage> {
                           value: '$todayCount 词',
                         ),
                         _OverviewRow(
-                          label: '连续打卡',
-                          value: '${settings?.currentStreak ?? 0} 天',
+                          label: '连续学习',
+                          value: '${settings?.studyStreak ?? 0} 天',
                         ),
                         _OverviewRow(
-                          label: '最长连续',
-                          value: '${settings?.longestStreak ?? 0} 天',
+                          label: '最长连续学习',
+                          value: '${settings?.longestStudyStreak ?? 0} 天',
                         ),
                         _OverviewRow(
                           label: '已学习的单词',
@@ -138,14 +138,6 @@ class _MePageState extends ConsumerState<MePage> {
                           value: overview == null
                               ? '加载中…'
                               : '${overview.totalWords} 词',
-                        ),
-                        _OverviewRow(
-                          label: '已掌握',
-                          value: overview == null
-                              ? '加载中…'
-                              : overview.totalWords == 0
-                                  ? '0%'
-                                  : '${(overview.masteryRate * 100).round()}%',
                         ),
                       ],
                     ),

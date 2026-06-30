@@ -6,11 +6,11 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/book_model.dart';
-import '../../models/learning_session.dart';
+
 import '../../models/level_challenge_progress.dart';
 import '../../models/level_study_progress.dart';
 import '../../models/point_transaction.dart';
-import '../../models/review_record.dart';
+import '../../models/answer_record.dart';
 import '../../models/user_settings.dart';
 import '../../utils/book_content_utils.dart';
 
@@ -21,8 +21,7 @@ class HiveService {
   static const booksBoxName = 'books';
   static const settingsBoxName = 'settings';
   static const settingsKey = 'default';
-  static const sessionsBoxName = 'sessions';
-  static const reviewRecordsBoxName = 'review_records';
+  static const answerRecordsBoxName = 'answer_records';
   static const levelChallengesBoxName = 'level_challenges';
   static const levelStudyBoxName = 'level_study';
   static const pointTransactionsBoxName = 'point_transactions';
@@ -30,13 +29,12 @@ class HiveService {
   static bool _initialized = false;
 
   static const _bookWordSchemaVersionKey = 'book_word_hive_schema';
-  static const _currentBookWordSchemaVersion = 3;
+  static const _currentBookWordSchemaVersion = 4;
 
   static const _allBoxNames = [
     booksBoxName,
     settingsBoxName,
-    sessionsBoxName,
-    reviewRecordsBoxName,
+    answerRecordsBoxName,
     levelChallengesBoxName,
     levelStudyBoxName,
     pointTransactionsBoxName,
@@ -53,8 +51,7 @@ class HiveService {
     await _resetBooksBoxIfSchemaChanged();
     await _openBoxOrReset<Book>(booksBoxName);
     await _openBoxOrReset<UserSettings>(settingsBoxName);
-    await _openBoxOrReset<LearningSession>(sessionsBoxName);
-    await _openBoxOrReset<ReviewRecord>(reviewRecordsBoxName);
+    await _openBoxOrReset<AnswerRecord>(answerRecordsBoxName);
     await _openBoxOrReset<LevelChallengeProgress>(levelChallengesBoxName);
     await _openBoxOrReset<LevelStudyProgress>(levelStudyBoxName);
     await _openBoxOrReset<PointTransaction>(pointTransactionsBoxName);
@@ -132,8 +129,7 @@ class HiveService {
       ..registerAdapter(WordPhraseAdapter())
       ..registerAdapter(ConfusableWordAdapter())
       ..registerAdapter(UserSettingsAdapter())
-      ..registerAdapter(LearningSessionAdapter())
-      ..registerAdapter(ReviewRecordAdapter())
+      ..registerAdapter(AnswerRecordAdapter())
       ..registerAdapter(LevelChallengeProgressAdapter())
       ..registerAdapter(LevelStudyProgressAdapter())
       ..registerAdapter(PointTransactionAdapter());
@@ -143,11 +139,8 @@ class HiveService {
 
   static Box<UserSettings> get _settings => Hive.box<UserSettings>(settingsBoxName);
 
-  static Box<LearningSession> get _sessions =>
-      Hive.box<LearningSession>(sessionsBoxName);
-
-  static Box<ReviewRecord> get _reviewRecords =>
-      Hive.box<ReviewRecord>(reviewRecordsBoxName);
+  static Box<AnswerRecord> get _answerRecords =>
+      Hive.box<AnswerRecord>(answerRecordsBoxName);
 
   static Box<LevelChallengeProgress> get _levelChallenges =>
       Hive.box<LevelChallengeProgress>(levelChallengesBoxName);
@@ -163,13 +156,7 @@ class HiveService {
     'assets/books/test_40.json',
   ];
 
-  /// 已移除的旧版词书，启动时从 Hive 清理，避免遗留简化结构数据。
-  static const legacyBookIdsToRemove = <String>[
-    'CET4_1',
-  ];
-
   static Future<void> importInitialBooks() async {
-    await _purgeLegacyBooks();
     await importBundledBooksIfNeeded();
   }
 
@@ -177,16 +164,6 @@ class HiveService {
   static Future<void> importBundledBooksIfNeeded() async {
     for (final assetPath in bundledBookAssets) {
       await _importBookAssetIfNeeded(assetPath);
-    }
-  }
-
-  static Future<void> _purgeLegacyBooks() async {
-    for (final bookId in legacyBookIdsToRemove) {
-      if (!_books.containsKey(bookId)) {
-        continue;
-      }
-      await deleteBook(bookId);
-      debugPrint('🗑️ 已移除旧版词书 $bookId');
     }
   }
 
@@ -251,36 +228,13 @@ class HiveService {
     await _settings.put(settingsKey, settings);
   }
 
-  static Future<void> saveSession(LearningSession session) async {
-    await _sessions.put(session.id, session);
+  static Future<void> saveAnswerRecord(AnswerRecord record) async {
+    await _answerRecords.put(record.id, record);
   }
 
-  static LearningSession? getSession(String id) => _sessions.get(id);
-
-  static List<LearningSession> getAllSessions() {
-    return _sessions.values.toList()
-      ..sort((a, b) => b.startedAt.compareTo(a.startedAt));
-  }
-
-  static Future<void> deleteSession(String id) async {
-    await _sessions.delete(id);
-  }
-
-  static Future<void> clearSessions() async {
-    await _sessions.clear();
-  }
-
-  static Future<void> saveReviewRecord(ReviewRecord record) async {
-    await _reviewRecords.put(record.id, record);
-  }
-
-  static List<ReviewRecord> getAllReviewRecords() {
-    return _reviewRecords.values.toList()
-      ..sort((a, b) => b.reviewedAt.compareTo(a.reviewedAt));
-  }
-
-  static Future<void> clearReviewRecords() async {
-    await _reviewRecords.clear();
+  static List<AnswerRecord> getAllAnswerRecords() {
+    return _answerRecords.values.toList()
+      ..sort((a, b) => b.answeredAt.compareTo(a.answeredAt));
   }
 
   static LevelChallengeProgress? getLevelChallengeProgress(

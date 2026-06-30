@@ -5,9 +5,8 @@ import '../repositories/book_repository.dart';
 import '../repositories/level_challenge_repository.dart';
 import '../repositories/level_study_repository.dart';
 import '../repositories/points_repository.dart';
-import '../repositories/session_repository.dart';
+
 import '../repositories/settings_repository.dart';
-import '../repositories/stats_repository.dart';
 import '../repositories/word_repository.dart';
 
 part 'repository_providers.g.dart';
@@ -20,12 +19,6 @@ SettingsRepository settingsRepository(Ref ref) => SettingsRepository();
 
 @Riverpod(keepAlive: true)
 WordRepository wordRepository(Ref ref) => WordRepository();
-
-@Riverpod(keepAlive: true)
-SessionRepository sessionRepository(Ref ref) => SessionRepository();
-
-@Riverpod(keepAlive: true)
-StatsRepository statsRepository(Ref ref) => StatsRepository();
 
 @Riverpod(keepAlive: true)
 LevelChallengeRepository levelChallengeRepository(Ref ref) =>

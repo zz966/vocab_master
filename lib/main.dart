@@ -8,7 +8,7 @@ import 'core/theme.dart';
 import 'features/shell/main_shell.dart';
 import 'providers/repository_providers.dart';
 import 'providers/settings_provider.dart';
-import 'repositories/session_repository.dart';
+
 import 'services/notification_service.dart';
 import 'services/tts_service.dart';
 import 'utils/reminder_message.dart';
@@ -34,7 +34,6 @@ Future<void> _initializeServices() async {
   await HiveService.init();
   await HiveService.importInitialBooks();
   await HiveService.seedDefaultSettingsIfNeeded();
-  await SessionRepository().cleanupStaleSessions();
   await TtsService.instance.init();
   await NotificationService.instance.init();
 }
@@ -63,18 +62,8 @@ class _VocabMasterAppState extends ConsumerState<VocabMasterApp> {
           await NotificationService.instance.requestPermissionIfNeeded();
           final body = await buildDailyReminderMessage(
             settingsRepository: ref.read(settingsRepositoryProvider),
-            statsRepository: ref.read(statsRepositoryProvider),
           );
           await NotificationService.instance.syncReminder(settings, body: body);
-          final weeklyBody = await buildWeeklyReportMessage(
-            settingsRepository: ref.read(settingsRepositoryProvider),
-            statsRepository: ref.read(statsRepositoryProvider),
-            bookRepository: ref.read(bookRepositoryProvider),
-          );
-          await NotificationService.instance.syncWeeklyReport(
-            settings,
-            body: weeklyBody,
-          );
         } on Object catch (error, stackTrace) {
           debugPrint('后台提醒同步失败: $error');
           debugPrint('$stackTrace');

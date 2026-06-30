@@ -1,50 +1,37 @@
-import '../core/hive/hive_service.dart';
-import '../models/learning_session.dart';
-import '../models/review_record.dart';
+import '../models/study_session_progress.dart';
 import '../models/word.dart';
-import '../repositories/session_repository.dart';
 import '../repositories/settings_repository.dart';
 import '../repositories/word_repository.dart';
-import '../utils/study_quality.dart';
 
 class StudyService {
   StudyService({
     required this._wordRepository,
     required this._settingsRepository,
-    required this._sessionRepository,
   });
 
   final WordRepository _wordRepository;
   final SettingsRepository _settingsRepository;
-  final SessionRepository _sessionRepository;
 
-  Future<void> rateWord({
+  Future<void> recordAnswer({
     required Word word,
-    required StudyQuality quality,
+    required bool isCorrect,
     String? bookId,
-    LearningSession? session,
+    StudySessionProgress? progress,
   }) async {
-    word.reviewCount += 1;
-    if (quality.value >= 2) {
-      word.familiarity = (word.familiarity + 1).clamp(0, 5);
+    if (isCorrect) {
+      word.learned = true;
     }
 
     await _wordRepository.saveWord(word, bookId: bookId);
 
-    final record = ReviewRecord(
-      id: HiveService.nextId('review'),
+    await _settingsRepository.upsertTodayAnswerRecord(
       wordId: word.id,
       bookId: bookId,
-      quality: quality.value,
-      reviewedAt: DateTime.now(),
     );
-    await _settingsRepository.addReviewRecord(record);
 
     final settings = await _settingsRepository.getSettings();
     await _settingsRepository.recordStudyDay(settings);
 
-    if (session != null) {
-      await _sessionRepository.recordResult(session, quality);
-    }
+    progress?.recordResult(isCorrect);
   }
 }

@@ -1,7 +1,8 @@
 name: vocab_master
 description: >
-  VocabMaster — 英语单词学习 App。内置词库与自定义单词书，
-  支持选择题/拼写/听音、关卡挑战、签到积分，面向 Android、iOS 与 Web。
+  VocabMaster — 英语单词学习 App。内置富内容词库，支持速刷/正常/挑战
+  三模式、查单词、选择题/拼写/听音、关卡挑战与签到积分，
+  面向 Android、iOS、Windows 与 Web。
 publish_to: 'none'
 version: 1.0.0+1
 

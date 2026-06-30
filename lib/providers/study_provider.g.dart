@@ -20,7 +20,7 @@ final ttsServiceProvider = Provider<TtsService>.internal(
 );
 
 typedef TtsServiceRef = ProviderRef<TtsService>;
-String _$studyServiceHash() => r'615dbb4de082cc24ec8a7283fc3850d10fb1d4a0';
+String _$studyServiceHash() => r'3493f9557bb0bb5a5a0b2bd6cf18790034fb9af8';
 
 /// See also [studyService].
 @ProviderFor(studyService)
@@ -34,23 +34,6 @@ final studyServiceProvider = AutoDisposeProvider<StudyService>.internal(
 );
 
 typedef StudyServiceRef = AutoDisposeProviderRef<StudyService>;
-String _$currentStudySessionHash() =>
-    r'e1bfecd0bd85d1c92f84764b7af96217a81c91b9';
-
-/// See also [CurrentStudySession].
-@ProviderFor(CurrentStudySession)
-final currentStudySessionProvider =
-    AutoDisposeNotifierProvider<CurrentStudySession, LearningSession?>.internal(
-  CurrentStudySession.new,
-  name: r'currentStudySessionProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$currentStudySessionHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$CurrentStudySession = AutoDisposeNotifier<LearningSession?>;
 String _$navigationIndexHash() => r'd414893e1ca6a80fb2253812d81d3fbffa99ea74';
 
 /// See also [NavigationIndex].

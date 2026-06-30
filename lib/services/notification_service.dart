@@ -77,7 +77,6 @@ class NotificationService {
 
     if (!settings.reminderEnabled) {
       await _plugin.cancel(1);
-      await _plugin.cancel(2);
       return;
     }
 
@@ -111,77 +110,13 @@ class NotificationService {
     await _plugin.zonedSchedule(
       1,
       'VocabMaster',
-      body ?? '该学习单词了！完成今日目标，保持连续打卡。',
+      body ?? '该学习单词了！完成今日目标，保持连续学习。',
       scheduled,
       details,
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
-    );
-  }
-
-  Future<void> syncWeeklyReport(
-    UserSettings settings, {
-    String? body,
-  }) async {
-    if (!_initialized) {
-      await init();
-    }
-    if (!_isSupported) {
-      return;
-    }
-
-    if (!settings.reminderEnabled) {
-      await _plugin.cancel(2);
-      return;
-    }
-
-    final time = _parseTime(settings.reminderTime ?? '20:00');
-    final now = tz.TZDateTime.now(tz.local);
-    var scheduled = _nextSundayAt(time.hour, time.minute);
-    if (scheduled.isBefore(now)) {
-      scheduled = scheduled.add(const Duration(days: 7));
-    }
-
-    const androidDetails = AndroidNotificationDetails(
-      'vocab_weekly',
-      '每周学习周报',
-      channelDescription: 'VocabMaster 每周日学习总结',
-      importance: Importance.high,
-      priority: Priority.high,
-    );
-    const iosDetails = DarwinNotificationDetails();
-    const details = NotificationDetails(
-      android: androidDetails,
-      iOS: iosDetails,
-    );
-
-    await _plugin.zonedSchedule(
-      2,
-      'VocabMaster 周报',
-      body ?? '查看本周学习成果，继续加油！',
-      scheduled,
-      details,
-      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
-      matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
-    );
-  }
-
-  tz.TZDateTime _nextSundayAt(int hour, int minute) {
-    var date = tz.TZDateTime.now(tz.local);
-    while (date.weekday != DateTime.sunday) {
-      date = date.add(const Duration(days: 1));
-    }
-    return tz.TZDateTime(
-      tz.local,
-      date.year,
-      date.month,
-      date.day,
-      hour,
-      minute,
     );
   }
 

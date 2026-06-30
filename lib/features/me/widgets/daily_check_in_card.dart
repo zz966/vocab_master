@@ -33,7 +33,7 @@ class DailyCheckInCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               status.checkedInToday
-                  ? '已签到 ✓ · 连续 ${status.streak} 天'
+                  ? '已签到 ✓ · 连续 ${status.checkInStreak} 天'
                   : '签到领取积分，连续签到天数会累计',
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
@@ -62,10 +62,10 @@ class DailyCheckInCard extends StatelessWidget {
                 minimumSize: const Size.fromHeight(52),
               ),
             ),
-            if (status.longestStreak > 0) ...[
+            if (status.longestCheckInStreak > 0) ...[
               const SizedBox(height: 12),
               Text(
-                '最长连续签到 ${status.longestStreak} 天',
+                '最长连续签到 ${status.longestCheckInStreak} 天',
                 textAlign: TextAlign.center,
                 style: theme.textTheme.bodySmall?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,

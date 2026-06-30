@@ -23,8 +23,8 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
       speechRate: fields[9] == null ? 0.45 : fields[9] as double,
       ttsAccent: fields[10] == null ? 'en-US' : fields[10] as String,
       reminderTime: fields[11] as String?,
-      currentStreak: fields[12] == null ? 0 : fields[12] as int,
-      longestStreak: fields[13] == null ? 0 : fields[13] as int,
+      studyStreak: fields[12] == null ? 0 : fields[12] as int,
+      longestStudyStreak: fields[13] == null ? 0 : fields[13] as int,
       lastStudyDate: fields[14] as DateTime?,
       updatedAt: fields[17] as DateTime?,
       pointsBalance: fields[18] == null ? 0 : fields[18] as int,
@@ -54,9 +54,9 @@ class UserSettingsAdapter extends TypeAdapter<UserSettings> {
       ..writeByte(11)
       ..write(obj.reminderTime)
       ..writeByte(12)
-      ..write(obj.currentStreak)
+      ..write(obj.studyStreak)
       ..writeByte(13)
-      ..write(obj.longestStreak)
+      ..write(obj.longestStudyStreak)
       ..writeByte(14)
       ..write(obj.lastStudyDate)
       ..writeByte(17)

@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../models/learning_session.dart';
 import '../services/study_service.dart';
 import '../services/tts_service.dart';
 import 'book_provider.dart';
@@ -19,18 +18,7 @@ StudyService studyService(Ref ref) {
   return StudyService(
     wordRepository: ref.watch(wordRepositoryProvider),
     settingsRepository: ref.watch(settingsRepositoryProvider),
-    sessionRepository: ref.watch(sessionRepositoryProvider),
   );
-}
-
-@riverpod
-class CurrentStudySession extends _$CurrentStudySession {
-  @override
-  LearningSession? build() => null;
-
-  void set(LearningSession? session) {
-    state = session;
-  }
 }
 
 @riverpod

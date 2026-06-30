@@ -3,26 +3,26 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../models/learning_session.dart';
+import '../../models/study_session_progress.dart';
 import '../../models/quiz_session_result.dart';
 import '../../models/word.dart';
 import '../../providers/study_provider.dart';
 import '../../utils/auto_read.dart';
-import '../../utils/study_quality.dart';
+
 
 class SpellingPage extends ConsumerStatefulWidget {
   const SpellingPage({
     super.key,
     required this.words,
     required this.bookIds,
-    this.session,
+    this.progress,
     this.onSpellingComplete,
     this.onProgressUpdate,
   });
 
   final List<Word> words;
   final List<String> bookIds;
-  final LearningSession? session;
+  final StudySessionProgress? progress;
   final Future<void> Function(QuizSessionResult result)? onSpellingComplete;
   final VoidCallback? onProgressUpdate;
 
@@ -110,11 +110,11 @@ class _SpellingPageState extends ConsumerState<SpellingPage> {
     final bookId =
         widget.bookIds.length == 1 ? widget.bookIds.first : null;
 
-    await ref.read(studyServiceProvider).rateWord(
+    await ref.read(studyServiceProvider).recordAnswer(
           word: _currentWord,
-          quality: correct ? StudyQuality.good : StudyQuality.again,
+          isCorrect: correct,
           bookId: bookId,
-          session: widget.session,
+          progress: widget.progress,
         );
 
     invalidateStudyData(ref);

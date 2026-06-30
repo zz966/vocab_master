@@ -1,6 +1,5 @@
+import 'package:vocab_master/models/answer_record.dart';
 import 'package:vocab_master/models/book_model.dart';
-import 'package:vocab_master/models/learning_session.dart';
-import 'package:vocab_master/models/review_record.dart';
 import 'package:vocab_master/models/word.dart';
 
 List<BookWordExample> _examplesFromStrings(List<String>? examples) {
@@ -26,9 +25,7 @@ Word testWord({
   String english = 'test',
   String chinese = '测试',
   List<String> bookIds = const ['book_1'],
-  int reviewCount = 0,
-  DateTime? nextReview,
-  int familiarity = 0,
+  bool learned = false,
   List<String>? examples,
 }) {
   return BookWord(
@@ -36,9 +33,7 @@ Word testWord({
     word: english,
     definitionCn: chinese,
     bookIds: bookIds,
-    reviewCount: reviewCount,
-    lastReviewTime: nextReview,
-    masteryLevel: familiarity,
+    learned: learned,
     sentenceExamples: _examplesFromStrings(examples),
   );
 }
@@ -59,38 +54,16 @@ Book testBook({
   );
 }
 
-LearningSession testSession({
-  String id = 'session_1',
-  String sessionType = 'quiz',
-  List<String> bookIds = const ['book_1'],
-  DateTime? startedAt,
-  DateTime? completedAt,
-  int wordsStudied = 0,
-  int wordsCorrect = 0,
-}) {
-  return LearningSession(
-    id: id,
-    sessionType: sessionType,
-    bookIds: bookIds,
-    startedAt: startedAt,
-    completedAt: completedAt,
-    wordsStudied: wordsStudied,
-    wordsCorrect: wordsCorrect,
-  );
-}
-
-ReviewRecord testReviewRecord({
-  String id = 'review_1',
+AnswerRecord testAnswerRecord({
+  String id = 'answer_1',
   String wordId = 'word_1',
   String? bookId = 'book_1',
-  int quality = 3,
-  DateTime? reviewedAt,
+  DateTime? answeredAt,
 }) {
-  return ReviewRecord(
+  return AnswerRecord(
     id: id,
     wordId: wordId,
     bookId: bookId,
-    quality: quality,
-    reviewedAt: reviewedAt ?? DateTime.now(),
+    answeredAt: answeredAt ?? DateTime.now(),
   );
 }

@@ -23,10 +23,10 @@ class UserSettings {
   String? reminderTime;
 
   @HiveField(12, defaultValue: 0)
-  int currentStreak;
+  int studyStreak;
 
   @HiveField(13, defaultValue: 0)
-  int longestStreak;
+  int longestStudyStreak;
 
   @HiveField(14)
   DateTime? lastStudyDate;
@@ -59,8 +59,8 @@ class UserSettings {
     this.speechRate = 0.45,
     this.ttsAccent = 'en-US',
     this.reminderTime,
-    this.currentStreak = 0,
-    this.longestStreak = 0,
+    this.studyStreak = 0,
+    this.longestStudyStreak = 0,
     this.lastStudyDate,
     DateTime? updatedAt,
     this.pointsBalance = 0,

@@ -47,11 +47,7 @@ void preserveWordLearningState({
     if (previous == null) {
       continue;
     }
-    word
-      ..masteryLevel = previous.masteryLevel
-      ..lastReviewTime = previous.lastReviewTime
-      ..reviewCount = previous.reviewCount
-      ..correctStreak = previous.correctStreak;
+    word.learned = previous.learned;
   }
 }
 

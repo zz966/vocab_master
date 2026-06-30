@@ -1,7 +1,7 @@
 {
   "bookId": "TEST_40",
   "bookName": "测试词库（40词）",
-  "description": "用于流程测试：第1关30词 + 第2关10词 | content-v7",
+  "description": "用于流程测试：第1关30词 + 第2关10词 | content-v8",
   "totalWords": 40,
   "cover": "",
   "category": "test",
@@ -48,8 +48,6 @@
         }
       ],
       "root": "drift",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -134,8 +132,6 @@
         }
       ],
       "root": "after",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -200,8 +196,6 @@
         }
       ],
       "root": "after",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -261,8 +255,6 @@
         }
       ],
       "root": "ampl",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -347,8 +339,6 @@
         }
       ],
       "root": "cert",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -425,8 +415,6 @@
         }
       ],
       "root": "sur",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -503,8 +491,6 @@
         }
       ],
       "root": "tain",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -577,8 +563,6 @@
         }
       ],
       "root": "opsy",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -651,8 +635,6 @@
         }
       ],
       "root": "bibl",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -761,8 +743,6 @@
         }
       ],
       "root": "char",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -847,8 +827,6 @@
         }
       ],
       "root": "bin",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -1061,8 +1039,6 @@
         }
       ],
       "root": "cept",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -1283,8 +1259,6 @@
         }
       ],
       "root": "gress",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -1401,8 +1375,6 @@
         }
       ],
       "root": "sequ",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -1535,8 +1507,6 @@
         }
       ],
       "root": "tag",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -1621,8 +1591,6 @@
         }
       ],
       "root": "tempor",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -1715,8 +1683,6 @@
         }
       ],
       "root": "tempt",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -1801,8 +1767,6 @@
         }
       ],
       "root": "",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -1879,8 +1843,6 @@
         }
       ],
       "root": "priv",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -1949,8 +1911,6 @@
         }
       ],
       "root": "tect",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2027,8 +1987,6 @@
         }
       ],
       "root": "ter",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2105,8 +2063,6 @@
         }
       ],
       "root": "grace",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -2187,8 +2143,6 @@
         }
       ],
       "root": "pel",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2265,8 +2219,6 @@
         }
       ],
       "root": "put",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2419,8 +2371,6 @@
         }
       ],
       "root": "semin",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2489,8 +2439,6 @@
         }
       ],
       "root": "",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -2567,8 +2515,6 @@
         }
       ],
       "root": "drag",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2793,8 +2739,6 @@
         }
       ],
       "root": "sur",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -2879,8 +2823,6 @@
         }
       ],
       "root": "spec",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adv.",
@@ -2965,8 +2907,6 @@
         }
       ],
       "root": "pel",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "v.",
@@ -3035,8 +2975,6 @@
         }
       ],
       "root": "fat",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3113,8 +3051,6 @@
         }
       ],
       "root": "fed",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -3335,8 +3271,6 @@
         }
       ],
       "root": "gen",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3421,8 +3355,6 @@
         }
       ],
       "root": "grit",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3507,8 +3439,6 @@
         }
       ],
       "root": "grit",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",
@@ -3577,8 +3507,6 @@
         }
       ],
       "root": "gut",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3651,8 +3579,6 @@
         }
       ],
       "root": "hip",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3729,8 +3655,6 @@
         }
       ],
       "root": "mort",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3799,8 +3723,6 @@
         }
       ],
       "root": "dol",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "n.",
@@ -3860,8 +3782,6 @@
         }
       ],
       "root": "sec",
-      "masteryLevel": 0,
-      "lastReviewTime": null,
       "definitions": [
         {
           "partOfSpeech": "adj.",

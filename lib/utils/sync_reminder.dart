@@ -8,21 +8,6 @@ import 'reminder_message.dart';
 Future<void> syncDailyReminder(WidgetRef ref, UserSettings settings) async {
   final body = await buildDailyReminderMessage(
     settingsRepository: ref.read(settingsRepositoryProvider),
-    statsRepository: ref.read(statsRepositoryProvider),
   );
   await NotificationService.instance.syncReminder(settings, body: body);
-}
-
-Future<void> syncWeeklyReport(WidgetRef ref, UserSettings settings) async {
-  final body = await buildWeeklyReportMessage(
-    settingsRepository: ref.read(settingsRepositoryProvider),
-    statsRepository: ref.read(statsRepositoryProvider),
-    bookRepository: ref.read(bookRepositoryProvider),
-  );
-  await NotificationService.instance.syncWeeklyReport(settings, body: body);
-}
-
-Future<void> syncAllReminders(WidgetRef ref, UserSettings settings) async {
-  await syncDailyReminder(ref, settings);
-  await syncWeeklyReport(ref, settings);
 }

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/study_provider.dart';
 import '../books/books_page.dart';
 import '../home/home_page.dart';
-import '../stats/me_page.dart';
+import '../me/me_page.dart';
 import '../search/word_lookup_page.dart';
 
 class MainShell extends ConsumerWidget {

@@ -108,33 +108,24 @@ class BookWord {
   String root;
 
   @HiveField(8)
-  int masteryLevel;
+  bool learned;
 
   @HiveField(9)
-  DateTime? lastReviewTime;
-
-  @HiveField(10)
-  int reviewCount;
-
-  @HiveField(11)
-  int correctStreak;
-
-  @HiveField(12)
   List<WordDefinition>? definitions;
 
-  @HiveField(13)
+  @HiveField(10)
   List<WordPhrase>? collocations;
 
-  @HiveField(14)
+  @HiveField(11)
   MemoryTips? memoryTips;
 
-  @HiveField(15)
+  @HiveField(12)
   List<String> bookIds;
 
-  @HiveField(16)
+  @HiveField(13)
   List<WordDefinition>? englishDefinitions;
 
-  @HiveField(17)
+  @HiveField(14)
   List<ConfusableWord>? synonymDetails;
 
   BookWord({
@@ -146,10 +137,7 @@ class BookWord {
     this.definitionCn = '',
     List<BookWordExample>? sentenceExamples,
     this.root = '',
-    this.masteryLevel = 0,
-    this.lastReviewTime,
-    this.reviewCount = 0,
-    this.correctStreak = 0,
+    this.learned = false,
     this.definitions,
     this.collocations,
     this.memoryTips,
@@ -175,12 +163,7 @@ class BookWord {
             .toList(),
         synonymDetails: synonymDetails,
         root: json['root'] as String? ?? '',
-        masteryLevel: json['masteryLevel'] as int? ?? 0,
-        lastReviewTime: json['lastReviewTime'] == null
-            ? null
-            : DateTime.tryParse(json['lastReviewTime'].toString()),
-        reviewCount: json['reviewCount'] as int? ?? 0,
-        correctStreak: json['correctStreak'] as int? ?? 0,
+        learned: json['learned'] as bool? ?? false,
         bookIds: List<String>.from(json['bookIds'] ?? const []),
         definitions: _definitionsFromJson(json['definitions']),
         englishDefinitions: _definitionsFromJson(json['englishDefinitions']),
@@ -318,10 +301,7 @@ class BookWord {
               )
               .toList(),
         'root': root,
-        'masteryLevel': masteryLevel,
-        'lastReviewTime': lastReviewTime?.toIso8601String(),
-        'reviewCount': reviewCount,
-        'correctStreak': correctStreak,
+        if (learned) 'learned': learned,
         if (bookIds.isNotEmpty) 'bookIds': bookIds,
         if (definitions != null && definitions!.isNotEmpty)
           'definitions': definitions!
@@ -389,14 +369,6 @@ class BookWord {
     phoneticUk = trimmed;
     phoneticUs = trimmed;
   }
-
-  int get familiarity => masteryLevel;
-
-  set familiarity(int value) => masteryLevel = value;
-
-  DateTime? get nextReview => lastReviewTime;
-
-  set nextReview(DateTime? value) => lastReviewTime = value;
 
   List<String> get synonyms {
     if (synonymDetails == null || synonymDetails!.isEmpty) {

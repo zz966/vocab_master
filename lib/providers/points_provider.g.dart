@@ -6,7 +6,7 @@ part of 'points_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$checkInStatusHash() => r'ab1ff5a2b0a01684f9fd54ee9e4ebea2bdd60c24';
+String _$checkInStatusHash() => r'6ced2a267d4f0df9192bf110bd223de2e4dcafad';
 
 /// See also [checkInStatus].
 @ProviderFor(checkInStatus)

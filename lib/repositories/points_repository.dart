@@ -16,8 +16,8 @@ class PointsRepository {
   CheckInStatus buildStatus(UserSettings settings) {
     return CheckInStatus(
       checkedInToday: hasCheckedInToday(settings),
-      streak: settings.checkInStreak,
-      longestStreak: settings.longestCheckInStreak,
+      checkInStreak: settings.checkInStreak,
+      longestCheckInStreak: settings.longestCheckInStreak,
       pointsBalance: settings.pointsBalance,
       todayReward: PointsConstants.dailyCheckInReward,
       recentCheckInDates: settings.checkInDates,
@@ -34,7 +34,7 @@ class PointsRepository {
         alreadyCheckedIn: true,
         pointsEarned: 0,
         newBalance: settings.pointsBalance,
-        streak: settings.checkInStreak,
+        checkInStreak: settings.checkInStreak,
       );
     }
 
@@ -44,7 +44,7 @@ class PointsRepository {
     final nextStreak = calculateNextCheckInStreak(
       today: today,
       lastCheckIn: settings.lastCheckInDate,
-      currentStreak: settings.checkInStreak,
+      checkInStreak: settings.checkInStreak,
     );
 
     settings
@@ -73,7 +73,7 @@ class PointsRepository {
       alreadyCheckedIn: false,
       pointsEarned: reward,
       newBalance: settings.pointsBalance,
-      streak: settings.checkInStreak,
+      checkInStreak: settings.checkInStreak,
     );
   }
 

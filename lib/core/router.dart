@@ -6,7 +6,7 @@ import '../features/books/level_selection_page.dart';
 import '../features/books/quick_browse_page.dart';
 import '../features/home/home_page.dart';
 import '../features/shell/main_shell.dart';
-import '../features/stats/me_page.dart';
+import '../features/me/me_page.dart';
 import '../features/search/word_lookup_page.dart';
 import '../features/study/word_detail_page.dart';
 

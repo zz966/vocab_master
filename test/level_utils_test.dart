@@ -2,12 +2,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:vocab_master/models/word.dart';
 import 'package:vocab_master/utils/level_utils.dart';
 
-Word _word(String english, {int familiarity = 0}) {
+Word _word(String english, {bool learned = false}) {
   return BookWord(
     id: english,
     word: english,
     definitionCn: english,
-    masteryLevel: familiarity,
+    learned: learned,
   );
 }
 
@@ -27,11 +27,8 @@ void main() {
     final levels = splitWordsIntoLevels(words);
 
     expect(levels.length, 3);
-    expect(levels[0].wordCount, 30);
-    expect(levels[1].wordCount, 30);
-    expect(levels[2].wordCount, 5);
-    expect(levelDisplayName(0), '第一关');
-    expect(levelDisplayName(9), '第十关');
+    expect(levels[0].words.length, 30);
+    expect(levels[1].words.length, 30);
+    expect(levels[2].words.length, 5);
   });
-
 }

@@ -15,8 +15,8 @@ CheckInStatus checkInStatus(Ref ref) {
   if (settings == null) {
     return const CheckInStatus(
       checkedInToday: false,
-      streak: 0,
-      longestStreak: 0,
+      checkInStreak: 0,
+      longestCheckInStreak: 0,
       pointsBalance: 0,
       todayReward: PointsConstants.dailyCheckInReward,
       recentCheckInDates: [],

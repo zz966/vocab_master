@@ -64,7 +64,7 @@ void trimCheckInHistory(UserSettings settings) {
 int calculateNextCheckInStreak({
   required DateTime today,
   DateTime? lastCheckIn,
-  required int currentStreak,
+  required int checkInStreak,
 }) {
   if (lastCheckIn == null) {
     return 1;
@@ -72,12 +72,12 @@ int calculateNextCheckInStreak({
 
   final lastDay = dateOnly(lastCheckIn);
   if (isSameDay(lastDay, today)) {
-    return currentStreak;
+    return checkInStreak;
   }
 
   final diff = today.difference(lastDay).inDays;
   if (diff == 1) {
-    return currentStreak + 1;
+    return checkInStreak + 1;
   }
 
   return 1;

@@ -9,11 +9,8 @@ void main() {
       expect(StudyMode.fromId('listening'), StudyMode.listening);
     });
 
-    test('maps legacy flashcard id to quiz', () {
-      expect(StudyMode.fromId('flashcard'), StudyMode.quiz);
-    });
-
     test('falls back to quiz for unknown id', () {
+      expect(StudyMode.fromId('flashcard'), StudyMode.quiz);
       expect(StudyMode.fromId('unknown'), StudyMode.quiz);
       expect(StudyMode.fromId(''), StudyMode.quiz);
     });
