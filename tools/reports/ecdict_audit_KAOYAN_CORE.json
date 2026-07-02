@@ -1,0 +1,2583 @@
+{
+  "book_id": "KAOYAN_CORE",
+  "book_file": "kaoyan_core.json",
+  "ecdict_source": "E:\\FlutterProject\\vocab_master\\tools\\ecdict\\stardict.db",
+  "total_words": 5047,
+  "verified": 4790,
+  "definition_mismatch": [
+    {
+      "id": "KAOYAN_CORE_4815",
+      "word": "a.",
+      "definition_cn": "n. 天主教徒",
+      "phonetic_uk": "/也作catholic/",
+      "phonetic_us": "/也作catholic/",
+      "ecdict_translation": "[医] 调节, 适应, 安培, 阳极, 正极, 前, 水, 水剂, 动脉",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "KAOYAN_CORE_617",
+      "word": "abdomen",
+      "definition_cn": "n. 腹，下腹(胸部到腿部的部分)",
+      "phonetic_uk": "/'æbdəmən; æb'dəʊmən/",
+      "phonetic_us": "/'æbdəmən/",
+      "ecdict_translation": "n. 腹部\n[医] 腹[部]",
+      "ecdict_phonetic": "'æbdәmen",
+      "ecdict_definition": "n. the region of the body of a vertebrate between the thorax and the pelvis"
+    },
+    {
+      "id": "KAOYAN_CORE_706",
+      "word": "accommodate",
+      "definition_cn": "v. 向…提供住处；对...予以照顾性考虑",
+      "phonetic_uk": "/ə'kɒmədeɪt/",
+      "phonetic_us": "/ə'kɑmədet/",
+      "ecdict_translation": "vt. 使适应, 调和, 通融, 容纳, 向...提供\nvi. 适应",
+      "ecdict_phonetic": "ә'kɒmәdeit",
+      "ecdict_definition": "v. provide with something desired or needed\nv. have room for; hold without crowding\nv. make (one thing) compatible with (another)"
+    },
+    {
+      "id": "KAOYAN_CORE_1455",
+      "word": "achieve",
+      "definition_cn": "v. 取得；获得；实现；成功",
+      "phonetic_uk": "/ə'tʃiːv/",
+      "phonetic_us": "/ə'tʃiv/",
+      "ecdict_translation": "vt. 完成, 达到\nvi. 如愿以偿",
+      "ecdict_phonetic": "ә'tʃi:v",
+      "ecdict_definition": "v. to gain with effort"
+    },
+    {
+      "id": "KAOYAN_CORE_2456",
+      "word": "acquaintance",
+      "definition_cn": "n. 熟人；相识；了解；知道",
+      "phonetic_uk": "/ə'kweɪnt(ə)ns/",
+      "phonetic_us": "/ə'kwentəns/",
+      "ecdict_translation": "n. 认识, 相识者",
+      "ecdict_phonetic": "ә'kweintәns",
+      "ecdict_definition": "n. personal knowledge or information about someone or something\nn. a relationship less intimate than friendship\nn. a person with whom you are acquainted"
+    },
+    {
+      "id": "KAOYAN_CORE_3",
+      "word": "activate",
+      "definition_cn": "v. 启动，激活；驱动，驱使；使开始起作用",
+      "phonetic_uk": "/'æktɪveɪt/",
+      "phonetic_us": "/'æktə'vet/",
+      "ecdict_translation": "vt. 使活动, 使激活, 正式建成\nvi. 有活力",
+      "ecdict_phonetic": "'æktiveit",
+      "ecdict_definition": "v. make active or more active\nv. make more adsorptive\nv. aerate (sewage) so as to favor the growth of organisms that decompose organic matter\nv. make (substances) radioactive"
+    },
+    {
+      "id": "KAOYAN_CORE_5004",
+      "word": "affiliate",
+      "definition_cn": "v. 隶属于； n. 附属机构， 分公司",
+      "phonetic_uk": "/ə'fɪlɪeɪt/",
+      "phonetic_us": "/ə'fɪlɪet/",
+      "ecdict_translation": "vt. 使紧密联系, 使附属, 接纳, 收养\nvi. 发生联系, 参加",
+      "ecdict_phonetic": "ә'filieit",
+      "ecdict_definition": "n. a subordinate or subsidiary associate; a person who is affiliated with another or with an organization\nn. a subsidiary or subordinate organization that is affiliated with another organization\nv. join in an affiliation"
+    },
+    {
+      "id": "KAOYAN_CORE_14",
+      "word": "agency",
+      "definition_cn": "n. 代理(处)；代办处；[美](政府的)机关，厅",
+      "phonetic_uk": "/'eɪdʒ(ə)nsɪ/",
+      "phonetic_us": "/'edʒənsi/",
+      "ecdict_translation": "n. 代理机构, 经销商, 中介\n[化] 办事处",
+      "ecdict_phonetic": "'eidʒәnsi",
+      "ecdict_definition": "n. an administrative unit of government\nn. a business that serves other businesses\nn. the state of being in action or exerting power"
+    },
+    {
+      "id": "KAOYAN_CORE_15",
+      "word": "agenda",
+      "definition_cn": "n. 议事日程，记事册",
+      "phonetic_uk": "/ə'dʒendə/",
+      "phonetic_us": "/ə'dʒɛndə/",
+      "ecdict_translation": "pl. 议程, 日常工作事项\n[计] 待议事件",
+      "ecdict_phonetic": "ә'dʒendә",
+      "ecdict_definition": "n. a temporally organized plan for matters to be attended to\nn. a list of matters to be taken up (as at a meeting)"
+    },
+    {
+      "id": "KAOYAN_CORE_17",
+      "word": "agony",
+      "definition_cn": "n. (精神或肉体的)极大痛苦，创伤",
+      "phonetic_uk": "/'ægənɪ/",
+      "phonetic_us": "/'æɡəni/",
+      "ecdict_translation": "n. 极大的痛苦, 挣扎\n[医] 濒死苦闷; 剧痛",
+      "ecdict_phonetic": "'ægәni",
+      "ecdict_definition": "n. intense feelings of suffering; acute mental or physical pain\nn. a state of acute pain"
+    },
+    {
+      "id": "KAOYAN_CORE_3253",
+      "word": "album",
+      "definition_cn": "n. 相簿；唱片集；集邮簿；签名纪念册",
+      "phonetic_uk": "/'ælbəm/",
+      "phonetic_us": "/'ælbəm/",
+      "ecdict_translation": "n. 粘贴簿, 唱片套\n[医] 白色物",
+      "ecdict_phonetic": "'ælbәm",
+      "ecdict_definition": "n. one or more recordings issued together; originally released on 12-inch phonograph records (usually with attractive record covers) and later on cassette audiotape and compact disc\nn. a book of blank pages with pockets or envelopes; for organizing photographs or stamp collections etc"
+    },
+    {
+      "id": "KAOYAN_CORE_4790",
+      "word": "allegiance",
+      "definition_cn": "n. 拥护； 忠诚",
+      "phonetic_uk": "/ə'liːdʒəns/",
+      "phonetic_us": "/ə'lidʒəns/",
+      "ecdict_translation": "n. 忠贞, 效忠",
+      "ecdict_phonetic": "ә'li:dʒәns",
+      "ecdict_definition": "n. the loyalty that citizens owe to their country (or subjects to their sovereign)"
+    },
+    {
+      "id": "KAOYAN_CORE_1863",
+      "word": "ambiguous",
+      "definition_cn": "adj. 模糊不清的；引起歧义的",
+      "phonetic_uk": "/æm'bɪgjʊəs/",
+      "phonetic_us": "/æm'bɪɡjuəs/",
+      "ecdict_translation": "a. 不明确的, 模棱两可的\n[法] 意思含糊的, 模棱两可的, 暧昧的",
+      "ecdict_phonetic": "æm'bigjuәs",
+      "ecdict_definition": "a. having more than one possible meaning\ns. having no intrinsic or objective meaning; not organized in conventional patterns"
+    },
+    {
+      "id": "KAOYAN_CORE_4653",
+      "word": "ambitious",
+      "definition_cn": "adj. 野心勃勃的；有雄心的；热望的；炫耀的",
+      "phonetic_uk": "/æm'bɪʃəs/",
+      "phonetic_us": "/æm'bɪʃəs/",
+      "ecdict_translation": "a. 有野心的, 抱负不凡的, 雄心勃勃的",
+      "ecdict_phonetic": "æm'biʃәs",
+      "ecdict_definition": "a. having a strong desire for success or achievement\ns. requiring full use of your abilities or resources"
+    },
+    {
+      "id": "KAOYAN_CORE_691",
+      "word": "amid",
+      "definition_cn": "prep. 在…中间，在…之中，被…围绕",
+      "phonetic_uk": "/ə'mɪd/",
+      "phonetic_us": "/ə'mɪd/",
+      "ecdict_translation": "prep. 在其间, 在其中\n[经] 在...中",
+      "ecdict_phonetic": "ә'mid",
+      "ecdict_definition": "prep. See Amidst.\nprep. In the midst or middle of; surrounded or encompassed by;\n   among."
+    },
+    {
+      "id": "KAOYAN_CORE_718",
+      "word": "among",
+      "definition_cn": "prep. 在…之中；在一群(组)之中；于…之间",
+      "phonetic_uk": "/ə'mʌŋ/",
+      "phonetic_us": "/ə'mʌŋ/",
+      "ecdict_translation": "prep. 在...之中",
+      "ecdict_phonetic": "ә'mʌŋ",
+      "ecdict_definition": "prep. Alt. of Amongst"
+    },
+    {
+      "id": "KAOYAN_CORE_4977",
+      "word": "ape",
+      "definition_cn": "n. 猿 <； v. 模仿",
+      "phonetic_uk": "/eɪp/",
+      "phonetic_us": "/ep/",
+      "ecdict_translation": "n. 无尾猿\n[计] 应用程序评价",
+      "ecdict_phonetic": "eip",
+      "ecdict_definition": "n. any of various primates with short tails or no tail at all\nv. imitate uncritically and in every aspect"
+    },
+    {
+      "id": "KAOYAN_CORE_857",
+      "word": "apologise",
+      "definition_cn": "v. (to,for)道歉，认错",
+      "phonetic_uk": "/ə'pɒlədʒaɪz/",
+      "phonetic_us": "/ə'pɔlədʒaɪz/",
+      "ecdict_translation": "vi. 道歉（等于apologize）",
+      "ecdict_phonetic": "ә'pɔlәdʒaiz",
+      "ecdict_definition": "v defend, explain, clear away, or make excuses for by reasoning\nv acknowledge faults or shortcomings or failing"
+    },
+    {
+      "id": "KAOYAN_CORE_22",
+      "word": "articulate",
+      "definition_cn": "adj. 善于表达的；有关节相连的； v. 清楚地讲话",
+      "phonetic_uk": "/ɑ:'tɪkjʊleɪt/",
+      "phonetic_us": "/ɑr'tɪkjulet/",
+      "ecdict_translation": "a. 发音清晰的, 口才好的\nvt. 明白地说, 以关节连接, 使成为系统的整体",
+      "ecdict_phonetic": "ɑ:'tikjulit",
+      "ecdict_definition": "v. unite by forming a joint or joints\nv. express or state clearly\na. expressing yourself easily or characterized by clear expressive language"
+    },
+    {
+      "id": "KAOYAN_CORE_25",
+      "word": "artistic",
+      "definition_cn": "adj. 艺术(家)的，美术(家)的；善于艺术创作的",
+      "phonetic_uk": "/ɑː'tɪstɪk/",
+      "phonetic_us": "/ɑr'tɪstɪk/",
+      "ecdict_translation": "a. 艺术的, 艺术家的, 富有艺术性的",
+      "ecdict_phonetic": "ɑ:'tistik",
+      "ecdict_definition": "a. relating to or characteristic of art or artists\ns. satisfying aesthetic standards and sensibilities"
+    },
+    {
+      "id": "KAOYAN_CORE_5033",
+      "word": "available",
+      "definition_cn": "adj. 可用的， 可得到的；可以见到的， 随时可来的",
+      "phonetic_uk": "/ə'veɪləbl/",
+      "phonetic_us": "/ə'veləbl/",
+      "ecdict_translation": "a. 可利用的, 可获得的, 有效的\n[医] 有效的, 可得的",
+      "ecdict_phonetic": "ә'veilәbl",
+      "ecdict_definition": "a. obtainable or accessible and ready for use or service\ns. not busy; not otherwise committed\ns. convenient for use or disposal"
+    },
+    {
+      "id": "KAOYAN_CORE_4819",
+      "word": "ax",
+      "definition_cn": "n. 斧",
+      "phonetic_uk": "/æks/",
+      "phonetic_us": "/æks/",
+      "ecdict_translation": "n. 斧头\nvt. 用斧削或砍, 削减",
+      "ecdict_phonetic": "æks",
+      "ecdict_definition": "n. an edge tool with a heavy bladed head mounted across a handle\nv. terminate"
+    },
+    {
+      "id": "KAOYAN_CORE_3744",
+      "word": "axe",
+      "definition_cn": "n. 斧； v. 削减；用斧砍",
+      "phonetic_uk": "/æks/",
+      "phonetic_us": "/æks/",
+      "ecdict_translation": "n. 斧, 斧头\nvt. 削减(人员、经费、计划、机构等)",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "v. chop or split with an ax"
+    },
+    {
+      "id": "KAOYAN_CORE_4456",
+      "word": "badminton",
+      "definition_cn": "n. 羽毛球",
+      "phonetic_uk": "/'bædmɪnt(ə)n/",
+      "phonetic_us": "/'bædmɪntən/",
+      "ecdict_translation": "n. 羽毛球运动",
+      "ecdict_phonetic": "'bædmintәn",
+      "ecdict_definition": "n. a game played on a court with light long-handled rackets used to volley a shuttlecock over a net"
+    },
+    {
+      "id": "KAOYAN_CORE_32",
+      "word": "banner",
+      "definition_cn": "n. 旗(帜)",
+      "phonetic_uk": "/'bænə/",
+      "phonetic_us": "/'bænɚ/",
+      "ecdict_translation": "n. 旗帜\na. 显著的, 特别好的",
+      "ecdict_phonetic": "'bænә",
+      "ecdict_definition": "n. long strip of cloth or paper used for decoration or advertising\ns. unusually good; outstanding"
+    },
+    {
+      "id": "KAOYAN_CORE_40",
+      "word": "barely",
+      "definition_cn": "adv. 赤裸裸地,无遮蔽地;仅仅,勉强,几乎没有",
+      "phonetic_uk": "/'beəlɪ/",
+      "phonetic_us": "/'bɛrli/",
+      "ecdict_translation": "adv. 几乎不",
+      "ecdict_phonetic": "'bєәli",
+      "ecdict_definition": "r. only a very short time before"
+    },
+    {
+      "id": "KAOYAN_CORE_55",
+      "word": "basket",
+      "definition_cn": "n. 筐，篮，篓",
+      "phonetic_uk": "/'bɑːskɪt/",
+      "phonetic_us": "/'bæskɪt/",
+      "ecdict_translation": "n. 篮, 篮子\nvt. 装入篮",
+      "ecdict_phonetic": "'bɑ:skit",
+      "ecdict_definition": "n. a container that is usually woven and has handles\nn. the quantity contained in a basket\nn. horizontal circular metal hoop supporting a net through which players try to throw the basketball\nn. a score in basketball made by throwing the ball through the hoop"
+    },
+    {
+      "id": "KAOYAN_CORE_4901",
+      "word": "bean",
+      "definition_cn": "n. 豆， 菜豆， 蚕豆",
+      "phonetic_uk": "/biːn/",
+      "phonetic_us": "/bin/",
+      "ecdict_translation": "n. 豆子\n[化] 油嘴; 豆",
+      "ecdict_phonetic": "bi:n",
+      "ecdict_definition": "n. any of various edible seeds of plants of the family Leguminosae used for food\nn. any of various seeds or fruits that are beans or resemble beans\nn. any of various leguminous plants grown for their edible seeds and pods\nv. hit on the head, especially with a pitched baseball"
+    },
+    {
+      "id": "KAOYAN_CORE_4764",
+      "word": "beast",
+      "definition_cn": "n. 兽， 牲畜 A；凶残的人； 举止粗鲁的人",
+      "phonetic_uk": "/biːst/",
+      "phonetic_us": "/bist/",
+      "ecdict_translation": "n. 畜生, 动物, 野兽, 兽性",
+      "ecdict_phonetic": "bi:st",
+      "ecdict_definition": "n. a cruelly rapacious person"
+    },
+    {
+      "id": "KAOYAN_CORE_3513",
+      "word": "bell",
+      "definition_cn": "n. 铃，钟；钟声，铃声；钟状物； v. 装钟于，系铃于",
+      "phonetic_uk": "/bel/",
+      "phonetic_us": "/bɛl/",
+      "ecdict_translation": "n. 铃, 钟\n[计] 响铃命令",
+      "ecdict_phonetic": "bel",
+      "ecdict_definition": "n. a hollow device made of metal that makes a ringing sound when struck\nn. the sound of a bell being struck\nn. (nautical) each of the eight half-hour units of nautical time signaled by strokes of a ship's bell; eight bells signals 4:00, 8:00, or 12:00 o'clock, either a.m. or p.m.\nn. the shape of a bell"
+    },
+    {
+      "id": "KAOYAN_CORE_3731",
+      "word": "bench",
+      "definition_cn": "n. 长凳；工作台；替补队员； v. 给…以席位；为…设置条凳",
+      "phonetic_uk": "/ben(t)ʃ/",
+      "phonetic_us": "/bɛntʃ/",
+      "ecdict_translation": "n. 长椅子\n[机] 台",
+      "ecdict_phonetic": "bentʃ",
+      "ecdict_definition": "n. a long seat for more than one person\nn. the magistrate or judge or judges sitting in court in judicial capacity to compose the court collectively\nn. the reserve players on a team\nn. (law) the seat for judges in a courtroom"
+    },
+    {
+      "id": "KAOYAN_CORE_3062",
+      "word": "beneath",
+      "definition_cn": "prep. 在…之下； adv. 在下方",
+      "phonetic_uk": "/bɪ'niːθ/",
+      "phonetic_us": "/bɪˈniːθ/",
+      "ecdict_translation": "prep. 在...下方\nadv. 在...下方",
+      "ecdict_phonetic": "bi'ni:θ",
+      "ecdict_definition": "r in or to a place that is lower"
+    },
+    {
+      "id": "KAOYAN_CORE_1023",
+      "word": "beside",
+      "definition_cn": "prep. 在...旁边，在...附近；和...相比",
+      "phonetic_uk": "/bɪ'saɪd/",
+      "phonetic_us": "/bɪ'saɪd/",
+      "ecdict_translation": "prep. 在旁边",
+      "ecdict_phonetic": "bi'said",
+      "ecdict_definition": "n. At the side of; on one side of.\nn. Aside from; out of the regular course or order of; in a\n   state of deviation from; out of.\nn. Over and above; distinct from; in addition to.\nadv. On one side.\nadv. More than that; over and above; not included in the\n   number, or in what has been mentioned; moreover; in addition."
+    },
+    {
+      "id": "KAOYAN_CORE_2164",
+      "word": "bible",
+      "definition_cn": "n. 有权威的书",
+      "phonetic_uk": "/bible/",
+      "phonetic_us": "/bible/",
+      "ecdict_translation": "n. 圣经",
+      "ecdict_phonetic": "'baibl",
+      "ecdict_definition": "n. the sacred writings of the Christian religions\nn. a book regarded as authoritative in its field"
+    },
+    {
+      "id": "KAOYAN_CORE_3343",
+      "word": "bone",
+      "definition_cn": "n. 骨；骨骼； v. 剔去的骨；施骨肥于",
+      "phonetic_uk": "/bəʊn/",
+      "phonetic_us": "/bon/",
+      "ecdict_translation": "n. 骨头, 骨, 骨制品\nvt. 剔骨\nvi. 专心致志",
+      "ecdict_phonetic": "bәun",
+      "ecdict_definition": "n. rigid connective tissue that makes up the skeleton of vertebrates\nn. the porous calcified substance from which bones are made\nn. a shade of white the color of bleached bones\nv. remove the bones from"
+    },
+    {
+      "id": "KAOYAN_CORE_1191",
+      "word": "bottom",
+      "definition_cn": "n. 底(部);基础,根基;海底,湖底,河床",
+      "phonetic_uk": "/'bɒtəm/",
+      "phonetic_us": "/'bɑtəm/",
+      "ecdict_translation": "n. 底部\na. 底部的\nvt. 给...装底, 查明真相\nvi. 到达底部, 建立基础",
+      "ecdict_phonetic": "'bɒtәm",
+      "ecdict_definition": "n. the lower side of anything\nn. the lowest part of anything\nn. the second half of an inning; while the home team is at bat\nn. a cargo ship"
+    },
+    {
+      "id": "KAOYAN_CORE_4590",
+      "word": "briefcase",
+      "definition_cn": "n. 公文包",
+      "phonetic_uk": "/'briːfkeɪs/",
+      "phonetic_us": "/'brifkes/",
+      "ecdict_translation": "n. 公事包",
+      "ecdict_phonetic": "'bri:fkeis",
+      "ecdict_definition": "n. a case with a handle; for carrying papers or files or books"
+    },
+    {
+      "id": "KAOYAN_CORE_3772",
+      "word": "bunch",
+      "definition_cn": "n. 群；串；突出物； v. 隆起；打褶；形成一串",
+      "phonetic_uk": "/bʌn(t)ʃ/",
+      "phonetic_us": "/bʌntʃ/",
+      "ecdict_translation": "n. 串, 束\n[医] 骨肿块(马)",
+      "ecdict_phonetic": "bʌntʃ",
+      "ecdict_definition": "n. a grouping of a number of similar things\nn. any collection in its entirety\nv. gather or cause to gather into a cluster"
+    },
+    {
+      "id": "KAOYAN_CORE_3941",
+      "word": "bundle",
+      "definition_cn": "n. 束；捆； v. 捆",
+      "phonetic_uk": "/'bʌnd(ə)l/",
+      "phonetic_us": "/'bʌndl/",
+      "ecdict_translation": "n. 捆, 束\nvt. 包扎, 胡乱塞进\nvi. 匆忙离开",
+      "ecdict_phonetic": "'bʌndl",
+      "ecdict_definition": "n. a package of several things tied together for carrying or storing\nv. make into a bundle\nv. sleep fully clothed in the same bed with one's betrothed"
+    },
+    {
+      "id": "KAOYAN_CORE_4380",
+      "word": "bureau",
+      "definition_cn": "n. 局，处；衣柜；办公桌",
+      "phonetic_uk": "/'bjʊərəʊ/",
+      "phonetic_us": "/'bjʊro/",
+      "ecdict_translation": "n. 局, 办公处\n[经] 局, 司, 处",
+      "ecdict_phonetic": "'bjuәrәu",
+      "ecdict_definition": "n an administrative unit of government\nn furniture with drawers for keeping clothes"
+    },
+    {
+      "id": "KAOYAN_CORE_88",
+      "word": "capture",
+      "definition_cn": "v&n. 捕获,俘虏;夺得,攻占",
+      "phonetic_uk": "/'kæptʃə/",
+      "phonetic_us": "/'kæptʃɚ/",
+      "ecdict_translation": "n. 抓取, 战利品, 捕获之物\nvt. 抓取, 获得, 迷住\n[计] 截获命令",
+      "ecdict_phonetic": "'kæptʃә",
+      "ecdict_definition": "n. the act of forcibly dispossessing an owner of property\nn. a process whereby a star or planet holds an object in its gravitational field\nn. any process in which an atomic or nuclear system acquires an additional particle\nn. the act of taking of a person by force"
+    },
+    {
+      "id": "KAOYAN_CORE_96",
+      "word": "carrier",
+      "definition_cn": "n. 搬运人;载体",
+      "phonetic_uk": "/'kærɪə/",
+      "phonetic_us": "/'kærɪɚ/",
+      "ecdict_translation": "n. 运送者, 邮递员, 带菌者\n[计] 载波",
+      "ecdict_phonetic": "'kæriә",
+      "ecdict_definition": "n. someone whose employment involves carrying something\nn. a self-propelled wheeled vehicle designed specifically to carry something\nn. an inactive substance that is a vehicle for a radioactive tracer of the same substance and that assists in its recovery after some chemical reaction\nn. a person or firm in the business of transporting people or goods or messages"
+    },
+    {
+      "id": "KAOYAN_CORE_99",
+      "word": "cart",
+      "definition_cn": "n. (二轮货运)马车,手推车",
+      "phonetic_uk": "/kɑːt/",
+      "phonetic_us": "/kɑrt/",
+      "ecdict_translation": "n. 二轮运货马车\nvi. 驾运货马车\nvt. 用车装载",
+      "ecdict_phonetic": "kɑ:t",
+      "ecdict_definition": "n. a heavy open wagon usually having two wheels and drawn by an animal\nv. transport something in a cart"
+    },
+    {
+      "id": "KAOYAN_CORE_101",
+      "word": "carve",
+      "definition_cn": "v. (雕)刻",
+      "phonetic_uk": "/kɑːv/",
+      "phonetic_us": "/kɑrv/",
+      "ecdict_translation": "v. 雕刻, 切开",
+      "ecdict_phonetic": "kɑ:v",
+      "ecdict_definition": "v. form by carving\nv. engrave or cut by chipping away at a surface\nv. cut to pieces"
+    },
+    {
+      "id": "KAOYAN_CORE_106",
+      "word": "cat",
+      "definition_cn": "n. 猫；猫科；",
+      "phonetic_uk": "/kæt/",
+      "phonetic_us": "/kæt/",
+      "ecdict_translation": "n. 猫, 恶妇\nvi. 呕吐\n计算机辅助教育, 计算机辅助测试, 计算机辅助翻译, 计算机辅助排版\n[计] 计算机辅助教学, 计算机辅助翻译, 计算机辅助排字, 计算机辅助测试",
+      "ecdict_phonetic": "kæt",
+      "ecdict_definition": "n. feline mammal usually having thick soft fur and no ability to roar: domestic cats; wildcats\nn. a spiteful woman gossip\nv. beat with a cat-o'-nine-tails"
+    },
+    {
+      "id": "KAOYAN_CORE_4848",
+      "word": "censorship",
+      "definition_cn": "n. 审查制度 <",
+      "phonetic_uk": "/'sensəʃɪp/",
+      "phonetic_us": "/'sɛnsɚ'ʃɪp/",
+      "ecdict_translation": "n. 检查制度\n[医] 督察, 监察",
+      "ecdict_phonetic": "'sensәʃip",
+      "ecdict_definition": "n counterintelligence achieved by banning or deleting any information of value to the enemy\nn deleting parts of publications or correspondence or theatrical performances"
+    },
+    {
+      "id": "KAOYAN_CORE_159",
+      "word": "certainly",
+      "definition_cn": "adv. 一定,必定,无疑;当然,行",
+      "phonetic_uk": "/ˈsəːt(ə)nli/",
+      "phonetic_us": "/'sɝtnli/",
+      "ecdict_translation": "adv. 确定地",
+      "ecdict_phonetic": "'sә:tәnli",
+      "ecdict_definition": "r definitely or positively (`sure' is sometimes used informally for `surely')"
+    },
+    {
+      "id": "KAOYAN_CORE_161",
+      "word": "certificate",
+      "definition_cn": "n. 证(明)书,执照",
+      "phonetic_uk": "/səˈtɪfɪkɪt; (for v.,) səˈtɪfɪˌkeɪt/",
+      "phonetic_us": "/sɚˈtɪfɪkɪt; (for v.,) sɚˈtɪfɪˌket/",
+      "ecdict_translation": "n. 证书, 证明书\nvt. 发给证明书, 用证书批准, 用证书证明",
+      "ecdict_phonetic": "sә'tifikeit",
+      "ecdict_definition": "n. a document attesting to the truth of certain stated facts\nv. present someone with a certificate\nv. authorize by certificate"
+    },
+    {
+      "id": "KAOYAN_CORE_3394",
+      "word": "chapter",
+      "definition_cn": "n. 章，回；（俱乐部、协会等的）分会；人生或历史上的重要时期； v. 把…分成章节",
+      "phonetic_uk": "/'tʃæptə/",
+      "phonetic_us": "/'tʃæptɚ/",
+      "ecdict_translation": "n. 章, 篇, 重要章节\n[计] 章; 段",
+      "ecdict_phonetic": "'tʃæptә",
+      "ecdict_definition": "n. a subdivision of a written work; usually numbered and titled\nn. any distinct period in history or in a person's life\nn. a local branch of some fraternity or association\nn. an ecclesiastical assembly of the monks in a monastery or even of the canons of a church"
+    },
+    {
+      "id": "KAOYAN_CORE_4793",
+      "word": "characterise",
+      "definition_cn": "v. 表示…的特性； 描述…的特性",
+      "phonetic_uk": "/'kærəktəraɪz/",
+      "phonetic_us": "/'kærəktəraiz/",
+      "ecdict_translation": "vt. 表示...的特性, 成为/是...的特性, 刻划/描述...的性格\nvi. 在文艺作品中塑造人物, 描绘性格",
+      "ecdict_phonetic": "'kærәktәraiz",
+      "ecdict_definition": "v be characteristic of\nv describe or portray the character or the qualities or peculiarities of"
+    },
+    {
+      "id": "KAOYAN_CORE_13",
+      "word": "characterize",
+      "definition_cn": "v. 表示…的特性;描述…特性",
+      "phonetic_uk": "/'kærəktəraiz/",
+      "phonetic_us": "/'kærəktə'raɪz/",
+      "ecdict_translation": "vt. 描绘...的特性, 刻划...的性格",
+      "ecdict_phonetic": "'kærәktәraiz",
+      "ecdict_definition": "v. be characteristic of"
+    },
+    {
+      "id": "KAOYAN_CORE_3110",
+      "word": "cheek",
+      "definition_cn": "n. 面颊，脸颊；臀部； v. 无礼地向…讲话，对…大胆无礼",
+      "phonetic_uk": "/tʃiːk/",
+      "phonetic_us": "/tʃik/",
+      "ecdict_translation": "n. 颊, 厚颜, 脸蛋\n[医] 颊",
+      "ecdict_phonetic": "tʃi:k",
+      "ecdict_definition": "n. either side of the face below the eyes\nv. speak impudently to"
+    },
+    {
+      "id": "KAOYAN_CORE_2357",
+      "word": "childhood",
+      "definition_cn": "n. 童年时期；幼年时代",
+      "phonetic_uk": "/'tʃaɪldhʊd/",
+      "phonetic_us": "/'tʃaɪldhʊd/",
+      "ecdict_translation": "n. 孩童时期\n[医] 儿童期",
+      "ecdict_phonetic": "'tʃaildhud",
+      "ecdict_definition": "n. the time of person's life when they are a child\nn. the state of a child between infancy and adolescence"
+    },
+    {
+      "id": "KAOYAN_CORE_210",
+      "word": "closet",
+      "definition_cn": "n. (壁)橱a.私下的vt.把…引进密室会谈",
+      "phonetic_uk": "/'klɒzɪt/",
+      "phonetic_us": "/'klɑzət/",
+      "ecdict_translation": "n. 壁橱, 小室\na. 秘密的, 空谈的\nvt. 把...关入小室",
+      "ecdict_phonetic": "'klɒzit",
+      "ecdict_definition": "n. a small private room for study or prayer\nv. confine to a small space, as for intensive work"
+    },
+    {
+      "id": "KAOYAN_CORE_211",
+      "word": "cloth",
+      "definition_cn": "n. (一块)布,织物,衣料",
+      "phonetic_uk": "/klɒθ/",
+      "phonetic_us": "/klɔθ/",
+      "ecdict_translation": "n. 布料, 织品, 布\n[建] 布",
+      "ecdict_phonetic": "klɒ:θ. klɒθ",
+      "ecdict_definition": "n artifact made by weaving or felting or knitting or crocheting natural or synthetic fibers"
+    },
+    {
+      "id": "KAOYAN_CORE_212",
+      "word": "clothe",
+      "definition_cn": "v. (给…)穿衣,供给…衣服",
+      "phonetic_uk": "/kləʊð/",
+      "phonetic_us": "/kloð/",
+      "ecdict_translation": "vt. 给...穿衣, 盖上, 赋予",
+      "ecdict_phonetic": "klәuð",
+      "ecdict_definition": "v. cover as if with clothing"
+    },
+    {
+      "id": "KAOYAN_CORE_214",
+      "word": "clothing",
+      "definition_cn": "n. 服装,被褥",
+      "phonetic_uk": "/'kləʊðɪŋ/",
+      "phonetic_us": "/'kloðɪŋ/",
+      "ecdict_translation": "n. 衣服",
+      "ecdict_phonetic": "'klәuðiŋ",
+      "ecdict_definition": "n. a covering designed to be worn on a person's body"
+    },
+    {
+      "id": "KAOYAN_CORE_483",
+      "word": "coherent",
+      "definition_cn": "adj. 一致的，协调的；(话语等)条理清楚的",
+      "phonetic_uk": "/kə(ʊ)'hɪər(ə)nt/",
+      "phonetic_us": "/ko'hɪrənt/",
+      "ecdict_translation": "a. 互相耦合的, 清晰的, 明了的，凝聚性的, 连贯的",
+      "ecdict_phonetic": "kәu'hiәrәnt",
+      "ecdict_definition": "a. marked by an orderly, logical, and aesthetically consistent relation of parts\ns. capable of thinking and expressing yourself in a clear and consistent manner\na. (physics) of waves having a constant phase relation\ns. sticking together"
+    },
+    {
+      "id": "KAOYAN_CORE_484",
+      "word": "cohesive",
+      "definition_cn": "adj. 粘合性的，有结合力的",
+      "phonetic_uk": "/kəʊ'hiːsɪv/",
+      "phonetic_us": "/ko'hisɪv/",
+      "ecdict_translation": "a. 黏合在一起的\n[医] 内聚的",
+      "ecdict_phonetic": "kәu'hi:siv",
+      "ecdict_definition": "s. causing cohesion\ns. cohering or tending to cohere; well integrated"
+    },
+    {
+      "id": "KAOYAN_CORE_786",
+      "word": "companion",
+      "definition_cn": "n. 同伴,共事者;伴侣",
+      "phonetic_uk": "/kəm'pænjən/",
+      "phonetic_us": "/kəm'pænɪən/",
+      "ecdict_translation": "n. 朋友, 陪伴, 指南, 升降口围罩\nvt. 陪伴",
+      "ecdict_phonetic": "kәm'pænjәn",
+      "ecdict_definition": "n. a friend who is frequently in the company of another\nn. a traveler who accompanies you\nn. one paid to accompany or assist or live with another"
+    },
+    {
+      "id": "KAOYAN_CORE_1968",
+      "word": "complain",
+      "definition_cn": "v. 投诉；发牢骚；诉说",
+      "phonetic_uk": "/kəm'pleɪn/",
+      "phonetic_us": "/kəm'plen/",
+      "ecdict_translation": "v. 抱怨, 抗议, 控诉",
+      "ecdict_phonetic": "kәm'plein",
+      "ecdict_definition": "v. express complaints, discontent, displeasure, or unhappiness\nv. make a formal accusation; bring a formal charge"
+    },
+    {
+      "id": "KAOYAN_CORE_4968",
+      "word": "confident",
+      "definition_cn": "adj. 确信的， 自信的",
+      "phonetic_uk": "/'kɒnfɪdənt/",
+      "phonetic_us": "/'kɑnfɪdənt/",
+      "ecdict_translation": "a. 有信心的, 有把握的",
+      "ecdict_phonetic": "'kɒnfidәnt",
+      "ecdict_definition": "a. having or marked by confidence or assurance\ns. not liable to error in judgment or action"
+    },
+    {
+      "id": "KAOYAN_CORE_1079",
+      "word": "consolidate",
+      "definition_cn": "v. 使加固，使加强；(把)联为一体，合并",
+      "phonetic_uk": "/kən'sɒlɪdeɪt/",
+      "phonetic_us": "/kən'sɑlɪdet/",
+      "ecdict_translation": "vt. 巩固, 使联合, 统一\nvi. 巩固\n[计] 合并计算",
+      "ecdict_phonetic": "kәn'sɒlideit",
+      "ecdict_definition": "v. unite into one\nv. make firm or secure; strengthen\nv. bring together into a single whole or system\nv. form into a solid mass or whole"
+    },
+    {
+      "id": "KAOYAN_CORE_4792",
+      "word": "converge",
+      "definition_cn": "v. 会合； 互相靠拢；聚集， 集中；趋近",
+      "phonetic_uk": "/kən'vɜːdʒ/",
+      "phonetic_us": "/kən'vɝdʒ/",
+      "ecdict_translation": "vi. 聚合, 集中于一点\nvt. 使集合",
+      "ecdict_phonetic": "kәn'vә:dʒ",
+      "ecdict_definition": "v. be adjacent or come together\nv. approach a limit as the number of terms increases without limit\nv. move or draw together at a certain location\nv. come together so as to form a single product"
+    },
+    {
+      "id": "KAOYAN_CORE_4415",
+      "word": "cosy",
+      "definition_cn": "adj. 舒适的；惬意的； n. 保温罩",
+      "phonetic_uk": "/'kəʊzɪ/",
+      "phonetic_us": "/ˈkozi/",
+      "ecdict_translation": "a. 温暖舒适的\nn. 保暖套",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "n. a padded cloth covering to keep a teapot warm"
+    },
+    {
+      "id": "KAOYAN_CORE_224",
+      "word": "counterpart",
+      "definition_cn": "n. 对应的人(或物)",
+      "phonetic_uk": "/'kaʊntəpɑːt/",
+      "phonetic_us": "/'kaʊntɚpɑrt/",
+      "ecdict_translation": "n. 副本, 复本, 配对物, 相应物\n[经] 副本, 正副二份中之一",
+      "ecdict_phonetic": "'kauntәpɑ:t",
+      "ecdict_definition": "n. a person or thing having the same function or characteristics as another\nn. a duplicate copy"
+    },
+    {
+      "id": "KAOYAN_CORE_223",
+      "word": "countryside",
+      "definition_cn": "n. 乡下,农村",
+      "phonetic_uk": "/'kʌntrɪsaɪd/",
+      "phonetic_us": "/'kʌntrɪsaɪd/",
+      "ecdict_translation": "n. 乡下地方, 乡下居民",
+      "ecdict_phonetic": "'kʌntrisaid",
+      "ecdict_definition": "n. rural regions"
+    },
+    {
+      "id": "KAOYAN_CORE_225",
+      "word": "county",
+      "definition_cn": "n. (英国)郡,(美国)县",
+      "phonetic_uk": "/'kaʊntɪ/",
+      "phonetic_us": "/'kaʊnti/",
+      "ecdict_translation": "n. 县, 郡",
+      "ecdict_phonetic": "'kaunti",
+      "ecdict_definition": "n. (United Kingdom) a region created by territorial division for the purpose of local government\nn. (United States) the largest administrative district within a state"
+    },
+    {
+      "id": "KAOYAN_CORE_4905",
+      "word": "credentials",
+      "definition_cn": "n. 证明书； 证件；资格",
+      "phonetic_uk": "/krə'denʃlz/",
+      "phonetic_us": "/krə'dɛnʃlz/",
+      "ecdict_translation": "n. 信任状, 国书, 文件, 身份证明, 证书\n[法] 信用证, 国书, 证书",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "n a document attesting to the truth of certain stated facts\nn a document attesting to the truth of certain stated facts"
+    },
+    {
+      "id": "KAOYAN_CORE_250",
+      "word": "cry",
+      "definition_cn": "n. &v.叫，喊，哭；(鸟兽)叫，啼，鸣，嗥",
+      "phonetic_uk": "/kraɪ/",
+      "phonetic_us": "/kraɪ/",
+      "ecdict_translation": "n. 叫声, 哭声, 大叫\nvi. 哭, 叫, 喊\nvt. 叫喊, 大声说, 哭出",
+      "ecdict_phonetic": "krai",
+      "ecdict_definition": "n. a loud utterance; often in protest or opposition\nn. a loud utterance of emotion (especially when inarticulate)\nn. a fit of weeping\nn. the characteristic utterance of an animal"
+    },
+    {
+      "id": "KAOYAN_CORE_269",
+      "word": "curl",
+      "definition_cn": "v. (使)卷曲,蜷缩； n. 卷发;卷曲状;卷曲物",
+      "phonetic_uk": "/kɜːl/",
+      "phonetic_us": "/kɝl/",
+      "ecdict_translation": "n. 拳曲, 鬈发\nvt. 弄卷\nvi. 拳曲, 弯曲",
+      "ecdict_phonetic": "kә:l",
+      "ecdict_definition": "n. American chemist who with Richard Smalley and Harold Kroto discovered fullerenes and opened a new branch of chemistry (born in 1933)\nv. form a curl, curve, or kink\nv. twist or roll into coils or ringlets\nv. play the Scottish game of curling"
+    },
+    {
+      "id": "KAOYAN_CORE_291",
+      "word": "dedicate",
+      "definition_cn": "v. 奉献;献身于",
+      "phonetic_uk": "/'dedɪkeɪt/",
+      "phonetic_us": "/'dɛdɪket/",
+      "ecdict_translation": "vt. 献出, 贡献",
+      "ecdict_phonetic": "'dedikeit",
+      "ecdict_definition": "v. open to public use, as of a highway, park, or building\nv. inscribe or address by way of compliment\nv. set apart to sacred uses with solemn rites, of a church"
+    },
+    {
+      "id": "KAOYAN_CORE_723",
+      "word": "demonstrate",
+      "definition_cn": "v. 论证,证实;演示,说明",
+      "phonetic_uk": "/'demənstreɪt/",
+      "phonetic_us": "/'dɛmən'stret/",
+      "ecdict_translation": "vt. 示范, 证明\nvi. 示威",
+      "ecdict_phonetic": "'demәnstreit",
+      "ecdict_definition": "v. march in protest; take part in a demonstration"
+    },
+    {
+      "id": "KAOYAN_CORE_1830",
+      "word": "deserve",
+      "definition_cn": "v. 应受，应得",
+      "phonetic_uk": "/dɪ'zɜːv/",
+      "phonetic_us": "/dɪ'zɝv/",
+      "ecdict_translation": "vt. 该得到, 值得\nvi. 应得报答",
+      "ecdict_phonetic": "di'zә:v",
+      "ecdict_definition": "v. be worthy or deserving"
+    },
+    {
+      "id": "KAOYAN_CORE_2010",
+      "word": "desirable",
+      "definition_cn": "adj. 令人满意的；值得要的； n. 合意的人或事物",
+      "phonetic_uk": "/dɪ'zaɪərəb(ə)l/",
+      "phonetic_us": "/dɪ'zaɪərəbl/",
+      "ecdict_translation": "a. 令人想望的, 可取的",
+      "ecdict_phonetic": "di'zairәbl",
+      "ecdict_definition": "a. worth having or seeking or achieving\ns. worthy of being chosen especially as a spouse"
+    },
+    {
+      "id": "KAOYAN_CORE_2542",
+      "word": "deteriorate",
+      "definition_cn": "v. 恶化，变坏",
+      "phonetic_uk": "/dɪ'tɪərɪəreɪt/",
+      "phonetic_us": "/dɪ'tɪrɪəret/",
+      "ecdict_translation": "v. (使)恶化",
+      "ecdict_phonetic": "di'tiәriәreit",
+      "ecdict_definition": "v. become worse or disintegrate"
+    },
+    {
+      "id": "KAOYAN_CORE_2692",
+      "word": "diet",
+      "definition_cn": "n. 饮食；食物；规定饮食； v. 节食",
+      "phonetic_uk": "/'daɪət/",
+      "phonetic_us": "/'daɪət/",
+      "ecdict_translation": "n. 日常饮食, 议会\nvt. 照规定饮食\nvi. 忌食",
+      "ecdict_phonetic": "'daiәt",
+      "ecdict_definition": "n. a prescribed selection of foods\nn. a legislative assembly in certain countries (e.g., Japan)\nn. the usual food and drink consumed by an organism (person or animal)\nn. the act of restricting your food intake (or your intake of particular foods)"
+    },
+    {
+      "id": "KAOYAN_CORE_4685",
+      "word": "dig",
+      "definition_cn": "v. 挖，掘；探究； n. 戳，刺；挖苦",
+      "phonetic_uk": "/dɪg/",
+      "phonetic_us": "/dɪɡ/",
+      "ecdict_translation": "vt. 挖, 翻土, 发掘\nvi. 挖掘\nn. 挖掘\n[计] 数字, 数位",
+      "ecdict_phonetic": "dig",
+      "ecdict_definition": "n. the site of an archeological exploration\nn. a small gouge (as in the cover of a book)\nn. the act of touching someone suddenly with your finger or elbow\nv. turn up, loosen, or remove earth"
+    },
+    {
+      "id": "KAOYAN_CORE_2662",
+      "word": "diminish",
+      "definition_cn": "v. 使减少；使变小",
+      "phonetic_uk": "/dɪ'mɪnɪʃ/",
+      "phonetic_us": "/dɪ'mɪnɪʃ/",
+      "ecdict_translation": "v. (使)减少, (使)变小",
+      "ecdict_phonetic": "di'miniʃ",
+      "ecdict_definition": "v. lessen the authority, dignity, or reputation of"
+    },
+    {
+      "id": "KAOYAN_CORE_949",
+      "word": "directory",
+      "definition_cn": "n. 人名地址录,(电话)号码簿",
+      "phonetic_uk": "/dɪ'rekt(ə)rɪ; daɪ-/",
+      "phonetic_us": "/dəˈrɛktəri; (also) daɪˈrɛktəri/",
+      "ecdict_translation": "n. 目录, 工商名录, 指南\n[计] 目录",
+      "ecdict_phonetic": "di'rektәri",
+      "ecdict_definition": "n. an alphabetical list of names and addresses\nn. (computer science) a listing of the files stored in memory (usually on a hard disk)"
+    },
+    {
+      "id": "KAOYAN_CORE_3384",
+      "word": "discern",
+      "definition_cn": "v. 识别；领悟，认识",
+      "phonetic_uk": "/dɪ'sɜːn/",
+      "phonetic_us": "/dɪ'sɝn/",
+      "ecdict_translation": "v. 辨别, 看清楚, 了解",
+      "ecdict_phonetic": "di'zә:n",
+      "ecdict_definition": "v detect with the senses"
+    },
+    {
+      "id": "KAOYAN_CORE_215",
+      "word": "disclose",
+      "definition_cn": "v. 揭示,泄露",
+      "phonetic_uk": "/dɪs'kləʊz/",
+      "phonetic_us": "/dɪs'kloz/",
+      "ecdict_translation": "vt. 揭露, 透露\n[法] 揭发, 揭露, 公开",
+      "ecdict_phonetic": "dis'klәuz",
+      "ecdict_definition": "v. disclose to view as by removing a cover"
+    },
+    {
+      "id": "KAOYAN_CORE_2993",
+      "word": "dish",
+      "definition_cn": "n. 盘；餐具；一盘食物；外貌有吸引力的人； v. 盛于碟盘中；分发；使某人的希望破灭；说（某人）的闲话",
+      "phonetic_uk": "/dɪʃ/",
+      "phonetic_us": "/dɪʃ/",
+      "ecdict_translation": "n. 盘子, 碟, 菜肴\n[医] 皿, 碟",
+      "ecdict_phonetic": "diʃ",
+      "ecdict_definition": "n. a piece of dishware normally used as a container for holding or serving food\nn. a particular item of prepared food\nn. the quantity that a dish will hold\nn. directional antenna consisting of a parabolic reflector for microwave or radio frequency radiation"
+    },
+    {
+      "id": "KAOYAN_CORE_889",
+      "word": "disposition",
+      "definition_cn": "n. 排列,部署;性格倾向;倾向,意向",
+      "phonetic_uk": "/dɪspə'zɪʃ(ə)n/",
+      "phonetic_us": "/'dɪspə'zɪʃən/",
+      "ecdict_translation": "n. 性情, 处置, 处理, 布置\n[医] 素因, 性情",
+      "ecdict_phonetic": ".dispә'ziʃәn",
+      "ecdict_definition": "n. your usual mood\nn. a natural or acquired habit or characteristic tendency in a person or thing"
+    },
+    {
+      "id": "KAOYAN_CORE_2818",
+      "word": "dispute",
+      "definition_cn": "v. 辩论；怀疑；阻止；抗拒； n. 辩论；争吵",
+      "phonetic_uk": "/dɪ'spjuːt; 'dɪspjuːt/",
+      "phonetic_us": "/'dɪs'pjʊt/",
+      "ecdict_translation": "n. 争论\nv. 争论",
+      "ecdict_phonetic": "dis'pju:t",
+      "ecdict_definition": "n. a disagreement or argument about something important\nn. coming into conflict with"
+    },
+    {
+      "id": "KAOYAN_CORE_318",
+      "word": "dome",
+      "definition_cn": "n. 圆屋顶",
+      "phonetic_uk": "/dəʊm/",
+      "phonetic_us": "/dom/",
+      "ecdict_translation": "n. 圆顶\nvt. 加圆顶\nvi. 成圆顶状",
+      "ecdict_phonetic": "dәum",
+      "ecdict_definition": "n. a concave shape whose distinguishing characteristic is that the concavity faces downward\nn. a stadium that has a roof\nn. a hemispherical roof"
+    },
+    {
+      "id": "KAOYAN_CORE_1709",
+      "word": "dramatic",
+      "definition_cn": "adj. 戏剧的；急剧的；引人注目的；激动人心的",
+      "phonetic_uk": "/drə'mætɪk/",
+      "phonetic_us": "/drə'mætɪk/",
+      "ecdict_translation": "a. 戏剧性的, 生动的",
+      "ecdict_phonetic": "drә'mætik",
+      "ecdict_definition": "a. suitable to or characteristic of drama\ns. sensational in appearance or thrilling in effect\na. pertaining to or characteristic of drama\na. used of a singer or singing voice that is marked by power and expressiveness and a histrionic or theatrical style"
+    },
+    {
+      "id": "KAOYAN_CORE_2476",
+      "word": "dress",
+      "definition_cn": "v. 给…穿衣； n. 连衣裙；女装",
+      "phonetic_uk": "/dres/",
+      "phonetic_us": "/drɛs/",
+      "ecdict_translation": "n. 服装, 覆盖物\nvi. 穿着\nvt. 给...穿衣, 整理",
+      "ecdict_phonetic": "dres",
+      "ecdict_definition": "n. a one-piece garment for a woman; has skirt and bodice\nv. put on clothes\nv. provide with clothes or put clothes on\nv. put a finish on"
+    },
+    {
+      "id": "KAOYAN_CORE_4902",
+      "word": "eclipse",
+      "definition_cn": "n. 食",
+      "phonetic_uk": "/ɪ'klɪps/",
+      "phonetic_us": "/ɪ'klɪps/",
+      "ecdict_translation": "n. 日食, 月食, (地位名誉等的)消失\nvt. 引起日食, 引起月食, 使黯然失色",
+      "ecdict_phonetic": "i'klips",
+      "ecdict_definition": "n. one celestial body obscures another\nv. cause an eclipse of (a celestial body) by intervention"
+    },
+    {
+      "id": "KAOYAN_CORE_764",
+      "word": "economic",
+      "definition_cn": "adj. 经济(上)的,经济学的",
+      "phonetic_uk": "/,iːkə'nɒmɪk; ek-/",
+      "phonetic_us": "/ˌikəˈnɑmɪk, ˌɛkəˈ-nɑmɪk/",
+      "ecdict_translation": "a. 经济上的, 实用的, 节省的\n[经] 经济的",
+      "ecdict_phonetic": ".i:kә'nɒmik",
+      "ecdict_definition": "a. of or relating to an economy, the system of production and management of material wealth\na. of or relating to the science of economics\ns. using the minimum of time or resources necessary for effectiveness\ns. concerned with worldly necessities of life (especially money)"
+    },
+    {
+      "id": "KAOYAN_CORE_349",
+      "word": "efficient",
+      "definition_cn": "adj. 有效的,效率高的;有能力的,能胜任的",
+      "phonetic_uk": "/ɪ'fɪʃ(ə)nt/",
+      "phonetic_us": "/ɪ'fɪʃnt/",
+      "ecdict_translation": "a. 有效率的, 能干的",
+      "ecdict_phonetic": "i'fiʃәnt",
+      "ecdict_definition": "a. being effective without wasting time or effort or expense"
+    },
+    {
+      "id": "KAOYAN_CORE_560",
+      "word": "eligible",
+      "definition_cn": "adj. 符合条件的;(尤指婚姻等)合适(意)的",
+      "phonetic_uk": "/'elɪdʒɪb(ə)l/",
+      "phonetic_us": "/'ɛlɪdʒəbl/",
+      "ecdict_translation": "a. 有资格当选的, 合格的\nn. 有资格者, 合格者, 适任者",
+      "ecdict_phonetic": "'elidʒәbl",
+      "ecdict_definition": "a. qualified for or allowed or worthy of being chosen"
+    },
+    {
+      "id": "KAOYAN_CORE_2819",
+      "word": "emigrate",
+      "definition_cn": "v. 移居；移居外国",
+      "phonetic_uk": "/'emɪgreɪt/",
+      "phonetic_us": "/'ɛmɪɡret/",
+      "ecdict_translation": "v. (使)移居, (使)移民",
+      "ecdict_phonetic": "'emigreit",
+      "ecdict_definition": "v. leave one's country of residence for a new one"
+    },
+    {
+      "id": "KAOYAN_CORE_2616",
+      "word": "ending",
+      "definition_cn": "n. 结局；结尾",
+      "phonetic_uk": "/'endɪŋ/",
+      "phonetic_us": "/'ɛndɪŋ/",
+      "ecdict_translation": "n. 终止, 终了, 收场\n[医] 末梢",
+      "ecdict_phonetic": "'endiŋ",
+      "ecdict_definition": "n. the end of a word (a suffix or inflectional ending or final morpheme)\nn. event whose occurrence ends something"
+    },
+    {
+      "id": "KAOYAN_CORE_2744",
+      "word": "entitle",
+      "definition_cn": "v. 称做…；定名为…；给…称号；使…有权利",
+      "phonetic_uk": "/ɪn'taɪt(ə)l; en-/",
+      "phonetic_us": "/ɪn'taɪtl/",
+      "ecdict_translation": "vt. 给...权利, 取名为, 给予名称, 叫做\n[法] 给...权利, 使有资格, 称呼",
+      "ecdict_phonetic": "in'taitl",
+      "ecdict_definition": "v. give the right to\nv. give a title to"
+    },
+    {
+      "id": "KAOYAN_CORE_75",
+      "word": "escalate",
+      "definition_cn": "v. (使)逐步增长(或发展)，(使)逐步升级",
+      "phonetic_uk": "/'eskəleɪt/",
+      "phonetic_us": "/'ɛskəlet/",
+      "ecdict_translation": "vi. 逐步扩大, 逐步升高, 逐步增强\nvt. 使逐步上升",
+      "ecdict_phonetic": "'eskәleit",
+      "ecdict_definition": "v. increase in extent or intensity"
+    },
+    {
+      "id": "KAOYAN_CORE_275",
+      "word": "excursion",
+      "definition_cn": "n. 短途旅行,游览;离题;[物理]偏移,漂移",
+      "phonetic_uk": "/ɪk'skɜːʃ(ə)n; ek-/",
+      "phonetic_us": "/ɪk'skɝʒn/",
+      "ecdict_translation": "n. 远足, 游览圆, 短程旅行\n[医] 移动, 离轨, 逸出",
+      "ecdict_phonetic": "ik'skә:ʒәn",
+      "ecdict_definition": "n. a journey taken for pleasure"
+    },
+    {
+      "id": "KAOYAN_CORE_834",
+      "word": "expense",
+      "definition_cn": "n. 花费,消费,消耗",
+      "phonetic_uk": "/ɪk'spens; ek-/",
+      "phonetic_us": "/ɪk'spɛns/",
+      "ecdict_translation": "n. 费用, 代价, 开支, 损失\n[经] 费用, 开支, 将支出转为费用",
+      "ecdict_phonetic": "ik'spens",
+      "ecdict_definition": "n. amounts paid for goods and services that may be currently tax deductible (as opposed to capital expenditures)\nn. a detriment or sacrifice\nn. money spent to perform work and usually reimbursed by an employer\nv. reduce the estimated value of something"
+    },
+    {
+      "id": "KAOYAN_CORE_4983",
+      "word": "fabulous",
+      "definition_cn": "adj. 寓言式的；极为巨大的；极好的",
+      "phonetic_uk": "/'fæbjələs/",
+      "phonetic_us": "/'fæbjələs/",
+      "ecdict_translation": "a. 传说的, 寓言般的, 难以置信的",
+      "ecdict_phonetic": "'fæbjulәs",
+      "ecdict_definition": "s. extremely pleasing\ns. based on or told of in traditional stories; lacking factual basis or historical validity\ns. barely credible"
+    },
+    {
+      "id": "KAOYAN_CORE_5019",
+      "word": "faithfully",
+      "definition_cn": "adv. 忠诚地， 如实地",
+      "phonetic_uk": "/'feɪθfəli/",
+      "phonetic_us": "/'feθfəli/",
+      "ecdict_translation": "adv. 忠实地, 诚心诚意地, 深信着地",
+      "ecdict_phonetic": "'feiθfuli",
+      "ecdict_definition": "r. in a faithful manner"
+    },
+    {
+      "id": "KAOYAN_CORE_4705",
+      "word": "fantastical",
+      "definition_cn": "adj. 奇异的， 幻想的， 异想天开的；极好的",
+      "phonetic_uk": "/fæn'tæstɪk/",
+      "phonetic_us": "/fæn'tæstɪk/",
+      "ecdict_translation": "a. 空想的；捕风捉影的",
+      "ecdict_phonetic": "fæn'tæstikәl",
+      "ecdict_definition": "s existing in fancy only\ns ludicrously odd"
+    },
+    {
+      "id": "KAOYAN_CORE_2284",
+      "word": "fashion",
+      "definition_cn": "n. 时尚；时装；样式；时髦人物； v. 使用；改变；做成…的形状",
+      "phonetic_uk": "/'fæʃ(ə)n/",
+      "phonetic_us": "/'fæʃən/",
+      "ecdict_translation": "n. 流行, 风尚, 时样\nvt. 形成, 造, 作",
+      "ecdict_phonetic": "'fæʃәn",
+      "ecdict_definition": "n. characteristic or habitual practice\nn. the latest and most admired style in clothes and cosmetics and behavior\nn. consumer goods (especially clothing) in the current mode\nv. make out of components (often in an improvising manner)"
+    },
+    {
+      "id": "KAOYAN_CORE_4925",
+      "word": "favourite",
+      "definition_cn": "adj. 特别喜欢的， 中意的； n. 最喜欢的人或物",
+      "phonetic_uk": "/'feɪvərɪt/",
+      "phonetic_us": "/'fevərɪt/",
+      "ecdict_translation": "n. 喜欢的事物\na. 喜爱的, 宠爱的",
+      "ecdict_phonetic": "'feivәrit",
+      "ecdict_definition": "n a competitor thought likely to win\nn a special loved one\nn something regarded with special favor or liking\ns appealing to the general public\ns preferred above all others and treated with partiality"
+    },
+    {
+      "id": "KAOYAN_CORE_402",
+      "word": "former",
+      "definition_cn": "adj. 以前的,在前的； pron. 前者",
+      "phonetic_uk": "/'fɔːmə/",
+      "phonetic_us": "/'fɔrmɚ/",
+      "ecdict_translation": "a. 从前的, 前者的\nn. 起形成作用的人(或物), 模型, 样板",
+      "ecdict_phonetic": "'fɒ:mә",
+      "ecdict_definition": "n. the first of two or the first mentioned of two\na. referring to the first of two things or persons mentioned (or the earlier one or ones of several); I prefer the former version to the latter one\"\ns. (used especially of persons) of the immediate past"
+    },
+    {
+      "id": "KAOYAN_CORE_395",
+      "word": "fragrant",
+      "definition_cn": "adj. 香的;芬芳的",
+      "phonetic_uk": "/'freɪgr(ə)nt/",
+      "phonetic_us": "/'fregrənt/",
+      "ecdict_translation": "a. 芬香的, 馥郁的, 愉快的",
+      "ecdict_phonetic": "'freigrәnt",
+      "ecdict_definition": "a. pleasant-smelling"
+    },
+    {
+      "id": "KAOYAN_CORE_4873",
+      "word": "franchise",
+      "definition_cn": "n. 特许权；选举权；经销权； v. 特许",
+      "phonetic_uk": "/'fræntʃaɪz/",
+      "phonetic_us": "/'fræntʃaɪz/",
+      "ecdict_translation": "n. 公民权, 特权, 特许经营权, 免赔额\nvt. 给以特权, 给以...公民权",
+      "ecdict_phonetic": "'fræntʃaiz",
+      "ecdict_definition": "n. an authorization to sell a company's goods or services in a particular place\nn. a business established or operated under an authorization to sell or distribute a company's goods or services in a particular area\nn. a statutory right or privilege granted to a person or group by a government (especially the rights of citizenship and the right to vote)\nv. grant a franchise to"
+    },
+    {
+      "id": "KAOYAN_CORE_5029",
+      "word": "freelance",
+      "definition_cn": "adj. 自由职业的",
+      "phonetic_uk": "/'friːlɑːns/",
+      "phonetic_us": "/'frilæns/",
+      "ecdict_translation": "n. 自由作家, 自由投稿, 自由职业者\na. 自由投稿的",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "v. work independently and on temporary contracts rather than for a long-term employer\na. working for yourself"
+    },
+    {
+      "id": "KAOYAN_CORE_4324",
+      "word": "fruitful",
+      "definition_cn": "adj. 富有成效的；多产的；果实结得多的",
+      "phonetic_uk": "/'fruːtfʊl; -f(ə)l/",
+      "phonetic_us": "/'frutfl/",
+      "ecdict_translation": "a. 结果实的, 多实的, 产量多的",
+      "ecdict_phonetic": "'fru:tful",
+      "ecdict_definition": "a. productive or conducive to producing in abundance"
+    },
+    {
+      "id": "KAOYAN_CORE_4806",
+      "word": "gage",
+      "definition_cn": "n. 标准尺寸， 规格； 量规， 量表",
+      "phonetic_uk": "/geɪdʒ/",
+      "phonetic_us": "/gedʒ/",
+      "ecdict_translation": "n. 抵押品, 挑战\nvt. 以...为担保, 以...为赌注\nn. 抵押品, 标准度量, 计量器\nvt. 精确计量, 估计",
+      "ecdict_phonetic": "geidʒ",
+      "ecdict_definition": "n street names for marijuana\nn a measuring instrument for measuring and indicating a quantity such as the thickness of wire or the amount of rain etc.\nv place a bet on"
+    },
+    {
+      "id": "KAOYAN_CORE_4915",
+      "word": "generalise",
+      "definition_cn": "v. 归纳， 概括；推广， 普及",
+      "phonetic_uk": "/'dʒenrəlaɪz/",
+      "phonetic_us": "/'dʒenərəlaiz/",
+      "ecdict_translation": "vt.vi. (使)一般化, 从...引出一般性结论, 泛论, 概括出, 归纳出, 使广义化",
+      "ecdict_phonetic": "'dʒenәrәlaiz",
+      "ecdict_definition": "v speak or write in generalities\nv draw from specific cases for more general cases\nv cater to popular taste to make popular and present to the general public; bring into general or common use\nv become systemic and spread throughout the body"
+    },
+    {
+      "id": "KAOYAN_CORE_434",
+      "word": "genetic",
+      "definition_cn": "adj. 遗传(学)的； n. [-s]遗传学",
+      "phonetic_uk": "/dʒɪ'netɪk/",
+      "phonetic_us": "/dʒə'nɛtɪk/",
+      "ecdict_translation": "a. 创始的, 遗传的, 起源的, 遗传学的\n[医] 生殖的, 遗传的",
+      "ecdict_phonetic": "dʒi'netik",
+      "ecdict_definition": "a. pertaining to or referring to origin\na. of or relating to the science of genetics"
+    },
+    {
+      "id": "KAOYAN_CORE_544",
+      "word": "geology",
+      "definition_cn": "n. 地质(学)",
+      "phonetic_uk": "/dʒɪ'ɒlədʒɪ/",
+      "phonetic_us": "/dʒɪ'ɑlədʒi/",
+      "ecdict_translation": "n. 地质学, 地质情况",
+      "ecdict_phonetic": "dʒi'ɒlәdʒi",
+      "ecdict_definition": "n. a science that deals with the history of the earth as recorded in rocks"
+    },
+    {
+      "id": "KAOYAN_CORE_678",
+      "word": "geometry",
+      "definition_cn": "n. 几何(学)",
+      "phonetic_uk": "/dʒɪ'ɒmɪtrɪ/",
+      "phonetic_us": "/dʒɪ'ɑmətri/",
+      "ecdict_translation": "n. 几何学\n[机] 几何学",
+      "ecdict_phonetic": "dʒi'ɒmәtri",
+      "ecdict_definition": "n. the pure mathematics of points and lines and curves and surfaces"
+    },
+    {
+      "id": "KAOYAN_CORE_3595",
+      "word": "ghost",
+      "definition_cn": "n. 鬼，幽灵； v. 作祟于；替…捉刀；为人代笔",
+      "phonetic_uk": "/gəʊst/",
+      "phonetic_us": "/ɡost/",
+      "ecdict_translation": "n. 鬼, 灵魂, 幻影, 一丝, 一点\nv. 鬼似地游荡",
+      "ecdict_phonetic": "gәust",
+      "ecdict_definition": "n. a mental representation of some haunting experience\nn. the visible disembodied soul of a dead person\nv. move like a ghost\nv. write for someone else"
+    },
+    {
+      "id": "KAOYAN_CORE_4802",
+      "word": "grab",
+      "definition_cn": "v. 抓； 夺  <； n. 抓； 夺",
+      "phonetic_uk": "/græb/",
+      "phonetic_us": "/ɡræb/",
+      "ecdict_translation": "n. 抓握, 掠夺, 强占, 东方沿岸帆船\nvi. 抓取, 抢去\nvt. 攫取, 捕获, 霸占",
+      "ecdict_phonetic": "græb",
+      "ecdict_definition": "n. a mechanical device for gripping an object\nv. make a grasping or snatching motion with the hand\nv. obtain illegally or unscrupulously\nv. take or grasp suddenly"
+    },
+    {
+      "id": "KAOYAN_CORE_4801",
+      "word": "gram",
+      "definition_cn": "n. 克",
+      "phonetic_uk": "/græm/",
+      "phonetic_us": "/ɡræm/",
+      "ecdict_translation": "n. 克, 绿豆, 鹰嘴豆\n[医] 克",
+      "ecdict_phonetic": "græm",
+      "ecdict_definition": "n. a metric unit of weight equal to one thousandth of a kilogram\nn. Danish physician and bacteriologist who developed a method of staining bacteria to distinguish among them (1853-1938)"
+    },
+    {
+      "id": "KAOYAN_CORE_641",
+      "word": "grammar",
+      "definition_cn": "n. 语法,语法书",
+      "phonetic_uk": "/'græmə/",
+      "phonetic_us": "/'græmɚ/",
+      "ecdict_translation": "n. 语法学, 入门书\n[计] 语法检查",
+      "ecdict_phonetic": "'græmә",
+      "ecdict_definition": "n. the branch of linguistics that deals with syntax and morphology (and sometimes also deals with semantics)"
+    },
+    {
+      "id": "KAOYAN_CORE_4225",
+      "word": "grass",
+      "definition_cn": "n. 草；草地，草坪； v. 放牧；使……长满草；使……吃草",
+      "phonetic_uk": "/grɑːs/",
+      "phonetic_us": "/ɡræs/",
+      "ecdict_translation": "n. 草, 草原, 牧场\n[医] 草, 禾本",
+      "ecdict_phonetic": "græs",
+      "ecdict_definition": "n. narrow-leaved green herbage: grown as lawns; used as pasture for grazing animals; cut and dried as hay\nn. German writer of novels and poetry and plays (born 1927)\nv. shoot down, of birds\nv. cover with grass"
+    },
+    {
+      "id": "KAOYAN_CORE_465",
+      "word": "gratitude",
+      "definition_cn": "n. 感激,感谢",
+      "phonetic_uk": "/'grætɪtjuːd/",
+      "phonetic_us": "/'ɡrætɪtud/",
+      "ecdict_translation": "n. 感激之情",
+      "ecdict_phonetic": "'grætitju:d",
+      "ecdict_definition": "n. a feeling of thankfulness and appreciation"
+    },
+    {
+      "id": "KAOYAN_CORE_4876",
+      "word": "gym",
+      "definition_cn": "n. 体育馆， 健身房",
+      "phonetic_uk": "/dʒɪm'n3ɪziəm/",
+      "phonetic_us": "/dʒɪm/",
+      "ecdict_translation": "n. +体育馆, 体育训练, 体育课, 体操",
+      "ecdict_phonetic": "dʒim",
+      "ecdict_definition": "n athletic facility equipped for sports or physical training"
+    },
+    {
+      "id": "KAOYAN_CORE_4864",
+      "word": "headline",
+      "definition_cn": "n. 大字标题； 头条新闻",
+      "phonetic_uk": "/'hedlaɪn/",
+      "phonetic_us": "/'hɛdlaɪn/",
+      "ecdict_translation": "n. 大标题, 新闻摘要\nvt. 为...做标题, 写标题",
+      "ecdict_phonetic": "'hedlain",
+      "ecdict_definition": "n. the heading or caption of a newspaper article\nv. publicize widely or highly, as if with a headline\nv. provide (a newspaper page or a story) with a headline"
+    },
+    {
+      "id": "KAOYAN_CORE_3432",
+      "word": "headmaster",
+      "definition_cn": "n. 校长",
+      "phonetic_uk": "/hed'mɑːstə/",
+      "phonetic_us": "/,hɛd'mæstɚ/",
+      "ecdict_translation": "n. (中小学)校长, 监工",
+      "ecdict_phonetic": "'hed'mɑ:stә",
+      "ecdict_definition": "n. presiding officer of a school"
+    },
+    {
+      "id": "KAOYAN_CORE_439",
+      "word": "homogeneous",
+      "definition_cn": "adj. 同种类的，同性质的，有相同特征的",
+      "phonetic_uk": "/,hɒmə(ʊ)'dʒiːnɪəs; -'dʒen-/",
+      "phonetic_us": "/,homə'dʒinɪəs/",
+      "ecdict_translation": "a. 同种的, 同质的, 齐性的\n[医] 同种的, 纯一的, 同质的, 均匀的",
+      "ecdict_phonetic": ".hәumә'dʒi:niәs",
+      "ecdict_definition": "a. all of the same or similar kind or nature"
+    },
+    {
+      "id": "KAOYAN_CORE_4266",
+      "word": "hose",
+      "definition_cn": "n. 软管；长筒袜；男性穿的紧身裤； v. 用软管浇水；痛打",
+      "phonetic_uk": "/həʊz/",
+      "phonetic_us": "/hoz/",
+      "ecdict_translation": "n. 水管, 橡皮软管, 长统袜\nvt. 用水管浇",
+      "ecdict_phonetic": "hәuz",
+      "ecdict_definition": "n. man's close-fitting garment of the 16th and 17th centuries covering the legs and reaching up to the waist; worn with a doublet\nn. a flexible pipe for conveying a liquid or gas\nv. water with a hose"
+    },
+    {
+      "id": "KAOYAN_CORE_692",
+      "word": "humid",
+      "definition_cn": "adj. 湿的,湿气重的",
+      "phonetic_uk": "/'hjuːmɪd/",
+      "phonetic_us": "/'hjumɪd/",
+      "ecdict_translation": "a. 潮湿的, 湿润的, 多湿气的",
+      "ecdict_phonetic": "'hju:mid",
+      "ecdict_definition": "s. containing or characterized by a great deal of water vapor"
+    },
+    {
+      "id": "KAOYAN_CORE_2877",
+      "word": "humiliate",
+      "definition_cn": "v. 羞辱；使…丢脸；耻辱",
+      "phonetic_uk": "/hjʊ'mɪlɪeɪt/",
+      "phonetic_us": "/hju'mɪlɪet/",
+      "ecdict_translation": "vt. 使丢脸, 使蒙羞, 屈辱",
+      "ecdict_phonetic": "hju:'milieit",
+      "ecdict_definition": "v. cause to feel shame; hurt the pride of"
+    },
+    {
+      "id": "KAOYAN_CORE_4504",
+      "word": "imagination",
+      "definition_cn": "n. [心理] 想象力；空想；幻想物",
+      "phonetic_uk": "/ɪ,mædʒɪ'neɪʃ(ə)n/",
+      "phonetic_us": "/ɪ,mædʒɪ'neʃən/",
+      "ecdict_translation": "n. 想像, 听觉, 想像力\n[医] 想像",
+      "ecdict_phonetic": "i.mædʒi'neiʃәn",
+      "ecdict_definition": "n. the formation of a mental image of something that is not perceived as real and is not present to the senses\nn. the ability to form mental images of things or events"
+    },
+    {
+      "id": "KAOYAN_CORE_4652",
+      "word": "imaginative",
+      "definition_cn": "adj. 富于想象的；有创造力的",
+      "phonetic_uk": "/ɪ'mædʒɪnətɪv/",
+      "phonetic_us": "/ɪ'mædʒɪnətɪv/",
+      "ecdict_translation": "a. 想像的, 虚构的",
+      "ecdict_phonetic": "i'mædʒinәtiv",
+      "ecdict_definition": "s. (used of persons or artifacts) marked by independence and creativity in thought or action"
+    },
+    {
+      "id": "KAOYAN_CORE_843",
+      "word": "impetus",
+      "definition_cn": "n. 推动(力),促进",
+      "phonetic_uk": "/'ɪmpɪtəs/",
+      "phonetic_us": "/'ɪmpɪtəs/",
+      "ecdict_translation": "n. 动力, 推动力, 动量\n[医] 冲动, 动能, 起始(病)",
+      "ecdict_phonetic": "'impitәs",
+      "ecdict_definition": "n a force that moves something along\nn the act of applying force suddenly"
+    },
+    {
+      "id": "KAOYAN_CORE_2062",
+      "word": "impressive",
+      "definition_cn": "adj. 感人的；令人钦佩的；给人以深刻印象的",
+      "phonetic_uk": "/ɪm'presɪv/",
+      "phonetic_us": "/ɪm'prɛsɪv/",
+      "ecdict_translation": "a. 给人深刻印象的, 威严的",
+      "ecdict_phonetic": "im'presiv",
+      "ecdict_definition": "a. making a strong or vivid impression\ns. producing a strong effect"
+    },
+    {
+      "id": "KAOYAN_CORE_245",
+      "word": "increasingly",
+      "definition_cn": "adv. 不断增加地,日益",
+      "phonetic_uk": "/ɪn'kriːsɪŋlɪ/",
+      "phonetic_us": "/ɪn'krisɪŋli/",
+      "ecdict_translation": "adv. 逐渐地, 渐增地",
+      "ecdict_phonetic": "in'kri:siŋli",
+      "ecdict_definition": "r. advancing in amount or intensity"
+    },
+    {
+      "id": "KAOYAN_CORE_836",
+      "word": "indispensable",
+      "definition_cn": "adj. (to,for)必不可少的,必需的",
+      "phonetic_uk": "/ɪndɪ'spensəb(ə)l/",
+      "phonetic_us": "/'ɪndɪ'spɛnsəbl/",
+      "ecdict_translation": "n. 不可缺少之物\na. 不可缺少的, 责无旁贷的, 绝对必要的",
+      "ecdict_phonetic": ".indis'pensәbl",
+      "ecdict_definition": "a. not to be dispensed with; essential\ns. unavoidable"
+    },
+    {
+      "id": "KAOYAN_CORE_4726",
+      "word": "industrialise",
+      "definition_cn": "v. 使工业化",
+      "phonetic_uk": "/ɪn'dʌstriəlaɪz/",
+      "phonetic_us": "/ɪn'dʌstriəlaɪz/",
+      "ecdict_translation": "vi.vt. (使)工业化",
+      "ecdict_phonetic": "in'dʌstriәlaiz",
+      "ecdict_definition": "v organize (the production of something) into an industry\nv develop industry; become industrial"
+    },
+    {
+      "id": "KAOYAN_CORE_440",
+      "word": "ingenious",
+      "definition_cn": "adj. 机敏的;有独创性的;精致的;精巧制成的",
+      "phonetic_uk": "/ɪn'dʒiːnɪəs/",
+      "phonetic_us": "/ɪn'dʒinɪəs/",
+      "ecdict_translation": "a. 灵敏的, 精巧的, 聪明的",
+      "ecdict_phonetic": "in'dʒi:njәs",
+      "ecdict_definition": "s showing inventiveness and skill"
+    },
+    {
+      "id": "KAOYAN_CORE_2723",
+      "word": "ingredient",
+      "definition_cn": "n. 原料；要素；组成部分； adj. 构成组成部分的",
+      "phonetic_uk": "/ɪn'griːdɪənt/",
+      "phonetic_us": "/ɪn'ɡridɪənt/",
+      "ecdict_translation": "n. 成分, 因素\n[化] 配合剂; 拼料; 成分; 组分",
+      "ecdict_phonetic": "in'gri:diәnt",
+      "ecdict_definition": "n. a component of a mixture or compound\nn. food that is a component of a mixture in cooking"
+    },
+    {
+      "id": "KAOYAN_CORE_1135",
+      "word": "intact",
+      "definition_cn": "adj. 完整无缺的,未经触动的,未受损伤的",
+      "phonetic_uk": "/ɪn'tækt/",
+      "phonetic_us": "/ɪn'tækt/",
+      "ecdict_translation": "a. 尚未被人碰过的, 原封不动的, 完整的\n[医] 完整的, 无伤的",
+      "ecdict_phonetic": "in'tækt",
+      "ecdict_definition": "s. (of a woman) having the hymen unbroken\ns. undamaged in any way"
+    },
+    {
+      "id": "KAOYAN_CORE_2757",
+      "word": "interpret",
+      "definition_cn": "v. 说明；口译",
+      "phonetic_uk": "/ɪn'tɜːprɪt/",
+      "phonetic_us": "/ɪn'tɝprɪt/",
+      "ecdict_translation": "vt. 解释, 演出, 翻译, 理解\nvi. 翻译, 解释",
+      "ecdict_phonetic": "in'tә:prit",
+      "ecdict_definition": "v. make sense of; assign a meaning to\nv. give an interpretation or rendition of"
+    },
+    {
+      "id": "KAOYAN_CORE_3233",
+      "word": "intrude",
+      "definition_cn": "v. 把…强加；把…硬挤",
+      "phonetic_uk": "/ɪn'truːd/",
+      "phonetic_us": "/ɪn'trʊd/",
+      "ecdict_translation": "vi. 闯入, 侵入\nvt. 强加于",
+      "ecdict_phonetic": "in'tru:d",
+      "ecdict_definition": "v. enter uninvited\nv. search or inquire in a meddlesome way\nv. thrust oneself in as if by force"
+    },
+    {
+      "id": "KAOYAN_CORE_4068",
+      "word": "invariably",
+      "definition_cn": "adv. 总是；不变地；一定地",
+      "phonetic_uk": "/ɪn'veərɪəblɪ/",
+      "phonetic_us": "/ɪn'vɛrɪəbli/",
+      "ecdict_translation": "adv. 不变化地, 恒定地, 始终如一地",
+      "ecdict_phonetic": "in'vєәriәbli",
+      "ecdict_definition": "r without variation or change, in every case"
+    },
+    {
+      "id": "KAOYAN_CORE_1083",
+      "word": "isolate",
+      "definition_cn": "v. 隔离,孤立",
+      "phonetic_uk": "/'aɪsəleɪt/",
+      "phonetic_us": "/aɪslˌet/",
+      "ecdict_translation": "vt. 使隔离, 使孤立, 使绝缘\nn. 隔离种群",
+      "ecdict_phonetic": "'aisәleit",
+      "ecdict_definition": "v. place or set apart\nv. obtain in pure form\nv. separate (experiences) from the emotions relating to them"
+    },
+    {
+      "id": "KAOYAN_CORE_1480",
+      "word": "journalist",
+      "definition_cn": "n. 新闻工作者；报人；记日志者",
+      "phonetic_uk": "/'dʒɜːn(ə)lɪst/",
+      "phonetic_us": "/'dʒɝnəlɪst/",
+      "ecdict_translation": "n. 新闻记者, 从事新闻杂志业的人",
+      "ecdict_phonetic": "'dʒә:nәlist",
+      "ecdict_definition": "n. a writer for newspapers and magazines"
+    },
+    {
+      "id": "KAOYAN_CORE_4157",
+      "word": "juice",
+      "definition_cn": "n. （水果）汁，液；果汁",
+      "phonetic_uk": "/dʒuːs/",
+      "phonetic_us": "/dʒus/",
+      "ecdict_translation": "n. 汁, 活力, 体液\nvt. 挤出汁来, 加汁",
+      "ecdict_phonetic": "dʒu:s",
+      "ecdict_definition": "n. the liquid part that can be extracted from plant or animal tissue by squeezing or cooking\nn. energetic vitality\nn. electric current\nn. any of several liquids of the body"
+    },
+    {
+      "id": "KAOYAN_CORE_4116",
+      "word": "kettle",
+      "definition_cn": "n. 壶；[化工] 釜；罐；鼓",
+      "phonetic_uk": "/'ket(ə)l/",
+      "phonetic_us": "/'kɛtl/",
+      "ecdict_translation": "n. 茶壶, 罐\n[化] 釜体釜; 锅",
+      "ecdict_phonetic": "'ketl",
+      "ecdict_definition": "n. a metal pot for stewing or boiling; usually has a lid\nn. the quantity a kettle will hold\nn. a large hemispherical brass or copper percussion instrument with a drumhead that can be tuned by adjusting the tension on it"
+    },
+    {
+      "id": "KAOYAN_CORE_4621",
+      "word": "lake",
+      "definition_cn": "n. 湖；深红色颜料；胭脂红； v. （使）血球溶解； v. （使）血球溶解",
+      "phonetic_uk": "/leɪk/",
+      "phonetic_us": "/lek/",
+      "ecdict_translation": "n. 湖, 池, 色淀\nv. (使)血球溶解",
+      "ecdict_phonetic": "leik",
+      "ecdict_definition": "n. a body of (usually fresh) water surrounded by land\nn. a purplish red pigment prepared from lac or cochineal\nn. any of numerous bright translucent organic pigments"
+    },
+    {
+      "id": "KAOYAN_CORE_4630",
+      "word": "lane",
+      "definition_cn": "n. 小巷；[航][水运] 航线；车道；罚球区",
+      "phonetic_uk": "/leɪn/",
+      "phonetic_us": "/len/",
+      "ecdict_translation": "n. 小路, 巷, 弄, 单行道",
+      "ecdict_phonetic": "lein",
+      "ecdict_definition": "n. a narrow way or road\nn. a well-defined track or path; for e.g. swimmers or lines of traffic"
+    },
+    {
+      "id": "KAOYAN_CORE_4175",
+      "word": "lapse",
+      "definition_cn": "n. (一时的) 走神，判断错误",
+      "phonetic_uk": "/læps/",
+      "phonetic_us": "/læps/",
+      "ecdict_translation": "n. 过失, 流逝, 失效\nvi. 犯错, 堕落, 减退, 消失, 流逝\nvt. 使失效",
+      "ecdict_phonetic": "læps",
+      "ecdict_definition": "n. a break or intermission in the occurrence of something\nv. end, at least for a long time\nv. drop to a lower level, as in one's morals or standards\nv. let slip"
+    },
+    {
+      "id": "KAOYAN_CORE_2403",
+      "word": "laptop",
+      "definition_cn": "n. 膝上型轻便电脑，笔记本电脑",
+      "phonetic_uk": "/'læptɒp/",
+      "phonetic_us": "/'læptɑp/",
+      "ecdict_translation": "[计] 膝上型的",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "n. a portable computer small enough to use in your lap"
+    },
+    {
+      "id": "KAOYAN_CORE_5003",
+      "word": "latter",
+      "definition_cn": "pron. 后者； adj. 后面的； 末尾的",
+      "phonetic_uk": "/'lætə/",
+      "phonetic_us": "/'lætɚ/",
+      "ecdict_translation": "a. 后者的, 较后的, 近来的",
+      "ecdict_phonetic": "'lætә",
+      "ecdict_definition": "n. the second of two or the second mentioned of two\na. referring to the second of two things or persons mentioned (or the last one or ones of several)"
+    },
+    {
+      "id": "KAOYAN_CORE_1915",
+      "word": "laugh",
+      "definition_cn": "n. 笑；引人发笑的事或人； v. 笑",
+      "phonetic_uk": "/lɑːf/",
+      "phonetic_us": "/læf/",
+      "ecdict_translation": "n. 笑, 笑声\nvi. 笑, 大笑\nvt. 以笑表示",
+      "ecdict_phonetic": "lɑ:f",
+      "ecdict_definition": "n. the sound of laughing\nn. a facial expression characteristic of a person laughing\nv. produce laughter"
+    },
+    {
+      "id": "KAOYAN_CORE_4460",
+      "word": "leg",
+      "definition_cn": "n. 腿；支柱",
+      "phonetic_uk": "/leg/",
+      "phonetic_us": "/lɛɡ/",
+      "ecdict_translation": "n. 腿, 假腿, 路程\nvi. 走, 跑",
+      "ecdict_phonetic": "leg",
+      "ecdict_definition": "n. a human limb; commonly used to refer to a whole limb but technically only the part of the limb between the knee and ankle\nn. a structure in animals that is similar to a human leg and used for locomotion\nn. one of the supports for a piece of furniture\nn. the limb of an animal used for food"
+    },
+    {
+      "id": "KAOYAN_CORE_4727",
+      "word": "liter",
+      "definition_cn": "n. 升",
+      "phonetic_uk": "/'liːtə/",
+      "phonetic_us": "/litɚ/",
+      "ecdict_translation": "n. 公升\n[化] 升",
+      "ecdict_phonetic": "'li:tә",
+      "ecdict_definition": "n. a metric unit of capacity, formerly defined as the volume of one kilogram of pure water under standard conditions; now equal to 1,000 cubic centimeters (or approximately 1.75 pints)"
+    },
+    {
+      "id": "KAOYAN_CORE_4226",
+      "word": "locker",
+      "definition_cn": "n. 柜，箱；上锁的人；有锁的橱柜；锁扣装置；有锁的存物柜",
+      "phonetic_uk": "/'lɒkə/",
+      "phonetic_us": "/'lɑkɚ/",
+      "ecdict_translation": "n. 抽屉, 小柜, 上锁人\n[机] 锁柜",
+      "ecdict_phonetic": "'lɒkә",
+      "ecdict_definition": "n. a fastener that locks or closes"
+    },
+    {
+      "id": "KAOYAN_CORE_2478",
+      "word": "lonely",
+      "definition_cn": "adj. 寂寞的；偏僻的； n. 孤独者",
+      "phonetic_uk": "/'ləʊnlɪ/",
+      "phonetic_us": "/'lonli/",
+      "ecdict_translation": "a. 孤单的, 孤寂的, 荒凉的",
+      "ecdict_phonetic": "'lәunli",
+      "ecdict_definition": "s. marked by dejection from being alone\ns. devoid of creatures"
+    },
+    {
+      "id": "KAOYAN_CORE_5020",
+      "word": "lung",
+      "definition_cn": "n. 肺",
+      "phonetic_uk": "/lʌŋ/",
+      "phonetic_us": "/lʌŋ/",
+      "ecdict_translation": "n. 肺, 肺脏, 空地\n[医] 肺",
+      "ecdict_phonetic": "lʌŋ",
+      "ecdict_definition": "n. either of two saclike respiratory organs in the chest of vertebrates; serves to remove carbon dioxide and provide oxygen to the blood"
+    },
+    {
+      "id": "KAOYAN_CORE_611",
+      "word": "maneuver",
+      "definition_cn": "n. (manoeuvre)机动;运用,操作;； v. 机动",
+      "phonetic_uk": "/mə'nʊvə/",
+      "phonetic_us": "/mə'nʊvɚ; mə'njʊvɚ/",
+      "ecdict_translation": "n. 演习, 调遣, 策略\nv. 调遣, 演习, 用计",
+      "ecdict_phonetic": "mә'nu:vә",
+      "ecdict_definition": "n. a military training exercise\nn. a deliberate coordinated movement requiring dexterity and skill\nn. a move made to gain a tactical end"
+    },
+    {
+      "id": "KAOYAN_CORE_638",
+      "word": "marvelous",
+      "definition_cn": "adj. (marvellous)惊人的,奇迹般的,妙极的",
+      "phonetic_uk": "/ˈmɑːvələs/",
+      "phonetic_us": "/'mɑrvələs/",
+      "ecdict_translation": "a. 令人惊异的, 了不起的, 不平常的",
+      "ecdict_phonetic": "'mɑ:vәlәs",
+      "ecdict_definition": "s. being or having the character of a miracle"
+    },
+    {
+      "id": "KAOYAN_CORE_4347",
+      "word": "melody",
+      "definition_cn": "n. 旋律；歌曲；美妙的音乐",
+      "phonetic_uk": "/'melədɪ/",
+      "phonetic_us": "/'mɛlədi/",
+      "ecdict_translation": "n. 曲子, 美妙音乐, 曲调",
+      "ecdict_phonetic": "'melәdi",
+      "ecdict_definition": "n. the perception of pleasant arrangements of musical notes"
+    },
+    {
+      "id": "KAOYAN_CORE_659",
+      "word": "mere",
+      "definition_cn": "adj. 纯粹的;仅仅,只不过",
+      "phonetic_uk": "/mɪə/",
+      "phonetic_us": "/mɪr/",
+      "ecdict_translation": "n. 小湖, 池塘\na. 仅仅的, 只不过的",
+      "ecdict_phonetic": "miә",
+      "ecdict_definition": "n. a small pond of standing water\ns. being nothing more than specified"
+    },
+    {
+      "id": "KAOYAN_CORE_685",
+      "word": "metropolitan",
+      "definition_cn": "adj. 首都的,主要都市的,大城市",
+      "phonetic_uk": "/metrə'pɒlɪt(ə)n/",
+      "phonetic_us": "/,mɛtrə'pɑlɪtən/",
+      "ecdict_translation": "n. 大都市居民, 都主教, 宗主国的公民\na. 大都市的, 都主教区的, 宗主国的",
+      "ecdict_phonetic": ".metrә'pɒlitn",
+      "ecdict_definition": "n. in the Eastern Orthodox Church this title is given to a position between bishop and patriarch; equivalent to archbishop in western Christianity\nn. a person who lives in a metropolis\na. relating to or characteristic of a metropolis"
+    },
+    {
+      "id": "KAOYAN_CORE_4852",
+      "word": "mingle",
+      "definition_cn": "v. 混合起来， 相混合；相交往； v. 使混合",
+      "phonetic_uk": "/'mɪŋgl/",
+      "phonetic_us": "/'mɪŋɡl/",
+      "ecdict_translation": "v. (使)混合",
+      "ecdict_phonetic": "'miŋgl",
+      "ecdict_definition": "v. get involved or mixed-up with"
+    },
+    {
+      "id": "KAOYAN_CORE_4783",
+      "word": "minimize",
+      "definition_cn": "v. 使减到最少， 使降到最低",
+      "phonetic_uk": "/'mɪnɪmaɪz/",
+      "phonetic_us": "/'mɪnɪmaɪz/",
+      "ecdict_translation": "vt. 将...减到最少\nvt. 最小化\nvi. 最小化\n[计] 最小化",
+      "ecdict_phonetic": "'minimaiz",
+      "ecdict_definition": "v. make small or insignificant\nv. cause to seem less serious; play down"
+    },
+    {
+      "id": "KAOYAN_CORE_4342",
+      "word": "ministry",
+      "definition_cn": "n. （政府的）部门",
+      "phonetic_uk": "/'mɪnɪstrɪ/",
+      "phonetic_us": "/'mɪnɪstri/",
+      "ecdict_translation": "n. 部, 内阁, 服务\n[经] 部",
+      "ecdict_phonetic": "'ministri",
+      "ecdict_definition": "n. religious ministers collectively (especially Presbyterian)\nn. building where the business of a government department is transacted\nn. a government department under the direction of a minister\nn. the work of a minister of religion"
+    },
+    {
+      "id": "KAOYAN_CORE_745",
+      "word": "mobile",
+      "definition_cn": "adj. 可动的,活动的,运动的",
+      "phonetic_uk": "/ˈməʊbaɪl/",
+      "phonetic_us": "/ˈmobəl; ˈmoˌbaɪl; ˈmoˌbil/",
+      "ecdict_translation": "a. 移动的, 易变的, 机动的\nn. 活动物体",
+      "ecdict_phonetic": "'mәubil",
+      "ecdict_definition": "n. a river in southwestern Alabama; flows into Mobile Bay\nn. a port in southwestern Alabama on Mobile Bay\nn. sculpture suspended in midair whose delicately balanced parts can be set in motion by air currents\ns. migratory"
+    },
+    {
+      "id": "KAOYAN_CORE_713",
+      "word": "modest",
+      "definition_cn": "adj. 谦虚的,有节制的",
+      "phonetic_uk": "/'mɒdɪst/",
+      "phonetic_us": "/'mɑdɪst/",
+      "ecdict_translation": "a. 谦逊的, 羞怯的, 端庄的, 适度的\n[经] 适当的",
+      "ecdict_phonetic": "'mɒdist",
+      "ecdict_definition": "a. marked by simplicity; having a humble opinion of yourself\ns. not large but sufficient in size or amount\ns. free from pomp or affectation\na. not offensive to sexual mores in conduct or appearance"
+    },
+    {
+      "id": "KAOYAN_CORE_147",
+      "word": "municipal",
+      "definition_cn": "adj. 市(立,政)的;地方性的,地方自治的",
+      "phonetic_uk": "/mjʊ'nɪsɪp(ə)l/",
+      "phonetic_us": "/mju'nɪsɪpl/",
+      "ecdict_translation": "a. 市政的, 自治区的, 内政的\n[经] 市政的, 市的",
+      "ecdict_phonetic": "mju:'nisipl",
+      "ecdict_definition": "a. relating or belonging to or characteristic of a municipality\ns. of or relating to the government of a municipality"
+    },
+    {
+      "id": "KAOYAN_CORE_557",
+      "word": "negligible",
+      "definition_cn": "adj. 可忽略不计的，微不足道的",
+      "phonetic_uk": "/'neglɪdʒɪb(ə)l/",
+      "phonetic_us": "/'nɛɡlɪdʒəbl/",
+      "ecdict_translation": "a. 可以忽略的, 不足取的, 无用的\n[医] 可不计的, 可忽视的",
+      "ecdict_phonetic": "'neglidʒәbl",
+      "ecdict_definition": "s. so small as to be meaningless; insignificant\ns. not worth considering"
+    },
+    {
+      "id": "KAOYAN_CORE_4756",
+      "word": "nonsense",
+      "definition_cn": "n. 胡说， 废话",
+      "phonetic_uk": "/'nɒnsns/",
+      "phonetic_us": "/'nɑnsɛns/",
+      "ecdict_translation": "n. 无意义的事, 荒谬言行, 荒唐",
+      "ecdict_phonetic": "'nɒnsәns",
+      "ecdict_definition": "n. a message that seems to convey no meaning\ns. having no intelligible meaning"
+    },
+    {
+      "id": "KAOYAN_CORE_4702",
+      "word": "nowhere",
+      "definition_cn": "adv. 任何地方都不， 没有地方 <",
+      "phonetic_uk": "/'nəuweə/",
+      "phonetic_us": "/'no'wɛr/",
+      "ecdict_translation": "adv. 无处, 到处都无",
+      "ecdict_phonetic": "'nәuhwєә",
+      "ecdict_definition": "n. an insignificant place\nr. not anywhere; in or at or to no place"
+    },
+    {
+      "id": "KAOYAN_CORE_559",
+      "word": "oblige",
+      "definition_cn": "v. 强迫,迫使;责成;(使)感激,施恩于",
+      "phonetic_uk": "/ə'blaɪdʒ/",
+      "phonetic_us": "/ə'blaɪdʒ/",
+      "ecdict_translation": "vt. 强制, 施恩惠于, 使感激\nvi. 施恩惠, 帮忙",
+      "ecdict_phonetic": "ә'blaidʒ",
+      "ecdict_definition": "v. bind by an obligation; cause to be indebted\nv. provide a service or favor for someone"
+    },
+    {
+      "id": "KAOYAN_CORE_1063",
+      "word": "obsolete",
+      "definition_cn": "adj. 已废弃的,过时的",
+      "phonetic_uk": "/'ɒbsəliːt/",
+      "phonetic_us": "/ɑbsəˌlit/",
+      "ecdict_translation": "a. 荒废的, 成废物的, 陈旧的, 老式的\nn. 废词, 废物",
+      "ecdict_phonetic": "'ɒbsәli:t",
+      "ecdict_definition": "s no longer in use"
+    },
+    {
+      "id": "KAOYAN_CORE_1827",
+      "word": "originate",
+      "definition_cn": "v. 引起；创作",
+      "phonetic_uk": "/ə'rɪdʒɪneɪt; ɒ-/",
+      "phonetic_us": "/əˈrɪdʒəˌnet/",
+      "ecdict_translation": "vt. 创始, 发明, 发起\nvi. 发源, 发生, 起航\n[计] 发自",
+      "ecdict_phonetic": "ә'ridʒineit",
+      "ecdict_definition": "v. come into existence; take on form or shape\nv. bring into being\nv. begin a trip at a certain point, as of a plane, train, bus, etc."
+    },
+    {
+      "id": "KAOYAN_CORE_3080",
+      "word": "outset",
+      "definition_cn": "n. 开始；开端",
+      "phonetic_uk": "/'aʊtset/",
+      "phonetic_us": "/'aʊtsɛt/",
+      "ecdict_translation": "n. 着手, 开头, 最初",
+      "ecdict_phonetic": "'autset",
+      "ecdict_definition": "n the time at which something is supposed to begin"
+    },
+    {
+      "id": "KAOYAN_CORE_3030",
+      "word": "overcoat",
+      "definition_cn": "n. 大衣，外套",
+      "phonetic_uk": "/'əʊvəkəʊt/",
+      "phonetic_us": "/'ovɚkot/",
+      "ecdict_translation": "n. 外套大衣",
+      "ecdict_phonetic": "'әuvәkәut",
+      "ecdict_definition": "n. an additional protective coating (as of paint or varnish)"
+    },
+    {
+      "id": "KAOYAN_CORE_4814",
+      "word": "overhaul",
+      "definition_cn": "n. 彻底检修；改革A； v. 彻底检修；赶上， 超过",
+      "phonetic_uk": "/əʊvə'hɔːl/",
+      "phonetic_us": "/'ovɚhɔl/",
+      "ecdict_translation": "vt. 分解检查, 翻修, 精细检查, 彻底革新\nn. 分解检查, 精细检查, 大检修",
+      "ecdict_phonetic": ".әuvә'hɒ:l",
+      "ecdict_definition": "n. periodic maintenance on a car or machine\nv. make repairs, renovations, revisions or adjustments to"
+    },
+    {
+      "id": "KAOYAN_CORE_784",
+      "word": "pan",
+      "definition_cn": "n. 平底锅,盘子,面板",
+      "phonetic_uk": "/pæn/",
+      "phonetic_us": "/pæn/",
+      "ecdict_translation": "n. 平锅, 浅盘, 盆地, 硬土层, 拍摄全景\nv. 上下左右移动, 摇镜头, 淘洗, 淘金",
+      "ecdict_phonetic": "pæn",
+      "ecdict_definition": "n. cooking utensil consisting of a wide metal vessel\nn. (Greek mythology) god of fields and woods and shepherds and flocks; represented as a man with goat's legs and horns and ears; identified with Roman Sylvanus or Faunus\nn. shallow container made of metal\nn. chimpanzees; more closely related to Australopithecus than to other pongids"
+    },
+    {
+      "id": "KAOYAN_CORE_4382",
+      "word": "panda",
+      "definition_cn": "n. 熊猫；猫熊",
+      "phonetic_uk": "/'pændə/",
+      "phonetic_us": "/'pændə/",
+      "ecdict_translation": "n. 大熊猫, 小熊猫",
+      "ecdict_phonetic": "'pændә",
+      "ecdict_definition": "n large black-and-white herbivorous mammal of bamboo forests of China and Tibet; in some classifications considered a member of the bear family or of a separate family Ailuropodidae\nn reddish-brown Old World raccoon-like carnivore; in some classifications considered unrelated to the giant pandas"
+    },
+    {
+      "id": "KAOYAN_CORE_790",
+      "word": "panel",
+      "definition_cn": "n. 面,板;控制板,仪表盘;专门小组",
+      "phonetic_uk": "/'pæn(ə)l/",
+      "phonetic_us": "/'pænl/",
+      "ecdict_translation": "n. 嵌板, 仪表板, 专题讨论小组, 全体陪审员\nvt. 嵌镶板",
+      "ecdict_phonetic": "'pænl",
+      "ecdict_definition": "n. sheet that forms a distinct (usually flat and rectangular) section or component of something\nn. (law) a group of people summoned for jury service (from whom a jury will be chosen)\nn. a group of people gathered for a special purpose as to plan or discuss an issue or judge a contest etc\nn. a soft pad placed under a saddle"
+    },
+    {
+      "id": "KAOYAN_CORE_805",
+      "word": "particular",
+      "definition_cn": "adj. 特殊的,苛求的,个别的n.详情,细节,特色",
+      "phonetic_uk": "/pəˈtɪkjʊlə(r)/",
+      "phonetic_us": "/pɚ'tɪkjəlɚ/",
+      "ecdict_translation": "n. 一项(或条、点), 个别项目, 详细说明\na. 特别的, 独有的, 挑剔的, 详尽的",
+      "ecdict_phonetic": "pә'tikjulә",
+      "ecdict_definition": "n. a fact about some part (as opposed to general)\nn. (logic) a proposition that asserts something about some (but not all) members of a class\ns. unique or specific to a person or thing or category\ns. separate and distinct from others of the same group or category"
+    },
+    {
+      "id": "KAOYAN_CORE_4884",
+      "word": "pebble",
+      "definition_cn": "n. 卵石",
+      "phonetic_uk": "/'pebl/",
+      "phonetic_us": "/'pɛbl/",
+      "ecdict_translation": "n. 小圆石, 小鹅卵石, 水晶透镜, 碎石花纹\n[医] 小石",
+      "ecdict_phonetic": "'pebl",
+      "ecdict_definition": "n. a small smooth rounded rock"
+    },
+    {
+      "id": "KAOYAN_CORE_4871",
+      "word": "per",
+      "definition_cn": "prep. 每；经， 由",
+      "phonetic_uk": "/pɜː/",
+      "phonetic_us": "/pɚ/",
+      "ecdict_translation": "prep. 每一, 通过, 经, 按照\n[经] 每, 按照",
+      "ecdict_phonetic": "pә:",
+      "ecdict_definition": "prep. Through; by means of; through the agency of; by; for; for\n   each; as, per annum; per capita, by heads, or according to individuals;\n   per curiam, by the court; per se, by itself, of itself. Per is also\n   sometimes used with English words."
+    },
+    {
+      "id": "KAOYAN_CORE_962",
+      "word": "pessimistic",
+      "definition_cn": "adj. 悲观(主义)的",
+      "phonetic_uk": "/,pesɪ'mɪstɪk/",
+      "phonetic_us": "/,pɛsɪ'mɪstɪk/",
+      "ecdict_translation": "a. 悲观的, 厌世的, 悲观主义的",
+      "ecdict_phonetic": ".pesi'mistik",
+      "ecdict_definition": "a. expecting the worst possible outcome"
+    },
+    {
+      "id": "KAOYAN_CORE_846",
+      "word": "petty",
+      "definition_cn": "adj. 小(器、规模)的,不重要的,细微的,卑鄙的",
+      "phonetic_uk": "/'petɪ/",
+      "phonetic_us": "/'pɛti/",
+      "ecdict_translation": "a. 琐碎的, 小规模的, 小气的, 委琐的\n[经] 小额的, 微小的, 小规模的",
+      "ecdict_phonetic": "'peti",
+      "ecdict_definition": "s. contemptibly narrow in outlook"
+    },
+    {
+      "id": "KAOYAN_CORE_2737",
+      "word": "phase",
+      "definition_cn": "n. 月相",
+      "phonetic_uk": "/feɪz/",
+      "phonetic_us": "/fez/",
+      "ecdict_translation": "n. 时期, 局面, 方面, 位相, 相, 阶段\nvt. 使调整相位, 使定相, 使一致, 逐步执行, 实行\n[计] 阶段",
+      "ecdict_phonetic": "feiz",
+      "ecdict_definition": "n. any distinct time period in a sequence of events\nn. (physical chemistry) a distinct state of matter in a system; matter that is identical in chemical composition and physical state and separated from other material by the phase boundary\nn. a particular point in the time of a cycle; measured from some arbitrary zero and expressed as an angle\nn. (astronomy) the particular appearance of a body's state of illumination (especially one of the recurring shapes of the part of Earth's moon that is illuminated by the sun)"
+    },
+    {
+      "id": "KAOYAN_CORE_2725",
+      "word": "plough",
+      "definition_cn": "v. 犁；耕； n. 犁；耕地（等于plow）",
+      "phonetic_uk": "/plaʊ/",
+      "phonetic_us": "/plaʊ/",
+      "ecdict_translation": "n. 犁, 犁过的地\nvi. 用犁耕田, 开路\nvt. 耕, 犁, 开路",
+      "ecdict_phonetic": "plau",
+      "ecdict_definition": "n a group of seven bright stars in the constellation Ursa Major\nn a farm tool having one or more heavy blades to break the soil and cut a furrow prior to sowing\nv move in a way resembling that of a plow cutting into or going through the soil\nv to break and turn over earth especially with a plow"
+    },
+    {
+      "id": "KAOYAN_CORE_4622",
+      "word": "plumber",
+      "definition_cn": "n. 水管工；堵漏人员",
+      "phonetic_uk": "/'plʌmə/",
+      "phonetic_us": "/'plʌmɚ/",
+      "ecdict_translation": "n. 水管工人\n[法] 堵漏防漏人员",
+      "ecdict_phonetic": "'plʌmә",
+      "ecdict_definition": "n. a craftsman who installs and repairs pipes and fixtures and appliances"
+    },
+    {
+      "id": "KAOYAN_CORE_4146",
+      "word": "poem",
+      "definition_cn": "n. 诗",
+      "phonetic_uk": "/'pəʊɪm/",
+      "phonetic_us": "/'poəm/",
+      "ecdict_translation": "n. 诗, 诗般美的事物",
+      "ecdict_phonetic": "'pәuim",
+      "ecdict_definition": "n. a composition written in metrical feet forming rhythmical lines"
+    },
+    {
+      "id": "KAOYAN_CORE_2185",
+      "word": "pop",
+      "definition_cn": "abbr. 卖点广告（Point of Purchase）",
+      "phonetic_uk": "/pɒp/",
+      "phonetic_us": "/pɑp/",
+      "ecdict_translation": "n. 砰然声, 枪击, 含气饮料, 流行音乐, 通俗艺术\na. 流行的, 热门的, 通俗的\nvt. 使发出爆裂声, 开枪打, 突然伸出\nvi. 发出爆裂声, 射击, 突然出现, 瞪大\nadv. 突然, 砰地\n[计] 出现点, 邮局协议",
+      "ecdict_phonetic": "pɒp",
+      "ecdict_definition": "n. a sweet drink containing carbonated water and flavoring\nn. a sharp explosive sound as from a gunshot or drawing a cork\nv. hit a pop-fly\nv. make a sharp explosive noise"
+    },
+    {
+      "id": "KAOYAN_CORE_3918",
+      "word": "postpone",
+      "definition_cn": "v. 使…延期；把…放在次要地位；把…放在后面",
+      "phonetic_uk": "/pəʊs(t)'pəʊn; pə'spəʊn/",
+      "phonetic_us": "/po'spon/",
+      "ecdict_translation": "vt. 延迟, 使延期, 缓办, 搁延\nvi. 延缓, 延缓发作",
+      "ecdict_phonetic": "pәust'pәun",
+      "ecdict_definition": "v. hold back to a later time"
+    },
+    {
+      "id": "KAOYAN_CORE_3472",
+      "word": "pot",
+      "definition_cn": "n. 壶；盆；罐； v. 把…装罐；射击；节略",
+      "phonetic_uk": "/pɒt/",
+      "phonetic_us": "/pɑt/",
+      "ecdict_translation": "n. 盆, 罐, 壶, 坩埚, 奖杯\nvt. 装入盆中, 在锅中煮, 随手射击\nvi. 随手射击",
+      "ecdict_phonetic": "pɒt",
+      "ecdict_definition": "n. metal or earthenware cooking vessel that is usually round and deep; often has a handle and lid\nn. the quantity contained in a pot\nn. a container in which plants are cultivated\nn. the cumulative amount involved in a game (such as poker)"
+    },
+    {
+      "id": "KAOYAN_CORE_178",
+      "word": "precede",
+      "definition_cn": "v. 领先(于),在(…之前);优先,先于",
+      "phonetic_uk": "/prɪ'siːd/",
+      "phonetic_us": "/prɪ'sid/",
+      "ecdict_translation": "vt. 在...之前, 优于, 较...优先\nvi. 在前面",
+      "ecdict_phonetic": ".pri:'si:d",
+      "ecdict_definition": "v. come before\nv. be the predecessor of\nv. move ahead (of others) in time or space\nv. furnish with a preface or introduction"
+    },
+    {
+      "id": "KAOYAN_CORE_924",
+      "word": "prior",
+      "definition_cn": "adj. 优先的,在前的;(to)在…之前",
+      "phonetic_uk": "/'praɪə/",
+      "phonetic_us": "/'praɪɚ/",
+      "ecdict_translation": "a. 更重要的, 较早的, 在先的\nn. 小隐修院院长, 大隐修院副院长",
+      "ecdict_phonetic": "'praiә",
+      "ecdict_definition": "n. the head of a religious order; in an abbey the prior is next below the abbot"
+    },
+    {
+      "id": "KAOYAN_CORE_375",
+      "word": "profitable",
+      "definition_cn": "adj. 有利可图的,有益的",
+      "phonetic_uk": "/'prɒfɪtəb(ə)l/",
+      "phonetic_us": "/'prɑfɪtəbl/",
+      "ecdict_translation": "a. 有利润的, 有利益的, 赚钱的\n[经] 有利(可图)的, 合算的",
+      "ecdict_phonetic": "'prɒfitәbl",
+      "ecdict_definition": "a. yielding material gain or profit"
+    },
+    {
+      "id": "KAOYAN_CORE_2703",
+      "word": "prone",
+      "definition_cn": "adj. 俯卧的；有…倾向的，易于…的； n. (Prone)人名；(意、法)普罗内",
+      "phonetic_uk": "/prəʊn/",
+      "phonetic_us": "/pron/",
+      "ecdict_translation": "a. 俯伏的, 面向下的, 有...倾向的\n[医] 旋前的, 伏的, 俯的",
+      "ecdict_phonetic": "prәun",
+      "ecdict_definition": "s. having a tendency (to); often used in combination\ns. lying face downward"
+    },
+    {
+      "id": "KAOYAN_CORE_770",
+      "word": "pronounce",
+      "definition_cn": "v. 发…的音;宣布,宣判",
+      "phonetic_uk": "/prə'naʊns/",
+      "phonetic_us": "/prə'naʊns/",
+      "ecdict_translation": "v. 发音, 宣告, 断言",
+      "ecdict_phonetic": "prә'nauns",
+      "ecdict_definition": "v. speak, pronounce, or utter in a certain way\nv. pronounce judgment on"
+    },
+    {
+      "id": "KAOYAN_CORE_1340",
+      "word": "provoke",
+      "definition_cn": "v. 挑动;激发;招惹",
+      "phonetic_uk": "/prə'vəʊk/",
+      "phonetic_us": "/prə'vok/",
+      "ecdict_translation": "vt. 激怒, 惹起, 诱导\n[法] 刺激, 煽动, 激怒",
+      "ecdict_phonetic": "prә'vәuk",
+      "ecdict_definition": "v. evoke or provoke to appear or occur\nv. provide the needed stimulus for"
+    },
+    {
+      "id": "KAOYAN_CORE_8",
+      "word": "radioactive",
+      "definition_cn": "adj. 放射性,放射引起的",
+      "phonetic_uk": "/,reɪdɪəʊ'æktɪv/",
+      "phonetic_us": "/'redɪo'æktɪv/",
+      "ecdict_translation": "a. 放射性的, 有放射能的\n[医] 放射性的, 放射的",
+      "ecdict_phonetic": ".reidiәu'æktiv",
+      "ecdict_definition": "a. exhibiting or caused by radioactivity"
+    },
+    {
+      "id": "KAOYAN_CORE_4877",
+      "word": "rarely",
+      "definition_cn": "adv. 很少， 难得； 稀有地",
+      "phonetic_uk": "/'reəli/",
+      "phonetic_us": "/'rɛrli/",
+      "ecdict_translation": "adv. 很少地, 罕有地",
+      "ecdict_phonetic": "'rєәli",
+      "ecdict_definition": "r. not often"
+    },
+    {
+      "id": "KAOYAN_CORE_4959",
+      "word": "rat",
+      "definition_cn": "n. 鼠 <",
+      "phonetic_uk": "/ræt/",
+      "phonetic_us": "/ræt/",
+      "ecdict_translation": "n. 鼠, 卑鄙的人, 破坏者, 变节者\nvi. 捕鼠, 变节\nvt. 弄蓬松",
+      "ecdict_phonetic": "ræt",
+      "ecdict_definition": "n. any of various long-tailed rodents similar to but larger than a mouse\nn. a pad (usually made of hair) worn as part of a woman's coiffure\nv. desert one's party or group of friends, for example, for one's personal advantage\nv. employ scabs or strike breakers in"
+    },
+    {
+      "id": "KAOYAN_CORE_4367",
+      "word": "reassure",
+      "definition_cn": "v. 使…安心，使消除疑虑",
+      "phonetic_uk": "/riːə'ʃʊə/",
+      "phonetic_us": "/,riə'ʃʊr/",
+      "ecdict_translation": "vt. 使...安心, 向...再保证\n[法] 重新保证, 再保险, 使清除疑虑",
+      "ecdict_phonetic": ".ri:ә'ʃuә",
+      "ecdict_definition": "v. cause to feel sure; give reassurance to\nv. give or restore confidence in; cause to feel sure or certain"
+    },
+    {
+      "id": "KAOYAN_CORE_5044",
+      "word": "reflexion",
+      "definition_cn": "n. 映像， 倒影；反省， 沉思",
+      "phonetic_uk": "/rɪ'flekʃn/",
+      "phonetic_us": "/rɪ'flɛkʃən/",
+      "ecdict_translation": "[医] 反射[作用], 反折",
+      "ecdict_phonetic": "ri'flekʃәn",
+      "ecdict_definition": "n the phenomenon of a propagating wave (light or sound) being thrown back from a surface\nn expression without words\nn a remark expressing careful consideration\nn a calm, lengthy, intent consideration\nn the ability to reflect beams or rays\nn a likeness in which left and right are reversed\nn the image of something as reflected by a mirror (or other reflective material)"
+    },
+    {
+      "id": "KAOYAN_CORE_2549",
+      "word": "refresh",
+      "definition_cn": "v. 更新；使……恢复；使……清新；消除……的疲劳",
+      "phonetic_uk": "/rɪ'freʃ/",
+      "phonetic_us": "/ri'frɛʃ/",
+      "ecdict_translation": "vt. 使清新, 使恢复, 使生气蓬勃\nvi. 提起精神, 恢复精神, 吃点心, 喝饮料\nvt. 刷新, 重新整理\nvi. 刷新, 重新整理\n[计] 刷新, 重新整理",
+      "ecdict_phonetic": "ri'freʃ",
+      "ecdict_definition": "v. make (to feel) fresh\nv. make fresh again"
+    },
+    {
+      "id": "KAOYAN_CORE_956",
+      "word": "resemblance",
+      "definition_cn": "n. 相似,相似性[点,物]",
+      "phonetic_uk": "/rɪ'zembl(ə)ns/",
+      "phonetic_us": "/rɪ'zɛmbləns/",
+      "ecdict_translation": "n. 相似处, 类似, 肖像",
+      "ecdict_phonetic": "ri'zemblәns",
+      "ecdict_definition": "n. similarity in appearance or external or superficial details"
+    },
+    {
+      "id": "KAOYAN_CORE_4962",
+      "word": "restless",
+      "definition_cn": "adj. 得不到休息的；不平静的；不安的， 坐立不安的",
+      "phonetic_uk": "/'restləs/",
+      "phonetic_us": "/'rɛstləs/",
+      "ecdict_translation": "a. 不安静的, 慌张的, 休息不充分的\n[医] 不安静的, 不宁的",
+      "ecdict_phonetic": "'restlis",
+      "ecdict_definition": "s. worried and uneasy\ns. ceaselessly in motion\na. lacking or not affording physical or mental rest"
+    },
+    {
+      "id": "KAOYAN_CORE_1325",
+      "word": "revive",
+      "definition_cn": "v. 恢复;(使)复苏",
+      "phonetic_uk": "/rɪ'vaɪv/",
+      "phonetic_us": "/rɪ'vaɪv/",
+      "ecdict_translation": "vt. 使苏醒, 使复兴, 使振奋, 回想起, 重播\nvi. 苏醒, 复活, 复兴, 恢复精神",
+      "ecdict_phonetic": "ri'vaiv",
+      "ecdict_definition": "v. be brought back to life, consciousness, or strength\nv. restore from a depressed, inactive, or unused state"
+    },
+    {
+      "id": "KAOYAN_CORE_1749",
+      "word": "rich",
+      "definition_cn": "adj. 富有的；肥沃的；昂贵的； n. (Rich)人名；(丹)里克；(捷)里赫；(英、西)里奇；(葡、法)里什",
+      "phonetic_uk": "/rɪtʃ/",
+      "phonetic_us": "/rɪtʃ/",
+      "ecdict_translation": "a. 富裕的, 富饶的, 浓厚的, 贵重的",
+      "ecdict_phonetic": "ri:tʃ",
+      "ecdict_definition": "a. possessing material wealth\na. having an abundant supply of desirable qualities or substances (especially natural resources)\ns. of great worth or quality\ns. very productive"
+    },
+    {
+      "id": "KAOYAN_CORE_3017",
+      "word": "rim",
+      "definition_cn": "n. 边，边缘；轮辋；圆圈； v. 作…的边，装边于",
+      "phonetic_uk": "/rɪm/",
+      "phonetic_us": "/rɪm/",
+      "ecdict_translation": "n. 边, 轮缘, 框\nvt. 镶边, 为...装边\nvi. 形成边缘",
+      "ecdict_phonetic": "rim",
+      "ecdict_definition": "n. the shape of a raised edge of a more or less circular object\nn. (basketball) the hoop from which the net is suspended\nn. the outer part of a wheel to which the tire is attached\nv. run around the rim of"
+    },
+    {
+      "id": "KAOYAN_CORE_3014",
+      "word": "rip",
+      "definition_cn": "v. 撕；锯； n. 裂口，裂缝",
+      "phonetic_uk": "/rɪp/",
+      "phonetic_us": "/rɪp/",
+      "ecdict_translation": "n. 裂痕, 破绽, 拉裂, 浪子, 巨浪\nvi. 被拉开, 裂开, 猛冲\nvt. 撕, 扯, 劈",
+      "ecdict_phonetic": "rip",
+      "ecdict_definition": "n. an opening made forcibly as by pulling apart\nn. a stretch of turbulent water in a river or the sea caused by one current flowing into or across another current\nv. move precipitously or violently\nv. cut (wood) along the grain"
+    },
+    {
+      "id": "KAOYAN_CORE_2415",
+      "word": "river",
+      "definition_cn": "n. 河，江",
+      "phonetic_uk": "/'rɪvə/",
+      "phonetic_us": "/'rɪvɚ/",
+      "ecdict_translation": "n. 河, 江\n[法] 河流, 江河, 内河",
+      "ecdict_phonetic": "'rivә",
+      "ecdict_definition": "n. a large natural stream of water (larger than a creek)"
+    },
+    {
+      "id": "KAOYAN_CORE_2978",
+      "word": "rod",
+      "definition_cn": "n. 棒；惩罚；枝条；权力",
+      "phonetic_uk": "/rɒd/",
+      "phonetic_us": "/rɑd/",
+      "ecdict_translation": "n. 竿, 笞鞭, 小枝\n[化] 棒",
+      "ecdict_phonetic": "rɒd",
+      "ecdict_definition": "n. a long thin implement made of metal or wood\nn. any rod-shaped bacterium\nn. a visual receptor cell that is sensitive to dim light"
+    },
+    {
+      "id": "KAOYAN_CORE_602",
+      "word": "romance",
+      "definition_cn": "n. 传奇,爱情故事",
+      "phonetic_uk": "/rə(ʊ)'mæns; 'rəʊmæns/",
+      "phonetic_us": "/ro'mæns/",
+      "ecdict_translation": "n. 冒险故事, 浪漫史, 传奇文学\nvi. 写传奇, 作空想, 虚构",
+      "ecdict_phonetic": "rәu'mæns",
+      "ecdict_definition": "n. the group of languages derived from Latin\nn. a novel dealing with idealized events remote from everyday life\nv. have a love affair with\nv. tell romantic or exaggerated lies"
+    },
+    {
+      "id": "KAOYAN_CORE_3865",
+      "word": "rope",
+      "definition_cn": "n. 绳，绳索； v. 捆，绑",
+      "phonetic_uk": "/rəʊp/",
+      "phonetic_us": "/rop/",
+      "ecdict_translation": "n. 绳, 索, 粗绳, 绞索, 决窍\nvt. 捆, 缚, 绑, 圈起, 以绳将...系住\nvi. 拧成绳状",
+      "ecdict_phonetic": "rәup",
+      "ecdict_definition": "n. a strong line\nv. fasten with a rope"
+    },
+    {
+      "id": "KAOYAN_CORE_3033",
+      "word": "rug",
+      "definition_cn": "n. 小地毯；毛皮地毯；男子假发",
+      "phonetic_uk": "/rʌg/",
+      "phonetic_us": "/rʌɡ/",
+      "ecdict_translation": "n. 小块地毯, 揭露某人",
+      "ecdict_phonetic": "rʌg",
+      "ecdict_definition": "n. floor covering consisting of a piece of thick heavy fabric (usually with nap or pile)"
+    },
+    {
+      "id": "KAOYAN_CORE_3778",
+      "word": "sarcastic",
+      "definition_cn": "adj. 挖苦的；尖刻的，辛辣的",
+      "phonetic_uk": "/sɑː'kæstɪk/",
+      "phonetic_us": "/sɑr'kæstɪk/",
+      "ecdict_translation": "a. 讽刺的, 讥讽的",
+      "ecdict_phonetic": "sɑ:'kæstik",
+      "ecdict_definition": "a. expressing or expressive of ridicule that wounds"
+    },
+    {
+      "id": "KAOYAN_CORE_3619",
+      "word": "sheep",
+      "definition_cn": "n. 羊，绵羊；胆小鬼",
+      "phonetic_uk": "/ʃiːp/",
+      "phonetic_us": "/ʃip/",
+      "ecdict_translation": "n. 羊, 胆小者",
+      "ecdict_phonetic": "ʃi:p",
+      "ecdict_definition": "n. woolly usually horned ruminant mammal related to the goat\nn. a timid defenseless simpleton who is readily preyed upon\nn. a docile and vulnerable person who would rather follow than make an independent decision"
+    },
+    {
+      "id": "KAOYAN_CORE_960",
+      "word": "simplify",
+      "definition_cn": "v. 简化,使单纯",
+      "phonetic_uk": "/'sɪmplɪfaɪ/",
+      "phonetic_us": "/'sɪmplɪfaɪ/",
+      "ecdict_translation": "vt. 单一化, 简单化",
+      "ecdict_phonetic": "'simplifai",
+      "ecdict_definition": "v. make simpler or easier or reduce in complexity or extent"
+    },
+    {
+      "id": "KAOYAN_CORE_4760",
+      "word": "sincere",
+      "definition_cn": "adj. 诚挚的， 诚恳的； 忠实的， 忠诚的",
+      "phonetic_uk": "/sɪn'sɪə/",
+      "phonetic_us": "/sɪn'sɪr/",
+      "ecdict_translation": "a. 诚实的, 正直的, 真挚的, 纯净的",
+      "ecdict_phonetic": "sin'siә",
+      "ecdict_definition": "a. open and genuine; not deceitful"
+    },
+    {
+      "id": "KAOYAN_CORE_1601",
+      "word": "sit",
+      "definition_cn": "v. 坐；位于； n. (Sit)人名；(东南亚国家华语)硕；(罗)西特",
+      "phonetic_uk": "/sɪt/",
+      "phonetic_us": "/sɪt/",
+      "ecdict_translation": "vi. 坐, 就座, 坐落\nvt. 使就座, 骑\nn. 坐, 衣服合身",
+      "ecdict_phonetic": "sit",
+      "ecdict_definition": "v. be seated\nv. be around, often idly or without specific purpose\nv. be in session\nv. be located or situated somewhere"
+    },
+    {
+      "id": "KAOYAN_CORE_2923",
+      "word": "situated",
+      "definition_cn": "adj. 位于…的；处于…境遇的； v. 使位于；使处于（situate的过去分词）",
+      "phonetic_uk": "/'sɪtjʊeɪtɪd/",
+      "phonetic_us": "/'sɪtʃuetɪd/",
+      "ecdict_translation": "a. 位于...的, 坐落在...的, 处于某种境地的\n[法] 坐落...的, 位于...的, 处于某种境地的",
+      "ecdict_phonetic": "'sitjueitid",
+      "ecdict_definition": "v determine or indicate the place, site, or limits of, as if by an instrument or by a survey\nv put (something somewhere) firmly\ns situated in a particular spot or position"
+    },
+    {
+      "id": "KAOYAN_CORE_4840",
+      "word": "somehow",
+      "definition_cn": "adv. 不知怎么地； 设法， 以某种方式",
+      "phonetic_uk": "/'sʌmhau/",
+      "phonetic_us": "/'sʌmhaʊ/",
+      "ecdict_translation": "adv. 不知何故",
+      "ecdict_phonetic": "'sʌmhau",
+      "ecdict_definition": "r. in some unspecified way or manner; or by some unspecified means\nr. for some unspecified reason;"
+    },
+    {
+      "id": "KAOYAN_CORE_5013",
+      "word": "somewhat",
+      "definition_cn": "adv. 稍微， 有点",
+      "phonetic_uk": "/'sʌmwɒt/",
+      "phonetic_us": "/'sʌmwʌt/",
+      "ecdict_translation": "n. 某物, 几分\nadv. 多少, 几分",
+      "ecdict_phonetic": "'sʌmhwɒt",
+      "ecdict_definition": "r to a small degree or extent\nr to a moderately sufficient extent or degree"
+    },
+    {
+      "id": "KAOYAN_CORE_4268",
+      "word": "spacecraft",
+      "definition_cn": "n. [航] 宇宙飞船，航天器",
+      "phonetic_uk": "/'speɪskrɑːft/",
+      "phonetic_us": "/'speskræft/",
+      "ecdict_translation": "n. 航天飞船",
+      "ecdict_phonetic": "'speiskræft",
+      "ecdict_definition": "n. a craft capable of traveling in outer space; technically, a satellite around the sun"
+    },
+    {
+      "id": "KAOYAN_CORE_4138",
+      "word": "spacious",
+      "definition_cn": "adj. 宽敞的，广阔的；无边无际的",
+      "phonetic_uk": "/'speɪʃəs/",
+      "phonetic_us": "/'speʃəs/",
+      "ecdict_translation": "a. 广大的, 宽广的",
+      "ecdict_phonetic": "'speiʃәs",
+      "ecdict_definition": "s very large in expanse or scope\ns (of buildings and rooms) having ample space"
+    },
+    {
+      "id": "KAOYAN_CORE_1113",
+      "word": "species",
+      "definition_cn": "n. (物)种,种类",
+      "phonetic_uk": "/'spiːʃiːz; -ʃɪz; 'spiːs-/",
+      "phonetic_us": "/'spiʃiz/",
+      "ecdict_translation": "n. 种, 类, 外形\n[医] 茶剂; 种",
+      "ecdict_phonetic": "'spi:ʃiz",
+      "ecdict_definition": "n. (biology) taxonomic group whose members can interbreed\nn. a specific kind of something"
+    },
+    {
+      "id": "KAOYAN_CORE_1128",
+      "word": "spiritual",
+      "definition_cn": "adj. 精神(上)的,心灵的",
+      "phonetic_uk": "/'spɪrɪtʃʊəl; -tjʊəl/",
+      "phonetic_us": "/'spɪrɪtʃʊəl/",
+      "ecdict_translation": "a. 精神上的, 神圣的, 崇高的, 高尚的, 鬼的, 招魂术的\nn. 有关教会的事",
+      "ecdict_phonetic": "'spiritʃuәl",
+      "ecdict_definition": "n. a kind of religious song originated by Blacks in the southern United States\ns. concerned with or affecting the spirit or soul\ns. lacking material body or form or substance"
+    },
+    {
+      "id": "KAOYAN_CORE_4526",
+      "word": "starve",
+      "definition_cn": "v. 饿死；挨饿；渴望",
+      "phonetic_uk": "/stɑːv/",
+      "phonetic_us": "/stɑrv/",
+      "ecdict_translation": "v. (使)饿死, (使)挨饿",
+      "ecdict_phonetic": "stɑ:v",
+      "ecdict_definition": "v. be hungry; go without food\nv. die of food deprivation\nv. deprive of food\nv. deprive of a necessity and cause suffering"
+    },
+    {
+      "id": "KAOYAN_CORE_4971",
+      "word": "statical",
+      "definition_cn": "adj. 静态的； 静力的",
+      "phonetic_uk": "/'stætɪk(l)/",
+      "phonetic_us": "/'stætɪk(l)/",
+      "ecdict_translation": "[机] 静止的, 静的",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "a. Resting; acting by mere weight without motion; as,\n   statical pressure; static objects.\na. Pertaining to bodies at rest or in equilibrium."
+    },
+    {
+      "id": "KAOYAN_CORE_1716",
+      "word": "substantial",
+      "definition_cn": "adj. 大量的；实质的；内容充实的； n. 本质；重要材料",
+      "phonetic_uk": "/səb'stænʃ(ə)l/",
+      "phonetic_us": "/səbˈstænʃəl/",
+      "ecdict_translation": "n. 重要材料(或事物), 有实际价值的东西\na. 实质上的, 物质的, 有内容的, 结实的",
+      "ecdict_phonetic": "sәb'stænʃәl",
+      "ecdict_definition": "s. having a firm basis in reality and being therefore important, meaningful, or considerable\na. having substance or capable of being treated as fact; not imaginary"
+    },
+    {
+      "id": "KAOYAN_CORE_1204",
+      "word": "subtract",
+      "definition_cn": "v. (from)减(去)",
+      "phonetic_uk": "/səb'trækt/",
+      "phonetic_us": "/səb'trækt/",
+      "ecdict_translation": "vt. 减去, 扣掉, 减少\nvi. 做减法\n[计] 减",
+      "ecdict_phonetic": "sәb'trækt",
+      "ecdict_definition": "v. make a subtraction\nv. take off or away"
+    },
+    {
+      "id": "KAOYAN_CORE_176",
+      "word": "successor",
+      "definition_cn": "n. 接替的人或事物，继任者",
+      "phonetic_uk": "/sək'sesə/",
+      "phonetic_us": "/sək'sɛsɚ/",
+      "ecdict_translation": "n. 继承者, 接任者\n[计] 后继",
+      "ecdict_phonetic": "sәk'sesә",
+      "ecdict_definition": "n. a person who follows next in order\nn. a thing or person that immediately replaces something or someone\nn. a person who inherits some title or office"
+    },
+    {
+      "id": "KAOYAN_CORE_2426",
+      "word": "suggestion",
+      "definition_cn": "n. 建议；示意；微量，细微的迹象",
+      "phonetic_uk": "/sə'dʒestʃ(ə)n/",
+      "phonetic_us": "/sə'dʒɛstʃən/",
+      "ecdict_translation": "n. 提议, 意见\n[医] 暗示",
+      "ecdict_phonetic": "sә'dʒestʃәn",
+      "ecdict_definition": "n. an idea that is suggested\nn. a proposal offered for acceptance or rejection\nn. persuasion formulated as a suggestion\nn. the sequential mental process in which one thought leads to another by association"
+    },
+    {
+      "id": "KAOYAN_CORE_4943",
+      "word": "sulphur",
+      "definition_cn": "n. 硫",
+      "phonetic_uk": "/'sʌlfə/",
+      "phonetic_us": "/'sʌlfə/",
+      "ecdict_translation": "n. 硫, 硫磺\n[化] 硫",
+      "ecdict_phonetic": "'sʌlfә",
+      "ecdict_definition": "v. treat with sulphur in order to preserve"
+    },
+    {
+      "id": "KAOYAN_CORE_4803",
+      "word": "summit",
+      "definition_cn": "n. 最高点， 峰顶， 极点；峰会",
+      "phonetic_uk": "/'sʌmɪt/",
+      "phonetic_us": "/'sʌmɪt/",
+      "ecdict_translation": "n. 顶点, 最高阶层, 最高级会议\na. 政府首脑的, 最高级的",
+      "ecdict_phonetic": "'sʌmit",
+      "ecdict_definition": "n. a meeting of heads of governments\nv. reach the summit (of a mountain)"
+    },
+    {
+      "id": "KAOYAN_CORE_981",
+      "word": "syndrome",
+      "definition_cn": "n. 综合病征；并存特性",
+      "phonetic_uk": "/'sɪndrəʊm/",
+      "phonetic_us": "/'sɪndrəm/",
+      "ecdict_translation": "n. 并发症状, 综合征, 同时存在的事物\n[计] 校验子; 并发位",
+      "ecdict_phonetic": "'sindrәum",
+      "ecdict_definition": "n. a complex of concurrent things\nn. a pattern of symptoms indicative of some disease"
+    },
+    {
+      "id": "KAOYAN_CORE_1136",
+      "word": "tactic",
+      "definition_cn": "n. (s)策略,战术",
+      "phonetic_uk": "/'tæktɪk/",
+      "phonetic_us": "/'tæktɪk/",
+      "ecdict_translation": "n. 一项战术, 一条策略\na. 战术的, 顺序的, 排列的",
+      "ecdict_phonetic": "'tæktik",
+      "ecdict_definition": "n. a plan for attaining a particular goal"
+    },
+    {
+      "id": "KAOYAN_CORE_1721",
+      "word": "team",
+      "definition_cn": "n. 队；组； v. 使合作",
+      "phonetic_uk": "/tiːm/",
+      "phonetic_us": "/tim/",
+      "ecdict_translation": "n. 队, 组\nvt. 把马(牛)套在同一辆车上, 把...编成一组\nvi. 驾驶卡车, 协作",
+      "ecdict_phonetic": "ti:m",
+      "ecdict_definition": "n. a cooperative unit (especially in sports)\nn. two or more draft animals that work together to pull something\nv. form a team"
+    },
+    {
+      "id": "KAOYAN_CORE_1144",
+      "word": "technical",
+      "definition_cn": "adj. 技术(性)的，工艺的；专门性的，专业性的",
+      "phonetic_uk": "/'teknɪk(ə)l/",
+      "phonetic_us": "/'tɛknɪkl/",
+      "ecdict_translation": "a. 技术上的, 专门的, 工业的, 严格根据法律的\n[化] 技巧",
+      "ecdict_phonetic": "'teknikl",
+      "ecdict_definition": "n. a pickup truck with a gun mounted on it\na. of or relating to technique or proficiency in a practical skill\na. characterizing or showing skill in or specialized knowledge of applied arts and sciences\na. of or relating to a practical subject that is organized according to scientific principles"
+    },
+    {
+      "id": "KAOYAN_CORE_2759",
+      "word": "thanksgiving",
+      "definition_cn": "n. 感恩",
+      "phonetic_uk": "/'θæŋksgɪvɪŋ; θæŋks'gɪvɪŋ/",
+      "phonetic_us": "/,θæŋks'ɡɪvɪŋ/",
+      "ecdict_translation": "n. 感谢",
+      "ecdict_phonetic": "'θæŋks.giviŋ",
+      "ecdict_definition": "n. fourth Thursday in November in the United States; second Monday in October in Canada; commemorates a feast held in 1621 by the Pilgrims and the Wampanoag"
+    },
+    {
+      "id": "KAOYAN_CORE_4738",
+      "word": "thereafter",
+      "definition_cn": "adv. 此后， 以后",
+      "phonetic_uk": "/ˌðeər'ɑːftə/",
+      "phonetic_us": "/,ðɛr'æftɚ/",
+      "ecdict_translation": "adv. 其后, 从那时以后",
+      "ecdict_phonetic": ".ðєәr'æftә",
+      "ecdict_definition": "r. from that time on"
+    },
+    {
+      "id": "KAOYAN_CORE_1157",
+      "word": "timid",
+      "definition_cn": "adj. 胆怯的,怯懦的",
+      "phonetic_uk": "/'tɪmɪd/",
+      "phonetic_us": "/'tɪmɪd/",
+      "ecdict_translation": "a. 胆小的, 羞怯的",
+      "ecdict_phonetic": "'timid",
+      "ecdict_definition": "n. people who are fearful and cautious\na. showing fear and lack of confidence"
+    },
+    {
+      "id": "KAOYAN_CORE_1196",
+      "word": "to",
+      "definition_cn": "prep. (表示方向)到；向；(表示间接关系)给",
+      "phonetic_uk": "/tə;tu;tuː/",
+      "phonetic_us": "/tə;tu;tuː/",
+      "ecdict_translation": "prep. 到, 向, 趋于\nadv. 向前",
+      "ecdict_phonetic": "tu:",
+      "ecdict_definition": "prep. The preposition to primarily indicates approach and arrival,\n   motion made in the direction of a place or thing and attaining it,\n   access; and also, motion or tendency without arrival; movement toward;\n   -- opposed to from.\nprep. Hence, it indicates motion, course, or tendency toward a\n   time, a state or condition, an aim, or anything capable of being\n   regarded as a limit to a tendency, movement, or action; as, he is going\n   to a trade; he is rising to wealth and honor.\nprep. In a very general way, and with innumerable varieties of\n   application, to connects transitive verbs with their remoter or\n   indirect object, and adjectives, nouns, and neuter or passive verbs\n   with a following noun which limits their action. Its sphere verges upon\n   that of for, but it contains less the idea of design or appropriation;\n   as, these remarks were addressed to a large audience; let us keep this\n   seat to ourselves; a substance sweet to the taste; an event painful to\n   the mind; duty to God and to our parents; a dislike to spirituous\n   liquor.\nprep. As sign of the infinitive, to had originally the use of last\n   defined, governing the infinitive as a verbal noun, and connecting it\n   as indirect object with a preceding verb or adjective; thus, ready to\n   go, i.e., ready unto going; good to eat, i.e., good for eating; I do my\n   utmost to lead my life pleasantly. But it has come to be the almost\n   constant prefix to the infinitive, even in situations where it has no\n   prepositional meaning, as where the infinitive is direct object or\n   subject; thus, I love to learn, i.e., I love learning; to die for one's\n   country is noble, i.e., the dying for one's country. Where the\n   infinitive denotes the design or purpose, good usage formerly allowed\n   the prefixing of for to the to; as, what went ye out for see? (Matt.\n   xi. 8).\nprep. In many phrases, and in connection with many other words, to\n   has a pregnant meaning, or is used elliptically.\nprep. Extent; limit; degree of comprehension; inclusion as far as;\n   as, they met us to the number of three hundred.\nprep. Effect; end; consequence; as, the prince was flattered to\n   his ruin; he engaged in a war to his cost; violent factions exist to\n   the prejudice of the state.\nprep. Apposition; connection; antithesis; opposition; as, they\n   engaged hand to hand.\nprep. Accord; adaptation; as, an occupation to his taste; she has\n   a husband to her mind.\nprep. Comparison; as, three is to nine as nine is to twenty-seven;\n   it is ten to one that you will offend him.\nprep. Addition; union; accumulation.\nprep. Accompaniment; as, she sang to his guitar; they danced to\n   the music of a piano.\nprep. Character; condition of being; purpose subserved or office\n   filled."
+    },
+    {
+      "id": "KAOYAN_CORE_1844",
+      "word": "tolerate",
+      "definition_cn": "v. 忍受；默许；宽恕",
+      "phonetic_uk": "/'tɒləreɪt/",
+      "phonetic_us": "/'tɑləret/",
+      "ecdict_translation": "vt. 宽容, 容许, 有耐力",
+      "ecdict_phonetic": "'tɒlәreit",
+      "ecdict_definition": "v. recognize and respect (rights and beliefs of others)\nv. have a tolerance for a poison or strong drug or pathogen or environmental condition"
+    },
+    {
+      "id": "KAOYAN_CORE_1188",
+      "word": "tomb",
+      "definition_cn": "n. 坟,冢",
+      "phonetic_uk": "/tuːm/",
+      "phonetic_us": "/tum/",
+      "ecdict_translation": "n. 坟墓, 死亡\nvt. 埋葬",
+      "ecdict_phonetic": "tu:m",
+      "ecdict_definition": "n a place for the burial of a corpse (especially beneath the ground and marked by a tombstone)"
+    },
+    {
+      "id": "KAOYAN_CORE_4709",
+      "word": "troop",
+      "definition_cn": "n. 群， 队 A <",
+      "phonetic_uk": "/truːp/",
+      "phonetic_us": "/trʊp/",
+      "ecdict_translation": "n. 军队, 一群, 一队\nvi. 群集, 结队, 成群而行",
+      "ecdict_phonetic": "tru:p",
+      "ecdict_definition": "n. a group of soldiers\nn. a cavalry unit corresponding to an infantry company\nn. a unit of Girl or Boy Scouts\nn. an orderly crowd"
+    },
+    {
+      "id": "KAOYAN_CORE_2811",
+      "word": "underlie",
+      "definition_cn": "v. 成为……的基础；位于……之下",
+      "phonetic_uk": "/ʌndə'laɪ/",
+      "phonetic_us": "/,ʌndɚ'laɪ/",
+      "ecdict_translation": "vt. 位于...之下, 成为...的基础",
+      "ecdict_phonetic": ".ʌndә'lai",
+      "ecdict_definition": "v. be or form the base for\nv. lie underneath"
+    },
+    {
+      "id": "KAOYAN_CORE_1935",
+      "word": "unfortunately",
+      "definition_cn": "adv. 不幸地",
+      "phonetic_uk": "/ʌnˈfɔːtʃənətli/",
+      "phonetic_us": "/ʌn'fɔrtʃənətli/",
+      "ecdict_translation": "adv. 恐怕, 不幸的是",
+      "ecdict_phonetic": "ʌn'fɔ:tjjnәtli",
+      "ecdict_definition": "r. by bad luck"
+    },
+    {
+      "id": "KAOYAN_CORE_4958",
+      "word": "unlikely",
+      "definition_cn": "adj. 未必的； 不可能的； 靠不住的",
+      "phonetic_uk": "/ʌn'laɪkli/",
+      "phonetic_us": "/ʌn'laɪkli/",
+      "ecdict_translation": "a. 不太可能的",
+      "ecdict_phonetic": ".ʌn'laikli",
+      "ecdict_definition": "a. has little chance of being the case or coming about"
+    },
+    {
+      "id": "KAOYAN_CORE_4948",
+      "word": "valve",
+      "definition_cn": "n. 阀；电子管， 真空管",
+      "phonetic_uk": "/vælv/",
+      "phonetic_us": "/vælv/",
+      "ecdict_translation": "n. 活瓣, 阀, 活门\nv. 装阀, 用阀调节",
+      "ecdict_phonetic": "vælv",
+      "ecdict_definition": "n. a structure in a hollow organ (like the heart) with a flap to insure one-way flow of fluid through it\nn. device in a brass wind instrument for varying the length of the air column to alter the pitch of a tone\nn. control consisting of a mechanical device for controlling the flow of a fluid\nn. the entire one-piece shell of a snail and certain other molluscs"
+    },
+    {
+      "id": "KAOYAN_CORE_1241",
+      "word": "van",
+      "definition_cn": "n. 有篷汽车;有篷货运车厢",
+      "phonetic_uk": "/væn/",
+      "phonetic_us": "/væn/",
+      "ecdict_translation": "n. 货车, 篷车, 先锋, 前驱, 前卫\nvt. 用货车搬运\n[计] 增值网",
+      "ecdict_phonetic": "væn",
+      "ecdict_definition": "n. (Great Britain) a closed railroad car that carries baggage or freight\nn. a camper equipped with living quarters\nn. a truck with an enclosed cargo space"
+    },
+    {
+      "id": "KAOYAN_CORE_4969",
+      "word": "vapor",
+      "definition_cn": "n. 蒸汽",
+      "phonetic_uk": "/'veɪpə/",
+      "phonetic_us": "/ˈveɪpər/",
+      "ecdict_translation": "n. 汽, 蒸气\nvi. 蒸发\nvt. 使蒸发",
+      "ecdict_phonetic": "'veipә",
+      "ecdict_definition": "n. a visible suspension in the air of particles of some substance"
+    },
+    {
+      "id": "KAOYAN_CORE_1278",
+      "word": "versus",
+      "definition_cn": "prep. (vs.)…对…(在诉讼,比赛等);与…相对",
+      "phonetic_uk": "/'vɜːsəs/",
+      "phonetic_us": "/'vɝsəs/",
+      "ecdict_translation": "prep. 对...\n[法] 诉, 对, 相形",
+      "ecdict_phonetic": "'vә:sәs",
+      "ecdict_definition": "prep. Against; as, John Doe versus Richard Roe; -- chiefly\n   used in legal language, and abbreviated to v. or vs."
+    },
+    {
+      "id": "KAOYAN_CORE_1328",
+      "word": "vigorous",
+      "definition_cn": "adj. 朝气蓬勃的,精力旺盛的",
+      "phonetic_uk": "/'vɪg(ə)rəs/",
+      "phonetic_us": "/'vɪɡərəs/",
+      "ecdict_translation": "a. 精力充沛的, 元气旺盛的, 茁壮的, 有力的",
+      "ecdict_phonetic": "'vigәrәs",
+      "ecdict_definition": "s. characterized by forceful and energetic action or activity\ns. strong and active physically or mentally"
+    },
+    {
+      "id": "KAOYAN_CORE_4035",
+      "word": "vinegar",
+      "definition_cn": "n. 醋",
+      "phonetic_uk": "/'vɪnɪgə/",
+      "phonetic_us": "/'vɪnɪɡɚ/",
+      "ecdict_translation": "n. 醋, 尖酸刻薄\nvt. 加醋于",
+      "ecdict_phonetic": "'vinigә",
+      "ecdict_definition": "n. sour-tasting liquid produced usually by oxidation of the alcohol in wine or cider and used as a condiment or food preservative\nn. dilute acetic acid"
+    },
+    {
+      "id": "KAOYAN_CORE_3309",
+      "word": "wardrobe",
+      "definition_cn": "n. 衣柜；行头；全部戏装",
+      "phonetic_uk": "/'wɔːdrəʊb/",
+      "phonetic_us": "/'wɔr'drob/",
+      "ecdict_translation": "n. 衣橱, 衣室, 全部衣服",
+      "ecdict_phonetic": "'wɒ:drәub",
+      "ecdict_definition": "n. a tall piece of furniture that provides storage space for clothes; has a door and rails or hooks for hanging clothes\nn. collection of clothing belonging to one person\nn. collection of costumes belonging to a theatrical company"
+    },
+    {
+      "id": "KAOYAN_CORE_4745",
+      "word": "whereas",
+      "definition_cn": "conj. 而， 却， 反之",
+      "phonetic_uk": "/ˌweər'æz/",
+      "phonetic_us": "/'wɛr'æz/",
+      "ecdict_translation": "conj. 然而, 鉴于\n[法] 考虑到, 鉴于, 就...而论",
+      "ecdict_phonetic": "hwєәr'æz",
+      "ecdict_definition": "adv. At which place; where.\nconj. Considering that; it being the case that; since; --\n   used to introduce a preamble which is the basis of declarations,\n   affirmations, commands, requests, or like, that follow.\nconj. When in fact; while on the contrary; the case being in\n   truth that; although; -- implying opposition to something that\n   precedes; or implying recognition of facts, sometimes followed by a\n   different statement, and sometimes by inferences or something\n   consequent."
+    },
+    {
+      "id": "KAOYAN_CORE_1972",
+      "word": "widespread",
+      "definition_cn": "adj. 普遍的，广泛的；分布广的",
+      "phonetic_uk": "/ˈwʌɪdsprɛd/",
+      "phonetic_us": "/ˈwʌɪdsprɛd/",
+      "ecdict_translation": "a. 充分伸展的, 广布的, 普及的, 流传广的",
+      "ecdict_phonetic": "'waidspred",
+      "ecdict_definition": "s. widely circulated or diffused"
+    },
+    {
+      "id": "KAOYAN_CORE_2580",
+      "word": "withstand",
+      "definition_cn": "v. 抵挡；禁得起；反抗",
+      "phonetic_uk": "/wɪð'stænd/",
+      "phonetic_us": "/wɪð'stænd/",
+      "ecdict_translation": "vt. 抵住, 顶住, 经得起",
+      "ecdict_phonetic": "wið'stænd",
+      "ecdict_definition": "v resist or confront with resistance\nv stand up or offer resistance to somebody or something"
+    }
+  ],
+  "missing_phonetic": [],
+  "phonetic_fillable": [],
+  "not_in_ecdict": [
+    {
+      "id": "KAOYAN_CORE_4704",
+      "word": "resumé",
+      "definition_cn": "n. 简历",
+      "phonetic_uk": "/'r3sjʊm3ɪ/",
+      "phonetic_us": "/'r3sjʊm3ɪ/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    }
+  ]
+}

@@ -76,8 +76,8 @@ void main() {
     );
   });
 
-  test('isRichBookWord rejects legacy simplified words', () {
-    final legacy = BookWord(
+  test('isRichBookWord accepts single authentic example', () {
+    final authentic = BookWord(
       id: 'legacy_1',
       word: 'abruptly',
       phoneticUk: '/əˈbrʌptli/',
@@ -87,9 +87,39 @@ void main() {
       sentenceExamples: [
         BookWordExample(en: 'Example.', cn: '例句。'),
       ],
+      definitions: [WordDefinition(partOfSpeech: 'adv.', meaning: '突然地')],
       synonymDetails: [
         ConfusableWord(word: 'suddenly', explanation: '突然地'),
       ],
+    );
+
+    expect(isRichBookWord(authentic), isTrue);
+  });
+
+  test('isRichBookWord accepts words without examples when definitions exist', () {
+    final sparse = BookWord(
+      id: 'legacy_2',
+      word: 'abruptly',
+      phoneticUk: '/əˈbrʌptli/',
+      phoneticUs: '/əˈbrʌptli/',
+      partOfSpeech: 'adv.',
+      definitionCn: '突然地',
+      sentenceExamples: const [],
+      definitions: [WordDefinition(partOfSpeech: 'adv.', meaning: '突然地')],
+    );
+
+    expect(isRichBookWord(sparse), isTrue);
+  });
+
+  test('isRichBookWord rejects words without definitions', () {
+    final legacy = BookWord(
+      id: 'legacy_3',
+      word: 'abruptly',
+      phoneticUk: '/əˈbrʌptli/',
+      phoneticUs: '/əˈbrʌptli/',
+      partOfSpeech: 'adv.',
+      definitionCn: '突然地',
+      sentenceExamples: const [],
     );
 
     expect(isRichBookWord(legacy), isFalse);

@@ -1,0 +1,2253 @@
+{
+  "book_id": "SAT",
+  "book_file": "SAT.json",
+  "ecdict_source": "E:\\FlutterProject\\vocab_master\\tools\\ecdict\\stardict.db",
+  "total_words": 4463,
+  "verified": 4239,
+  "definition_mismatch": [
+    {
+      "id": "SAT_2854",
+      "word": "abase",
+      "definition_cn": "v. 使…谦卑；降低…的品格；降低…的地位",
+      "phonetic_uk": "/ə'beɪs/",
+      "phonetic_us": "/ə'bes/",
+      "ecdict_translation": "vt. 降低...的地位, 降低...的品格, 贬抑, 使谦卑",
+      "ecdict_phonetic": "ә'beis",
+      "ecdict_definition": "v cause to feel shame; hurt the pride of"
+    },
+    {
+      "id": "SAT_2366",
+      "word": "accelerate",
+      "definition_cn": "v. 使……加快；使……增速",
+      "phonetic_uk": "/ək'seləreɪt/",
+      "phonetic_us": "/əkˈsɛləˌret/",
+      "ecdict_translation": "v. 加速, 促进",
+      "ecdict_phonetic": "әk'selәreit",
+      "ecdict_definition": "v. move faster\nv. cause to move faster"
+    },
+    {
+      "id": "SAT_640",
+      "word": "acclivity",
+      "definition_cn": "n. 向上的斜坡；[建] 上斜",
+      "phonetic_uk": "/ə'klɪvɪtɪ/",
+      "phonetic_us": "/ə'klɪvəti/",
+      "ecdict_translation": "n. 上坡",
+      "ecdict_phonetic": "ә'kliviti",
+      "ecdict_definition": "n an upward slope or grade (as in a road)"
+    },
+    {
+      "id": "SAT_3466",
+      "word": "accustomed",
+      "definition_cn": "adj. 习惯的；通常的；独有的； v. 使习惯于（accustom的过去分词）",
+      "phonetic_uk": "/ə'kʌstəmd/",
+      "phonetic_us": "/ə'kʌstəmd/",
+      "ecdict_translation": "a. 惯常的, 习惯了的",
+      "ecdict_phonetic": "ә'kʌstәmd",
+      "ecdict_definition": "a. (often followed by `to') in the habit of or adapted to\ns. commonly used or practiced; usual"
+    },
+    {
+      "id": "SAT_4032",
+      "word": "acerbity",
+      "definition_cn": "n. 酸，涩；刻薄",
+      "phonetic_uk": "/ə'sɜːbətɪ/",
+      "phonetic_us": "/ə'sɝbəti/",
+      "ecdict_translation": "n. 涩, 酸, 尖刻\n[化] 涩度",
+      "ecdict_phonetic": "ә'sә:biti",
+      "ecdict_definition": "n. a sharp bitterness\nn. a sharp sour taste"
+    },
+    {
+      "id": "SAT_2082",
+      "word": "acquaintance",
+      "definition_cn": "n. 熟人；相识；了解；知道",
+      "phonetic_uk": "/ə'kweɪnt(ə)ns/",
+      "phonetic_us": "/ə'kwentəns/",
+      "ecdict_translation": "n. 认识, 相识者",
+      "ecdict_phonetic": "ә'kweintәns",
+      "ecdict_definition": "n. personal knowledge or information about someone or something\nn. a relationship less intimate than friendship\nn. a person with whom you are acquainted"
+    },
+    {
+      "id": "SAT_2590",
+      "word": "advent",
+      "definition_cn": "n. 到来；出现；基督降临；基督降临节",
+      "phonetic_uk": "/advent/",
+      "phonetic_us": "/advent/",
+      "ecdict_translation": "n. 来到, 来临",
+      "ecdict_phonetic": "'ædvәnt",
+      "ecdict_definition": "n. arrival that has been awaited (especially of something momentous)\nn. the season including the four Sundays preceding Christmas"
+    },
+    {
+      "id": "SAT_2769",
+      "word": "agape",
+      "definition_cn": "adj. 张开著；张口惊视的； adv. 目瞪口呆； n. (Agape)人名；(罗)阿加佩",
+      "phonetic_uk": "/ə'geɪp/",
+      "phonetic_us": "/ə'ɡep/",
+      "ecdict_translation": "a. 张口发呆的, 目瞪口呆的\nadv. 张口发呆地, 目瞪口呆地",
+      "ecdict_phonetic": "ә'geip",
+      "ecdict_definition": "n. (Christian theology) the love of God or Christ for mankind\nn. selfless love of one person for another without sexual implications (especially love that is spiritual in nature)\nn. a religious meal shared as a sign of love and fellowship"
+    },
+    {
+      "id": "SAT_2682",
+      "word": "aggressive",
+      "definition_cn": "adj. 侵略性的；好斗的；有进取心的；有闯劲的",
+      "phonetic_uk": "/ə'gresɪv/",
+      "phonetic_us": "/ə'ɡrɛsɪv/",
+      "ecdict_translation": "a. 侵略的, 挑畔的, 进取的\n[法] 侵略的, 爱挑衅的, 行为过火的",
+      "ecdict_phonetic": "ә'gresiv",
+      "ecdict_definition": "a. having or showing determination and energetic pursuit of your ends; positive in his convictions\"\ns. tending to spread quickly\ns. characteristic of an enemy or one eager to fight"
+    },
+    {
+      "id": "SAT_501",
+      "word": "agitate",
+      "definition_cn": "v. 摇动；骚动；使…激动",
+      "phonetic_uk": "/'ædʒɪteɪt/",
+      "phonetic_us": "/ˈædʒɪˌteɪt/",
+      "ecdict_translation": "vt. 使摇动, 搅动, 使激动, 使不安\nvi. 鼓动, 煽动",
+      "ecdict_phonetic": "'ædʒiteit",
+      "ecdict_definition": "v. try to stir up public opinion\nv. cause to be agitated, excited, or roused\nv. change the arrangement or position of"
+    },
+    {
+      "id": "SAT_1755",
+      "word": "ailment",
+      "definition_cn": "n. 小病；不安",
+      "phonetic_uk": "/'eɪlm(ə)nt/",
+      "phonetic_us": "/'elmənt/",
+      "ecdict_translation": "n. 病痛, 疾病\n[医] 疾病",
+      "ecdict_phonetic": "'eilmәnt",
+      "ecdict_definition": "n. an often persistent bodily disorder or disease; a cause for complaining"
+    },
+    {
+      "id": "SAT_906",
+      "word": "album",
+      "definition_cn": "n. 相簿；唱片集；集邮簿；签名纪念册",
+      "phonetic_uk": "/'ælbəm/",
+      "phonetic_us": "/'ælbəm/",
+      "ecdict_translation": "n. 粘贴簿, 唱片套\n[医] 白色物",
+      "ecdict_phonetic": "'ælbәm",
+      "ecdict_definition": "n. one or more recordings issued together; originally released on 12-inch phonograph records (usually with attractive record covers) and later on cassette audiotape and compact disc\nn. a book of blank pages with pockets or envelopes; for organizing photographs or stamp collections etc"
+    },
+    {
+      "id": "SAT_179",
+      "word": "alight",
+      "definition_cn": "v. 下来；飞落； adj. 烧着的；点亮着的",
+      "phonetic_uk": "/ə'laɪt/",
+      "phonetic_us": "/ə'laɪt/",
+      "ecdict_translation": "vi. 落下, 偶然发现\na. 点着的",
+      "ecdict_phonetic": "ә'lait",
+      "ecdict_definition": "v. to come to rest, settle\nv. come down"
+    },
+    {
+      "id": "SAT_722",
+      "word": "alimentary",
+      "definition_cn": "adj. 滋养的；食物的",
+      "phonetic_uk": "/ælɪ'ment(ə)rɪ/",
+      "phonetic_us": "/,ælɪ'mɛntəri/",
+      "ecdict_translation": "a. 饮食的, 供养的\n[化] 营养的",
+      "ecdict_phonetic": ".æli'mentәri",
+      "ecdict_definition": "s. of or providing nourishment"
+    },
+    {
+      "id": "SAT_4224",
+      "word": "altercation",
+      "definition_cn": "n. 争执",
+      "phonetic_uk": "/ɒltə'keɪʃ(ə)n/",
+      "phonetic_us": "/,ɔltɚ'keʃən/",
+      "ecdict_translation": "n. 争论, 争吵",
+      "ecdict_phonetic": ".ɒ:ltә'keiʃәn",
+      "ecdict_definition": "n noisy quarrel"
+    },
+    {
+      "id": "SAT_2283",
+      "word": "ambidextrous",
+      "definition_cn": "adj. 双手灵巧的；怀有二心的",
+      "phonetic_uk": "/,æmbɪ'dekstrəs/",
+      "phonetic_us": "/'æmbə'dɛkstrəs/",
+      "ecdict_translation": "a. 两手俱利的, 搞两面派的\n[医] 两手同利的",
+      "ecdict_phonetic": ".æmbi'dekstrәs",
+      "ecdict_definition": "a. equally skillful with each hand\ns. marked by deliberate deceptiveness especially by pretending one set of feelings and acting under the influence of another"
+    },
+    {
+      "id": "SAT_1991",
+      "word": "ambiguous",
+      "definition_cn": "adj. 模糊不清的；引起歧义的",
+      "phonetic_uk": "/æm'bɪgjʊəs/",
+      "phonetic_us": "/æm'bɪɡjuəs/",
+      "ecdict_translation": "a. 不明确的, 模棱两可的\n[法] 意思含糊的, 模棱两可的, 暧昧的",
+      "ecdict_phonetic": "æm'bigjuәs",
+      "ecdict_definition": "a. having more than one possible meaning\ns. having no intrinsic or objective meaning; not organized in conventional patterns"
+    },
+    {
+      "id": "SAT_4311",
+      "word": "ambitious",
+      "definition_cn": "adj. 野心勃勃的；有雄心的；热望的；炫耀的",
+      "phonetic_uk": "/æm'bɪʃəs/",
+      "phonetic_us": "/æm'bɪʃəs/",
+      "ecdict_translation": "a. 有野心的, 抱负不凡的, 雄心勃勃的",
+      "ecdict_phonetic": "æm'biʃәs",
+      "ecdict_definition": "a. having a strong desire for success or achievement\ns. requiring full use of your abilities or resources"
+    },
+    {
+      "id": "SAT_4091",
+      "word": "amok",
+      "definition_cn": "adv. 狂乱地；杀人狂地； adj. 杀人狂的；狂乱的",
+      "phonetic_uk": "/ə'mɒk/",
+      "phonetic_us": "/ə'mɑk/",
+      "ecdict_translation": "adv. 乱砍乱杀, 杀气腾腾地横冲直撞\n[医] [抑郁后暴发]杀人狂",
+      "ecdict_phonetic": "ә'mɔk",
+      "ecdict_definition": "r. wildly; without self-control\nr. in a murderous frenzy"
+    },
+    {
+      "id": "SAT_4432",
+      "word": "Anglo-Saxon",
+      "definition_cn": "n. 盎格鲁—撒克逊人",
+      "phonetic_uk": "/ˌæŋgləu'sæksn/",
+      "phonetic_us": "/,æŋɡləu'sæksən/",
+      "ecdict_translation": "n. 盎格鲁撒克逊人\na. 盎格鲁撒克逊人的",
+      "ecdict_phonetic": "'æŋ^lәu'sæksәn",
+      "ecdict_definition": "n. a native or inhabitant of England prior to the Norman Conquest\nn. a person of Anglo-Saxon (especially British) descent whose native tongue is English and whose culture is strongly influenced by English culture as in WASP for `White Anglo-Saxon Protestant'\na. of or relating to the Anglo-Saxons or their language"
+    },
+    {
+      "id": "SAT_1655",
+      "word": "antagonize",
+      "definition_cn": "v. 使…敌对；使…对抗；对…起反作用",
+      "phonetic_uk": "/æn'tæɡənaiz/",
+      "phonetic_us": "/æn'tæɡənaɪz/",
+      "ecdict_translation": "vt. 使对抗, 使敌对, 反对\nvi. 引起反抗",
+      "ecdict_phonetic": "æn'tægәnaiz",
+      "ecdict_definition": "v. provoke the hostility of\nv. act in opposition to"
+    },
+    {
+      "id": "SAT_4450",
+      "word": "ante-room",
+      "definition_cn": "n. 接待室， 前厅",
+      "phonetic_uk": "/ante-room/",
+      "phonetic_us": "/ante-room/",
+      "ecdict_translation": "n. （连接正厅的）前厅, 候见室",
+      "ecdict_phonetic": "'ænti:r'u:m",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_3685",
+      "word": "antecede",
+      "definition_cn": "v. 在之前；胜过；居前",
+      "phonetic_uk": "/,æntɪ'siːd/",
+      "phonetic_us": "/,ænti'si:d/",
+      "ecdict_translation": "vt. 在...之前, 居...之先",
+      "ecdict_phonetic": ",ænti'si:d",
+      "ecdict_definition": "v be earlier in time; go back further"
+    },
+    {
+      "id": "SAT_3877",
+      "word": "antemundane",
+      "definition_cn": "n. 世界形成前的",
+      "phonetic_uk": "/,æntɪ'mʌndeɪn/",
+      "phonetic_us": "/,æntɪ'mʌndeɪn/",
+      "ecdict_translation": "a. 创世前的",
+      "ecdict_phonetic": ".ænti'mʌndein",
+      "ecdict_definition": "a. Being or occurring before the creation of the world."
+    },
+    {
+      "id": "SAT_3213",
+      "word": "antipodes",
+      "definition_cn": "n. 地球上处于正相对应的两个地区，尤指（与欧洲形成对跖地的）澳大拉西亚",
+      "phonetic_uk": "/æn'tɪpədiːz/",
+      "phonetic_us": "/æn'tɪpə,diz/",
+      "ecdict_translation": "n. 地球上处于相对地置的地区",
+      "ecdict_phonetic": "æn'tipәdi:z",
+      "ecdict_definition": "n. any two places or regions on diametrically opposite sides of the Earth"
+    },
+    {
+      "id": "SAT_2132",
+      "word": "apiece",
+      "definition_cn": "adv. 每人；每个；各自地",
+      "phonetic_uk": "/ə'piːs/",
+      "phonetic_us": "/ə'pis/",
+      "ecdict_translation": "adv. 就每个而论, 各",
+      "ecdict_phonetic": "ә'pi:s",
+      "ecdict_definition": "r to or from every one of two or more (considered individually)"
+    },
+    {
+      "id": "SAT_2919",
+      "word": "arbiter",
+      "definition_cn": "n. [法] 仲裁者；裁决人",
+      "phonetic_uk": "/'ɑːbɪtə/",
+      "phonetic_us": "/'ɑrbɪtɚ/",
+      "ecdict_translation": "n. 仲裁人, 裁决者, 公断人\n[计] 判优程序",
+      "ecdict_phonetic": "'ɑ:bitә",
+      "ecdict_definition": "n. someone with the power to settle matters at will\nn. someone chosen to judge and decide a disputed issue"
+    },
+    {
+      "id": "SAT_3773",
+      "word": "arboreal",
+      "definition_cn": "adj. 树木的；栖息在树上的",
+      "phonetic_uk": "/ɑː'bɔːrɪəl/",
+      "phonetic_us": "/ɑr'bɔrɪəl/",
+      "ecdict_translation": "a. 树的, 栖于树木的\n[医] 树的, 树上生活的",
+      "ecdict_phonetic": "ɑ:'bәuriәl",
+      "ecdict_definition": "a. inhabiting or frequenting trees\ns. resembling a tree in form and branching structure"
+    },
+    {
+      "id": "SAT_526",
+      "word": "arboriculture",
+      "definition_cn": "n. 树木的培植/栽培",
+      "phonetic_uk": "/'ɑːb(ə)rɪ,kʌltʃə; ɑː'bɔː-/",
+      "phonetic_us": "/'ɑrbərɪ'kʌltʃɚ/",
+      "ecdict_translation": "n. 树木栽培",
+      "ecdict_phonetic": "'ɑ:bәri.kʌltʃә",
+      "ecdict_definition": "n. the cultivation of tree for the production of timber"
+    },
+    {
+      "id": "SAT_1607",
+      "word": "aroma",
+      "definition_cn": "n. 芳香",
+      "phonetic_uk": "/ə'rəʊmə/",
+      "phonetic_us": "/ə'romə/",
+      "ecdict_translation": "n. 浓香, 香气\n[医] 香气, 芳香气",
+      "ecdict_phonetic": "ә'rәumә",
+      "ecdict_definition": "n. a distinctive odor that is pleasant"
+    },
+    {
+      "id": "SAT_1768",
+      "word": "arrogate",
+      "definition_cn": "v. 冒称；霸占；没来由地将…归属于",
+      "phonetic_uk": "/'ærəgeɪt/",
+      "phonetic_us": "/'ærəɡet/",
+      "ecdict_translation": "vt. 没来由地把...归属于, 僭取\n[法] 冒称具有, 僭取, 侵占",
+      "ecdict_phonetic": "'ærәugeit",
+      "ecdict_definition": "v. make undue claims to having"
+    },
+    {
+      "id": "SAT_37",
+      "word": "assertive",
+      "definition_cn": "adj. 肯定的；独断的；坚定而自信的",
+      "phonetic_uk": "/ə'sɜːtɪv/",
+      "phonetic_us": "/ə'sɝtɪv/",
+      "ecdict_translation": "a. 武断的, 过分自信的\n[法] 断言的",
+      "ecdict_phonetic": "ә'sә:tiv",
+      "ecdict_definition": "a. aggressively self-assured"
+    },
+    {
+      "id": "SAT_1273",
+      "word": "assonate",
+      "definition_cn": "v. （使）音相谐，（使）成为准押韵",
+      "phonetic_uk": "/assonate/",
+      "phonetic_us": "/assonate/",
+      "ecdict_translation": "v. (使)音相谐,(使)成为准押韵",
+      "ecdict_phonetic": "'æsәjneit",
+      "ecdict_definition": "v correspond in vowel sounds; rhyme in assonance"
+    },
+    {
+      "id": "SAT_2704",
+      "word": "bacchanalia",
+      "definition_cn": "n. （古罗马的）酒神节；大酒宴",
+      "phonetic_uk": "/bacchanalia/",
+      "phonetic_us": "/bacchanalia/",
+      "ecdict_translation": "n. 狂饮的闹宴",
+      "ecdict_phonetic": ",bækә'neiljә",
+      "ecdict_definition": "n an orgiastic festival in ancient Greece in honor of Dionysus (= Bacchus)\nn a wild gathering involving excessive drinking and promiscuity"
+    },
+    {
+      "id": "SAT_2915",
+      "word": "bawdy",
+      "definition_cn": "adj. 猥亵的；下流的；卖淫的",
+      "phonetic_uk": "/'bɔːdɪ/",
+      "phonetic_us": "/'bɔdi/",
+      "ecdict_translation": "a. 淫秽的, 言语猥亵的",
+      "ecdict_phonetic": "'bɒ:di",
+      "ecdict_definition": "s. humorously vulgar"
+    },
+    {
+      "id": "SAT_2496",
+      "word": "beatific",
+      "definition_cn": "adj. 幸福的；祝福的；快乐的",
+      "phonetic_uk": "/biːə'tɪfɪk/",
+      "phonetic_us": "/,biə'tɪfɪk/",
+      "ecdict_translation": "a. 至福的, 赐福的, 极乐的",
+      "ecdict_phonetic": ".bi:ә'tifik",
+      "ecdict_definition": "s. experiencing or bestowing celestial joy"
+    },
+    {
+      "id": "SAT_4088",
+      "word": "beguile",
+      "definition_cn": "v. 欺骗；使着迷；轻松地消磨",
+      "phonetic_uk": "/bɪ'gaɪl/",
+      "phonetic_us": "/bɪ'ɡaɪl/",
+      "ecdict_translation": "vt. 诱骗",
+      "ecdict_phonetic": "bi'gail",
+      "ecdict_definition": "v influence by slyness\nv attract; cause to be enamored"
+    },
+    {
+      "id": "SAT_2978",
+      "word": "benignity",
+      "definition_cn": "n. 仁慈；善举",
+      "phonetic_uk": "/bɪ'nɪɡnətɪ/",
+      "phonetic_us": "/bɪ'nɪgnəti/",
+      "ecdict_translation": "n. 善良, 温厚",
+      "ecdict_phonetic": "bi'nigniti",
+      "ecdict_definition": "n. the quality of being kind and gentle"
+    },
+    {
+      "id": "SAT_1267",
+      "word": "bereave",
+      "definition_cn": "v. 使……失去；使……孤寂",
+      "phonetic_uk": "/bɪ'riːv/",
+      "phonetic_us": "/bɪ'riv/",
+      "ecdict_translation": "vt. 使孤寂, 使丧失, 使失去",
+      "ecdict_phonetic": "bi'ri:v",
+      "ecdict_definition": "v. deprive through death"
+    },
+    {
+      "id": "SAT_874",
+      "word": "bestrew",
+      "definition_cn": "v. 布满；散布",
+      "phonetic_uk": "/bɪ'struː/",
+      "phonetic_us": "/bi'stru:/",
+      "ecdict_translation": "vt. 撒满...表面, 使遍布",
+      "ecdict_phonetic": "bi'stru:",
+      "ecdict_definition": "v. cover by strewing"
+    },
+    {
+      "id": "SAT_4061",
+      "word": "bethink",
+      "definition_cn": "v. 想起，忆起；使……思考；使……考虑",
+      "phonetic_uk": "/bɪ'θɪŋk/",
+      "phonetic_us": "/bi'θiŋk/",
+      "ecdict_translation": "vt. 使考虑, 使想起",
+      "ecdict_phonetic": "bi'θiŋk",
+      "ecdict_definition": "v. cause oneself to consider something\nv. consider or ponder something carefully"
+    },
+    {
+      "id": "SAT_1561",
+      "word": "bisect",
+      "definition_cn": "v. 平分；二等分",
+      "phonetic_uk": "/baɪ'sekt/",
+      "phonetic_us": "/baɪ'sɛkt/",
+      "ecdict_translation": "v. 分成两部份, 对分",
+      "ecdict_phonetic": "bai'sekt",
+      "ecdict_definition": "v. cut in half or cut in two"
+    },
+    {
+      "id": "SAT_3895",
+      "word": "blase",
+      "definition_cn": "adj. 玩厌了的，厌烦于享乐的； n. (Blase)人名；(德)布拉泽；(法)布拉斯",
+      "phonetic_uk": "/blase/",
+      "phonetic_us": "/blase/",
+      "ecdict_translation": "a. 厌倦享乐的, 玩腻了的",
+      "ecdict_phonetic": "'blɑ:zei",
+      "ecdict_definition": "s. very sophisticated especially because of surfeit; versed in the ways of the world\ns. uninterested because of frequent exposure or indulgence\ns. nonchalantly unconcerned"
+    },
+    {
+      "id": "SAT_2772",
+      "word": "brethren",
+      "definition_cn": "n. <旧>兄弟们，同胞；〈旧〉同党，会友",
+      "phonetic_uk": "/'breðr(ɪ)n/",
+      "phonetic_us": "/'brɛðrən/",
+      "ecdict_translation": "n. 弟兄们, 教友们",
+      "ecdict_phonetic": "'breðrәn",
+      "ecdict_definition": "n. (plural) the lay members of a male religious order"
+    },
+    {
+      "id": "SAT_26",
+      "word": "brigade",
+      "definition_cn": "n. 旅；大部队；队列； v. 把…编成旅；把…编成队",
+      "phonetic_uk": "/brɪ'geɪd/",
+      "phonetic_us": "/brɪ'ged/",
+      "ecdict_translation": "n. 旅, 队\n[法] 团体, 队, 组",
+      "ecdict_phonetic": "bri'geid",
+      "ecdict_definition": "n. army unit smaller than a division\nv. form or unite into a brigade"
+    },
+    {
+      "id": "SAT_2698",
+      "word": "buffoon",
+      "definition_cn": "n. 丑角；滑稽剧演员",
+      "phonetic_uk": "/bə'fuːn/",
+      "phonetic_us": "/bə'fun/",
+      "ecdict_translation": "n. 小丑",
+      "ecdict_phonetic": "bә'fu:n",
+      "ecdict_definition": "n a rude or vulgar fool\nn a person who amuses others by ridiculous behavior"
+    },
+    {
+      "id": "SAT_1309",
+      "word": "bulbous",
+      "definition_cn": "adj. 球根的；球根状的；由球根生长的（等于bulbaceous）",
+      "phonetic_uk": "/'bʌlbəs/",
+      "phonetic_us": "/'bʌlbəs/",
+      "ecdict_translation": "a. 球茎的, 球茎状的, 由球茎生长的\n[医] 球状的, 球的",
+      "ecdict_phonetic": "'bʌlbәs",
+      "ecdict_definition": "s shaped like a bulb\ns curving outward"
+    },
+    {
+      "id": "SAT_3673",
+      "word": "bureau",
+      "definition_cn": "n. 局，处；衣柜；办公桌",
+      "phonetic_uk": "/'bjʊərəʊ/",
+      "phonetic_us": "/'bjʊro/",
+      "ecdict_translation": "n. 局, 办公处\n[经] 局, 司, 处",
+      "ecdict_phonetic": "'bjuәrәu",
+      "ecdict_definition": "n an administrative unit of government\nn furniture with drawers for keeping clothes"
+    },
+    {
+      "id": "SAT_4094",
+      "word": "cacophony",
+      "definition_cn": "n. 刺耳的音调；不和谐音",
+      "phonetic_uk": "/kə'kɒf(ə)nɪ/",
+      "phonetic_us": "/kə'kɑfəni/",
+      "ecdict_translation": "n. 不愉快的音调, 不协和音, 杂音",
+      "ecdict_phonetic": "kæ'kɒfәni",
+      "ecdict_definition": "n. loud confusing disagreeable sounds"
+    },
+    {
+      "id": "SAT_582",
+      "word": "cadenza",
+      "definition_cn": "n. 装饰乐段",
+      "phonetic_uk": "/kə'denzə/",
+      "phonetic_us": "/kə'dɛnzə/",
+      "ecdict_translation": "n. [乐]装饰乐段,华彩乐段",
+      "ecdict_phonetic": "kә'denzә",
+      "ecdict_definition": "n. a brilliant solo passage occurring near the end of a piece of music"
+    },
+    {
+      "id": "SAT_4069",
+      "word": "caste",
+      "definition_cn": "n. （印度社会中的）种姓；（具有严格等级差别的）社会地位；（排他的）社会团体",
+      "phonetic_uk": "/kɑːst/",
+      "phonetic_us": "/kæst/",
+      "ecdict_translation": "n. 印度的种姓制度, (排他的)社会团体",
+      "ecdict_phonetic": "kæst. kɑ:st",
+      "ecdict_definition": "n. social status or position conferred by a system based on class\nn. (Hinduism) a hereditary social class among Hindus; stratified according to ritual purity\nn. a social class separated from others by distinctions of hereditary rank or profession or wealth\nn. in some social insects (such as ants) a physically distinct individual or group of individuals specialized to perform certain functions in the colony"
+    },
+    {
+      "id": "SAT_4005",
+      "word": "Catholicism",
+      "definition_cn": "n. 天主教；天主教义",
+      "phonetic_uk": "/kə'θɔlisizəm/",
+      "phonetic_us": "/kə'θɔlisizəm/",
+      "ecdict_translation": "n. 天主教的信仰",
+      "ecdict_phonetic": "kә'θɒlisizm",
+      "ecdict_definition": "n. the beliefs and practices of a Catholic Church"
+    },
+    {
+      "id": "SAT_3306",
+      "word": "celebrated",
+      "definition_cn": "adj. 著名的；有名望的； v. 庆祝（celebrate的过去式和过去分词）",
+      "phonetic_uk": "/'selɪbreɪtɪd/",
+      "phonetic_us": "/'sɛlə'bretɪd/",
+      "ecdict_translation": "a. 驰名的, 有名的",
+      "ecdict_phonetic": "'selibreitid",
+      "ecdict_definition": "s. widely known and esteemed\ns. having an illustrious past"
+    },
+    {
+      "id": "SAT_62",
+      "word": "censorship",
+      "definition_cn": "n. 审查制度；审查机构",
+      "phonetic_uk": "/'sensəʃɪp/",
+      "phonetic_us": "/'sɛnsɚ'ʃɪp/",
+      "ecdict_translation": "n. 检查制度\n[医] 督察, 监察",
+      "ecdict_phonetic": "'sensәʃip",
+      "ecdict_definition": "n counterintelligence achieved by banning or deleting any information of value to the enemy\nn deleting parts of publications or correspondence or theatrical performances"
+    },
+    {
+      "id": "SAT_3302",
+      "word": "characterize",
+      "definition_cn": "v. 描绘…的特性；具有…的特征",
+      "phonetic_uk": "/'kærəktəraiz/",
+      "phonetic_us": "/'kærəktə'raɪz/",
+      "ecdict_translation": "vt. 描绘...的特性, 刻划...的性格",
+      "ecdict_phonetic": "'kærәktәraiz",
+      "ecdict_definition": "v. be characteristic of"
+    },
+    {
+      "id": "SAT_3853",
+      "word": "chord",
+      "definition_cn": "n. 弦；和弦；香水的基调",
+      "phonetic_uk": "/kɔːd/",
+      "phonetic_us": "/kɔrd/",
+      "ecdict_translation": "n. 弦, 和音\n[医] 索, 带",
+      "ecdict_phonetic": "kɒ:d",
+      "ecdict_definition": "n. a straight line connecting two points on a curve\nn. a combination of three or more notes that blend harmoniously when sounded together\nv. play chords on (a string instrument)"
+    },
+    {
+      "id": "SAT_448",
+      "word": "chronological",
+      "definition_cn": "adj. 按年代顺序排列的；依时间前后排列而记载的",
+      "phonetic_uk": "/krɒnə'lɒdʒɪk(ə)l/",
+      "phonetic_us": "/,krɑnə'lɑdʒɪkl/",
+      "ecdict_translation": "a. 年代学的, 按时间顺序的, 按照年月顺序的\n[计] 编年的, 按年月日顺序的",
+      "ecdict_phonetic": ", krɔnә'lɔdʒikәl",
+      "ecdict_definition": "a. relating to or arranged according to temporal order"
+    },
+    {
+      "id": "SAT_1061",
+      "word": "chronometer",
+      "definition_cn": "n. [天] 精密记时表；高度精确的钟表；航海经线仪",
+      "phonetic_uk": "/krə'nɒmɪtə/",
+      "phonetic_us": "/krə'nɑmɪtɚ/",
+      "ecdict_translation": "n. 天文钟, 航海用的精密时计, 精密的时钟\n[化] 精密记时计",
+      "ecdict_phonetic": "krә'nɒmitә",
+      "ecdict_definition": "n. an accurate clock (especially used in navigation)"
+    },
+    {
+      "id": "SAT_105",
+      "word": "churlish",
+      "definition_cn": "adj. 没有礼貌的；脾气暴躁的",
+      "phonetic_uk": "/'tʃɜːlɪʃ/",
+      "phonetic_us": "/'tʃə:liʃ/",
+      "ecdict_translation": "a. 粗野的",
+      "ecdict_phonetic": "'tʃә:liʃ",
+      "ecdict_definition": "s. rude and boorish\ns. having a bad disposition; surly"
+    },
+    {
+      "id": "SAT_2332",
+      "word": "circulate",
+      "definition_cn": "v. 传播，流传；循环；流通",
+      "phonetic_uk": "/'sɜːkjʊleɪt/",
+      "phonetic_us": "/'sɝkjəlet/",
+      "ecdict_translation": "v. (使)流通, (使)循环, (使)传播",
+      "ecdict_phonetic": "'sә:kjuleit",
+      "ecdict_definition": "v. cause to become widely known\nv. cause be distributed\nv. move through a space, circuit or system, returning to the starting point\nv. cause to move in a circuit or system"
+    },
+    {
+      "id": "SAT_4328",
+      "word": "circumlocution",
+      "definition_cn": "n. 婉转曲折的说法，累赘的陈述；遁辞",
+      "phonetic_uk": "/,sɜːkəmlə'kjuːʃ(ə)n/",
+      "phonetic_us": "/,sɝkəmlə'kjuʃən/",
+      "ecdict_translation": "n. 迂回的说法",
+      "ecdict_phonetic": ".sә:kәmlә'kju:ʃәn",
+      "ecdict_definition": "n. a style that involves indirect ways of expressing things\nn. an indirect way of expressing something"
+    },
+    {
+      "id": "SAT_3610",
+      "word": "circumnavigate",
+      "definition_cn": "v. 环航",
+      "phonetic_uk": "/sɜːkəm'nævɪgeɪt/",
+      "phonetic_us": "/,sɝkəm'nævɪɡet/",
+      "ecdict_translation": "vt. 环绕航行",
+      "ecdict_phonetic": ".sә:kәm'nævigeit",
+      "ecdict_definition": "v. travel around, either by plane or ship"
+    },
+    {
+      "id": "SAT_4052",
+      "word": "clothier",
+      "definition_cn": "n. 衣庄；呢绒商",
+      "phonetic_uk": "/'kləʊðɪə/",
+      "phonetic_us": "/'kloðɪɚ/",
+      "ecdict_translation": "n. 布商, 衣商",
+      "ecdict_phonetic": "'klәuðiә",
+      "ecdict_definition": "n. a merchant who sells men's clothing"
+    },
+    {
+      "id": "SAT_4037",
+      "word": "coagulate",
+      "definition_cn": "v. 使…凝结",
+      "phonetic_uk": "/kəʊ'ægjʊleɪt/",
+      "phonetic_us": "/ko'æɡjulet/",
+      "ecdict_translation": "v. (使)凝结\na. 凝结的",
+      "ecdict_phonetic": "kәu'ægjuleit",
+      "ecdict_definition": "s. transformed from a liquid into a soft semisolid or solid mass"
+    },
+    {
+      "id": "SAT_3494",
+      "word": "coax",
+      "definition_cn": "v. 哄；哄诱；慢慢将…弄好",
+      "phonetic_uk": "/kəʊks/",
+      "phonetic_us": "/koks/",
+      "ecdict_translation": "vt. 哄, 诱骗, 耐心地摆弄\nvi. 哄骗\n[计] 同轴电缆",
+      "ecdict_phonetic": "kәuks",
+      "ecdict_definition": "n a transmission line for high-frequency signals\nv influence or urge by gentle urging, caressing, or flattering"
+    },
+    {
+      "id": "SAT_4286",
+      "word": "cohesive",
+      "definition_cn": "adj. 凝聚的；有结合力的；紧密结合的；有粘着力的",
+      "phonetic_uk": "/kəʊ'hiːsɪv/",
+      "phonetic_us": "/ko'hisɪv/",
+      "ecdict_translation": "a. 黏合在一起的\n[医] 内聚的",
+      "ecdict_phonetic": "kәu'hi:siv",
+      "ecdict_definition": "s. causing cohesion\ns. cohering or tending to cohere; well integrated"
+    },
+    {
+      "id": "SAT_4246",
+      "word": "concupiscence",
+      "definition_cn": "n. 强烈的邪欲",
+      "phonetic_uk": "/kən'kjuːpɪs(ə)ns/",
+      "phonetic_us": "/kən'kjupɪsns/",
+      "ecdict_translation": "n. 色欲\n[医] 色欲",
+      "ecdict_phonetic": "kәn'kju:pisәns",
+      "ecdict_definition": "n a desire for sexual intimacy"
+    },
+    {
+      "id": "SAT_2494",
+      "word": "condescend",
+      "definition_cn": "v. 屈尊；俯就；（对某人）表现出优越感",
+      "phonetic_uk": "/kɒndɪ'send/",
+      "phonetic_us": "/,kɑndɪ'sɛnd/",
+      "ecdict_translation": "vi. 谦逊, 屈就, 堕落",
+      "ecdict_phonetic": ".kɒndi'send",
+      "ecdict_definition": "v. behave in a patronizing and condescending manner\nv. do something that one considers to be below one's dignity\nv. debase oneself morally, act in an undignified, unworthy, or dishonorable way"
+    },
+    {
+      "id": "SAT_2290",
+      "word": "condescending",
+      "definition_cn": "adj. 表现出优越感的；居高临下的； v. 屈尊（condescend的ing形式）",
+      "phonetic_uk": "/kɒndɪ'sendɪŋ/",
+      "phonetic_us": "/,kɑndɪ'sɛndɪŋ/",
+      "ecdict_translation": "a. 谦逊的, 故意屈尊的, 有优越感的",
+      "ecdict_phonetic": ".kɒndi'sendiŋ",
+      "ecdict_definition": "v behave in a patronizing and condescending manner\nv do something that one considers to be below one's dignity\nv debase oneself morally, act in an undignified, unworthy, or dishonorable way\nv treat condescendingly\ns (used of behavior or attitude) characteristic of those who treat others with condescension"
+    },
+    {
+      "id": "SAT_2059",
+      "word": "confession",
+      "definition_cn": "n. 忏悔，告解；供认；表白",
+      "phonetic_uk": "/kən'feʃ(ə)n/",
+      "phonetic_us": "/kən'fɛʃən/",
+      "ecdict_translation": "n. 承认, 坦白, 招供\n[法] 自白, 招供, 自认有罪",
+      "ecdict_phonetic": "kәn'feʃәn",
+      "ecdict_definition": "n. an admission of misdeeds or faults\nn. a written document acknowledging an offense and signed by the guilty party\nn. (Roman Catholic Church) the act of a penitent disclosing his sinfulness before a priest in the sacrament of penance in the hope of absolution\nn. a public declaration of your faith"
+    },
+    {
+      "id": "SAT_2970",
+      "word": "consecutive",
+      "definition_cn": "adj. 连贯的；连续不断的",
+      "phonetic_uk": "/kən'sekjʊtɪv/",
+      "phonetic_us": "/kən'sɛkjətɪv/",
+      "ecdict_translation": "a. 连续的, 联贯的\n[计] 连续的; 连接的",
+      "ecdict_phonetic": "kәn'sekjutiv",
+      "ecdict_definition": "s. in regular succession without gaps\nr. in a consecutive manner"
+    },
+    {
+      "id": "SAT_3987",
+      "word": "contemptible",
+      "definition_cn": "adj. 可鄙的；卑劣的；可轻视的",
+      "phonetic_uk": "/kən'tem(p)tɪb(ə)l/",
+      "phonetic_us": "/kən'tɛmptəbl/",
+      "ecdict_translation": "a. 卑鄙的, 可轻蔑的, 不足挂齿的",
+      "ecdict_phonetic": "kәn'temptibl",
+      "ecdict_definition": "a. deserving of contempt or scorn"
+    },
+    {
+      "id": "SAT_3762",
+      "word": "contrition",
+      "definition_cn": "n. 痛悔；悔悟",
+      "phonetic_uk": "/kən'trɪʃ(ə)n/",
+      "phonetic_us": "/kən'triʃən/",
+      "ecdict_translation": "n. 完全悔悟, 悔改, 悔罪",
+      "ecdict_phonetic": "kәn'triʃәn",
+      "ecdict_definition": "n sorrow for sin arising from fear of damnation"
+    },
+    {
+      "id": "SAT_220",
+      "word": "convoke",
+      "definition_cn": "v. 召集；召集…开会",
+      "phonetic_uk": "/kən'vəʊk/",
+      "phonetic_us": "/kən'vok/",
+      "ecdict_translation": "vt. 召集...开会",
+      "ecdict_phonetic": "kәn'vәuk",
+      "ecdict_definition": "v. call together"
+    },
+    {
+      "id": "SAT_3469",
+      "word": "deteriorate",
+      "definition_cn": "v. 恶化，变坏",
+      "phonetic_uk": "/dɪ'tɪərɪəreɪt/",
+      "phonetic_us": "/dɪ'tɪrɪəret/",
+      "ecdict_translation": "v. (使)恶化",
+      "ecdict_phonetic": "di'tiәriәreit",
+      "ecdict_definition": "v. become worse or disintegrate"
+    },
+    {
+      "id": "SAT_354",
+      "word": "dilapidate",
+      "definition_cn": "v. 毁坏；荒废；浪费",
+      "phonetic_uk": "/dɪ'læpɪdeɪt/",
+      "phonetic_us": "/di'læpideit/",
+      "ecdict_translation": "v. (使)荒废, (使)毁坏",
+      "ecdict_phonetic": "di'læpideit",
+      "ecdict_definition": "v. bring into a condition of decay or partial ruin by neglect or misuse"
+    },
+    {
+      "id": "SAT_1217",
+      "word": "discern",
+      "definition_cn": "v. 识别；领悟，认识",
+      "phonetic_uk": "/dɪ'sɜːn/",
+      "phonetic_us": "/dɪ'sɝn/",
+      "ecdict_translation": "v. 辨别, 看清楚, 了解",
+      "ecdict_phonetic": "di'zә:n",
+      "ecdict_definition": "v detect with the senses"
+    },
+    {
+      "id": "SAT_400",
+      "word": "discretionary",
+      "definition_cn": "adj. 任意的；自由决定的",
+      "phonetic_uk": "/dɪ'skreʃ(ə)n(ə)rɪ/",
+      "phonetic_us": "/dɪ'skrɛʃə'nɛri/",
+      "ecdict_translation": "[计] 选择的",
+      "ecdict_phonetic": "dis'kreʃәnәri",
+      "ecdict_definition": "s. having or using the ability to act or decide according to your own discretion or judgment\ns. (especially of funds) not earmarked; available for use as needed"
+    },
+    {
+      "id": "SAT_2830",
+      "word": "disfigure",
+      "definition_cn": "v. 使变丑；损毁…的外形；使大为减色",
+      "phonetic_uk": "/dɪs'fɪgə/",
+      "phonetic_us": "/dɪs'fɪɡjɚ/",
+      "ecdict_translation": "vt. 毁损...的外形, 玷污, 损害, 毁损...的容貌\n[法] 损毁容颜, 破相",
+      "ecdict_phonetic": "dis'fi^ә",
+      "ecdict_definition": "v mar or spoil the appearance of"
+    },
+    {
+      "id": "SAT_1081",
+      "word": "dismantle",
+      "definition_cn": "v. 拆除；取消；解散；除掉…的覆盖物",
+      "phonetic_uk": "/dɪs'mænt(ə)l/",
+      "phonetic_us": "/dɪs'mæntl/",
+      "ecdict_translation": "vt. 拆除...的设备, 分解, 去除覆盖物",
+      "ecdict_phonetic": "dis'mæntl",
+      "ecdict_definition": "v tear down so as to make flat with the ground\nv take apart into its constituent pieces\nv take off or remove"
+    },
+    {
+      "id": "SAT_1487",
+      "word": "disorient",
+      "definition_cn": "v. 使…迷惑；使…失去方向感",
+      "phonetic_uk": "/dɪs'ɔ:rɪent/",
+      "phonetic_us": "/dɪsˈɔriˌɛnt, -ˈor-/",
+      "ecdict_translation": "vt. 使失去方向, 使迷惑",
+      "ecdict_phonetic": "dis'ɒ:rient",
+      "ecdict_definition": "v. cause to be lost or disoriented"
+    },
+    {
+      "id": "SAT_195",
+      "word": "dissect",
+      "definition_cn": "v. 切细；仔细分析",
+      "phonetic_uk": "/daɪ'sekt; dɪ-/",
+      "phonetic_us": "/dɪˈsɛkt, daɪ-, ˈdaɪˌsɛkt/",
+      "ecdict_translation": "v. 解剖, 切开",
+      "ecdict_phonetic": "di'sekt",
+      "ecdict_definition": "v. cut open or cut apart"
+    },
+    {
+      "id": "SAT_320",
+      "word": "distend",
+      "definition_cn": "v. 使…膨胀；使…扩张",
+      "phonetic_uk": "/dɪ'stend/",
+      "phonetic_us": "/dɪ'stɛnd/",
+      "ecdict_translation": "v. (使)膨胀, (使)扩张",
+      "ecdict_phonetic": "di'stend",
+      "ecdict_definition": "v. cause to expand as it by internal pressure\nv. swell from or as if from internal pressure"
+    },
+    {
+      "id": "SAT_3390",
+      "word": "divers",
+      "definition_cn": "adj. 不同种类的，各式各样的； n. (Divers)人名；(英)戴弗斯；(法)迪韦尔",
+      "phonetic_uk": "/'daɪvəz/",
+      "phonetic_us": "/'daɪvɚz/",
+      "ecdict_translation": "a. 各种不同的\npron. 若干个, 好几个",
+      "ecdict_phonetic": "'daivәz",
+      "ecdict_definition": "s. many and different"
+    },
+    {
+      "id": "SAT_550",
+      "word": "dramatic",
+      "definition_cn": "adj. 戏剧的；急剧的；引人注目的；激动人心的",
+      "phonetic_uk": "/drə'mætɪk/",
+      "phonetic_us": "/drə'mætɪk/",
+      "ecdict_translation": "a. 戏剧性的, 生动的",
+      "ecdict_phonetic": "drә'mætik",
+      "ecdict_definition": "a. suitable to or characteristic of drama\ns. sensational in appearance or thrilling in effect\na. pertaining to or characteristic of drama\na. used of a singer or singing voice that is marked by power and expressiveness and a histrionic or theatrical style"
+    },
+    {
+      "id": "SAT_2570",
+      "word": "dumbfound",
+      "definition_cn": "v. 使惊呆；使人惊愕失声",
+      "phonetic_uk": "/dʌm'faʊnd/",
+      "phonetic_us": "/dʌm'faʊnd/",
+      "ecdict_translation": "vt. 使...惊讶得发呆",
+      "ecdict_phonetic": "dʌm'fajnd",
+      "ecdict_definition": "v be a mystery or bewildering to"
+    },
+    {
+      "id": "SAT_1501",
+      "word": "electrode",
+      "definition_cn": "n. 顽皮雷弹",
+      "phonetic_uk": "/ɪ'lektrəʊd/",
+      "phonetic_us": "/ɪ'lɛktrod/",
+      "ecdict_translation": "n. 电极\n[化] 电极; 焊条; 电焊条",
+      "ecdict_phonetic": "i'lektrәud",
+      "ecdict_definition": "n. a conductor used to make electrical contact with some part of a circuit"
+    },
+    {
+      "id": "SAT_4234",
+      "word": "emanate",
+      "definition_cn": "v. 放射（过去式emanated，过去分词emanated，现在分词emanating，第三人称单数emanates，形容词emanative）；发散",
+      "phonetic_uk": "/'eməneɪt/",
+      "phonetic_us": "/ˈɛməˌneɪt/",
+      "ecdict_translation": "vi. 散发, 发出, 发源",
+      "ecdict_phonetic": "'emәneit",
+      "ecdict_definition": "v. proceed or issue forth, as from a source"
+    },
+    {
+      "id": "SAT_3157",
+      "word": "emigrate",
+      "definition_cn": "v. 移居；移居外国",
+      "phonetic_uk": "/'emɪgreɪt/",
+      "phonetic_us": "/'ɛmɪɡret/",
+      "ecdict_translation": "v. (使)移居, (使)移民",
+      "ecdict_phonetic": "'emigreit",
+      "ecdict_definition": "v. leave one's country of residence for a new one"
+    },
+    {
+      "id": "SAT_1179",
+      "word": "entrench",
+      "definition_cn": "v. 确立，牢固；用壕沟围住；挖掘",
+      "phonetic_uk": "/ɪn'tren(t)ʃ; en-/",
+      "phonetic_us": "/ɪn'trɛntʃ/",
+      "ecdict_translation": "vt. 围以壕沟, 防护, 保卫, 使处于牢固地位\nvi. 掘壕, 侵犯",
+      "ecdict_phonetic": "in'trentʃ",
+      "ecdict_definition": "v. fix firmly or securely\nv. occupy a trench or secured area"
+    },
+    {
+      "id": "SAT_218",
+      "word": "ethereal",
+      "definition_cn": "adj. 优雅的；轻飘的；缥缈的；超凡的",
+      "phonetic_uk": "/ɪ'θɪərɪəl/",
+      "phonetic_us": "/ɪ'θɪrɪəl/",
+      "ecdict_translation": "a. 轻的, 飘渺的, 天上的\n[医] 醚制的, 挥发性的",
+      "ecdict_phonetic": "i'θiriәl",
+      "ecdict_definition": "a. of or containing or dissolved in ether\ns. characterized by unusual lightness and delicacy"
+    },
+    {
+      "id": "SAT_3686",
+      "word": "exaggerate",
+      "definition_cn": "v. 使扩大；使增大",
+      "phonetic_uk": "/ɪg'zædʒəreɪt; eg-/",
+      "phonetic_us": "/ɪɡ'zædʒəret/",
+      "ecdict_translation": "v. 夸大, 夸张",
+      "ecdict_phonetic": "ig'zædʒәreit",
+      "ecdict_definition": "v to enlarge beyond bounds or the truth\nv do something to an excessive degree"
+    },
+    {
+      "id": "SAT_3554",
+      "word": "excavate",
+      "definition_cn": "v. 挖掘；开凿",
+      "phonetic_uk": "/'ekskəveɪt/",
+      "phonetic_us": "/'ɛkskə'vet/",
+      "ecdict_translation": "v. 挖空, 挖出, 凿通",
+      "ecdict_phonetic": "'ekskәveit",
+      "ecdict_definition": "v. recover through digging\nv. find by digging in the ground\nv. form by hollowing\nv. remove the inner part or the core of"
+    },
+    {
+      "id": "SAT_2090",
+      "word": "expect",
+      "definition_cn": "v. 期望；指望；认为；预料",
+      "phonetic_uk": "/ɪk'spekt; ek-/",
+      "phonetic_us": "/ɪk'spɛkt/",
+      "ecdict_translation": "vt. 预期, 盼望, 期待",
+      "ecdict_phonetic": "iks'pekt",
+      "ecdict_definition": "v. regard something as probable or likely\nv. look forward to the probable occurrence of\nv. consider reasonable or due\nv. look forward to the birth of a child"
+    },
+    {
+      "id": "SAT_3154",
+      "word": "extrovert",
+      "definition_cn": "n. 外向；外倾者；性格外向者（等于extravert）",
+      "phonetic_uk": "/'ekstrəvɜːt/",
+      "phonetic_us": "/,ɛkstrə'vɝt/",
+      "ecdict_translation": "n. 外向性格的人\n[医] 外倾[性格]者",
+      "ecdict_phonetic": "'ekstrәuvә:t",
+      "ecdict_definition": "n. (psychology) a person concerned more with practical realities than with inner thoughts and feelings\ns. being concerned with the social and physical environment"
+    },
+    {
+      "id": "SAT_534",
+      "word": "facile",
+      "definition_cn": "adj. （言语或理论）轻率的，未经深思熟虑的",
+      "phonetic_uk": "/'fæsaɪl; -sɪl/",
+      "phonetic_us": "/'fæsl/",
+      "ecdict_translation": "a. 容易的, 灵巧的, 温和的",
+      "ecdict_phonetic": "'fæsil",
+      "ecdict_definition": "s. arrived at without due care or effort; lacking depth\ns. performing adroitly and without effort"
+    },
+    {
+      "id": "SAT_1963",
+      "word": "fallible",
+      "definition_cn": "adj. 易犯错误的；不可靠的",
+      "phonetic_uk": "/'fælɪb(ə)l/",
+      "phonetic_us": "/'fæləbl/",
+      "ecdict_translation": "a. 易错的, 可能犯错的",
+      "ecdict_phonetic": "'fælәbl",
+      "ecdict_definition": "a. likely to fail or make errors\ns. wanting in moral strength, courage, or will; having the attributes of man as opposed to e.g. divine beings"
+    },
+    {
+      "id": "SAT_2308",
+      "word": "flagella",
+      "definition_cn": "n. 鞭毛；鞭节（flagellum的复数）",
+      "phonetic_uk": "/flagella/",
+      "phonetic_us": "/flagella/",
+      "ecdict_translation": "[医] 鞭毛(原虫), 鞭节(昆虫)",
+      "ecdict_phonetic": "flә'dʒelә",
+      "ecdict_definition": "n a whip used to inflict punishment (often used for pedantic humor)\nn a lash-like appendage used for locomotion (e.g., in sperm cells and some bacteria and protozoa)"
+    },
+    {
+      "id": "SAT_1700",
+      "word": "florid",
+      "definition_cn": "adj. 绚丽的；气色好的",
+      "phonetic_uk": "/'flɒrɪd/",
+      "phonetic_us": "/'flɔrɪd/",
+      "ecdict_translation": "a. 华丽的, 红润的\n[医] 鲜红的",
+      "ecdict_phonetic": "'flɒrid",
+      "ecdict_definition": "s elaborately or excessively ornamented\ns inclined to a healthy reddish color often associated with outdoor life"
+    },
+    {
+      "id": "SAT_3961",
+      "word": "fraternal",
+      "definition_cn": "adj. 兄弟般的；友好的",
+      "phonetic_uk": "/frə'tɜːn(ə)l/",
+      "phonetic_us": "/frə'tɝnl/",
+      "ecdict_translation": "a. 兄弟的, 兄弟似的, 友爱的",
+      "ecdict_phonetic": "frә'tә:nl",
+      "ecdict_definition": "a. of or relating to a fraternity or society of usually men\na. (of twins) derived from two separate fertilized ova"
+    },
+    {
+      "id": "SAT_3362",
+      "word": "frizzle",
+      "definition_cn": "v. 使卷缩；使卷曲； n. 卷发；吱吱响声",
+      "phonetic_uk": "/'frɪz(ə)l/",
+      "phonetic_us": "/'frɪz(ə)l/",
+      "ecdict_translation": "n. 拳发, 拳曲\nv. (使)拳曲",
+      "ecdict_phonetic": "'frizl",
+      "ecdict_definition": "v. fry something until it curls and becomes crisp"
+    },
+    {
+      "id": "SAT_1560",
+      "word": "gaiety",
+      "definition_cn": "n. 快乐，兴高采烈；庆祝活动，喜庆；（服饰）华丽，艳丽",
+      "phonetic_uk": "/'geɪətɪ/",
+      "phonetic_us": "/'ɡeiəti/",
+      "ecdict_translation": "n. 愉快, 快活, 高兴",
+      "ecdict_phonetic": "'geiәti",
+      "ecdict_definition": "n. a gay feeling\nn. a festive merry feeling"
+    },
+    {
+      "id": "SAT_1767",
+      "word": "gestate",
+      "definition_cn": "v. 使怀孕",
+      "phonetic_uk": "/dʒe'steɪt/",
+      "phonetic_us": "/'dʒɛstet/",
+      "ecdict_translation": "vt. 孕育",
+      "ecdict_phonetic": "'dʒesteit",
+      "ecdict_definition": "v. have the idea for"
+    },
+    {
+      "id": "SAT_3828",
+      "word": "gibber",
+      "definition_cn": "v. 喋喋而言；胡扯； n. 三棱石；无法听懂的话",
+      "phonetic_uk": "/'dʒɪbə/",
+      "phonetic_us": "/'dʒɪbɚ/",
+      "ecdict_translation": "vi. 急促而不清楚地说话, 傻乎乎地说话\n[计] 混乱信息, 无用数据",
+      "ecdict_phonetic": "'dʒibә",
+      "ecdict_definition": "v. chatter inarticulately; of monkeys"
+    },
+    {
+      "id": "SAT_225",
+      "word": "gibberish",
+      "definition_cn": "n. 乱语；快速而不清楚的言语",
+      "phonetic_uk": "/'dʒɪb(ə)rɪʃ/",
+      "phonetic_us": "/'dʒɪbərɪʃ/",
+      "ecdict_translation": "n. 快而不清的语, 胡扯",
+      "ecdict_phonetic": "'dʒibәriʃ",
+      "ecdict_definition": "n. unintelligible talking"
+    },
+    {
+      "id": "SAT_359",
+      "word": "gland",
+      "definition_cn": "n. 腺",
+      "phonetic_uk": "/glænd/",
+      "phonetic_us": "/ɡlænd/",
+      "ecdict_translation": "n. 腺, 密封套\n[化] 衬片; 密封垫",
+      "ecdict_phonetic": "glænd",
+      "ecdict_definition": "n. any of various organs that synthesize substances needed by the body and release it through ducts or directly into the bloodstream"
+    },
+    {
+      "id": "SAT_1953",
+      "word": "hadron",
+      "definition_cn": "n. [高能] 强子（参与强相互作用的基本粒子）",
+      "phonetic_uk": "/'hædrɒn/",
+      "phonetic_us": "/'hædrɒn/",
+      "ecdict_translation": "[化] 强子(强相互作用粒子)",
+      "ecdict_phonetic": "'hædrɔn",
+      "ecdict_definition": "n. any elementary particle that interacts strongly with other particles"
+    },
+    {
+      "id": "SAT_3324",
+      "word": "herbivore",
+      "definition_cn": "n. [动] 食草动物",
+      "phonetic_uk": "/'hɜːbɪvɔː/",
+      "phonetic_us": "/ɝ​bəˌvɔr/",
+      "ecdict_translation": "n. 草食动物",
+      "ecdict_phonetic": "'hә:bivɒ:",
+      "ecdict_definition": "n. any animal that feeds chiefly on grass and other plants"
+    },
+    {
+      "id": "SAT_589",
+      "word": "hodgepodge",
+      "definition_cn": "n. 大杂烩；混煮；一团糟； v. 使混乱",
+      "phonetic_uk": "/'hɒdʒpɒdʒ/",
+      "phonetic_us": "/'hɑdʒpɑdʒ/",
+      "ecdict_translation": "n. 杂烩菜, 混杂物",
+      "ecdict_phonetic": "'hɒdʒpɒdʒ",
+      "ecdict_definition": "n a motley assortment of things\nn a theory or argument made up of miscellaneous or incongruous ideas"
+    },
+    {
+      "id": "SAT_4429",
+      "word": "homologous chromosome",
+      "definition_cn": "n. [遗] 同源染色体",
+      "phonetic_uk": "/homologous chromosome/",
+      "phonetic_us": "/homologous chromosome/",
+      "ecdict_translation": "[医] 同原染色体",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_1822",
+      "word": "hospitable",
+      "definition_cn": "adj. 热情友好的；（环境）舒适的",
+      "phonetic_uk": "/hɒ'spɪtəb(ə)l; 'hɒspɪt-/",
+      "phonetic_us": "/hɑ'spɪtəbl/",
+      "ecdict_translation": "a. 好客的, 招待周到的",
+      "ecdict_phonetic": "'hɒspitәbl",
+      "ecdict_definition": "a. favorable to life and growth\na. disposed to treat guests and strangers with cordiality and generosity\ns. having an open mind"
+    },
+    {
+      "id": "SAT_4105",
+      "word": "humiliate",
+      "definition_cn": "v. 羞辱；使…丢脸；耻辱",
+      "phonetic_uk": "/hjʊ'mɪlɪeɪt/",
+      "phonetic_us": "/hju'mɪlɪet/",
+      "ecdict_translation": "vt. 使丢脸, 使蒙羞, 屈辱",
+      "ecdict_phonetic": "hju:'milieit",
+      "ecdict_definition": "v. cause to feel shame; hurt the pride of"
+    },
+    {
+      "id": "SAT_2596",
+      "word": "hypotenuse",
+      "definition_cn": "n. 直角三角形的斜边",
+      "phonetic_uk": "/haɪ'pɒtənjuːz; -s/",
+      "phonetic_us": "/haɪ'pɑtənus/",
+      "ecdict_translation": "n. (直角三角形之)斜边",
+      "ecdict_phonetic": "hai'pɒtnju:s",
+      "ecdict_definition": "n. the side of a right triangle opposite the right angle"
+    },
+    {
+      "id": "SAT_4312",
+      "word": "imaginative",
+      "definition_cn": "adj. 富于想象的；有创造力的",
+      "phonetic_uk": "/ɪ'mædʒɪnətɪv/",
+      "phonetic_us": "/ɪ'mædʒɪnətɪv/",
+      "ecdict_translation": "a. 想像的, 虚构的",
+      "ecdict_phonetic": "i'mædʒinәtiv",
+      "ecdict_definition": "s. (used of persons or artifacts) marked by independence and creativity in thought or action"
+    },
+    {
+      "id": "SAT_1019",
+      "word": "impalpable",
+      "definition_cn": "adj. 感触不到的；难理解的；无形的",
+      "phonetic_uk": "/ɪm'pælpəb(ə)l/",
+      "phonetic_us": "/ɪm'pælpəb(ə)l/",
+      "ecdict_translation": "a. 不可触知的, 不能感知的, 难以理解的\n[医] 不可接触的, 极细微的",
+      "ecdict_phonetic": "im'pælpәbl",
+      "ecdict_definition": "a. imperceptible to the senses or the mind\ns. not perceptible to the touch"
+    },
+    {
+      "id": "SAT_2868",
+      "word": "imperil",
+      "definition_cn": "v. 危及；使陷于危险",
+      "phonetic_uk": "/ɪm'perɪl; -r(ə)l/",
+      "phonetic_us": "/ɪm'pɛrəl/",
+      "ecdict_translation": "vt. 使处于危险, 危害",
+      "ecdict_phonetic": "im'peril",
+      "ecdict_definition": "v pose a threat to; present a danger to"
+    },
+    {
+      "id": "SAT_2051",
+      "word": "inadvertent",
+      "definition_cn": "adj. 疏忽的；不注意的（副词inadvertently）；无意中做的",
+      "phonetic_uk": "/,ɪnəd'vɜːt(ə)nt/",
+      "phonetic_us": "/ɪnəd'vɝtənt/",
+      "ecdict_translation": "a. 漫不经心的, 非故意的",
+      "ecdict_phonetic": ".inәd'vә:tәnt",
+      "ecdict_definition": "s happening by chance or unexpectedly or unintentionally"
+    },
+    {
+      "id": "SAT_4015",
+      "word": "indefinitely",
+      "definition_cn": "adv. 不确定地，无限期地；模糊地，不明确地",
+      "phonetic_uk": "/ɪn'defɪnɪtlɪ/",
+      "phonetic_us": "/ɪn'dɛfɪnətli/",
+      "ecdict_translation": "adv. 无期限地",
+      "ecdict_phonetic": "",
+      "ecdict_definition": "r. to an indefinite extent; for an indefinite time"
+    },
+    {
+      "id": "SAT_557",
+      "word": "indignant",
+      "definition_cn": "adj. 愤愤不平的；义愤的",
+      "phonetic_uk": "/ɪn'dɪgnənt/",
+      "phonetic_us": "/ɪn'dɪɡnənt/",
+      "ecdict_translation": "a. 愤怒的, 愤慨的",
+      "ecdict_phonetic": "in'dignәnt",
+      "ecdict_definition": "s. angered at something unjust or wrong"
+    },
+    {
+      "id": "SAT_584",
+      "word": "ingenious",
+      "definition_cn": "adj. 有独创性的；机灵的，精制的；心灵手巧的",
+      "phonetic_uk": "/ɪn'dʒiːnɪəs/",
+      "phonetic_us": "/ɪn'dʒinɪəs/",
+      "ecdict_translation": "a. 灵敏的, 精巧的, 聪明的",
+      "ecdict_phonetic": "in'dʒi:njәs",
+      "ecdict_definition": "s showing inventiveness and skill"
+    },
+    {
+      "id": "SAT_1549",
+      "word": "ingredient",
+      "definition_cn": "n. 原料；要素；组成部分； adj. 构成组成部分的",
+      "phonetic_uk": "/ɪn'griːdɪənt/",
+      "phonetic_us": "/ɪn'ɡridɪənt/",
+      "ecdict_translation": "n. 成分, 因素\n[化] 配合剂; 拼料; 成分; 组分",
+      "ecdict_phonetic": "in'gri:diәnt",
+      "ecdict_definition": "n. a component of a mixture or compound\nn. food that is a component of a mixture in cooking"
+    },
+    {
+      "id": "SAT_1792",
+      "word": "instill",
+      "definition_cn": "v. 徐徐滴入；逐渐灌输",
+      "phonetic_uk": "/in'stil/",
+      "phonetic_us": "/ɪn'stɪl/",
+      "ecdict_translation": "vt. 滴注, 慢慢地灌输",
+      "ecdict_phonetic": "in'stil",
+      "ecdict_definition": "v. impart gradually\nv. enter drop by drop"
+    },
+    {
+      "id": "SAT_2350",
+      "word": "inure",
+      "definition_cn": "v. 使…习惯；使…适应",
+      "phonetic_uk": "/ɪ'njʊə; ɪ'njɔː/",
+      "phonetic_us": "/i'njuə/",
+      "ecdict_translation": "vt. 使习惯于\nvi. 生效",
+      "ecdict_phonetic": "i'njuә",
+      "ecdict_definition": "v. cause to accept or become hardened to; habituate"
+    },
+    {
+      "id": "SAT_3795",
+      "word": "jocular",
+      "definition_cn": "adj. 爱开玩笑的；打趣的；滑稽的",
+      "phonetic_uk": "/'dʒɒkjʊlə/",
+      "phonetic_us": "/'dʒɑkjəlɚ/",
+      "ecdict_translation": "a. 诙谐的",
+      "ecdict_phonetic": "'dʒɒkjulә",
+      "ecdict_definition": "s characterized by jokes and good humor\nr with humor"
+    },
+    {
+      "id": "SAT_3087",
+      "word": "lapse",
+      "definition_cn": "n. (一时的) 走神，判断错误",
+      "phonetic_uk": "/læps/",
+      "phonetic_us": "/læps/",
+      "ecdict_translation": "n. 过失, 流逝, 失效\nvi. 犯错, 堕落, 减退, 消失, 流逝\nvt. 使失效",
+      "ecdict_phonetic": "læps",
+      "ecdict_definition": "n. a break or intermission in the occurrence of something\nv. end, at least for a long time\nv. drop to a lower level, as in one's morals or standards\nv. let slip"
+    },
+    {
+      "id": "SAT_3843",
+      "word": "leg",
+      "definition_cn": "n. 腿；支柱",
+      "phonetic_uk": "/leg/",
+      "phonetic_us": "/lɛɡ/",
+      "ecdict_translation": "n. 腿, 假腿, 路程\nvi. 走, 跑",
+      "ecdict_phonetic": "leg",
+      "ecdict_definition": "n. a human limb; commonly used to refer to a whole limb but technically only the part of the limb between the knee and ankle\nn. a structure in animals that is similar to a human leg and used for locomotion\nn. one of the supports for a piece of furniture\nn. the limb of an animal used for food"
+    },
+    {
+      "id": "SAT_747",
+      "word": "levee",
+      "definition_cn": "n. 堤坝（码头）；（旧时君主或显贵的）早晨接见； v. 为…筑堤",
+      "phonetic_uk": "/'levɪ; lɪ'viː/",
+      "phonetic_us": "/'lɛvi/",
+      "ecdict_translation": "n. 早朝, 大堤\nvt. 为...筑堤",
+      "ecdict_phonetic": "'levi",
+      "ecdict_definition": "n. a formal reception of visitors or guests (as at a royal court)\nn. a pier that provides a landing place on a river\nn. an embankment that is built in order to prevent a river from overflowing"
+    },
+    {
+      "id": "SAT_1161",
+      "word": "lexicographer",
+      "definition_cn": "n. 词典编纂者",
+      "phonetic_uk": "/,leksɪ'kɒgrəfə/",
+      "phonetic_us": "/,lɛksɪ'kɑɡrəfɚ/",
+      "ecdict_translation": "n. 辞典编纂者",
+      "ecdict_phonetic": ".leksi'kɒgrәfә",
+      "ecdict_definition": "n. a compiler or writer of a dictionary; a student of the lexical component of language"
+    },
+    {
+      "id": "SAT_3402",
+      "word": "liquefy",
+      "definition_cn": "v. 液化；溶解",
+      "phonetic_uk": "/'lɪkwɪfaɪ/",
+      "phonetic_us": "/'lɪkwɪfaɪ/",
+      "ecdict_translation": "v. (使)溶解, (使)液化",
+      "ecdict_phonetic": "'likwifai",
+      "ecdict_definition": "v. become liquid\nv. make (a solid substance) liquid, as by heating\nv. become liquid or fluid when heated"
+    },
+    {
+      "id": "SAT_1568",
+      "word": "loquacious",
+      "definition_cn": "adj. 饶舌的，多话的",
+      "phonetic_uk": "/lə'kweɪʃəs/",
+      "phonetic_us": "/lə'kweʃəs/",
+      "ecdict_translation": "a. 多嘴的, 好辩的, 吵闹的, 潺潺的",
+      "ecdict_phonetic": "lәu'kweiʃәs",
+      "ecdict_definition": "s full of trivial conversation"
+    },
+    {
+      "id": "SAT_300",
+      "word": "lucubration",
+      "definition_cn": "n. 刻苦钻研；苦心而成的著作",
+      "phonetic_uk": "/,luːkjʊ'breɪʃ(ə)n; ,ljuː-/",
+      "phonetic_us": "/,lju:kju:'breiʃən/",
+      "ecdict_translation": "n. (在灯下)刻苦钻研, 冥思苦想",
+      "ecdict_phonetic": ",lju:kju(:)'breiʃәn",
+      "ecdict_definition": "n. a solemn literary work that is the product of laborious cogitation\nn. laborious cogitation"
+    },
+    {
+      "id": "SAT_3114",
+      "word": "lung",
+      "definition_cn": "n. 肺；呼吸器",
+      "phonetic_uk": "/lʌŋ/",
+      "phonetic_us": "/lʌŋ/",
+      "ecdict_translation": "n. 肺, 肺脏, 空地\n[医] 肺",
+      "ecdict_phonetic": "lʌŋ",
+      "ecdict_definition": "n. either of two saclike respiratory organs in the chest of vertebrates; serves to remove carbon dioxide and provide oxygen to the blood"
+    },
+    {
+      "id": "SAT_1871",
+      "word": "mingle",
+      "definition_cn": "v. 混合；交往； n. (Mingle)人名；(加纳、英)明格尔",
+      "phonetic_uk": "/'mɪŋg(ə)l/",
+      "phonetic_us": "/'mɪŋɡl/",
+      "ecdict_translation": "v. (使)混合",
+      "ecdict_phonetic": "'miŋgl",
+      "ecdict_definition": "v. get involved or mixed-up with"
+    },
+    {
+      "id": "SAT_3371",
+      "word": "minnow",
+      "definition_cn": "n. [鱼] 鲦鱼（一种小淡水鱼）",
+      "phonetic_uk": "/'mɪnəʊ/",
+      "phonetic_us": "/'mɪno/",
+      "ecdict_translation": "n. 鲤科淡水小鱼",
+      "ecdict_phonetic": "'minәu",
+      "ecdict_definition": "n. very small European freshwater fish common in gravelly streams"
+    },
+    {
+      "id": "SAT_3219",
+      "word": "misbehave",
+      "definition_cn": "v. 作弊；行为不礼貌",
+      "phonetic_uk": "/mɪsbɪ'heɪv/",
+      "phonetic_us": "/,mɪsbɪ'hev/",
+      "ecdict_translation": "v. (使)行为无礼貌, (使)行为不端",
+      "ecdict_phonetic": ".misbi'heiv",
+      "ecdict_definition": "v. behave badly"
+    },
+    {
+      "id": "SAT_3622",
+      "word": "misbehavior",
+      "definition_cn": "n. 品行不端；不礼貌（等于misbehaviour）",
+      "phonetic_uk": "/,mɪsbɪ'hevjɚ/",
+      "phonetic_us": "/,mɪsbɪ'hevjɚ/",
+      "ecdict_translation": "n. 不正当的举止, 不规矩的行为\n[法] 行为不端, 品行不良, 不正当的举止",
+      "ecdict_phonetic": "'misbi'heivjә",
+      "ecdict_definition": "n. improper or wicked or immoral behavior"
+    },
+    {
+      "id": "SAT_144",
+      "word": "misrepresent",
+      "definition_cn": "v. 歪曲，误传；不合适地代表",
+      "phonetic_uk": "/,mɪsreprɪ'zent/",
+      "phonetic_us": "/,mɪs,rɛprɪ'zɛnt/",
+      "ecdict_translation": "vt. 不如实地叙述(或说明), 不称职地代表",
+      "ecdict_phonetic": "'mis.repri'zent",
+      "ecdict_definition": "v. represent falsely"
+    },
+    {
+      "id": "SAT_2497",
+      "word": "mite",
+      "definition_cn": "n. 极小量；小虫；小孩儿；微小的东西",
+      "phonetic_uk": "/maɪt/",
+      "phonetic_us": "/maɪt/",
+      "ecdict_translation": "n. 尽绵薄之力的捐献, 细微, 微少, 螨\n[医] 螨",
+      "ecdict_phonetic": "mait",
+      "ecdict_definition": "n. any of numerous very small to minute arachnids often infesting animals or plants or stored foods"
+    },
+    {
+      "id": "SAT_518",
+      "word": "mordent",
+      "definition_cn": "n. 涟音；波音",
+      "phonetic_uk": "/'mɔːd(ə)nt/",
+      "phonetic_us": "/'mɔrdnt/",
+      "ecdict_translation": "[音]波音",
+      "ecdict_phonetic": "'mɔ:dәnt",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4271",
+      "word": "nefarious",
+      "definition_cn": "adj. 邪恶的；穷凶极恶的；不法的",
+      "phonetic_uk": "/nɪ'feərɪəs/",
+      "phonetic_us": "/ni'fεəriəs/",
+      "ecdict_translation": "a. 恶毒的, 极坏的",
+      "ecdict_phonetic": "ni'feәriәs",
+      "ecdict_definition": "s. extremely wicked"
+    },
+    {
+      "id": "SAT_1169",
+      "word": "neologism",
+      "definition_cn": "n. 新词；新义；新词的使用",
+      "phonetic_uk": "/nɪ'ɒlədʒɪz(ə)m/",
+      "phonetic_us": "/nɪ'ɑlədʒɪzəm/",
+      "ecdict_translation": "n. 新语, 使用新语, 创造新语\n[医] 新语症; 语词新作, 新词症",
+      "ecdict_phonetic": "ni:'ɒlәdʒizm",
+      "ecdict_definition": "n. a newly invented word or phrase\nn. the act of inventing a word or phrase"
+    },
+    {
+      "id": "SAT_3372",
+      "word": "obsolescent",
+      "definition_cn": "adj. 荒废的；即将过时的；逐渐被废弃的",
+      "phonetic_uk": "/,ɒbsə'les(ə)nt/",
+      "phonetic_us": "/,ɑbsə'lɛsnt/",
+      "ecdict_translation": "a. 在逐步废弃的",
+      "ecdict_phonetic": ".ɒbsә'lesәnt",
+      "ecdict_definition": "s. becoming obsolete"
+    },
+    {
+      "id": "SAT_3032",
+      "word": "ordinate",
+      "definition_cn": "n. [数] 纵坐标",
+      "phonetic_uk": "/'ɔːdɪnət/",
+      "phonetic_us": "/'ɔrdɪnət/",
+      "ecdict_translation": "n. 纵线, 纵座标\n[医] 纵座标",
+      "ecdict_phonetic": "'ɒ:dineit",
+      "ecdict_definition": "n. the value of a coordinate on the vertical axis"
+    },
+    {
+      "id": "SAT_1388",
+      "word": "outlast",
+      "definition_cn": "v. 比…长久；从…中逃生",
+      "phonetic_uk": "/aʊt'lɑːst/",
+      "phonetic_us": "/,aʊt'læst/",
+      "ecdict_translation": "vt. 比...长久, 从...中逃生",
+      "ecdict_phonetic": ".aut'lɑ:st",
+      "ecdict_definition": "v live longer than"
+    },
+    {
+      "id": "SAT_1417",
+      "word": "outlive",
+      "definition_cn": "v. 比…活得长；比…经久；经受住；渡过…而存在",
+      "phonetic_uk": "/aʊt'lɪv/",
+      "phonetic_us": "/,aʊt'lɪv/",
+      "ecdict_translation": "vt. 比...经久, 比...活得长, 度过(风暴)而健在",
+      "ecdict_phonetic": "aut'liv",
+      "ecdict_definition": "v. live longer than"
+    },
+    {
+      "id": "SAT_1084",
+      "word": "outweigh",
+      "definition_cn": "v. 比…重（在重量上）；比…重要；比…有价值",
+      "phonetic_uk": "/aʊt'weɪ/",
+      "phonetic_us": "/'aʊt'we/",
+      "ecdict_translation": "vt. 比...重, 比...重要, 比...有价值",
+      "ecdict_phonetic": ".aut'wei",
+      "ecdict_definition": "v. be heavier than"
+    },
+    {
+      "id": "SAT_3440",
+      "word": "overwork",
+      "definition_cn": "v. 工作过度； n. 过度工作",
+      "phonetic_uk": "/əʊvə'wɜːk/",
+      "phonetic_us": "/'ovɚ'wɝk/",
+      "ecdict_translation": "n. 过度操劳的工作, 额外工作\nv. (使)工作过度, 使过分劳累",
+      "ecdict_phonetic": ".әuvә'wә:k",
+      "ecdict_definition": "n. the act of working too much or too long\nv. use too much\nv. work excessively hard"
+    },
+    {
+      "id": "SAT_8",
+      "word": "parsimonious",
+      "definition_cn": "adj. 吝啬的；过于节俭的；质量差的",
+      "phonetic_uk": "/,pɑːsɪ'məʊnɪəs/",
+      "phonetic_us": "/,pɑrsə'monɪəs/",
+      "ecdict_translation": "a. 过度节俭的, 吝啬小气的",
+      "ecdict_phonetic": ",pɑ:si'mәunjәs, -niәs",
+      "ecdict_definition": "s. excessively unwilling to spend"
+    },
+    {
+      "id": "SAT_3191",
+      "word": "perfidious",
+      "definition_cn": "adj. 背信弃义的；不忠的",
+      "phonetic_uk": "/pə'fɪdɪəs/",
+      "phonetic_us": "/pɚ'fɪdɪəs/",
+      "ecdict_translation": "a. 不忠贞的, 背信的, 有异心的",
+      "ecdict_phonetic": "pә'fidiәs",
+      "ecdict_definition": "s tending to betray; especially having a treacherous character as attributed to the Carthaginians by the Romans"
+    },
+    {
+      "id": "SAT_2439",
+      "word": "peripheral",
+      "definition_cn": "adj. 外围的；次要的；（神经）末梢区域的； n. 外部设备",
+      "phonetic_uk": "/pə'rɪf(ə)r(ə)l/",
+      "phonetic_us": "/pə'rɪfərəl/",
+      "ecdict_translation": "a. 周边的, 周围的, 圆周的, 无关紧要的, 肤浅的\n[医] 外周的, 周围的, 末梢的",
+      "ecdict_phonetic": "pә'rifәrәl",
+      "ecdict_definition": "n. (computer science) electronic equipment connected by cable to the CPU of a computer\na. on or near an edge or constituting an outer boundary; the outer area\ns. related to the key issue but not of central importance"
+    },
+    {
+      "id": "SAT_53",
+      "word": "pervade",
+      "definition_cn": "v. 遍及；弥漫",
+      "phonetic_uk": "/pə'veɪd/",
+      "phonetic_us": "/pɚ'ved/",
+      "ecdict_translation": "vt. 弥漫于, 遍及于, 流行于, 蔓延, 渗透于, 充满",
+      "ecdict_phonetic": "pә'veid",
+      "ecdict_definition": "v spread or diffuse through"
+    },
+    {
+      "id": "SAT_1337",
+      "word": "petrify",
+      "definition_cn": "v. 石化；惊呆",
+      "phonetic_uk": "/'petrɪfaɪ/",
+      "phonetic_us": "/'pɛtrɪfaɪ/",
+      "ecdict_translation": "vt. (非正式)使惊呆, 使吓得要死, 使发呆\nvt.vi. 使石化, 使成为化石, 使变僵, 变僵硬, 使消失活力, 使僵化",
+      "ecdict_phonetic": "'petri,fai",
+      "ecdict_definition": "v. cause to become stonelike or stiff or dazed and stunned"
+    },
+    {
+      "id": "SAT_1770",
+      "word": "phase",
+      "definition_cn": "n. 月相",
+      "phonetic_uk": "/feɪz/",
+      "phonetic_us": "/fez/",
+      "ecdict_translation": "n. 时期, 局面, 方面, 位相, 相, 阶段\nvt. 使调整相位, 使定相, 使一致, 逐步执行, 实行\n[计] 阶段",
+      "ecdict_phonetic": "feiz",
+      "ecdict_definition": "n. any distinct time period in a sequence of events\nn. (physical chemistry) a distinct state of matter in a system; matter that is identical in chemical composition and physical state and separated from other material by the phase boundary\nn. a particular point in the time of a cycle; measured from some arbitrary zero and expressed as an angle\nn. (astronomy) the particular appearance of a body's state of illumination (especially one of the recurring shapes of the part of Earth's moon that is illuminated by the sun)"
+    },
+    {
+      "id": "SAT_1435",
+      "word": "pheromone",
+      "definition_cn": "n. 信息素（用于生化领域）；费洛蒙（昆虫分泌以刺激同种昆虫之化合物质）",
+      "phonetic_uk": "/'ferəməʊn/",
+      "phonetic_us": "/'fɛrəmon/",
+      "ecdict_translation": "[化] 性外激素; 信息激素",
+      "ecdict_phonetic": "'ferәmәun",
+      "ecdict_definition": "n. a chemical substance secreted externally by some animals (especially insects) that influences the physiology or behavior of other animals of the same species"
+    },
+    {
+      "id": "SAT_9",
+      "word": "Phosphorus",
+      "definition_cn": "n. 磷",
+      "phonetic_uk": "/'fɒsf(ə)rəs/",
+      "phonetic_us": "/'fɑsfərəs/",
+      "ecdict_translation": "n. 启明星, 金星, 磷, 磷光体\n[化] 磷P",
+      "ecdict_phonetic": "'fɒsfәrәs",
+      "ecdict_definition": "n. a multivalent nonmetallic element of the nitrogen family that occurs commonly in inorganic phosphate rocks and as organic phosphates in all living cells; is highly reactive and occurs in several allotropic forms"
+    },
+    {
+      "id": "SAT_460",
+      "word": "polarize",
+      "definition_cn": "v. （使）极化；（使）偏振；（使）两极分化",
+      "phonetic_uk": "/'pəuləraiz/",
+      "phonetic_us": "/'polə'raɪz/",
+      "ecdict_translation": "v. (使)偏振, (使)极化, (使)两极分化",
+      "ecdict_phonetic": "'pәulәraiz",
+      "ecdict_definition": "v. cause to vibrate in a definite pattern\nv. cause to concentrate about two conflicting or contrasting positions\nv. become polarized in a conflict or contrasting situation"
+    },
+    {
+      "id": "SAT_2847",
+      "word": "polygamy",
+      "definition_cn": "n. 一夫多妻，一妻多夫，多配偶",
+      "phonetic_uk": "/pə'lɪgəmɪ/",
+      "phonetic_us": "/pə'lɪɡəmi/",
+      "ecdict_translation": "n. 多配偶(制), 多偶性\n[医] 多配[合](一雌多雄或一雄多雌,一妻多夫或一夫多妻)",
+      "ecdict_phonetic": "pә'ligәmi",
+      "ecdict_definition": "n. having more than one spouse at a time"
+    },
+    {
+      "id": "SAT_1541",
+      "word": "polyglot",
+      "definition_cn": "n. 通晓数种语言的人；用通晓数种语言记载的书； adj. 通数国语言，数国语言的",
+      "phonetic_uk": "/'pɒlɪglɒt/",
+      "phonetic_us": "/'pɑlɪɡlɑt/",
+      "ecdict_translation": "a. (使用)多种语言的, 多种文字对照的\nn. 使用多种语言的人, 多种文字对照本",
+      "ecdict_phonetic": "'pɒliglɒt",
+      "ecdict_definition": "s. having a command of or composed in many languages"
+    },
+    {
+      "id": "SAT_3743",
+      "word": "prankster",
+      "definition_cn": "n. 爱开玩笑的人；顽皮的人；恶作剧的人",
+      "phonetic_uk": "/'præŋkstə/",
+      "phonetic_us": "/'præŋkstə/",
+      "ecdict_translation": "n. 恶作剧者",
+      "ecdict_phonetic": "'præŋkstә",
+      "ecdict_definition": "n. someone who plays practical jokes on others"
+    },
+    {
+      "id": "SAT_277",
+      "word": "predation",
+      "definition_cn": "n. 捕食；掠夺",
+      "phonetic_uk": "/prɪ'deɪʃ(ə)n/",
+      "phonetic_us": "/prɪ'deʃən/",
+      "ecdict_translation": "掠夺行为",
+      "ecdict_phonetic": "pri'deiʃәn",
+      "ecdict_definition": "n. the act of preying by a predator who kills and eats the prey"
+    },
+    {
+      "id": "SAT_2861",
+      "word": "predicament",
+      "definition_cn": "n. 窘况，困境；状态",
+      "phonetic_uk": "/prɪ'dɪkəm(ə)nt/",
+      "phonetic_us": "/prɪ'dɪkəmənt/",
+      "ecdict_translation": "n. 处境, 穷境, 困局",
+      "ecdict_phonetic": "pri'dikәmәnt",
+      "ecdict_definition": "n. a situation from which extrication is difficult especially an unpleasant or trying one"
+    },
+    {
+      "id": "SAT_887",
+      "word": "preemption",
+      "definition_cn": "n. 优先购买；强制收购；抢先占有；取代",
+      "phonetic_uk": "/prɪ'empʃən/",
+      "phonetic_us": "/,primpʃən/",
+      "ecdict_translation": "n. 先买, 先买权\n[法] 预先占有, 优先购买权, 抢先购买",
+      "ecdict_phonetic": "pri:'empʃәn",
+      "ecdict_definition": "n. the judicial principle asserting the supremacy of federal over state legislation on the same subject\nn. the right of a government to seize or appropriate something (as property)\nn. the right to purchase something in advance of others"
+    },
+    {
+      "id": "SAT_3095",
+      "word": "projectile",
+      "definition_cn": "adj. 抛射的；抛掷的；供抛射用的；（触角等）能伸出的； n. 射弹；抛射体；自动推进武器",
+      "phonetic_uk": "/prə(ʊ)'dʒektaɪl; -tɪl/",
+      "phonetic_us": "/prə'dʒɛktl/",
+      "ecdict_translation": "n. 发射体, 抛射物\na. 发射的, 投射的",
+      "ecdict_phonetic": "prә'dʒektil",
+      "ecdict_definition": "n. a weapon that is forcibly thrown or projected at a targets but is not self-propelled\ns. impelling or impelled forward"
+    },
+    {
+      "id": "SAT_3338",
+      "word": "protuberate",
+      "definition_cn": "v. 伸出的",
+      "phonetic_uk": "/prəʊ'tjuːbəreɪt/",
+      "phonetic_us": "/prəʊ'tjuːbəreɪt/",
+      "ecdict_translation": "vi.隆起,凸出",
+      "ecdict_phonetic": "prәj'tju:bәreit",
+      "ecdict_definition": "v cause to bulge out or project\nv form a rounded prominence"
+    },
+    {
+      "id": "SAT_2435",
+      "word": "prudential",
+      "definition_cn": "adj. 谨慎的；明辨的",
+      "phonetic_uk": "/prʊ'denʃ(ə)l/",
+      "phonetic_us": "/pru'dɛnʃəl/",
+      "ecdict_translation": "a. 审慎的, 精明的, 起咨询作用的",
+      "ecdict_phonetic": "pru:'denʃәl",
+      "ecdict_definition": "s. arising from or characterized by prudence especially in business matters"
+    },
+    {
+      "id": "SAT_468",
+      "word": "pulverize",
+      "definition_cn": "v. 粉碎；使成粉末；研磨",
+      "phonetic_uk": "/'pʌlvəraɪz/",
+      "phonetic_us": "/'pʌlvə'raɪz/",
+      "ecdict_translation": "vt. 把...磨成粉\nvi. 变成粉",
+      "ecdict_phonetic": "'pʌlvәraiz",
+      "ecdict_definition": "v make into a powder by breaking up or cause to become dust\nv destroy completely\nv become powder or dust"
+    },
+    {
+      "id": "SAT_3928",
+      "word": "pyre",
+      "definition_cn": "n. 火葬用的柴堆",
+      "phonetic_uk": "/paɪə/",
+      "phonetic_us": "/'paɪɚ/",
+      "ecdict_translation": "n. (火葬用)柴堆",
+      "ecdict_phonetic": "'paiә",
+      "ecdict_definition": "n. wood heaped for burning a dead body as a funeral rite"
+    },
+    {
+      "id": "SAT_2679",
+      "word": "ramify",
+      "definition_cn": "v. 分枝，分叉；成网状",
+      "phonetic_uk": "/'ræmɪfaɪ/",
+      "phonetic_us": "/'ræmə,fai/",
+      "ecdict_translation": "v. (使)分枝, (使)分叉, (使)成枝岔状",
+      "ecdict_phonetic": "'ræmifai",
+      "ecdict_definition": "v. grow and send out branches or branch-like structures"
+    },
+    {
+      "id": "SAT_203",
+      "word": "rationalism",
+      "definition_cn": "n. 理性主义；唯理主义",
+      "phonetic_uk": "/'ræʃ(ə)n(ə)lɪz(ə)m/",
+      "phonetic_us": "/'ræʃnə'lɪzəm/",
+      "ecdict_translation": "n. 合理主义, 理性论, 纯理论",
+      "ecdict_phonetic": "'ræʃәnәlizm",
+      "ecdict_definition": "n. (philosophy) the doctrine that knowledge is acquired by reason without resort to experience\nn. the theological doctrine that human reason rather than divine revelation establishes religious truth\nn. the doctrine that reason is the right basis for regulating conduct"
+    },
+    {
+      "id": "SAT_101",
+      "word": "rationalize",
+      "definition_cn": "v. 使……合理化；使……有理化；为……找借口",
+      "phonetic_uk": "/'ræʃənəlaiz/",
+      "phonetic_us": "/'ræʃnə'laɪz/",
+      "ecdict_translation": "vt. 使合理, 合理地处理, 使有理化\nvi. 合理地思考",
+      "ecdict_phonetic": "'ræʃәnәlaiz",
+      "ecdict_definition": "v. structure and run according to rational or scientific principles in order to achieve desired results\nv. think rationally; employ logic or reason\nv. remove irrational quantities from"
+    },
+    {
+      "id": "SAT_3625",
+      "word": "reassure",
+      "definition_cn": "v. 使…安心，使消除疑虑",
+      "phonetic_uk": "/riːə'ʃʊə/",
+      "phonetic_us": "/,riə'ʃʊr/",
+      "ecdict_translation": "vt. 使...安心, 向...再保证\n[法] 重新保证, 再保险, 使清除疑虑",
+      "ecdict_phonetic": ".ri:ә'ʃuә",
+      "ecdict_definition": "v. cause to feel sure; give reassurance to\nv. give or restore confidence in; cause to feel sure or certain"
+    },
+    {
+      "id": "SAT_4134",
+      "word": "recluse",
+      "definition_cn": "n. 隐士；隐居者； adj. 隐居的",
+      "phonetic_uk": "/rɪ'kluːs/",
+      "phonetic_us": "/'rɛklus/",
+      "ecdict_translation": "a. 隐遁的, 偏僻的\nn. 隐遁者, 遁世者",
+      "ecdict_phonetic": "ri'klu:s",
+      "ecdict_definition": "s. withdrawn from society; seeking solitude"
+    },
+    {
+      "id": "SAT_4098",
+      "word": "recreate",
+      "definition_cn": "v. 娱乐；消遣",
+      "phonetic_uk": "/riːkrɪ'eɪt/",
+      "phonetic_us": "/,rikrɪ'et/",
+      "ecdict_translation": "v. (使)得到休养, (使)得到娱乐, 再创造",
+      "ecdict_phonetic": "'rekrieit",
+      "ecdict_definition": "v. create anew"
+    },
+    {
+      "id": "SAT_167",
+      "word": "recumbent",
+      "definition_cn": "adj. 斜倚的；休息的",
+      "phonetic_uk": "/rɪ'kʌmb(ə)nt/",
+      "phonetic_us": "/rɪ'kʌmbənt/",
+      "ecdict_translation": "a. 斜靠着的, 躺着的, 不活泼的, 休息着的\n[医] 斜卧的, 躺着的",
+      "ecdict_phonetic": "ri'kʌmbәnt",
+      "ecdict_definition": "s lying down; in a position of comfort or rest"
+    },
+    {
+      "id": "SAT_2300",
+      "word": "regiment",
+      "definition_cn": "v. 把…编成团；严格地管制； n. 团；大量",
+      "phonetic_uk": "/'redʒɪm(ə)nt/",
+      "phonetic_us": "/'rɛdʒɪmənt/",
+      "ecdict_translation": "n. （军队）团, 大量（人或物）\nv. 组编成团，组织，严格管制",
+      "ecdict_phonetic": "'redʒimәnt",
+      "ecdict_definition": "n. army unit smaller than a division\nv. subject to rigid discipline, order, and systematization\nv. form (military personnel) into a regiment\nv. assign to a regiment"
+    },
+    {
+      "id": "SAT_521",
+      "word": "relegate",
+      "definition_cn": "v. 把降低到；归入；提交",
+      "phonetic_uk": "/'relɪgeɪt/",
+      "phonetic_us": "/'rɛlɪɡet/",
+      "ecdict_translation": "vt. 驱逐, 使降低地位, 把...归类, 把...委托给\n[法] 流放, 判流放刑, 驱逐",
+      "ecdict_phonetic": "'religeit",
+      "ecdict_definition": "v. refer to another person for decision or judgment\nv. assign to a class or kind"
+    },
+    {
+      "id": "SAT_293",
+      "word": "replenish",
+      "definition_cn": "v. 补充，再装满；把…装满；给…添加燃料",
+      "phonetic_uk": "/rɪ'plenɪʃ/",
+      "phonetic_us": "/rɪ'plɛnɪʃ/",
+      "ecdict_translation": "vt. 把...重新补足, 把...再装满\nvi. 被再装满, 充满",
+      "ecdict_phonetic": "ri'pleniʃ",
+      "ecdict_definition": "v. fill something that had previously been emptied"
+    },
+    {
+      "id": "SAT_68",
+      "word": "resonate",
+      "definition_cn": "v. 共鸣；共振",
+      "phonetic_uk": "/'rez(ə)neɪt/",
+      "phonetic_us": "/'rɛzə'net/",
+      "ecdict_translation": "v. (使)共鸣, (使)共振",
+      "ecdict_phonetic": "'rezәneit",
+      "ecdict_definition": "v. sound with resonance\nv. be received or understood"
+    },
+    {
+      "id": "SAT_1264",
+      "word": "resplendent",
+      "definition_cn": "adj. 光辉的；华丽的",
+      "phonetic_uk": "/rɪ'splend(ə)nt/",
+      "phonetic_us": "/rɪ'splɛndənt/",
+      "ecdict_translation": "a. 辉煌的, 灿烂的",
+      "ecdict_phonetic": "ri'splendәnt",
+      "ecdict_definition": "s having great beauty and splendor"
+    },
+    {
+      "id": "SAT_2516",
+      "word": "resuscitate",
+      "definition_cn": "v. 使复苏；使复兴",
+      "phonetic_uk": "/rɪ'sʌsɪteɪt/",
+      "phonetic_us": "/rɪ'sʌsɪtet/",
+      "ecdict_translation": "v. (使)复苏, (使)复兴",
+      "ecdict_phonetic": "ri'sʌsiteit",
+      "ecdict_definition": "v. cause to regain consciousness"
+    },
+    {
+      "id": "SAT_3416",
+      "word": "revitalize",
+      "definition_cn": "v. 使…复活；使…复兴；使…恢复生气",
+      "phonetic_uk": "/,ri:'vaitəlaiz/",
+      "phonetic_us": "/,ri'vaɪtəlaɪz/",
+      "ecdict_translation": "vt. 使恢复生气, 使复活, 使复兴",
+      "ecdict_phonetic": ".ri:'vaitәlaiz",
+      "ecdict_definition": "v. give new life or vigor to"
+    },
+    {
+      "id": "SAT_3258",
+      "word": "sapid",
+      "definition_cn": "adj. 有滋味的；有趣的",
+      "phonetic_uk": "/'sæpɪd/",
+      "phonetic_us": "/'sæpɪd/",
+      "ecdict_translation": "a. 有味道的, 风味良好的, 有趣味的\n[医] 美味的",
+      "ecdict_phonetic": "'sæpid",
+      "ecdict_definition": "s full of flavor"
+    },
+    {
+      "id": "SAT_1671",
+      "word": "sapiential",
+      "definition_cn": "adj. 智慧的；明智的；赋予智慧的",
+      "phonetic_uk": "/seɪpɪ'enʃ(ə)l/",
+      "phonetic_us": "/,sepɪ'ɛnʃəl/",
+      "ecdict_translation": "a. 有关智慧的",
+      "ecdict_phonetic": ".seipi'enʃәl",
+      "ecdict_definition": "s. characterized by wisdom, especially the wisdom of God"
+    },
+    {
+      "id": "SAT_1922",
+      "word": "semblance",
+      "definition_cn": "n. 外貌；假装；类似",
+      "phonetic_uk": "/'sembləns/",
+      "phonetic_us": "/'sɛmbləns/",
+      "ecdict_translation": "n. 外表, 伪装, 假象, 少量",
+      "ecdict_phonetic": "'semblәns",
+      "ecdict_definition": "n. an outward or token appearance or form that is deliberately misleading"
+    },
+    {
+      "id": "SAT_2758",
+      "word": "serendipity",
+      "definition_cn": "n. 意外发现珍奇事物的本领；有意外发现珍宝的运气",
+      "phonetic_uk": "/,ser(ə)n'dɪpɪtɪ/",
+      "phonetic_us": "/,sɛrən'dɪpəti/",
+      "ecdict_translation": "n. 偶然发现珍宝的运气/才能, 易遇奇缘的运气",
+      "ecdict_phonetic": ",serәn'dipiti",
+      "ecdict_definition": "n. good luck in making unexpected and fortunate discoveries"
+    },
+    {
+      "id": "SAT_1972",
+      "word": "shrivel",
+      "definition_cn": "v. 枯萎；皱缩",
+      "phonetic_uk": "/ʃrɪv(ə)l/",
+      "phonetic_us": "/'ʃrɪvl/",
+      "ecdict_translation": "v. (使)起皱纹, (使)枯萎, (使)束手无策",
+      "ecdict_phonetic": "'ʃrivl",
+      "ecdict_definition": "v. wither, as with a loss of moisture"
+    },
+    {
+      "id": "SAT_3263",
+      "word": "simplify",
+      "definition_cn": "v. 简化；使单纯；使简易",
+      "phonetic_uk": "/'sɪmplɪfaɪ/",
+      "phonetic_us": "/'sɪmplɪfaɪ/",
+      "ecdict_translation": "vt. 单一化, 简单化",
+      "ecdict_phonetic": "'simplifai",
+      "ecdict_definition": "v. make simpler or easier or reduce in complexity or extent"
+    },
+    {
+      "id": "SAT_2448",
+      "word": "skittish",
+      "definition_cn": "adj. （人或动物）不安的，易受惊的；难驾驭的",
+      "phonetic_uk": "/'skɪtɪʃ/",
+      "phonetic_us": "/'skɪtɪʃ/",
+      "ecdict_translation": "a. 易惊的, 轻佻的, 三心二意的, 不可靠的, 羞怯的, 活泼的, 爱蹦跳的, 活跃的",
+      "ecdict_phonetic": "'skitiʃ",
+      "ecdict_definition": "s. unpredictably excitable (especially of horses)"
+    },
+    {
+      "id": "SAT_2549",
+      "word": "species",
+      "definition_cn": "n. [生物] 物种；种类； adj. 物种上的",
+      "phonetic_uk": "/'spiːʃiːz; -ʃɪz; 'spiːs-/",
+      "phonetic_us": "/'spiʃiz/",
+      "ecdict_translation": "n. 种, 类, 外形\n[医] 茶剂; 种",
+      "ecdict_phonetic": "'spi:ʃiz",
+      "ecdict_definition": "n. (biology) taxonomic group whose members can interbreed\nn. a specific kind of something"
+    },
+    {
+      "id": "SAT_2957",
+      "word": "stagnate",
+      "definition_cn": "v. 停滞；淤塞；变萧条",
+      "phonetic_uk": "/stæg'neɪt; 'stægneɪt/",
+      "phonetic_us": "/stæɡ'net/",
+      "ecdict_translation": "v. (使)淤塞, (使)停滞, (使)变萧条",
+      "ecdict_phonetic": "'stægneit",
+      "ecdict_definition": "v. stand still\nv. cause to stagnate\nv. cease to flow; stand without moving"
+    },
+    {
+      "id": "SAT_670",
+      "word": "statuesque",
+      "definition_cn": "adj. 雕像般的；轮廓清晰的；均衡的",
+      "phonetic_uk": "/,stætjʊ'esk; -tʃʊ-/",
+      "phonetic_us": "/,stʃʊjʊ'ɛsk/",
+      "ecdict_translation": "a. 雕像一般的, 均称的, 轮廓优美的",
+      "ecdict_phonetic": ".stætju'esk",
+      "ecdict_definition": "s of size and dignity suggestive of a statue\ns suggestive of a statue"
+    },
+    {
+      "id": "SAT_1141",
+      "word": "substantial",
+      "definition_cn": "adj. 大量的；实质的；内容充实的； n. 本质；重要材料",
+      "phonetic_uk": "/səb'stænʃ(ə)l/",
+      "phonetic_us": "/səbˈstænʃəl/",
+      "ecdict_translation": "n. 重要材料(或事物), 有实际价值的东西\na. 实质上的, 物质的, 有内容的, 结实的",
+      "ecdict_phonetic": "sәb'stænʃәl",
+      "ecdict_definition": "s. having a firm basis in reality and being therefore important, meaningful, or considerable\na. having substance or capable of being treated as fact; not imaginary"
+    },
+    {
+      "id": "SAT_2935",
+      "word": "tenable",
+      "definition_cn": "adj. （主张等）站得住脚的；可维持的",
+      "phonetic_uk": "/'tenəb(ə)l/",
+      "phonetic_us": "/'tenəb(ə)l/",
+      "ecdict_translation": "a. 可守的, 站得住(脚)的, 合理的, 成立的",
+      "ecdict_phonetic": "'tenәbl",
+      "ecdict_definition": "s. based on sound reasoning or evidence"
+    },
+    {
+      "id": "SAT_1261",
+      "word": "tenure",
+      "definition_cn": "n. 任期；占有； v. 授予…终身职位",
+      "phonetic_uk": "/'tenjə/",
+      "phonetic_us": "/'tɛnjɚ/",
+      "ecdict_translation": "n. 享有, 保有期\n[经] (财产,职位等的)占有, 占有权",
+      "ecdict_phonetic": "'tenjuә",
+      "ecdict_definition": "n. the term during which some position is held\nn. the right to hold property; part of an ancient hierarchical system of holding lands\nv. give life-time employment to"
+    },
+    {
+      "id": "SAT_1375",
+      "word": "tolerate",
+      "definition_cn": "v. 忍受；默许；宽恕",
+      "phonetic_uk": "/'tɒləreɪt/",
+      "phonetic_us": "/'tɑləret/",
+      "ecdict_translation": "vt. 宽容, 容许, 有耐力",
+      "ecdict_phonetic": "'tɒlәreit",
+      "ecdict_definition": "v. recognize and respect (rights and beliefs of others)\nv. have a tolerance for a poison or strong drug or pathogen or environmental condition"
+    },
+    {
+      "id": "SAT_2963",
+      "word": "trove",
+      "definition_cn": "n. 被发现的东西；收藏的东西",
+      "phonetic_uk": "/trəʊv/",
+      "phonetic_us": "/trov/",
+      "ecdict_translation": "n. 发现物, 收藏品\n[法] 发现物, 收藏物",
+      "ecdict_phonetic": "trәuv",
+      "ecdict_definition": "n treasure of unknown ownership found hidden (usually in the earth)"
+    },
+    {
+      "id": "SAT_3932",
+      "word": "tutorship",
+      "definition_cn": "n. 辅导；教师职位",
+      "phonetic_uk": "/tutorship/",
+      "phonetic_us": "/tutorship/",
+      "ecdict_translation": "n. 教师之职位\n[法] 保护人的职责或权力, 保护权",
+      "ecdict_phonetic": "'tju:tәʃip",
+      "ecdict_definition": "n teaching pupils individually (usually by a tutor hired privately)"
+    },
+    {
+      "id": "SAT_1145",
+      "word": "unbecoming",
+      "definition_cn": "adj. 不适当的，不相称的；不合身的，不得体的",
+      "phonetic_uk": "/ʌnbɪ'kʌmɪŋ/",
+      "phonetic_us": "/,ʌnbɪ'kʌmɪŋ/",
+      "ecdict_translation": "a. 不适合的, 不合体的, 不相配的",
+      "ecdict_phonetic": ".ʌnbi'kʌmiŋ",
+      "ecdict_definition": "s not in keeping with accepted standards of what is right or proper in polite society"
+    },
+    {
+      "id": "SAT_3091",
+      "word": "underlie",
+      "definition_cn": "v. 成为……的基础；位于……之下",
+      "phonetic_uk": "/ʌndə'laɪ/",
+      "phonetic_us": "/,ʌndɚ'laɪ/",
+      "ecdict_translation": "vt. 位于...之下, 成为...的基础",
+      "ecdict_phonetic": ".ʌndә'lai",
+      "ecdict_definition": "v. be or form the base for\nv. lie underneath"
+    },
+    {
+      "id": "SAT_2799",
+      "word": "ungainly",
+      "definition_cn": "adj. 笨拙的；不雅的； adv. 笨拙地；不雅地",
+      "phonetic_uk": "/ʌn'geɪnlɪ/",
+      "phonetic_us": "/ʌn'ɡenli/",
+      "ecdict_translation": "a. 难看的, 不优雅的, 粗陋的",
+      "ecdict_phonetic": ".ʌn'geinli",
+      "ecdict_definition": "s lacking grace in movement or posture\ns difficult to handle or manage especially because of shape"
+    },
+    {
+      "id": "SAT_1947",
+      "word": "untimely",
+      "definition_cn": "adj. 不合时宜的；过早的； adv. 不合时宜地；过早地",
+      "phonetic_uk": "/ʌn'taɪmlɪ/",
+      "phonetic_us": "/ʌn'taɪmli/",
+      "ecdict_translation": "a. 不到时候的, 不合时令的, 不适时的",
+      "ecdict_phonetic": ".ʌn'taimli",
+      "ecdict_definition": "s badly timed\ns uncommonly early or before the expected time\nr too soon; in a premature manner"
+    },
+    {
+      "id": "SAT_1476",
+      "word": "urine",
+      "definition_cn": "n. 尿",
+      "phonetic_uk": "/'jʊərɪn; -raɪn/",
+      "phonetic_us": "/'jʊrən/",
+      "ecdict_translation": "n. 小便, 尿\n[医] 尿",
+      "ecdict_phonetic": "'juәrin",
+      "ecdict_definition": "n. liquid excretory product"
+    },
+    {
+      "id": "SAT_1409",
+      "word": "vaccinate",
+      "definition_cn": "v. 接种疫苗； n. 被接种牛痘者",
+      "phonetic_uk": "/'væksɪneɪt/",
+      "phonetic_us": "/'væksə'net/",
+      "ecdict_translation": "v. 预防接种",
+      "ecdict_phonetic": "'væksineit",
+      "ecdict_definition": "v perform vaccinations or produce immunity in by inoculation"
+    },
+    {
+      "id": "SAT_3791",
+      "word": "vaporize",
+      "definition_cn": "v. 蒸发",
+      "phonetic_uk": "/'veɪpəraɪz/",
+      "phonetic_us": "/'vepə'raɪz/",
+      "ecdict_translation": "v. (使)蒸发",
+      "ecdict_phonetic": "'veipәraiz",
+      "ecdict_definition": "v kill with or as if with a burst of gunfire or electric current or as if by shooting\nv turn into gas\nv lose or cause to lose liquid by vaporization leaving a more concentrated residue\nv decrease rapidly and disappear"
+    },
+    {
+      "id": "SAT_3036",
+      "word": "vegetate",
+      "definition_cn": "v. 过单调呆板的生活",
+      "phonetic_uk": "/'vedʒɪteɪt/",
+      "phonetic_us": "/'vɛdʒətet/",
+      "ecdict_translation": "vi. 植物似地生长, 过呆板单调的生活, 无所事事地生活, (赘疣)生长, 长大",
+      "ecdict_phonetic": "'vedʒiteit",
+      "ecdict_definition": "v. lead a passive existence without using one's body or mind\nv. establish vegetation on\nv. produce vegetation"
+    },
+    {
+      "id": "SAT_4109",
+      "word": "velvety",
+      "definition_cn": "adj. 天鹅绒般柔软的；醇和的，可口的",
+      "phonetic_uk": "/'velvɪtɪ/",
+      "phonetic_us": "/'vɛlvəti/",
+      "ecdict_translation": "a. 像天鹅绒的, 轻软光滑的, 柔和的, 平和的",
+      "ecdict_phonetic": "'velviti",
+      "ecdict_definition": "s smooth and soft to sight or hearing or touch or taste\ns resembling velvet in having a smooth soft surface"
+    },
+    {
+      "id": "SAT_3575",
+      "word": "verisimilar",
+      "definition_cn": "adj. 好像是真的",
+      "phonetic_uk": "/,verɪ'sɪmɪlə/",
+      "phonetic_us": "/,vɛrə'sɪməlɚ/",
+      "ecdict_translation": "a. 好像真实的\n[法] 貌似真的, 似乎是真的, 很可能的",
+      "ecdict_phonetic": ".veri'similә",
+      "ecdict_definition": "s. appearing to be true or real"
+    },
+    {
+      "id": "SAT_43",
+      "word": "wherever",
+      "definition_cn": "adv. 无论什么地方；究竟在哪里； conj. 无论在哪里；无论什么情况下",
+      "phonetic_uk": "/weər'evə/",
+      "phonetic_us": "/wɛr'ɛvɚ/",
+      "ecdict_translation": "adv. 无论哪里",
+      "ecdict_phonetic": "hwєәr'evә",
+      "ecdict_definition": "r. where in the world"
+    },
+    {
+      "id": "SAT_3453",
+      "word": "widespread",
+      "definition_cn": "adj. 普遍的，广泛的；分布广的",
+      "phonetic_uk": "/ˈwʌɪdsprɛd/",
+      "phonetic_us": "/ˈwʌɪdsprɛd/",
+      "ecdict_translation": "a. 充分伸展的, 广布的, 普及的, 流传广的",
+      "ecdict_phonetic": "'waidspred",
+      "ecdict_definition": "s. widely circulated or diffused"
+    },
+    {
+      "id": "SAT_3935",
+      "word": "withstand",
+      "definition_cn": "v. 抵挡；禁得起；反抗",
+      "phonetic_uk": "/wɪð'stænd/",
+      "phonetic_us": "/wɪð'stænd/",
+      "ecdict_translation": "vt. 抵住, 顶住, 经得起",
+      "ecdict_phonetic": "wið'stænd",
+      "ecdict_definition": "v resist or confront with resistance\nv stand up or offer resistance to somebody or something"
+    },
+    {
+      "id": "SAT_1180",
+      "word": "wizen",
+      "definition_cn": "v. 枯萎；凋谢；干瘪； v. 使凋谢；使枯萎；使干瘪； adj. 凋谢的；枯萎的",
+      "phonetic_uk": "/'wɪz(ə)n/",
+      "phonetic_us": "/'wizən/",
+      "ecdict_translation": "vt.vi. (使)枯萎, (使)雕谢",
+      "ecdict_phonetic": "'wizn",
+      "ecdict_definition": "s lean and wrinkled by shrinkage as from age or illness"
+    },
+    {
+      "id": "SAT_4001",
+      "word": "workmanlike",
+      "definition_cn": "adj. 技术熟练的；精工细作的",
+      "phonetic_uk": "/'wɜːkmənlaɪk/",
+      "phonetic_us": "/'wɝkmənlaɪk/",
+      "ecdict_translation": "a. 工作熟练的, 有技巧的, 精巧的",
+      "ecdict_phonetic": "'w\\\\:kmәnlaik",
+      "ecdict_definition": "s. worthy of a good workman"
+    },
+    {
+      "id": "SAT_4435",
+      "word": "X-ray",
+      "definition_cn": "n. X射线",
+      "phonetic_uk": "/'eks'rei/",
+      "phonetic_us": "/'eksreɪ/",
+      "ecdict_translation": "a. X射线的\nvt. 用X光检查, 照X光\nvi. 使用X光",
+      "ecdict_phonetic": "'eks'rei",
+      "ecdict_definition": "v. examine by taking x-rays\nv. take an x-ray of something or somebody"
+    },
+    {
+      "id": "SAT_987",
+      "word": "yearling",
+      "definition_cn": "n. 一岁家畜；满一岁的动物； adj. 一岁的",
+      "phonetic_uk": "/'jɪəlɪŋ; 'jɜː-/",
+      "phonetic_us": "/'jɪrlɪŋ/",
+      "ecdict_translation": "n. 一岁崽",
+      "ecdict_phonetic": "'yiәliŋ",
+      "ecdict_definition": "n. a racehorse considered one year old until the second Jan. 1 following its birth\nn. an animal in its second year"
+    }
+  ],
+  "missing_phonetic": [],
+  "phonetic_fillable": [],
+  "not_in_ecdict": [
+    {
+      "id": "SAT_4425",
+      "word": "AluminumAl",
+      "definition_cn": "n. 铝",
+      "phonetic_uk": "/ə'ljuːminəm/",
+      "phonetic_us": "/ə'ljuːminəm/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4430",
+      "word": "cliché",
+      "definition_cn": "n. 陈词滥调",
+      "phonetic_uk": "/kliː'ʃei/",
+      "phonetic_us": "/kliː'ʃei/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4427",
+      "word": "distingusihed",
+      "definition_cn": "adj. 著名的， 卓越的",
+      "phonetic_uk": "/dis'tiŋgwiʃt/",
+      "phonetic_us": "/dis'tiŋgwiʃt/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4449",
+      "word": "Iron Fe",
+      "definition_cn": "n. 铁",
+      "phonetic_uk": "/'aiən/",
+      "phonetic_us": "/'aiən/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4447",
+      "word": "Oxygen O",
+      "definition_cn": "n. 氧",
+      "phonetic_uk": "/'ɔksidʒən/",
+      "phonetic_us": "/'ɔksidʒən/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4434",
+      "word": "PhosphorusP",
+      "definition_cn": "n. 磷",
+      "phonetic_uk": "/'fɔsfərəs/",
+      "phonetic_us": "/'fɔsfərəs/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4444",
+      "word": "projector lens",
+      "definition_cn": "n. 放映机镜头",
+      "phonetic_uk": "/projector lens/",
+      "phonetic_us": "/projector lens/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4460",
+      "word": "sulfur disoxide",
+      "definition_cn": "n. 二氧化硫",
+      "phonetic_uk": "/sulfur disoxide/",
+      "phonetic_us": "/sulfur disoxide/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4462",
+      "word": "transgenic animals",
+      "definition_cn": "n. [遗] 转基因动物，转化的动物",
+      "phonetic_uk": "/transgenic animals/",
+      "phonetic_us": "/transgenic animals/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    },
+    {
+      "id": "SAT_4442",
+      "word": "undersize d",
+      "definition_cn": "adj. 较一般为小的， 不够大的",
+      "phonetic_uk": "/ˌʌndə'saiz (d)/",
+      "phonetic_us": "/,ʌdɚ'saɪzd/",
+      "ecdict_translation": "",
+      "ecdict_phonetic": "",
+      "ecdict_definition": ""
+    }
+  ]
+}

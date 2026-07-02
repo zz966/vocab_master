@@ -1,0 +1,47 @@
+[
+  {
+    "book_id": "CET4_CORE",
+    "book_file": "cet4_core.json",
+    "severe_mismatch_count": 642
+  },
+  {
+    "book_id": "CET6_CORE",
+    "book_file": "cet6_core.json",
+    "severe_mismatch_count": 761
+  },
+  {
+    "book_id": "GRE",
+    "book_file": "GRE.json",
+    "severe_mismatch_count": 1535
+  },
+  {
+    "book_id": "IELTS",
+    "book_file": "IELTS.json",
+    "severe_mismatch_count": 781
+  },
+  {
+    "book_id": "JUNIOR_CORE",
+    "book_file": "junior_core.json",
+    "severe_mismatch_count": 380
+  },
+  {
+    "book_id": "KAOYAN_CORE",
+    "book_file": "kaoyan_core.json",
+    "severe_mismatch_count": 174
+  },
+  {
+    "book_id": "SAT",
+    "book_file": "SAT.json",
+    "severe_mismatch_count": 136
+  },
+  {
+    "book_id": "SENIOR_CORE",
+    "book_file": "senior_core.json",
+    "severe_mismatch_count": 693
+  },
+  {
+    "book_id": "TOEFL",
+    "book_file": "TOEFL.json",
+    "severe_mismatch_count": 1398
+  }
+]

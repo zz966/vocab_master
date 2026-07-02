@@ -127,3 +127,14 @@ app.*.symbols
 
 # CET4 词书构建缓存
 tools/_cet*.json
+
+# 忽略大文件和数据库
+tools/edict_sqlite-28.zip
+tools/edict/stardict.db
+tools/edict_extract/stardict.db
+
+# 或者用通配符忽略整个目录下的大文件（更灵活）
+tools/**/*.zip
+tools/**/*.db
+*.db
+*.zip

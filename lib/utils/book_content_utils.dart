@@ -1,20 +1,18 @@
 import '../models/book_model.dart';
 
-/// 判断 [BookWord] 是否符合 test_40 富内容词库格式。
+/// 判断 [BookWord] 是否具备可学习的真实内容（content-v3 标准）。
+///
+/// 允许无例句（examples 暂空）、近义词/英文释义可选；test_40 仍可用 --strict 校验。
 bool isRichBookWord(BookWord word) {
-  if (word.sentenceExamples.length < 3) {
+  if (word.phoneticUk.trim().isEmpty && word.phoneticUs.trim().isEmpty) {
     return false;
   }
-  if (word.phoneticUk.trim().isEmpty || word.phoneticUs.trim().isEmpty) {
+  if (word.definitions == null || word.definitions!.isEmpty) {
     return false;
   }
-  if (word.definitions == null || word.englishDefinitions == null) {
-    return false;
-  }
-  if (word.synonymDetails == null || word.synonymDetails!.isEmpty) {
-    return false;
-  }
-  if (word.synonymDetails!.any((item) => item.explanation.trim().isEmpty)) {
+  final synonyms = word.synonymDetails;
+  if (synonyms != null &&
+      synonyms.any((item) => item.explanation.trim().isEmpty)) {
     return false;
   }
   return !_collocationsMissingExamples(word);
